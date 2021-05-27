@@ -5,6 +5,7 @@ const ejs = require('ejs')
 const app = express();
 //view engine
 app.set('view engine', 'ejs');
+
 // public express static
 app.use(express.static(__dirname + '/public'));
 
@@ -14,10 +15,10 @@ app.get('/', (req, res) => {
     res.render('signin')
 });
 
-app.get('/users/register', (req, res) => {
-    res.render('register')
-});
+//register page
+const newUserController = require('./controllers/newUser')
 
+app.get('/users/register', newUserController)
 
 //listen on specific post
 app.listen(3000, () => {
