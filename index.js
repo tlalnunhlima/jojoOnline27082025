@@ -17,8 +17,13 @@ app.get('/', (req, res) => {
 
 //register page
 const newUserController = require('./controllers/newUser')
+//store user page
+const storeUserController = require('./controllers/storeUser')
 
+//get link register page
 app.get('/users/register', newUserController)
+//get store user link
+app.post('/users/register', storeUserController)
 
 //listen on specific post
 app.listen(3000, () => {

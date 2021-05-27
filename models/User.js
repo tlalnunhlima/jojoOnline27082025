@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const Schema = mongoose.Schema()
+const Schema = mongoose.Schema
 
 Const UserSchema = new Schema({
     regn: {
@@ -23,7 +23,7 @@ Const UserSchema = new Schema({
         type: Number,
         required: true
     }
-})
+});
 
 //export model
 const User = mongoose.model('User', UserSchema)
