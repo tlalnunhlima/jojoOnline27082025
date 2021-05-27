@@ -2,14 +2,15 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
-Const UserSchema = new Schema({
+const UserSchema = new Schema({
     regn: {
         type: Number,
-        required: true
+        required: true,
+        unique: true
     },
     name: {
-        type: String,
-        required: true
+       type: String,
+       required: true
     },
     fname: {
         type: String,
