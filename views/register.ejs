@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  
+<%- include('layouts/headers') -%>
+
+
+<body class="text-center">
+    
+<main class="form-signin">
+  <form action="/staff/register" method="POST" enctype="multipart/form-data">
+    <img class="mb-3" src="/img/icon.png" alt="" width="72" height="57">
+    
+    <h3 class="h3 mb-2 fw-normal">Create Student Account</h3>
+
+    <div class="form-floating mb-2">
+        <input type="number" class="form-control" id="floatingInput" placeholder="Regn No.">
+        <label for="floatingInput">Regn No.</label>
+      </div>
+      <div class="form-floating mb-2">
+      <input type="text" class="form-control" id="floatingInput" placeholder="name">
+      <label for="floatingInput">Name</label>
+    </div>
+      <div class="form-floating mb-2">
+        <input type="text" class="form-control" id="floatingInput" placeholder="fname">
+        <label for="floatingInput">Father's name</label>
+      </div>
+    <div class="form-floating mb-2">
+      <input type="text" class="form-control" id="floatingPassword" placeholder="address">
+      <label for="floatingPassword">Address</label>
+    </div>
+    <div class="form-floating mb-2">
+      <input type="number" class="form-control" id="floatingPassword" placeholder="phone no.">
+      <label for="floatingPassword">Mobile No.</label>
+    </div>
+
+   
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+    
+    <p class="mt-3 text-muted"><span class="text-muted ">&copy; 2018<script>new Date().getFullYear()>2018&&document.write("-"+new Date().getFullYear());</script>, Jojo Computer Institute.</span></p>
+  </form>
+  
+</main>
+
+    
+    <%- include('layouts/scripts') %>
+  </body>
+  
+</html>
