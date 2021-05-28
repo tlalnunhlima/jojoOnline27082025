@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 
 const UserSchema = new Schema({
     regn: {
-        type: Number,
+        type: String,
         required: true,
         unique: true
     },
@@ -21,7 +21,7 @@ const UserSchema = new Schema({
         required: true
     },
     phone: {
-        type: Number,
+        type: String,
         required: true
     }
 });
