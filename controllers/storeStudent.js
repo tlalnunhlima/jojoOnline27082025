@@ -14,6 +14,6 @@ module.exports = async (req, res) => {
    });
 
    jojo_Student.save().then(() => console.log('meow'));
-   res.redirect('/')
-}
    
+   res.redirect('/')
+};

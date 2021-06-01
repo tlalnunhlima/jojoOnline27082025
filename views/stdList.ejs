@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<%- include('layouts/headers') -%>
+
+
+<body class="bg-light">
+    <%- include('layouts/navbar') -%>
+    
+<main class="container text-center">
+    
+<h4>List of Students</h4>
+<a href='/register'>Add New Students</a></span>
+
+<table class="table table-hover border bg-white">
+  <thead>
+    <tr>
+      <th scope="col">Regn No.</th>
+      <th scope="col">Name</th>
+      <th scope="col">FName</th>
+      <th scope="col">Add</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+      <% for(var i=0; i < students.length; i++) { %>
+    <tr>
+      <th><%= students[i].regn %></th>
+      <td><%= students[i].name %></td>
+      <td><%= students[i].fname %></td>
+      <td><%= students[i].address %></td>
+      <td><%= students[i].phone %></td>
+      <td>#</td>
+    </tr>
+    <% } %>
+  </tbody>
+  
+</table>
+
+</main>
+    
+    <%- include('layouts/scripts') -%>
+  </body>
+  
+</html>

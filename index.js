@@ -1,6 +1,7 @@
 const express = require('express')
 const ejs = require('ejs')
 const mongoose = require('mongoose')
+const Student = require('./models/Student')
 
 // //connect database
 mongoose.connect('mongodb+srv://jojoOnline:jojoOnline@cluster0.24mkr.mongodb.net/jojo_database?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true})
@@ -33,11 +34,15 @@ app.get('/login', userLoginController)
 
 //get store user link
 app.post('/users/register', storeUserController)
+
 app.post('/auth/login', authLoginController)
 
 //home page
-app.get('/', (req, res) => {
-    res.send('Hello World jojo family')
+app.get('/', async (req, res) => {
+    const students = await Student.find({})
+        res.render('stdList', {
+            students
+        })
 });
 
 

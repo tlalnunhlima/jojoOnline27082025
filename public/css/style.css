@@ -1,0 +1,30 @@
+.navbar {
+  z-index: 1;
+  border-bottom: 1px solid gray;
+}
+.navbar-brand {
+  padding-left: 100px;
+}
+
+.navbar-adjust {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 100px;
+}
+
+.dropdown-item:hover {
+  border-top: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+/*-------------media query for video fullscreen-----------*/
+@media only screen and (max-width: 990px) {
+  .navbar-brand {
+  padding-left: 10px;
+  }
+  .navbar-adjust {
+  display: flex;
+  justify-content: flex-start;
+  padding-right: 10px;
+}
+}
