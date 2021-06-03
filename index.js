@@ -1,7 +1,10 @@
 const express = require('express')
-const ejs = require('ejs')
+
 const mongoose = require('mongoose')
-const Student = require('./models/Student')
+
+const ejs = require('ejs')
+
+const app = express();
 
 // //connect database
 mongoose.connect('mongodb+srv://jojoOnline:jojoOnline@cluster0.24mkr.mongodb.net/jojo_database?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true})
@@ -9,7 +12,7 @@ mongoose.connect('mongodb+srv://jojoOnline:jojoOnline@cluster0.24mkr.mongodb.net
      .catch((err) => console.log(err))
 
 
-const app = express();
+
 
 //view engine
 app.set('view engine', 'ejs');
@@ -17,34 +20,27 @@ app.set('port', (process.env.PORT || 3000))
 // public express static
 app.use(express.static(__dirname + '/public'));
 app.use(express.json())
-app.use(express.urlencoded())
+app.use(express.urlencoded({extended: true}))
 
-//control form link registration
-const gotoNewUserForm = require('./controllers/newUserForm')
-const storeUserController = require('./controllers/storeStudent')
+//mongoose warning tibotu
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
+
 
 //controll user login
 const userLoginController = require('./controllers/newLogin')
 const authLoginController = require('./controllers/authLogin')
+const routeController = require('./controllers/routeController')
 
-//get link register page
-app.get('/register', gotoNewUserForm)
+//go to all route
+app.use('/', routeController)
+
+
 
 app.get('/login', userLoginController)
 
-//get store user link
-app.post('/users/register', storeUserController)
-
 app.post('/auth/login', authLoginController)
-
-//home page
-app.get('/', async (req, res) => {
-    const students = await Student.find({})
-        res.render('stdList', {
-            students
-        })
-});
-
 
 
 //listen on specific post

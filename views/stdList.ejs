@@ -7,12 +7,14 @@
 <body class="bg-light">
     <%- include('layouts/navbar') -%>
     
-<main class="container text-center">
-    
-<h4>List of Students</h4>
-<a href='/register'>Add New Students</a></span>
+<main class="container">
 
-<table class="table table-hover border bg-white">
+<div class="d-flex justify-content-between mt-3 mb-2">
+  <h4><%= viewTitle %></h4>
+  <a class="btn  btn-warning btn-sm" href="/register"><i class="fa fa-plus"></i> Add New Student</a>
+</div>
+
+<table class="table table-hover border bg-white  text-center">
   <thead>
     <tr>
       <th scope="col">Regn No.</th>
@@ -32,7 +34,9 @@
       <td><%= students[i].fname %></td>
       <td><%= students[i].address %></td>
       <td><%= students[i].phone %></td>
-      <td>#</td>
+      <td>
+        <a href="/register/<%= students[i]._id %>"><i class="fas fa-edit border p-1 text-muted rounded"></i></a> 
+        <a href="/stdList/delete/<%= students[i]._id %>" onclick="return confirm('Are you sure to delete ' + '<%= students[i].name %>' +' record ?');"><i class="fas fa-trash-alt border p-1 text-muted rounded" aria-hidden="true"></i></a></td>
     </tr>
     <% } %>
   </tbody>
