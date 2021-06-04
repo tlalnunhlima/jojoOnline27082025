@@ -1,16 +1,39 @@
+const Student = require('../models/Student')
+
 const express = require('express')
 
 const router = express.Router();
 
-const Student = require('../models/Student')
+const expressSession = require('express-session')
+
+//global variable
+global.loggedIn = null;
 
 
+router.use(expressSession({
+    
+    resave: false,
+    
+    saveUninitialized: true,
+    
+    secret: 'keyboard cat'
+}))
+
+
+router.use('*', (req, res, next) => {
+    
+    loggedIn = req.session.userId;
+    
+    next()
+});
 
 
 //home page
 router.get('/', async (req, res) => {
     
     const students = await Student.find({})
+    
+    console.log(req.session)
     
         res.render('stdList', {
             
@@ -22,10 +45,15 @@ router.get('/', async (req, res) => {
 //new student register form
 router.get('/register', (req, res) => {
     
-          res.render('register', {
-              
+    if(req.session.userId){
+        
+          return res.render('register', {
+
             viewTitle: 'Register new student here',
         })
+    } 
+    
+    res.redirect('/login')
 });
 
 //save new student to database
@@ -49,6 +77,22 @@ router.get('/register/:id', (req, res) => {
         }) 
     })
     
+router.get('/login', (req, res) => {
+    
+    if(req.session.userId) {
+        
+        console.log('You are still logged in!')
+        
+        return res.redirect('/')//if user logged in redirect to home page
+     
+    }
+
+    res.render('login')
+    
+}) 
+    
+    
+    
 router.get('/stdList/delete/:id', (req, res) => {
     
     Student.findByIdAndRemove(req.params.id, (err, doc) => {
@@ -63,7 +107,17 @@ router.get('/stdList/delete/:id', (req, res) => {
         
     });
 });
+
+
+router.get('/logout', (req, res) => {
     
+    req.session.destroy(() => {
+        
+        res.redirect('/')
+        
+    })
+    
+})
 
           
 

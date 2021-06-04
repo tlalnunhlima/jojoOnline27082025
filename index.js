@@ -1,3 +1,6 @@
+//database connect hi dah hmasa ber ila
+require('./models/dbConnection.js')
+
 const express = require('express')
 
 const mongoose = require('mongoose')
@@ -5,13 +8,6 @@ const mongoose = require('mongoose')
 const ejs = require('ejs')
 
 const app = express();
-
-// //connect database
-mongoose.connect('mongodb+srv://jojoOnline:jojoOnline@cluster0.24mkr.mongodb.net/jojo_database?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true})
-    .then((result) => console.log('db connected'))
-     .catch((err) => console.log(err))
-
-
 
 
 //view engine
@@ -29,16 +25,11 @@ mongoose.set('useCreateIndex', true);
 
 
 //controll user login
-const userLoginController = require('./controllers/newLogin')
 const authLoginController = require('./controllers/authLogin')
 const routeController = require('./controllers/routeController')
 
 //go to all route
 app.use('/', routeController)
-
-
-
-app.get('/login', userLoginController)
 
 app.post('/auth/login', authLoginController)
 
