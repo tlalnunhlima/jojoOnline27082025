@@ -10,6 +10,7 @@ const ejs = require('ejs')
 const app = express();
 
 
+
 //view engine
 app.set('view engine', 'ejs');
 app.set('port', (process.env.PORT || 3000))
@@ -24,14 +25,10 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 
 
-//controll user login
-const authLoginController = require('./controllers/authLogin')
+//all the link goes to routeController
 const routeController = require('./controllers/routeController')
-
-//go to all route
 app.use('/', routeController)
 
-app.post('/auth/login', authLoginController)
 
 
 //listen on specific post

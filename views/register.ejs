@@ -16,6 +16,7 @@
  
  
 <main class="form-register">
+  
   <div class="d-flex justify-content-between mb-3">
       
   <h5> <%= viewTitle -%></h5>
@@ -24,6 +25,20 @@
   
 </div>
 
+    <% if(errors != null && errors.length > 0) { %>
+    
+        <ul class="list-group">
+          
+          <% for (var i = 0; i < errors.length; i++) { %>
+              
+            <li class="list-group-item list-group-item-danger"><%= errors[i] %></li>
+            
+          <% } %>
+          
+        </ul>
+        
+    <% } %>
+
   <form action="/users/register" method="POST" autocomplete="off">
 
   <input type="hidden" name="_id" aria-hidden="true">
@@ -31,12 +46,12 @@
    <div class="row g-2">
                                 
     <div class="form-floating mb-2">
-      <input type="text" class="form-control pl-3" id="floatingRegn" placeholder="regn" name="regn" >
+      <input type="text" class="form-control pl-3" id="floatingRegn" placeholder="regn" name="regn" maxlength="3" value="<%= regn %>" required>
       <label for="floatingRegn">Regn No.</label>
     </div>
     
     <div class="form-floating mb-2 col-md">
-      <input type="text" class="form-control" id="floatingName" placeholder="name" name="name" >
+      <input type="text" class="form-control" id="floatingName" placeholder="name" name="name" maxlength="30" value="<%= name %>" required>
       <label for="floatingName">Name</label>
     </div>
     
@@ -44,22 +59,22 @@
     
       
     <div class="form-floating mb-2 col-md">
-      <input type="text" class="form-control" id="floatingFname" placeholder="fname" name="fname" >
+      <input type="text" class="form-control" id="floatingFname" placeholder="fname" name="fname" maxlength="30" value="<%= fname %>" required>
       <label for="floatingFname">Father's Name</label>
     </div>
     <div class="form-floating mb-2 col-12">
-      <input type="text" class="form-control" id="floatingAddress" placeholder="address" name="address" >
+      <input type="text" class="form-control" id="floatingAddress" placeholder="address" name="address" maxlength="60" value="<%= address %>" required>
       <label for="floatingAddress">Address</label>
     </div>
     
   
     
     <div class="form-floating mb-2 col-md-6">
-      <input type="text" class="form-control" id="floatingPhone" placeholder="phone" name="phone" >
+      <input type="text" class="form-control" id="floatingPhone" placeholder="phone" name="phone" maxlength="10" value="<%= phone %>" required>
       <label for="floatingPhone">Phone</label>
     </div>
     <div class="form-floating mb-2 col-md-6">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="password" name="password" >
+      <input type="password" class="form-control" id="floatingPassword" placeholder="password" name="password" value="<%= password %>" required>
       <label for="floatingPassword">Password</label>
     </div>
     

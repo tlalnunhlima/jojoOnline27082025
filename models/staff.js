@@ -1,31 +1,15 @@
 const mongoose = require('mongoose')
+
 const bcrypt = require('bcrypt')
 
 const Schema = mongoose.Schema
 
 var uniqueValidator = require('mongoose-unique-validator')
 
-const UserSchema = new Schema({
-    regn: {
-        type: String,
-        required: [true, 'Please provide regn no'],
-        unique: true
-    },
-    name: {
+const staffSchema = new Schema({
+    username: {
        type: String,
        required: [true, 'Please provide name']
-    },
-    fname: {
-        type: String,
-        required: [true, 'Please provide fname']
-    },
-    address: {
-        type: String,
-        required: [true, 'Please provide address']
-    },
-    phone: {
-        type: String,
-        required: [true, 'Please provide phone']
     },
     password: {
         type: String,
@@ -38,11 +22,11 @@ const UserSchema = new Schema({
 });
 
 //duplicate checker
-UserSchema.plugin(uniqueValidator);
+staffSchema.plugin(uniqueValidator);
 
 
 //password hash
-UserSchema.pre('save', async function(next){
+staffSchema.pre('save', async function(next){
     
   try {
       
@@ -60,6 +44,6 @@ UserSchema.pre('save', async function(next){
 })
 
 //export model
-const Student = mongoose.model('Student', UserSchema)
+const staff = mongoose.model('staff', staffSchema)
 
-module.exports = Student
+module.exports = staff

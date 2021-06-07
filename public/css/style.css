@@ -1,5 +1,14 @@
 .navbar {
   z-index: 1;
+  min-height:32px !important; /*navbar lian loa dahna*/
+}
+
+.navbar-nav > li > a {
+  
+  padding-top:5px !important; 
+  
+  padding-bottom:5px !important;
+  
 }
 .navbar-brand {
   padding-left: 100px;

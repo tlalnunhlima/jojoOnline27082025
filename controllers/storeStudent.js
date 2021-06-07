@@ -1,4 +1,4 @@
-const Student = require('../models/Student')
+const testScore = require('../models/studentScore.model')
 
 
 module.exports = async (req, res) => {
@@ -15,36 +15,59 @@ module.exports = async (req, res) => {
 
 function insertRecord(req, res) {
    
-   const student = new Student({ 
+   const scoreDetail = new testScore({ 
       
-      regn: req.body.regn,
-      name: req.body.name,
-      fname: req.body.fname,
-      address: req.body.address,
-      phone: req.body.phone,
-      password: req.body.password
+      nameOfSubject: req.body.nameOfSubject,
       
+      chapterNo: req.body.chapterNo,
+      
+      assignmentNo1: req.body.assignmentNo1,
+      
+      assignmentNo2: req.body.assignmentNo2,
+      
+      assignmentNo3: req.body.assignmentNo3,
+      
+      assignmentNo4: req.body.assignmentNo4,
+      
+      assignmentNo5: req.body.assignmentNo5,
+      
+      markObtained: req.body.markObtained,
+      
+      totalMark: req.body.totalMark
+     
    })
 
-   student.save().then(() => console.log('meow'));
-   
-   res.redirect('/')
+   scoreDetail.save((err, doc) => {
+       
+        if (err) {
+            
+            const validationErrors = Object.keys(err.errors).map(key => err.errors[key].message)
+            
+            req.flash('validationErrors', validationErrors)
+            
+            req.flash('data', req.body)
+            
+            return res.redirect('/student/testPage')
+        }
+        
+        res.redirect('/')
+   })
 }
 
 
 function updateRecord(req, res) {
    
-   Student.findOneAndUpdate({ _id: req.body._id}, req.body, { new: true }, (err, doc) => {
+   testScore.findOneAndUpdate({ _id: req.body._id}, req.body, { new: true }, (err, doc) => {
        
         if (!err) { res.redirect('/')
         
-         console.log('miau miau updated')
+         console.log('miau miau score updated')
            
         }
        
         else {
       
-                console.log('Error during record update : ' + err);
+                console.log('Error during score record update : ' + err);
       
         }
     });

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<%- include('layouts/headers') -%>
+
+
+<body class="bg-light">
+    <%- include('layouts/navbar') -%>
+    
+<main class="container">
+
+<div class="d-flex justify-content-between mt-3 mb-2">
+  <h4><%= viewTitle %></h4>
+  <% if(loggedIn) { %>
+  <a class="btn  btn-warning btn-sm" href="/auth/registerStaff"><i class="fa fa-plus"></i> Add New Student</a>
+  <% } %>
+</div>
+
+<table class="table table-hover border bg-white  text-center shadow-sm">
+  <thead>
+    <tr>
+      <th scope="col">Username</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+      <% for(var i=0; i < staffs.length; i++) { %>
+    <tr>
+      <td><%= staffs[i].username %></td>
+      <td>
+        <a href="/staffList/delete/<%= staffs[i]._id %>" onclick="return confirm('Are you sure to delete ' + '<%= staffs[i].username %>' +' record ?');"><i class="fas fa-trash-alt border p-1 text-muted rounded" aria-hidden="true"></i></a></td>
+    </tr>
+    <% } %>
+  </tbody>
+  
+</table>
+
+</main>
+    
+    <%- include('layouts/scripts') -%>
+    
+
+
+  </body>
+  
+</html>
