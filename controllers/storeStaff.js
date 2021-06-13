@@ -18,7 +18,12 @@ function insertRecord(req, res) {
    const newStaff = new staff({ 
       
       username: req.body.username,
-      password: req.body.password
+      
+      password: req.body.password,
+      
+      myDashboard: ['Computer Student', 'Open Student', 'My Scoreboard', 'Logout'],
+      
+      hrefLink: ['/stdList', '/openList', '/myScoreboard']
       
    })
 

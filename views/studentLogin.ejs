@@ -1,20 +1,23 @@
 <!DOCTYPE html>
+
 <html lang="en">
   
 <%- include('layouts/headers') -%>
+
 <style>
+
   body {
+    
   padding-top: 20px;
+  
 }
 
 </style>
-
 
 <body class="text-center">
     
 <main class="form-signin">
   
-
   <form action="/auth/login" method="POST" autocomplete="off">
 
     <a href="/"><img class="mb-3" src="/img/icon.png" alt="" width="72" height="57"></a>
@@ -22,24 +25,31 @@
     <h3 class="h3 mb-3 fw-normal">Please Login</h3>
 
     <div class="form-floating mb-2">
-      <input type="text" class="form-control" id="floatingUsername" placeholder="username" name="username" required>
-      <label for="floatingUsername">Username</label>
+      
+      <input type="text" class="form-control" id="floatingPhone" placeholder="phone" name="phone" required>
+      
+      <label for="floatingPhone">Phone No. </label>
+      
     </div>
+    
     <div class="form-floating mb-2">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" required>
-      <label for="floatingPassword">Password</label>
+      
+      <input type="date" class="form-control" id="floatingDob" placeholder="dob" name="dob" required>
+      
+      <label for="floatingDob">Date of Birth</label>
+      
     </div>
 
-    
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+    <button class="w-100 btn btn-primary" type="submit">Student Login</button>
     
     <p class="mt-3 text-muted"><span class="text-muted ">&copy; 2018<script>new Date().getFullYear()>2018&&document.write("-"+new Date().getFullYear());</script>, Jojo Computer Institute.</span></p>
+  
   </form>
   
 </main>
 
-    
     <%- include('layouts/scripts') %>
+    
   </body>
   
 </html>

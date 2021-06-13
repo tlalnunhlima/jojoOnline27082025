@@ -1,6 +1,17 @@
 .navbar {
+  
   z-index: 1;
+  
   min-height:32px !important; /*navbar lian loa dahna*/
+  
+  border-bottom: 1px solid #ccc;
+  
+}
+
+.navbar-brand {
+  
+  padding-left: 100px;
+  
 }
 
 .navbar-nav > li > a {
@@ -10,8 +21,15 @@
   padding-bottom:5px !important;
   
 }
-.navbar-brand {
-  padding-left: 100px;
+
+.nav-item:hover {
+  
+ background-color: #d3d3d3;
+  
+  border-radius: 10%;
+  
+  animation-delay: 5s;
+  
 }
 
 .navbar-adjust {
@@ -20,6 +38,7 @@
   padding-right: 100px;
 }
 
+
 .dropdown-item:hover {
   border-top: 1px solid #f1f1f1;
   border-bottom: 1px solid #f1f1f1;
@@ -27,12 +46,126 @@
 
 /*-------------media query for video fullscreen-----------*/
 @media only screen and (max-width: 990px) {
-  .navbar-brand {
-  padding-left: 10px;
+  
+  .navbar-nav > li > a {
+  
+  padding-left: 10px !important; 
+
   }
+  
   .navbar-adjust {
   display: flex;
   justify-content: flex-start;
-  padding-right: 10px;
+ 
 }
+.navbar-brand {
+  
+  padding-left: 10px;
+  
+}
+}
+
+
+/*style form old static web page*/
+
+body{
+  -webkit-user-select:none;
+  -moz-user-select:-moz-none;
+  -ms-user-select:none;
+  user-select:none
+}
+.mar2020, 
+.feb2020, 
+.dec2019,
+.nov2019,
+.oct2019,
+.sep2019{
+  display: none;
+}
+#ans1,#ans2,#ans3,#ans4,#ans5,
+#ans6,#ans7,#ans8,#ans9,#ans10,
+#ans11,#ans12,#ans13,#ans14,#ans15,
+#ans16,#ans17,#ans18,#ans19,#ans20,
+#ans21,#ans22,#ans23,#ans24,#ans25,
+#ans26,#ans27,#ans28,#ans29,#ans30,
+#ans31,#ans32,#ans33,#ans34,#ans35,
+#ans36,#ans37,#ans38,#ans39,#ans40,
+#ans41,#ans42,#ans43,#ans44,#ans45,
+#ans46,#ans47,#ans48
+ {
+  display: none;
+}
+
+.jumbotron-background-image {
+  
+  background: #C9CCD3;
+  
+  background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+
+}
+.container a{
+  
+  text-decoration: none;
+}
+
+.card {
+    text-align: justify;
+  }
+  
+  
+  .borderTop {
+    
+    border-top: 4px solid #dedede;
+    
+  }
+
+.starter-template {
+  
+  padding: 3rem 1.5rem;
+  
+  text-align: center;
+}
+
+/*-------------media query for video fullscreen-----------*/
+
+@media only screen and (max-width: 600px) {
+  
+  .container-fluid, .card-body {
+    
+    width: 100vw;
+    
+    padding: 0;
+    
+    margin: 0;
+    
+  }
+  
+  .tryAnswer {
+    
+    width: 100%;
+    
+    margin-left: 10px;
+    
+  }
+  
+  .card {
+    
+    box-shadow: none;
+    
+  }
+  
+  .welcomepage {
+    
+    padding: 3px!important;
+    
+    margin: 0;
+
+  }
+  
+  .welcomepage h1 {
+    
+    font-size: 22px;
+    
+  }
+  
 }

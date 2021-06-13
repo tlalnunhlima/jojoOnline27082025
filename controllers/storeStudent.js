@@ -1,4 +1,4 @@
-const testScore = require('../models/studentScore.model')
+const Student = require('../models/Student')
 
 
 module.exports = async (req, res) => {
@@ -6,62 +6,58 @@ module.exports = async (req, res) => {
    if (req.body._id == '') {
      
         insertRecord(req, res);
+        
    }
+   
         else {
-     
+            
         updateRecord(req, res);
-}
+        
+    }
 }
 
 function insertRecord(req, res) {
    
-   const scoreDetail = new testScore({ 
+   const newStudent = new Student({
       
-      nameOfSubject: req.body.nameOfSubject,
+      regn: req.body.regn,
       
-      chapterNo: req.body.chapterNo,
+      username: req.body.username,
       
-      assignmentNo1: req.body.assignmentNo1,
+      fname: req.body.fname,
       
-      assignmentNo2: req.body.assignmentNo2,
+      address: req.body.address,
       
-      assignmentNo3: req.body.assignmentNo3,
+      phone: req.body.phone,
       
-      assignmentNo4: req.body.assignmentNo4,
+      dob: req.body.dob,
       
-      assignmentNo5: req.body.assignmentNo5,
+      staffid: req.session.userId,
       
-      markObtained: req.body.markObtained,
+      myDashboard: ['My Dashboard', 'My Scoreboard', 'My Fee Details', 'Logout'],
       
-      totalMark: req.body.totalMark
+      hrefLink: ['/all/stdDashboard', '/all/testResult', '/feeDetails']
+      
      
-   })
+   });
 
-   scoreDetail.save((err, doc) => {
-       
-        if (err) {
-            
-            const validationErrors = Object.keys(err.errors).map(key => err.errors[key].message)
-            
-            req.flash('validationErrors', validationErrors)
-            
-            req.flash('data', req.body)
-            
-            return res.redirect('/student/testPage')
-        }
-        
-        res.redirect('/')
-   })
+   newStudent.save()
+  
+    .then(() => console.log('meow : student data submitted successfully'))
+    
+    .catch(() => console.log('Problem occurs during data insertion'))
+    
+    res.redirect('/stdList')
 }
 
 
 function updateRecord(req, res) {
    
-   testScore.findOneAndUpdate({ _id: req.body._id}, req.body, { new: true }, (err, doc) => {
+  Student.findOneAndUpdate({ _id: req.body._id}, req.body, { new: true }, (err, doc) => {
        
-        if (!err) { res.redirect('/')
+        if (!err) { res.redirect('/stdList')
         
-         console.log('miau miau score updated')
+         console.log('miau miau student details updated')
            
         }
        
@@ -70,5 +66,7 @@ function updateRecord(req, res) {
                 console.log('Error during score record update : ' + err);
       
         }
+        
     });
+    
 }

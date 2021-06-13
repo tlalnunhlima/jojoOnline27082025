@@ -7,18 +7,43 @@ const Schema = mongoose.Schema
 var uniqueValidator = require('mongoose-unique-validator')
 
 const staffSchema = new Schema({
+    
     username: {
+        
        type: String,
+       
        required: [true, 'Please provide name']
+       
     },
+    
     password: {
+        
         type: String,
+        
         required: [true, 'Please provide password']
+        
     },
+    
+    myDashboard: [{
+       
+       type: String
+        
+    }],
+    
+    hrefLink: [{
+       
+       type: String
+        
+    }],
+     
     datePosted: {
+        
         type: Date,
+        
         default: new Date()
+        
     }
+    
 });
 
 //duplicate checker

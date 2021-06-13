@@ -5,15 +5,21 @@
 
 
 <body class="bg-light">
+  
     <%- include('layouts/navbar') -%>
     
 <main class="container">
-
+  
 <div class="d-flex justify-content-between mt-3 mb-2">
+  
   <h4><%= viewTitle %></h4>
+  
   <% if(loggedIn) { %>
+  
   <a class="btn  btn-warning btn-sm" href="/auth/registerStaff"><i class="fa fa-plus"></i> Add New Student</a>
+  
   <% } %>
+  
 </div>
 
 <table class="table table-hover border bg-white  text-center shadow-sm">

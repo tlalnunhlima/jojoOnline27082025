@@ -1,12 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   
 <%- include('layouts/headers') -%>
+
 <style>
+
   body {
+    
   padding-top: 20px;
+  
   background-color: #f5f5f5;
+  
 }
+
 </style>
 
 
@@ -21,7 +27,7 @@
       
   <h5> <%= viewTitle -%></h5>
   
-  <a class="btn btn-warning btn-sm" href="/"><i class="fa fa-database"></i> View All Student</a>
+  <a class="btn btn-warning btn-sm" href="/stdList"><i class="fa fa-database"></i> View All Student</a>
   
 </div>
 
@@ -46,40 +52,53 @@
    <div class="row g-2">
                                 
     <div class="form-floating mb-2">
-      <input type="text" class="form-control pl-3" id="floatingRegn" placeholder="regn" name="regn" maxlength="3" value="<%= regn %>" required>
-      <label for="floatingRegn">Regn No.</label>
-    </div>
-    
-    <div class="form-floating mb-2 col-md">
-      <input type="text" class="form-control" id="floatingName" placeholder="name" name="name" maxlength="30" value="<%= name %>" required>
-      <label for="floatingName">Name</label>
-    </div>
-    
-  
-    
       
+      <input type="text" class="form-control pl-3" id="floatingRegn" placeholder="regn" name="regn" maxlength="3" required>
+      
+      <label for="floatingRegn">Regn No.</label>
+      
+    </div>
+    
     <div class="form-floating mb-2 col-md">
-      <input type="text" class="form-control" id="floatingFname" placeholder="fname" name="fname" maxlength="30" value="<%= fname %>" required>
-      <label for="floatingFname">Father's Name</label>
+      
+      <input type="text" class="form-control" id="floatingUsername" placeholder="username" name="username" maxlength="30" required>
+      
+      <label for="floatingUserame">Name</label>
+      
     </div>
-    <div class="form-floating mb-2 col-12">
-      <input type="text" class="form-control" id="floatingAddress" placeholder="address" name="address" maxlength="60" value="<%= address %>" required>
-      <label for="floatingAddress">Address</label>
-    </div>
-    
   
+    <div class="form-floating mb-2 col-md">
+      
+      <input type="text" class="form-control" id="floatingFname" placeholder="fname" name="fname" maxlength="30" required>
+      
+      <label for="floatingFname">Father's Name</label>
+      
+    </div>
+    
+    <div class="form-floating mb-2 col-12">
+      
+      <input type="text" class="form-control" id="floatingAddress" placeholder="address" name="address" maxlength="60" required>
+      
+      <label for="floatingAddress">Address</label>
+      
+    </div>
     
     <div class="form-floating mb-2 col-md-6">
-      <input type="text" class="form-control" id="floatingPhone" placeholder="phone" name="phone" maxlength="10" value="<%= phone %>" required>
+      
+      <input type="text" class="form-control" id="floatingPhone" placeholder="phone" name="phone" minlength="10" maxlength="10" required>
+      
       <label for="floatingPhone">Phone</label>
+      
     </div>
+    
     <div class="form-floating mb-2 col-md-6">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="password" name="password" value="<%= password %>" required>
-      <label for="floatingPassword">Password</label>
+      
+      <input type="date" class="form-control" id="floatingDate" placeholder="DOB" name="dob" required>
+      
+      <label for="floatingDate">Date of Birth</label>
+      
     </div>
     
-    
-
 </div>
     
     <button class="btn btn-lg btn-primary" type="submit">Register</button>

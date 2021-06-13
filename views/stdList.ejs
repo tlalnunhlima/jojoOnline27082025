@@ -10,8 +10,9 @@
     <%- include('layouts/navbar') -%>
     
 <main class="container">
+  
 
-    <div class="d-flex justify-content-between mt-3 mb-2">
+    <div class="d-flex justify-content-between mt-4 mb-2">
       
       <h4><%= viewTitle %> </h4>
       
@@ -39,13 +40,13 @@
       <% for(var i=0; i < students.length; i++) { %>
     <tr>
       <th><%= students[i].regn %></th>
-      <td><%= students[i].name %></td>
+      <td><%= students[i].username %></td>
       <td><%= students[i].fname %></td>
       <td><%= students[i].address %></td>
       <td><%= students[i].phone %></td>
       <td>
-        <a href="/register/<%= students[i]._id %>"><i class="fas fa-edit border p-1 text-muted rounded"></i></a> 
-        <a href="/stdList/delete/<%= students[i]._id %>" onclick="return confirm('Are you sure to delete ' + '<%= students[i].name %>' +' record ?');"><i class="fas fa-trash-alt border p-1 text-muted rounded" aria-hidden="true"></i></a></td>
+        <a href="/editStudent/<%= students[i]._id %>"><i class="fas fa-edit border p-1 text-muted rounded"></i></a> 
+        <a href="/stdList/delete/<%= students[i]._id %>" onclick="return confirm('Are you sure to delete ' + '<%= students[i].username %>' +' record ?');"><i class="fas fa-trash-alt border p-1 text-muted rounded" aria-hidden="true"></i></a></td>
     </tr>
     <% } %>
   </tbody>

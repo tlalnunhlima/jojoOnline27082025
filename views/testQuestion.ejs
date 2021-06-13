@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  
+<%- include('layouts/headers') -%>
+
+
+<body class="bg-light">
+    
+    <%- include('layouts/navbar') -%>
+    
+<main class="container">
+  
+  <div class="d-flex justify-content-between mt-3 fw-bold">
+      
+	  <p><u> Assignment </u></p>
+	  
+	  <p><u> Fundamental of Computer (DCA-101) </u></p>
+	  
+	  <a class="btn btn-outline-warning" href="#"><i class="fa fa-database"></i> View All Assignment</a>
+  
+  </div>
+
+
+
+  <form action="/users/register" method="POST" autocomplete="off">
+
+  <input type="hidden" name="_id" aria-hidden="true">
+    
+   
+   <article class="question single-question question-type-normal">
+						
+		<p>
+			
+			<div class="question-number mt-3 fw-normal">1.
+						
+			<span class="question-main"><%= questions[0].q %></span>
+			
+			</div>			
+		
+		</p>
+
+			<div class="question-inner">
+
+				<div class="form-style form-style-3">
+					
+					<div class="form-inputs clearfix question-options d-flex justify-content-between">
+                  	
+						<p>
+							
+							<label class="color " for="dca1010101">a) </label>
+                       
+                    		<input type="radio" name="jojo-radio-dca1010101" id="dca1010101">
+											
+							<label for="dca1010101"><%= questions[0].options[0] %></label>
+							
+										
+						</p>
+						
+						<p>
+							
+							<label for="dca1010102">b) </label>
+							
+                    		<input type="radio" name="jojo-radio-dca1010101" id="dca1010102">
+                    		
+                    		<label for="dca1010102"><%= questions[0].options[1] %></label>
+										
+						</p>
+						
+						<p>
+							
+							<label for="dca1010103">c) </label>
+                      
+                    		<input type="radio" name="jojo-radio-dca1010101" id="dca1010103">
+							
+							<label for="dca1010103"><%= questions[0].options[2] %></label>
+										
+						</p>
+                    										
+                    	
+                    										
+                    	<p>
+											
+							<label for="dca1010104">d) </label>
+							
+                    		<input type="radio" name="jojo-radio-dca1010101" id="dca1010104">
+							
+							<label for="dca1010104"><%= questions[0].options[3] %></label>
+										
+						</p>
+                    	
+               
+						<p class="hidden">
+                            
+                            <input type="hidden" id="answer_2022" value="3" />
+                                        
+                        </p>
+						
+					</div>
+			</div>
+			
+		</div>
+
+    </article>
+    
+    <article class="question single-question question-type-normal">
+						
+		<p>
+			
+			<div class="question-number mt-3 fw-normal">2.
+						
+			<span class="question-main" ><%= questions[1].q %></span>
+			
+			</div>			
+		
+		</p>
+
+			<div class="question-inner">
+
+				<div class="form-style form-style-3">
+					
+					<div class="form-inputs clearfix question-options d-flex justify-content-between">
+                  	
+						<p>
+							
+							<label class="color " for="dca1010102a">a) </label>
+                       
+                    		<input type="radio" name="jojo-radio-dca1010102" id="dca1010102a">
+											
+							<label for="dca1010102a"><%= questions[1].options[0] %></label>
+							
+										
+						</p>
+						
+						<p>
+							
+							<label for="dca1010102b">b) </label>
+							
+                    		<input type="radio" name="jojo-radio-dca1010102" id="dca1010102b">
+                    		
+                    		<label for="dca1010102b"><%= questions[1].options[1] %></label>
+										
+						</p>
+						
+						<p>
+							
+							<label for="dca1010102c">c) </label>
+                      
+                    		<input type="radio" name="jojo-radio-dca1010102" id="dca1010102c">
+							
+							<label for="dca1010102c"><%= questions[1].options[2] %></label>
+										
+						</p>
+                    										
+                    	
+                    										
+                    	<p>
+											
+							<label for="dca1010102d">d) </label>
+							
+                    		<input type="radio" name="jojo-radio-dca1010102" id="dca1010102d">
+							
+							<label for="dca1010102d"><%= questions[1].options[3] %></label>
+										
+						</p>
+                    	
+               
+						<p class="hidden">
+                            
+                            <input type="hidden" id="answer_2022" value="3" />
+                                        
+                        </p>
+						
+					</div>
+			</div>
+			
+		</div>
+
+    </article>
+    
+    <article class="question single-question question-type-normal">
+						
+		<p>
+			
+			<div class="question-number mt-3 fw-normal">3.
+						
+			<span class="question-main"><%= questions[2].q %></span>
+			
+			</div>			
+		
+		</p>
+
+			<div class="question-inner">
+
+				<div class="form-style form-style-3">
+					
+					<div class="form-inputs clearfix question-options d-flex justify-content-between">
+                  	
+						<p>
+							
+							<label class="color " for="dca1010103a">a) </label>
+                       
+                    		<input type="radio" name="jojo-radio-dca1010103" id="dca1010103a">
+											
+							<label for="dca1010103a"><%= questions[2].options[0] %></label>
+							
+										
+						</p>
+						
+						<p>
+							
+							<label for="dca1010103b">b) </label>
+							
+                    		<input type="radio" name="jojo-radio-dca1010103" id="dca1010103b">
+                    		
+                    		<label for="dca1010103b"><%= questions[2].options[1] %></label>
+										
+						</p>
+						
+						<p>
+							
+							<label for="dca1010103c">c) </label>
+                      
+                    		<input type="radio" name="jojo-radio-dca1010103" id="dca1010103c">
+							
+							<label for="dca1010103c"><%= questions[2].options[2] %></label>
+										
+						</p>
+                    										
+                    	
+                    										
+                    	<p>
+											
+							<label for="dca1010103d">d) </label>
+							
+                    		<input type="radio" name="jojo-radio-dca1010103" id="dca1010103d">
+							
+							<label for="dca1010103d"><%= questions[2].options[3] %></label>
+										
+						</p>
+                    	
+               
+						<p class="hidden">
+                            
+                            <input type="hidden" id="answer_2022" value="3" />
+                                        
+                        </p>
+						
+					</div>
+			</div>
+			
+		</div>
+
+    </article>
+    
+    <article class="question single-question question-type-normal">
+						
+		<p>
+			
+			<div class="question-number mt-3 fw-normal">4.
+						
+			<span class="question-main"><%= questions[3].q %></span>
+			
+			</div>			
+		
+		</p>
+
+			<div class="question-inner">
+
+				<div class="form-style form-style-3">
+					
+					<div class="form-inputs clearfix question-options d-flex justify-content-between">
+                  	
+						<p>
+							
+							<label class="color " for="dca1010104a">a) </label>
+                       
+                    		<input type="radio" name="jojo-radio-dca1010104" id="dca1010104a">
+											
+							<label for="dca1010104a"><%= questions[3].options[0] %></label>
+							
+										
+						</p>
+						
+						<p>
+							
+							<label for="dca1010104b">b) </label>
+							
+                    		<input type="radio" name="jojo-radio-dca1010104" id="dca1010104b">
+                    		
+                    		<label for="dca1010104b"><%= questions[3].options[1] %></label>
+										
+						</p>
+						
+						<p>
+							
+							<label for="dca1010104c">c) </label>
+                      
+                    		<input type="radio" name="jojo-radio-dca1010104" id="dca1010104c">
+							
+							<label for="dca1010104c"><%= questions[3].options[2] %></label>
+										
+						</p>
+                    										
+                    	
+                    										
+                    	<p>
+											
+							<label for="dca1010104d">d) </label>
+							
+                    		<input type="radio" name="jojo-radio-dca1010104" id="dca1010104d">
+							
+							<label for="dca1010104d"><%= questions[3].options[3] %></label>
+										
+						</p>
+                    	
+               
+						<p class="hidden">
+                            
+                            <input type="hidden" id="answer_2022" value="3" />
+                                        
+                        </p>
+						
+					</div>
+			</div>
+			
+		</div>
+
+    </article>
+   
+  
+			   <div class="d-flex justify-content-center p-3">
+			    
+			    <button class="btn btn-primary" type="submit">Submit</button>
+			    
+			   </div> 
+			  
+			  </form>
+			  
+			</main>
+
+    
+
+  <%- include('layouts/scripts') -%>
+  
+    
+  </body>
+  
+</html>
