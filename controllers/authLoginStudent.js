@@ -20,6 +20,8 @@ module.exports = (req, res) => {
                     
                     req.session.username = std.username,
                     
+                    req.session.studentIdentity = std.studentIdentity,
+                    
                     req.session.myDashboard1 = std.myDashboard[0],
                     
                     req.session.myDashboard2 = std.myDashboard[1],

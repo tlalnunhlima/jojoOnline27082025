@@ -22,6 +22,8 @@ function insertRecord(req, res) {
       
       regn: req.body.regn,
       
+      studentIdentity: 'computerStudent',
+      
       username: req.body.username,
       
       fname: req.body.fname,

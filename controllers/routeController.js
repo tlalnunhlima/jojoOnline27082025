@@ -67,14 +67,15 @@ router.get('/', (req, res) => {
 
 
 
-//student list
+//student list for admin only view
 router.get('/stdList', async (req, res) => {
     
     const students = await Student.find({})
     
-    if(req.session.userId) {
     
-       return res.render('stdList', {
+   if(req.session.adminIdentity) {
+    
+          return res.render('stdList', {
             
             viewTitle: 'Student List',
             
@@ -97,7 +98,7 @@ router.get('/stdList', async (req, res) => {
             students
         })
         
-    }
+        }
     
     res.redirect('/')
 });
@@ -191,9 +192,9 @@ router.get('/std/login', (req, res) => {
 //student dashboard
 router.get('/all/stdDashboard', (req, res) => {
     
-    console.log(req.session)
+    console.log(req.session.username)
     
-    if(req.session.userId) {
+    if(req.session.studentIdentity) {
         
        return res.render('stdDashboard', {
             
@@ -217,7 +218,7 @@ router.get('/all/stdDashboard', (req, res) => {
         
     }
         
-        res.render('studentLogin')
+        res.redirect('/')
     
 }) 
     

@@ -16,6 +16,12 @@ const UserSchema = new Schema({
         
     },
     
+    studentIdentity: {
+        
+       type: String
+       
+    },
+    
     username: {
         
        type: String,

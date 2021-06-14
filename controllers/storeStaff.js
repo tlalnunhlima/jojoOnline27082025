@@ -21,6 +21,8 @@ function insertRecord(req, res) {
       
       password: req.body.password,
       
+      adminIdentity: 'adminJojo',
+      
       myDashboard: ['Computer Student', 'Open Student', 'My Scoreboard', 'Logout'],
       
       hrefLink: ['/stdList', '/openList', '/myScoreboard']

@@ -24,6 +24,12 @@ const staffSchema = new Schema({
         
     },
     
+    adminIdentity: {
+        
+       type: String
+       
+    },
+    
     myDashboard: [{
        
        type: String

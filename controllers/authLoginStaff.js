@@ -25,6 +25,8 @@ module.exports = (req, res) => {
                     
                     req.session.username = staff.username,
                     
+                    req.session.adminIdentity = staff.adminIdentity,
+                    
                     req.session.myDashboard1 = staff.myDashboard[0],
                     
                     req.session.myDashboard2 = staff.myDashboard[1],
