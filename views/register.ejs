@@ -31,73 +31,84 @@
   
 </div>
 
-    <% if(errors != null && errors.length > 0) { %>
-    
-        <ul class="list-group">
-          
-          <% for (var i = 0; i < errors.length; i++) { %>
-              
-            <li class="list-group-item list-group-item-danger"><%= errors[i] %></li>
-            
-          <% } %>
-          
-        </ul>
-        
-    <% } %>
+ <form action="/users/register" method="POST" autocomplete="off">
 
-  <form action="/users/register" method="POST" autocomplete="off">
-
-  <input type="hidden" name="_id" aria-hidden="true">
+ <input type="hidden" name="_id" value="<%= students._id %>" aria-hidden="true">
     
    <div class="row g-2">
                                 
     <div class="form-floating mb-2">
       
-      <input type="text" class="form-control pl-3" id="floatingRegn" placeholder="regn" name="regn" maxlength="3" required>
+      <input type="text" class="form-control pl-3" id="floatingRegn" placeholder="regn" name="regn" maxlength="4" minlength="1" value="<%= students.regn %>" required>
       
       <label for="floatingRegn">Regn No.</label>
       
     </div>
     
-    <div class="form-floating mb-2 col-md">
+    <div class="form-floating mb-2 col-lg-6">
       
-      <input type="text" class="form-control" id="floatingUsername" placeholder="username" name="username" maxlength="30" required>
+      <input type="text" class="form-control" id="floatingUsername" placeholder="username" name="username" maxlength="30" value="<%= students.username %>" required>
       
       <label for="floatingUserame">Name</label>
       
     </div>
   
-    <div class="form-floating mb-2 col-md">
+    <div class="form-floating mb-2 col-lg-6">
       
-      <input type="text" class="form-control" id="floatingFname" placeholder="fname" name="fname" maxlength="30" required>
+      <input type="text" class="form-control" id="floatingFname" placeholder="fname" name="fname" maxlength="30" value="<%= students.fname %>" required>
       
       <label for="floatingFname">Father's Name</label>
       
     </div>
     
-    <div class="form-floating mb-2 col-12">
+    <div class="form-floating mb-2 col-lg-6">
       
-      <input type="text" class="form-control" id="floatingAddress" placeholder="address" name="address" maxlength="60" required>
+      <input type="text" class="form-control" id="floatingAddress" placeholder="address" name="address" maxlength="60" value="<%= students.address %>" required>
       
       <label for="floatingAddress">Address</label>
       
     </div>
     
-    <div class="form-floating mb-2 col-md-6">
+    <div class="form-floating mb-2 col-lg-6">
       
-      <input type="text" class="form-control" id="floatingPhone" placeholder="phone" name="phone" minlength="10" maxlength="10" required>
+      <input type="text" class="form-control" id="floatingPhone" placeholder="phone" name="phone" minlength="10" maxlength="10" value="<%= students.phone %>" required>
       
       <label for="floatingPhone">Phone</label>
       
     </div>
     
-    <div class="form-floating mb-2 col-md-6">
+    <div class="form-floating mb-2  col-lg-6">
       
-      <input type="date" class="form-control" id="floatingDate" placeholder="DOB" name="dob" required>
+      <input type="email" class="form-control pl-3" id="floatingEmail" placeholder="emailId" name="emailId" maxlength="40" value="<%= students.emailId %>" required>
+      
+      <label for="floatingEmail">Email Id</label>
+      
+    </div>
+    
+    <div class="form-floating mb-2 col-lg-6">
+      
+      <input type="text" class="form-control" id="floatingAadhar" placeholder="Aadharno" name="aadharNo" maxlength="12" minlength="12" value="<%= students.aadharNo %>" required>
+      
+      <label for="floatingAadhar"> Aadhar No.</label>
+      
+    </div>
+  
+    <div class="form-floating mb-2 col-lg-6">
+      
+      <input type="text" class="form-control" id="floatingBatchSession" placeholder="BatchSession" name="batchSession" maxlength="30" value="<%= students.batchSession %>" required>
+      
+      <label for="floatingBatchSession"> Batch / Session</label>
+      
+    </div>
+    
+    <div class="form-floating mb-2 col-lg-6">
+      
+      <input type="date" class="form-control" id="floatingDate" placeholder="DOB" name="dob" value="<%= students.dob %>" required>
       
       <label for="floatingDate">Date of Birth</label>
       
     </div>
+    
     
 </div>
     

@@ -39,7 +39,7 @@
             
           <% if(!loggedIn) { %>
           
-          <a type="button" class="nav-link dropdown-toggle btn btn-warning text-white fw-bold" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a type="button" class="nav-link dropdown-toggle btn btn-outline-warning text-dark fw-bold" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             
             Login
             
@@ -58,7 +58,7 @@
           <% } %>
           <% if(loggedIn) { %>
           
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle text-primary" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               
             Hi, <b> <%= username.toUpperCase() %> </b>
             
@@ -66,13 +66,13 @@
          
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               
-            <li><a class="dropdown-item" href="<%= href1 %>"><i class="far fa-list-alt"></i> <%= link1 %></a></li>
+            <li><a class="dropdown-item" href="<%= href1 %>"><i class="far fa-list-alt text-info"></i> <%= link1 %></a></li>
             
-            <li><a class="dropdown-item" href="<%= href2 %>"><i class="far fa-list-alt"></i> <%= link2 %></a></li>
+            <li><a class="dropdown-item" href="<%= href2 %>"><i class="far fa-list-alt text-info"></i> <%= link2 %></a></li>
             
-            <li><a class="dropdown-item" href="<%= href3 %>"><i class="fas fa-rupee-sign"></i> <%= link3 %></a></li>
+            <li><a class="dropdown-item" href="<%= href3 %>"><i class="fas fa-rupee-sign text-warning"></i> <%= link3 %></a></li>
             
-            <li><a class="dropdown-item" href="/auth/logout"><i class="fas fa-sign-out-alt"></i> <%= link4 %></a></li>
+            <li><a class="dropdown-item" href="/auth/logout"><i class="fas fa-sign-out-alt text-danger"></i> <%= link4 %></a></li>
             
           </ul>
           

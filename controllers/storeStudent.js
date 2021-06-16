@@ -34,6 +34,12 @@ function insertRecord(req, res) {
       
       dob: req.body.dob,
       
+      emailId: req.body.emailId,
+      
+      aadharNo: req.body.aadharNo,
+      
+      batchSession: req.body.batchSession,
+      
       staffid: req.session.userId,
       
       myDashboard: ['My Dashboard', 'My Scoreboard', 'My Fee Details', 'Logout'],

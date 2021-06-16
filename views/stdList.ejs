@@ -9,6 +9,8 @@
     
     <%- include('layouts/navbar') -%>
     
+    <%- include ('ejsFunction') %> <!--function javascript ejs-->
+    
 <main class="container">
   
 
@@ -37,18 +39,49 @@
   </thead>
   
   <tbody>
+    
       <% for(var i=0; i < students.length; i++) { %>
+      
     <tr>
+      
       <th><%= students[i].regn %></th>
-      <td><%= students[i].username %></td>
-      <td><%= students[i].fname %></td>
-      <td><%= students[i].address %></td>
-      <td><%= students[i].phone %></td>
+      
       <td>
-        <a href="/editStudent/<%= students[i]._id %>"><i class="fas fa-edit border p-1 text-muted rounded"></i></a> 
-        <a href="/stdList/delete/<%= students[i]._id %>" onclick="return confirm('Are you sure to delete ' + '<%= students[i].username %>' +' record ?');"><i class="fas fa-trash-alt border p-1 text-muted rounded" aria-hidden="true"></i></a></td>
+        
+        <a href="/computer/<%= students[i]._id %>">
+          
+          <%= capitalizeFirstLetter(students[i].username) %>
+          
+        </a>
+        
+      </td>
+      
+      <td><%= capitalizeFirstLetter(students[i].fname) %></td>
+      
+      <td><%= capitalizeFirstLetter(students[i].address) %></td>
+      
+      <td><%= students[i].phone %></td>
+      
+      <td>
+        
+        <a href="/editStudent/<%= students[i]._id %>">
+          
+          <i class="fas fa-edit border p-1 text-muted rounded me-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"></i>
+          
+        </a>
+        
+        <a href="/stdList/delete/<%= students[i]._id %>" onclick="return confirm('Are you sure to delete ' + '<%= students[i].username %>' +' record ?');">
+          
+          <i class="fas fa-trash-alt border p-1 text-muted rounded" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete" aria-hidden="true"></i>
+          
+        </a>
+          
+      </td>
+      
     </tr>
+    
     <% } %>
+    
   </tbody>
   
 </table>

@@ -54,6 +54,24 @@ const UserSchema = new Schema({
         
     },
     
+    emailId: {
+        
+        type: String
+        
+    },
+    
+    aadharNo: {
+        
+        type: String
+        
+    },
+    
+    batchSession: {
+        
+        type: String
+
+    },
+    
     dob: {
         
         type: String,
@@ -61,7 +79,7 @@ const UserSchema = new Schema({
         required: [true, 'Please provide DOB']
         
     },
-    
+   
     staffid: {
         
         type: Schema.Types.ObjectId,
@@ -83,8 +101,6 @@ const UserSchema = new Schema({
        type: String
         
     }],
-    
-    
     
     datePosted: {
         

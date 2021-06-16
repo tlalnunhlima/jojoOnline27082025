@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<%- include('layouts/headers') -%>
+
+<style>
+
+  body {
+    
+  padding-top: 20px;
+  
+  background-color: #f5f5f5;
+  
+}
+
+</style>
+
+
+<body class="text-center">
+ 
+ <a href="/"><img class="mb-3" src="/img/icon.png" alt="" width="72" height="57"></a>
+ 
+ 
+<main class="form-register">
+  
+  <div class="d-flex justify-content-between mb-3">
+      
+  <h5> <%= viewTitle -%></h5>
+  
+  <a class="btn btn-warning btn-sm" href="/stdList"><i class="fa fa-database"></i> View All Student</a>
+  
+</div>
+
+
+  <form action="/users/register" method="POST" autocomplete="off">
+
+  <input type="hidden" name="_id" aria-hidden="true">
+    
+   <div class="row g-2">
+                                
+    <div class="form-floating mb-2">
+      
+      <input type="email" class="form-control pl-3" id="floatingEmail" placeholder="email" name="email" maxlength="40" required>
+      
+      <label for="floatingEmail">Email Id</label>
+      
+    </div>
+    
+    <div class="form-floating mb-2 col-md">
+      
+      <input type="text" class="form-control" id="floatingAadhar" placeholder="Aadharno" name="aadharno" maxlength="12" minlength="12" required>
+      
+      <label for="floatingAadhar"> Aadhar No.</label>
+      
+    </div>
+  
+    <div class="form-floating mb-2 col-md">
+      
+      <input type="text" class="form-control" id="floatingBatchSession" placeholder="BatchSession" name="batchSession" maxlength="30" required>
+      
+      <label for="floatingBatchSession"> Batch / Session</label>
+      
+    </div>
+    
+    <div class="form-floating mb-2 col-12">
+      
+      <input type="date" class="form-control" id="floatingDOA" placeholder="doa" name="doa" required>
+      
+      <label for="floatingDOA">Date of Admission</label>
+      
+    </div>
+    
+</div>
+    
+    <button class="btn btn-lg btn-primary" type="submit">Update</button>
+    
+    <p class="mt-3 small"><span class="text-muted ">&copy; 2018<script>new Date().getFullYear()>2018&&document.write("-"+new Date().getFullYear());</script>, Jojo Computer Institute.</span></p>
+  
+  </form>
+  
+</main>
+
+    
+    <%- include('layouts/scripts') %>
+  </body>
+  
+</html>

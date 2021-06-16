@@ -104,33 +104,19 @@ router.get('/stdList', async (req, res) => {
 });
 
 //new student register form
-router.get('/register', (req, res) => {
+router.get('/register', async (req, res) => {
     
-    var regn = ""
-    var username = ""
-    var fname = ""
-    var address = ""
-    var phone = ""
-    var dob = ""
+    const students = await Student.find({})
     
-    const data = req.flash('data')[0];
-    
-    if(typeof data != 'undefined') {
-        regn = data.regn
-        username = data.username
-        fname = data.fname
-        address = data.address
-        phone = data.phone
-        dob = data.dob
-    }
-    
-    if(req.session.userId){
+    if(req.session.adminIdentity){
         
           return res.render('register', {
 
             viewTitle: 'Register new student here',
             
             errors: req.flash('validationErrors'),
+            
+            students: req.body
             
         })
     } 
@@ -145,15 +131,15 @@ router.post('/auth/login', require('../controllers/authLoginStudent'))
 
 
 //edit student details
-router.get('/editStudent/:id', (req, res) => {
+router.get('/editStudent/:id', async (req, res) => {
     
-    if(req.session.userId) {
+    if(req.session.adminIdentity) {
     
-    Student.findById(req.params.id, (err, doc) =>{
+   await Student.findById(req.params.id, (err, doc) =>{
        
        if(!err) {
         
-           res.render('editRegister', {
+           return res.render('register', {
        
             viewTitle: 'Update student detail:',
             
@@ -323,6 +309,88 @@ router.get('/student/test', (req, res) => {
 })
 
 //assignment question end ============================
+
+
+
+
+
+
+
+
+//student page admin only view====
+
+router.get('/computer/:id', async (req, res) => {
+    
+    if(req.session.adminIdentity) {
+    
+    await Student.findById(req.params.id, (err, doc) =>{
+       
+       if(!err) {
+        
+            res.render('studentPage', {
+       
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+           
+            students: doc
+                
+            
+                })
+                
+                return;
+            }
+            
+        })
+        
+        return;
+        
+    }
+
+        res.redirect('/stdList')
+    
+})
+
+
+
+//go to form to update student info
+router.get('/computer/:id/updateInfo', async (req, res) => {
+    
+    if(req.session.adminIdentity) {
+    
+    await Student.findById(req.params.id, (err, doc) =>{
+       
+       if(!err) {
+        
+           return res.render('addStdInfo', {
+               
+            viewTitle: 'Update Student Info',
+       
+            students: doc
+                
+                })
+            }
+            
+        })
+        
+    }
+
+        res.redirect('/computer/:id')
+    
+})
+
 
 
 router.use((req, res) => res.render('notFoundPage'))
