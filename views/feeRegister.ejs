@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  
+<%- include('layouts/headers') -%>
+
+<%- include('ejsFunction') -%>
+
+<style>
+
+body {
+    
+  padding-top: 10px;
+  
+  background-color: #f5f5f5;
+  
+}
+
+</style>
+
+<body class="text-center">
+
+<main class="container">
+  
+                <div class="d-flex justify-content-around mb-2">
+ 
+                <a href="/"><img src="/img/icon.png" alt="" width="72" height="57"></a>
+
+              </div>
+
+ <form action="/users/feeRegister" method="POST" autocomplete="off" class="border rounded bg-white shadow p-3">
+
+ <input type="hidden" name="_id" value="<%= students._id %>" aria-hidden="true">
+
+<table class="table table-borderless w-50">
+  
+  <div class="d-flex justify-content-around border-bottom mb-2">
+  
+    <div class="lead text-muted mb-3">  <%= viewTitle -%> </div>
+    
+    <div> <a href="/stdList" class="fw-light text-muted"><i class="fa fa-database"></i> view students</a></div>
+  
+  </div>
+  
+  <tbody>
+    
+    <tr class="border-bottom">
+      
+      <th scope="row" style="width: 200px; height: 50px" class="text-start ps-3"> Name of Student</th>
+      
+      <td class="text-start text-primary" style="width: 200px"> <a href="/computer/<%= students._id %>"><%= capitalizeFirstLetter(students.username) %></a></td>
+      
+    </tr>
+    
+    <tr class="border-bottom">
+      
+      <th scope="row" style="width: 200px" class="text-start ps-3"> Narration</th>
+      
+      <td class="text-start text-primary" style="width: 200px"> 
+      
+      <select id="narrationInput" name="narrationInput" class="form-select" aria-label="Default select"  required>
+                            
+         <option value="">Click here...</option>
+                            
+             <option value="By Cash">By Cash</option>
+             
+             <option value="By Bank">By Bank </option>
+                            
+      </select>
+      
+      </td>
+      
+    </tr>
+      
+    </tr>
+    
+    <tr class="border-bottom">
+      
+      <th scope="row" style="width: 200px" class="text-start ps-3"> Amount (in Rs.)</th>
+      
+      <td class="text-start text-primary" style="width: 200px"> 
+      
+         <input type="number" class="form-control" id="feeAmount" size="4" placeholder="type amount..." name="feeAmount" maxlength="5" minlength="3" required>
+
+      </td>
+      
+    </tr>
+    
+    <tr class="border-bottom">
+      
+      <th scope="row" style="width: 200px" class="text-start ps-3"> Date of Payment</th>
+      
+      <td class="text-start text-primary" style="width: 200px"> 
+      
+        <input type="date" class="form-control" id="dateofpayment" placeholder="dateofpayment" name="dateofpayment" required>
+
+      </td>
+ 
+    </tr>
+    
+  </tbody>
+  
+</table>
+       
+          <button class="btn btn-success mt-2" type="submit">Process</button>
+          
+          <p class="mt-3 small"><span class="text-muted ">&copy; 2018<script>new Date().getFullYear()>2018&&document.write("-"+new Date().getFullYear());</script>, Jojo Computer Institute.</span></p>
+        
+        </form>
+        
+      </main>
+
+    <%- include('layouts/scripts') %>
+    
+  </body>
+  
+</html>

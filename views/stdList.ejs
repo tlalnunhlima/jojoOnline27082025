@@ -13,29 +13,59 @@
     
 <main class="container">
   
+   
+   
+          <div class="table-responsive">
+        
+              <table class="table bg-white border mt-1">
+               
+                
+                <tbody>
+                  
+                  <tr>
+                    
+                    
+                    <td><a class="text-dark ms-3 align-middle small float-end border-end pe-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Add New Student" href="/register"><i class="fas fa-user-plus text-success fw-bold"></i> Add Student</a></td>
+                    
+                    <td><a class="text-dark ms-3 align-middle small float-end border-end pe-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Check fee" href="/viewFee"><i class="fas fa-rupee-sign text-danger fw-bold"></i> View Fee</a></td>
+                    
+                    <td><a class="text-dark ms-3 align-middle small float-end border-end pe-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Check fee received" href="/viewAllFeeReceived"><i class="fas fa-rupee-sign text-danger fw-bold"></i> View All Fee </a></td>
+                    
+                    <td><a class="text-dark ms-3 align-middle small float-end border-end pe-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Check Assignment" href="#"><i class="fas fa-book-reader text-info fw-bold"></i> View Assignment</a></td>
+                    
+                  </tr>
+                  
+                </tbody>
+                
+              </table>
+      
+          </div>
+          
+          <p class="lead text-secondary fw-normal"><%= viewTitle %></p>
 
-    <div class="d-flex justify-content-between mt-4 mb-2">
-      
-      <h4><%= viewTitle %> </h4>
-      
-      <% if(loggedIn) { %>
-      
-      <a class="btn  btn-warning btn-sm" href="/register"><i class="fa fa-plus"></i> Add New Student</a>
-      
-      <% } %>
     
-    </div>
-
-<table class="table table-hover border bg-white  text-center shadow-sm">
+<div class="table-responsive">
+  
+<table class="table border bg-light  shadow-sm">
+  
   <thead>
+    
     <tr>
-      <th scope="col">Regn No.</th>
-      <th scope="col">Name</th>
-      <th scope="col">FName</th>
-      <th scope="col">Add</th>
-      <th scope="col">Phone</th>
-      <th scope="col">Action</th>
+      
+      <th scope="col" class="ps-3 fw-normal" style="width: 85px">Regn.</th>
+      
+      <th scope="col" class="fw-normal">Name of Student</th>
+      
+      <th scope="col" class="fw-normal">Father's Name</th>
+      
+      <th scope="col" class="fw-normal">Address</th>
+      
+      <th scope="col" class="fw-normal">Phone No</th>
+      
+      <th scope="col" class="fw-normal">Action</th>
+      
     </tr>
+    
   </thead>
   
   <tbody>
@@ -44,7 +74,7 @@
       
     <tr>
       
-      <th><%= students[i].regn %></th>
+      <th class="text-center" ><%= students[i].regn %></th>
       
       <td>
         
@@ -70,11 +100,7 @@
           
         </a>
         
-        <a href="/stdList/delete/<%= students[i]._id %>" onclick="return confirm('Are you sure to delete ' + '<%= students[i].username %>' +' record ?');">
-          
-          <i class="fas fa-trash-alt border p-1 text-muted rounded" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete" aria-hidden="true"></i>
-          
-        </a>
+        
           
       </td>
       
@@ -86,9 +112,12 @@
   
 </table>
 
+</div>
+
 </main>
     
     <%- include('layouts/scripts') -%>
+    <%- include('layouts/footer') -%>
     
 
 

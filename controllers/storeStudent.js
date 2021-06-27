@@ -1,20 +1,23 @@
 const Student = require('../models/Student')
 
-
 module.exports = async (req, res) => {
   
    if (req.body._id == '') {
      
         insertRecord(req, res);
         
-   }
+   } 
    
-        else {
+    else {
             
         updateRecord(req, res);
         
     }
+    
 }
+
+
+
 
 function insertRecord(req, res) {
    
@@ -40,41 +43,63 @@ function insertRecord(req, res) {
       
       batchSession: req.body.batchSession,
       
+      gender: req.body.gender,
+      
       staffid: req.session.userId,
       
       myDashboard: ['My Dashboard', 'My Scoreboard', 'My Fee Details', 'Logout'],
       
-      hrefLink: ['/all/stdDashboard', '/all/testResult', '/feeDetails']
+      hrefLink: ['/all/stdDashboard', '/all/testResult', '/feeDetails'],
       
-     
+      studentFee: [],
+      
+      studentExamFee: [],
+      
+      totalCourseFee: 9000,
+      
+      feeDiscount: 2000,
+      
+      feeAfterDiscount: 7000
+          
    });
 
-   newStudent.save()
-  
-    .then(() => console.log('meow : student data submitted successfully'))
-    
-    .catch(() => console.log('Problem occurs during data insertion'))
-    
-    res.redirect('/stdList')
+               newStudent.save()
+              
+                .then(() => console.log('meow : student data submitted successfully'))
+                
+                .catch((error) => Object.keys(error.errors).map(key => error.errors[key].message))
+                
+                console.log('Problem occurs during data insertion')
+                
+                
+                
+                res.redirect('/stdList')
 }
 
 
+
+
 function updateRecord(req, res) {
+    
    
   Student.findOneAndUpdate({ _id: req.body._id}, req.body, { new: true }, (err, doc) => {
        
         if (!err) { res.redirect('/stdList')
         
          console.log('miau miau student details updated')
-           
+         
+         console.log(req.body);
+         
         }
        
         else {
       
-                console.log('Error during score record update : ' + err);
+        console.log('Error during student record update : ' + err);
       
         }
         
     });
     
 }
+
+

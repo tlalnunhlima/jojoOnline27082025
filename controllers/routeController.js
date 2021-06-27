@@ -6,6 +6,8 @@ const dcaQuestion = require('../QuestionJs/dca2019101Question')
 
 const express = require('express')
 
+const moment = require('moment')
+
 const router = express.Router();
 
 const expressSession = require('express-session')
@@ -31,7 +33,7 @@ router.use(expressSession({
 
 router.use('*', (req, res, next) => {
     
-    loggedIn = req.session.userId;
+   loggedIn = req.session.userId;
     
     next()
 });
@@ -70,7 +72,7 @@ router.get('/', (req, res) => {
 //student list for admin only view
 router.get('/stdList', async (req, res) => {
     
-    const students = await Student.find({})
+    const students = await Student.find({}).sort({regn : -1});
     
     
    if(req.session.adminIdentity) {
@@ -100,37 +102,459 @@ router.get('/stdList', async (req, res) => {
         
         }
     
-    res.redirect('/')
+    res.redirect('/');
 });
 
+
 //new student register form
-router.get('/register', async (req, res) => {
-    
-    const students = await Student.find({})
+
+router.get('/register', (req, res) => {
     
     if(req.session.adminIdentity){
         
           return res.render('register', {
 
-            viewTitle: 'Register new student here',
+            viewTitle: 'Register Student',
             
             errors: req.flash('validationErrors'),
             
             students: req.body
             
-        })
+        });
     } 
     
-    res.redirect('/auth/loginStaff')
+    res.redirect('/auth/loginStaff');
 });
+
+
+//view all group of fee
+
+router.get('/viewFee',(req, res) => {
+    
+
+if(req.session.adminIdentity) {
+    
+    return res.render('viewFee', {
+                
+            viewTitle: 'All Fee Account',
+       
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            moment: moment
+                
+                });
+                
+            } 
+               
+
+        res.redirect('/stdList');
+    
+});
+
+
+
+//today fee review list for admin only view
+
+router.get('/viewFee/todayFeeReview', async (req, res) => {
+    
+
+            
+            //hei hi vawiin date entirnan 2021-06-26 a ni;  moment().format('YYYY-MM-DD')
+            
+if(req.session.adminIdentity) {
+    
+  await Student.find({$or: [{studentFee : { $elemMatch: {  dateofpayment : moment().format('YYYY-MM-DD')  } } }, 
+  
+  {studentExamFee : { $elemMatch: {  dateofpayment : moment().format('YYYY-MM-DD')  } } },
+  
+  {studentOtherFee : { $elemMatch: {  dateofpayment : moment().format('YYYY-MM-DD')  } } }
+  
+  ] },
+  
+  (err, doc) => {
+      
+      console.log(doc.length);
+      
+      if(!err) {
+          
+            res.render('todayFeeReview', {
+                
+            viewTitle: 'Who paid Fee today',
+       
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+           
+            students: doc,
+            
+            moment: moment
+            
+                
+                });
+                
+                return;
+                
+                
+
+            } else {
+                
+                res.redirect('/stdList');
+                
+            }
+            
+        })
+        .populate('studentFee.verifierId')
+        
+        .populate('studentExamFee.verifierId')
+        
+        .populate('studentOtherFee.verifierId');
+        
+        return;
+        
+            
+    }
+        
+        
+        res.redirect('/stdList');
+    
+});
+
+
+//i want to see all fee received from the student irrespective of timestamp
+
+router.get('/viewFee/viewAllFeeReceived', async (req, res) => {
+    
+
+            const startingDateWithoutTime = moment().format('2021-01-01'); //kumtir hriatna
+            
+            const currentDateWithoutTime = moment().format('YYYY-MM-DD'); //vawiin hriatna
+            
+
+if(req.session.adminIdentity) {
+    
+  await Student.find({studentFee : { $elemMatch: {  dateofpayment : { $gte: startingDateWithoutTime, $lte: currentDateWithoutTime } } } }, (err, doc) => {
+      
+      if(!err) {
+          
+            res.render('viewAllFeeReceived', {
+                
+            viewTitle: 'All account: ',
+       
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+           
+            students: doc,
+            
+            moment: moment
+                
+                });
+                
+                return;
+
+            } else {
+                
+                
+                res.redirect('/stdList');
+                
+            }
+            
+        })
+        .populate('studentFee.verifierId')
+        
+        .populate('studentExamFee.verifierId')
+        
+        .populate('studentOtherFee.verifierId');
+        
+        return;
+        
+    }
+
+        res.redirect('/stdList');
+    
+});
+
+
+//exam fee review list for admin only view
+
+router.get('/viewFee/viewExamFeeReceived', async (req, res) => {
+    
+    
+            const startingDateWithoutTime = moment().format('2021-01-01'); //kumtir hriatna
+            
+            const currentDateWithoutTime = moment().format('YYYY-MM-DD'); //vawiin hriatna
+            
+
+if(req.session.adminIdentity) {
+    
+  await Student.find({studentExamFee : { $elemMatch: {  dateofpayment : { $gte: startingDateWithoutTime, $lte: currentDateWithoutTime } } } }, (err, doc) => {
+      
+      if(!err) {
+          
+            res.render('viewExamFeeReceived', {
+                
+            viewTitle: 'Who paid Exam Fee this Session',
+       
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+           
+            students: doc,
+            
+            moment: moment
+            
+                
+                });
+                
+                return;
+                
+                
+
+            } else {
+                
+                res.redirect('/viewFee');
+                
+            }
+            
+        })
+        .populate('studentFee.verifierId')
+        
+        .populate('studentExamFee.verifierId')
+        
+        .populate('studentOtherFee.verifierId');
+        
+        return;
+        
+            
+    }
+        
+        
+        res.redirect('/viewFee');
+    
+});
+
+
+
+//other fee review list for admin only view
+
+router.get('/viewFee/viewOtherFeeReceived', async (req, res) => {
+    
+    
+            const startingDateWithoutTime = moment().format('2021-01-01'); //kumtir hriatna
+            
+            const currentDateWithoutTime = moment().format('YYYY-MM-DD'); //vawiin hriatna
+            
+
+if(req.session.adminIdentity) {
+    
+  await Student.find({studentOtherFee : { $elemMatch: {  dateofpayment : { $gte: startingDateWithoutTime, $lte: currentDateWithoutTime } } } }, (err, doc) => {
+      
+      if(!err) {
+          
+            res.render('viewOtherFeeReceived', {
+                
+            viewTitle: 'Who paid any other fee this Session',
+       
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+           
+            students: doc,
+            
+            moment: moment
+            
+                
+                });
+                
+                return;
+                
+                
+
+            } else {
+                
+                res.redirect('/viewFee');
+                
+            }
+            
+        })
+        .populate('studentFee.verifierId')
+        
+        .populate('studentExamFee.verifierId')
+        
+        .populate('studentOtherFee.verifierId');
+        
+        return;
+        
+            
+    }
+        
+        
+        res.redirect('/viewFee');
+    
+});
+
+
+//view by selecting date fee review list for admin only view
+
+router.get('/viewFee/viewFeeByDate/:dateofpayment', async (req, res) => {
+    
+
+//req.params.dateofpayment hian a chunga url date hi a search chhuak thei dawn a ni.
+            
+if(req.session.adminIdentity) {
+    
+  await Student.find({$or: [{studentFee : { $elemMatch: {  dateofpayment : { $eq: req.params.dateofpayment }  } } }, 
+  
+  {studentExamFee : { $elemMatch: {  dateofpayment : { $eq: req.params.dateofpayment }  } } },
+  
+  {studentOtherFee : { $elemMatch: {  dateofpayment : { $eq: req.params.dateofpayment }  } } }
+  
+  ] },
+  
+  (err, doc) => {
+      
+
+      if(!err) {
+          
+            res.render('viewFeeByDate', {
+                
+            viewTitle: 'Who pay today',
+       
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+           
+            students: doc,
+            
+            moment: moment
+            
+                
+                });
+                
+                return;
+                
+                
+
+            } else {
+                
+                res.redirect('/stdList');
+                
+            }
+            
+        })
+        .populate('studentFee.verifierId')
+        
+        .populate('studentExamFee.verifierId')
+        
+        .populate('studentOtherFee.verifierId');
+        
+        return;
+        
+            
+    }
+        
+        
+        res.redirect('/stdList');
+    
+});
+
+
+
+
+//ask authorisation to login
+router.post('/auth/login', require('../controllers/authLoginStudent'))
+
 
 //save new student to database
 router.post('/users/register', require('../controllers/storeStudent'))
 
-router.post('/auth/login', require('../controllers/authLoginStudent'))
+//update student fee payment
+router.post('/users/feeRegister', require('../controllers/storeStudentFee'))
+
+//update student exam fee 
+router.post('/users/examFeeRegister', require('../controllers/storeStudentExamFee'))
+
+
+//update student any other fee 
+router.post('/users/otherFeeRegister', require('../controllers/storeStudentOtherFee'))
 
 
 //edit student details
+
 router.get('/editStudent/:id', async (req, res) => {
     
     if(req.session.adminIdentity) {
@@ -294,10 +718,11 @@ router.post('/staff/register', require('../controllers/storeStaff'))
 
 router.post('/authUser/loginStaff', require('../controllers/authLoginStaff'))
 
-// staff section end ============================
 
 
-//assignment question start ============================
+
+
+//erere
 
 router.get('/student/test', (req, res) => {
     
@@ -347,13 +772,15 @@ router.get('/computer/:id', async (req, res) => {
            
             students: doc
                 
-            
                 })
                 
                 return;
             }
             
         })
+        .populate('studentFee.verifierId')
+        .populate('studentExamFee.verifierId')
+        .populate('studentOtherFee.verifierId');
         
         return;
         
@@ -365,35 +792,111 @@ router.get('/computer/:id', async (req, res) => {
 
 
 
-//go to form to update student info
-router.get('/computer/:id/updateInfo', async (req, res) => {
+
+//monthly fee payment form
+
+router.get('/computer/:id/feeRegister', async (req, res) => {
     
-    if(req.session.adminIdentity) {
-    
-    await Student.findById(req.params.id, (err, doc) =>{
+  if(req.session.adminIdentity) {
        
-       if(!err) {
-        
-           return res.render('addStdInfo', {
-               
-            viewTitle: 'Update Student Info',
+       await Student.findById(req.params.id, (err, doc) =>{
+           
+    if(!err) {
+    
+        res.render('feeRegister', {
+                
+            viewTitle: 'Monthly fee statement',
        
             students: doc
-                
-                })
-            }
             
-        })
+                    });
+
+                }
+
+            });
+                
+        return;
         
     }
+            
+        res.redirect('/computer/:id');
+        
+});
 
-        res.redirect('/computer/:id')
+// =========================================
+
+
+//exam fee payment form =========
+
+router.get('/computer/:id/examFeeRegister', async (req, res) => {
     
-})
+  if(req.session.adminIdentity) {
+       
+       await Student.findById(req.params.id, (err, doc) =>{
+           
+    if(!err) {
+    
+        res.render('examFeeRegister', {
+                
+            viewTitle: 'Exam fee statement',
+       
+            students: doc
+            
+                    });
+
+                }
+
+            });
+                
+        return;
+        
+    }
+            
+        res.redirect('/computer/:id');
+        
+});
+// =========================================
+
+
+
+
+
+
+//other fee like backlog any other payment form =====================
+
+router.get('/computer/:id/otherFeeRegister', async (req, res) => {
+    
+  if(req.session.adminIdentity) {
+       
+       await Student.findById(req.params.id, (err, doc) =>{
+           
+    if(!err) {
+    
+        res.render('otherFeeRegister', {
+                
+            viewTitle: 'Other fee statement',
+       
+            students: doc
+            
+                    });
+
+                }
+
+            });
+                
+        return;
+        
+    }
+            
+        res.redirect('/computer/:id');
+        
+});
+// =========================================
+
+
 
 
 
 router.use((req, res) => res.render('notFoundPage'))
 
-          
 module.exports = router;

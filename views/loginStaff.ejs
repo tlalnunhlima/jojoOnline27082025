@@ -1,19 +1,22 @@
 <!DOCTYPE html>
+
 <html lang="en">
   
 <%- include('layouts/headers') -%>
+
 <style>
+
   body {
+    
   padding-top: 20px;
+  
 }
 
 </style>
 
-
 <body class="text-center">
     
 <main class="form-signin">
-  
 
   <form action="/authUser/loginStaff" method="POST" autocomplete="off">
 
@@ -37,15 +40,16 @@
       
     </div>
 
-    <button class="w-100 btn btn-success" type="submit">Staff Login</button>
+    <button class="w-100 btn btn-success fw-bold text-white" type="submit">Staff Login</button>
     
     <p class="mt-3 text-muted"><span class="text-muted ">&copy; 2018<script>new Date().getFullYear()>2018&&document.write("-"+new Date().getFullYear());</script>, Jojo Computer Institute.</span></p>
+  
   </form>
   
 </main>
 
-    
     <%- include('layouts/scripts') %>
+    
   </body>
   
 </html>

@@ -33,10 +33,108 @@ while (num.length > 0) // Loop through string
 
 capitalizeFirstLetter = function(inputName) {
   
-var text = inputName;
-
-return text = text.toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
+          if(inputName != undefined) {
+            
+                var text = inputName;
+          
+                return text = text.toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
+          
+          } else {
+            
+            return inputName;
+            
+          }
 
 }
+
+// for monthly fee started ==================
+
+var amountArray = [];
+
+showTotalAmount = function(inputValue) {
+  
+        amountArray.push(inputValue);
+      
+        var totalPaid = 0;
+  
+        for (var i = 0; i < amountArray.length; i++) {
+      
+           totalPaid = totalPaid + amountArray[i]
+          
+        }
+        
+        return totalPaid;
+
+}
+
+
+
+var balanceArray = [];
+
+showTotalBalance = function(inputValue) {
+  
+        balanceArray.push(inputValue);
+      
+        var totalBalance = 9000;
+  
+        for (var i = 0; i < balanceArray.length; i++) {
+      
+           totalBalance = totalBalance - balanceArray[i];
+           
+          
+        }
+        
+        return totalBalance;
+
+}
+
+// For monthly fee ends ===========================
+
+
+// for exam fee started ==================
+
+var examfeeAmountArray = [];
+
+showTotalExamFeeAmount = function(inputValue) {
+  
+        examfeeAmountArray.push(inputValue);
+      
+        var totalEFPaid = 0;
+  
+        for (var i = 0; i < examfeeAmountArray.length; i++) {
+      
+           totalEFPaid = totalEFPaid + examfeeAmountArray[i]
+          
+        }
+        
+        return totalEFPaid;
+
+}
+
+
+
+var examfeeBalanceArray = [];
+
+showTotalExamFeeBalance = function(inputValue) {
+  
+        examfeeBalanceArray.push(inputValue);
+      
+        var totalEFBalance = 1510;
+  
+        for (var i = 0; i < examfeeBalanceArray.length; i++) {
+      
+           totalEFBalance = totalEFBalance - examfeeBalanceArray[i];
+           
+          
+        }
+        
+        return totalEFBalance;
+
+}
+
+// For exam fee ends ===========================
+
+//============================
+
 
 %>

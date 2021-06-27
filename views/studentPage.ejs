@@ -4,18 +4,13 @@
   
 <%- include('layouts/headers') -%>
 
-
 <body class="bg-light">
     
     <%- include('layouts/navbar') -%>
     
     <%- include ('ejsFunction') %> <!--function javascript ejs-->
     
-
-
     <!-- --------------main container section------------------ -->
-    
-    
 
     <main role="main" class="container p-2 mb-2">
       
@@ -45,38 +40,37 @@
           
           </li>
           
-           
-        
         </ul>
         
-       
-        
         <div class="tab-content" id="myTabContent">
+          
+          <!--profile started-->
             
           <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
           
            <ul class="list-group">
                
-               
-               <table class="table bg-white table-responsive studentTable">
+               <div class="table-responsive ">
+                 
+               <table class="table bg-white studentTable">
                   
                   <tbody>
                       
                     <tr class="text-center">
                         
-                      <th class="p-3" colspan="6"> Basic Details</th>
+                      <th class="p-3 text-secondary" colspan="6"> Basic Details</th>
                       
                     </tr>
                     
                     <tr>
                       
-                      <td class="text-primary" style="width:150px">Name of Student</td>
+                      <td class="text-primary" >Name of Student</td>
                       
                       <td> : </td>
                       
                       <td><%= capitalizeFirstLetter(students.username) %></td>
                       
-                      <td class="text-primary" style="width:150px">Father's Name</td>
+                      <td class="text-primary" >Father's Name</td>
                       
                       <td> : </td>
                       
@@ -85,7 +79,6 @@
                     </tr>
                     
                     <tr>
-                      
                       
                       <td class="text-primary">Present Address</td>
                       
@@ -120,33 +113,34 @@
                   </tbody>
                   
                 </table>
+                
+                </div>
                
-                  
             </ul>
             
             <ul class="list-group pt-2">
-                
-                
+              
+              <div class="table-responsive ">
+
                  <table class="table border bg-white">
                   
                   <tbody>
                       
                     <tr class="text-center">
                         
-                      <th class="p-3" colspan="6"> Other Details <a class="btn  btn-outline-warning btn-sm float-end text-dark" href="/computer/<%= students._id %>/updateInfo"><i class="fa fa-plus fw-bold text-primary"></i> Update Details </a></th>
+                      <th class="p-3 text-secondary" colspan="6"> Other Details </th>
                       
-                      
-                            
                     </tr>
+                    
                     <tr>
                       
-                      <td class="text-primary" style="width:150px"> Email Id</td>
+                      <td class="text-primary" > Email Id</td>
                       
                       <td> : </td>
                       
                       <td> <%= students.emailId === undefined ? 'N/A' : students.emailId %></td>
                       
-                      <td class="text-primary" style="width:150px"> Aadhar No. </td>
+                      <td class="text-primary" > Aadhar No. </td>
                       
                       <td> : </td>
                       
@@ -156,12 +150,11 @@
                     
                     <tr>
                       
-                      
                       <td class="text-primary" >Batch / Session</td>
                       
                       <td> : </td>
                       
-                      <td> <%= students.batchSession === undefined ? 'N/A' : students.batchSession %></td>
+                      <td> <%= students.batchSession === undefined ? 'N/A' : capitalizeFirstLetter(students.batchSession) %></td>
                       
                       <td class="text-primary"> Date of Admission </td>
                       
@@ -170,132 +163,305 @@
                       <td> <%= students.datePosted === undefined  ? 'N/A' : convertDate(students.datePosted) %></td>
                       
                     </tr>
-                    
-                      
-                    </tr>
+        
                     
                   </tbody>
                   
                 </table>
+                
+                </div>
                
             </ul>
 
           </div>
-         
           
-          
-          
+          <!--profile end-->
+ 
+ 
+          <!--fee tab started-->
+ 
           <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            
+            <!--Monthly fee table started-->
+   
+           <ul class="list-group"> 
+        
+              <div class="table-responsive">
+        
+              <table class="table bg-white border-start border-end shadow-sm">
+                
+                   <tbody>
+                     
+                    <tr class="text-center">
+                        
+                      <th class="p-3 text-secondary lead" colspan="6"> Course Fee / Monthly Fee Statement</th>
+                      
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td rowspan="2" class="fw-bold text-muted border align-middle"> Sl. Nos</td>
+                      
+                      <td rowspan="2" class="fw-bold text-muted border align-middle"> Narration </td>
+      
+                      
+                      <td rowspan="2"class="fw-bold text-muted border align-middle"> Amount </td>
+                      
+                      <td rowspan="2" class="fw-bold text-muted border align-middle"> Date of Payment </td>
+                      
+                      <td rowspan="2" class="fw-bold text-muted border align-middle"> Checked/Verified By </td>
+                      
+                       <td colspan="2" class="fw-bold text-muted border text-center align-middle"> Course Fee (Rs. 9,000/-) </td>
+                      
+                    </tr>
+                    
+                    <tr>
+                      
+                        <td class="fw-bold text-muted border text-success">Total Paid</td>
+                        
+                        <td class="fw-bold text-muted border">Balance</td>
+ 
+                      </tr>
+            
+                    
+              <% for (var i=0; i < students.studentFee.length; i++) { %>
               
-           <ul class="list-group">
-               
-               
-               <table class="table bg-white border-e table-responsive studentTable">
-                  
-                  <tbody>
+                        <tr>
+                          
+                          <td class="text-center border" ><%= i + 1 %></td>
+                          
+                          <td class="border fst-italic"> <%= students.studentFee[i].narrationInput %> </td>
+                          
+                          <td class="border">Rs.  <%= students.studentFee[i].feeAmount %> </td>
                       
-                    <tr class="text-center">
+                          <td class="border"><%= convertDate(students.studentFee[i].dateofpayment) %></td>
+                          
+                          <td class="border fst-italic">  <%= capitalizeFirstLetter(students.studentFee[i].verifierId.username) %> </td>
+        
+                          <td class="border text-success">Rs. <%= showTotalAmount(students.studentFee[i].feeAmount)  %></td>
+                          
+                          <td class="border text-danger">Rs. <%= showTotalBalance(students.studentFee[i].feeAmount)  %></td>
+                          
+                          
+                        </tr>
                         
-                      <th class="p-3" colspan="6">Monthly Fee</th>
+                        <% } %>
+                            
+                        <tr>
+                          
+                          <td colspan="6" class="text-end pt-3 pb-3">
+                            
+                          <!--add monthly fee button-->   
                       
-                    </tr>
+                              <a class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enter Fee" href="/computer/<%= students._id %>/feeRegister">
+                                
+                                  <i class="fas fa-edit text-success fw-bold">
+                                    
+                                  </i> 
+                                  
+                                  Add Monthly Fee
+                                
+                                </a>
+                          </td>
+                          
+                        </tr>
+                        
+                      </tbody>
+                      
+                    </table>
                     
-                    <tr>
-                      
-                      <td class="text-primary">1st Month</td>
-                      
-                      <td> : </td>
-                      
-                      <td> Rs. 1500</td>
-                      
-                      <td class="text-primary">2nd Month</td>
-                      
-                      <td> : </td>
-                      
-                      <td>Rs. 1500</td>
-                      
-                    </tr>
-                    
-                    <tr>
-                      
-                      
-                      <td class="text-primary">3rd Month</td>
-                      
-                      <td> : </td>
-                      
-                      <td>Rs. 1500</td>
-                      
-                      <td class="text-primary">4th Month </td>
-                      
-                      <td> : </td>
-                      
-                      <td> Rs. 1500</td>
-                      
-                    </tr>
-                    
-                    <tr>
-                      
-                      <td class="text-primary">5th Month</td>
-                      
-                      <td> : </td>
-                      
-                      <td>Rs. 1500</td>
-                      
-                      <td class="text-primary">6th Month</td>
-                      
-                      <td> : </td>
-                      
-                      <td> Rs. 1500 </td>
-                      
-                    </tr>
-                    
-                  </tbody>
-                  
-                </table>
-               
-                  
-            </ul>
+                    </div>
+            
+            </ul> <!--monthly fee table end-->
             
             
+            
+            <!--Exam fee table started-->
+                    
             <ul class="list-group">
-               
-               
-               <table class="table bg-white border table-responsive studentTable">
-                  
-                  <tbody>
-                      
+              
+              <div class="table-responsive ">
+
+               <table class="table border table-responsive bg-white  shadow-sm">
+                
+                   <tbody>
+                     
                     <tr class="text-center">
                         
-                      <th class="p-3" colspan="6">Exam Fee</th>
+                      <th class="p-3 text-secondary lead" colspan="6"> Exam Fee</th>
                       
                     </tr>
                     
                     <tr>
                       
-                      <td class="text-primary">Amount</td>
+                      <td rowspan="2" class="fw-bold text-muted border align-middle" class="ps-3" style="width: 85px"> Sl. Nos</td>
                       
-                      <td> : </td>
+                      <td rowspan="2" class="fw-bold text-muted border align-middle"> Narration </td>
+      
+                      <td rowspan="2"class="fw-bold text-muted border align-middle"> Amount </td>
                       
-                      <td>Rs. 1500</td>
+                      <td rowspan="2" class="fw-bold text-muted border align-middle"> Date of Payment </td>
                       
-                      <td class="text-primary">Date of Payment</td>
+                      <td rowspan="2" class="fw-bold text-muted border align-middle"> Checked/Verified By </td>
                       
-                      <td> : </td>
-                      
-                      <td> 01/01/2021</td>
+                       <td colspan="2" class="fw-bold text-muted border text-center align-middle"> Exam Fee (Rs. 1,510/-) </td>
                       
                     </tr>
                     
-                  </tbody>
-                  
-                </table>
-                  
-            </ul>
+                     <tr>
+                      
+                        <td class="fw-bold text-muted border text-success">Total Paid</td>
+                        
+                        <td class="fw-bold text-muted border">Balance</td>
+                        
+                      </tr>
+              
+            
+            <% for (var i=0; i < students.studentExamFee.length; i++) { %>
+              
+                      
+              
+                        <tr>
+                          
+                          <td class="text-center border" ><%= i + 1 %></td>
+                          
+                          <td class="border fst-italic"> <%= students.studentExamFee[i].narrationInput %> </td>
+                          
+                          <td class="border">Rs.  <%= students.studentExamFee[i].feeAmount %> </td>
+                      
+                          <td class="border"><%= convertDate(students.studentExamFee[i].dateofpayment) %></td>
+                          
+                          <td class="border fst-italic">  <%= capitalizeFirstLetter(students.studentExamFee[i].verifierId.username) %> </td>
+        
+                          <td class="border text-success">Rs. <%= showTotalExamFeeAmount(students.studentExamFee[i].feeAmount)  %></td>
+                          
+                          <td class="border text-danger">Rs. <%= showTotalExamFeeBalance(students.studentExamFee[i].feeAmount)  %></td>
+                          
+                          
+                        </tr>
+                        
+                        <% } %>
+                            
+                        <tr>
+                          
+                          <td colspan="6" class="text-end pt-3 pb-3">
+                            
+                          <!--add exam fee button-->   
+                      
+                              <a class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enter Fee" href="/computer/<%= students._id %>/examFeeRegister">
+                                
+                                  <i class="fas fa-edit text-success fw-bold">
+                                    
+                                  </i> 
+                                  
+                                  Add Exam Fee
+                                
+                                </a>
+                          </td>
+                          
+                        </tr>
+                        
+                      </tbody>
+                      
+                    </table>
+                    
+                    </div>
+            
+            </ul> <!--Exam fee table end-->
+            
+            <!--other fee table started-->
+                    
+            <ul class="list-group">
+              
+              <div class="table-responsive">
+
+               <table class="table border table-responsive bg-white  shadow-sm">
+                
+                   <tbody>
+                     
+                    <tr class="text-center">
+                        
+                      <th class="p-3 text-secondary lead" colspan="6"> Other Fee ( Eg. Backlog fee, Adm fee etc.)</th>
+                      
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="fw-bold text-muted border align-middle" class="ps-3" style="width: 85px"> Sl. Nos</td>
+                      
+                      <td  class="fw-bold text-muted border align-middle"> Narration </td>
+      
+                      <td class="fw-bold text-muted border align-middle"> Amount </td>
+                      
+                      <td  class="fw-bold text-muted border align-middle"> Date of Payment </td>
+                      
+                      <td  class="fw-bold text-muted border align-middle"> Checked/Verified By </td>
+                      
+                       <td class="fw-bold text-muted border text-center align-middle"> Remarks </td>
+                      
+                    </tr>
+                    
           
-          </div>
+              
+            
+            <% for (var i=0; i < students.studentOtherFee.length; i++) { %>
+              
+                      
+              
+                        <tr>
+                          
+                          <td class="text-center border" ><%= i + 1 %></td>
+                          
+                          <td class="border fst-italic"> <%= students.studentOtherFee[i].narrationInput %> </td>
+                          
+                          <td class="border">Rs.  <%= students.studentOtherFee[i].feeAmount %> </td>
+                      
+                          <td class="border"><%= convertDate(students.studentOtherFee[i].dateofpayment) %></td>
+                          
+                          <td class="border fst-italic">  <%= capitalizeFirstLetter(students.studentOtherFee[i].verifierId.username) %> </td>
+        
+                          <td class="border text-success"> <%= students.studentOtherFee[i].remarks %> </td>
+                          
+
+                          
+                          
+                        </tr>
+                        
+                        <% } %>
+                            
+                        <tr>
+                          
+                          <td colspan="6" class="text-end pt-3 pb-3">
+                            
+                          <!--add other fee button-->   
+                      
+                              <a class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enter Fee" href="/computer/<%= students._id %>/otherFeeRegister">
+                                
+                                  <i class="fas fa-edit text-success fw-bold">
+                                    
+                                  </i> 
+                                  
+                                  Add Other Fee
+                                
+                                </a>
+                          </td>
+                          
+                        </tr>
+                        
+                      </tbody>
+                      
+                    </table>
+                    
+                </div>
+            
+            </ul> <!--other fee table end-->
+            
+          
+          </div> <!--fee table end-->
+          
+          
           
           <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-              
               
                <ul class="list-group">
                
@@ -327,8 +493,7 @@
                     </tr>
                     
                     <tr>
-                      
-                      
+
                       <td class="text-primary">Present Address</td>
                       
                       <td> : </td>
@@ -374,26 +539,12 @@
 <!-- --------------fee details------------------ -->
     <div class="container">
         
-        
-        
-       
-       
     </div>
 
     <%- include('layouts/scripts') -%>
     
     <%- include('layouts/footer') -%>
     
-    <script>
-    
-    
-      
-      
-      
-    </script>
-    
-
   </body>
-  
-  
+
 </html>

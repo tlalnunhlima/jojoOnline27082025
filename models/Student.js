@@ -8,7 +8,7 @@ const UserSchema = new Schema({
     
     regn: {
         
-        type: String,
+        type: Number,
         
         required: [true, 'Please provide regn no'],
         
@@ -72,6 +72,12 @@ const UserSchema = new Schema({
 
     },
     
+    gender: {
+      
+        type: String  
+        
+    },
+    
     dob: {
         
         type: String,
@@ -102,6 +108,102 @@ const UserSchema = new Schema({
         
     }],
     
+   studentFee: [
+       
+       {
+       
+       narrationInput: String,
+       
+       feeAmount: Number,
+       
+       dateofpayment: String,
+       
+       verifierId: {
+        
+        type: Schema.Types.ObjectId,
+        
+        ref: 'staff',
+        
+        required: true
+        
+    }
+       
+   }],
+   
+   studentExamFee: [
+       
+       {
+       
+       narrationInput: String,
+       
+       feeAmount: Number,
+       
+       dateofpayment: String,
+       
+       verifierId: {
+        
+        type: Schema.Types.ObjectId,
+        
+        ref: 'staff',
+        
+        required: true
+        
+    }
+       
+   }],
+   
+   
+   studentOtherFee: [
+       
+       {
+       
+       narrationInput: String,
+       
+       feeAmount: Number,
+       
+       dateofpayment: String,
+       
+       remarks: String,
+       
+       verifierId: {
+        
+        type: Schema.Types.ObjectId,
+        
+        ref: 'staff',
+        
+        required: true
+        
+    }
+       
+   }],
+   
+   totalCourseFee: {
+       
+       type: Number,
+       
+       required: true
+      
+       
+   },
+   
+   feeDiscount: {
+       
+       type: Number,
+       
+       required: true
+      
+       
+   },
+   
+   feeAfterDiscount: {
+       
+       type: Number,
+       
+       required: true
+       
+   },
+    
+    
     datePosted: {
         
         type: Date,
@@ -109,13 +211,16 @@ const UserSchema = new Schema({
         default: new Date()
         
     }
+    
 });
 
 //duplicate checker
+
 UserSchema.plugin(uniqueValidator);
 
 
 //export model
+
 const Student = mongoose.model('Student', UserSchema)
 
 module.exports = Student

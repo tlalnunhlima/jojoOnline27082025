@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  
+<%- include('layouts/headers') -%>
+
+
+<body class="bg-light">
+    
+    <%- include('layouts/navbar') -%>
+    
+    <%- include ('ejsFunction') %> <!--function javascript ejs-->
+    
+<main class="container">
+  
+
+    <div class="d-flex justify-content-between align-items-center mt-4">
+      
+        <a class="text-dark small" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Go to view fee" href="/viewFee"><i class="fas fa-arrow-left text-dark fw-bold"></i> Back </a>
+        
+         <p class="text-secondary fw-normal"><%= viewTitle %> : <span class="text-danger"><%= moment().format('DD/MM/YYYY'); %> <%= moment().format("[(]dddd[)]"); %></span></p>
+
+        <a class="text-dark small" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Go to Student List" href="/stdList"><i class="far fa-list-alt text-info fw-bold"></i> Student List</a>
+
+    
+    </div>
+    
+        <!--Today fee review table started-->
+   
+           <ul class="list-group"> 
+        
+              <div class="table-responsive">
+        
+              <table class="table border bg-white border-start border-end shadow-sm">
+                
+                   <tbody>
+                     
+                    <tr class="text-center">
+                        
+                      <th class="p-3 fw-normal text-secondary lead" colspan="6"> Monthly Fee</th>
+                      
+                      
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="fw-bold text-dark border align-middle"> Regn.</td>
+                      
+                      <td class="fw-bold text-dark border align-middle"> Student's Name</td>
+                      
+                      <td class="fw-bold text-dark border align-middle"> Father's Name </td>
+                      
+                      <td class="fw-bold text-dark border align-middle"> Narration </td>
+      
+                      <td class="fw-bold text-dark border align-middle"> Amount </td>
+                      
+                      <td class="fw-bold text-dark border align-middle"> Entered By </td>
+      
+                    </tr>
+              <% 
+              
+              
+              
+             for (var i=0; i < students.length; i++) {
+              
+                    if( students[i].studentFee != undefined ) {
+                        
+          
+                    for (var k=0; k < students[i].studentFee.length; k++) {
+                        
+                        if( students[i].studentFee[k] != undefined && students[i].studentFee[k].dateofpayment ==  '2021-06-26' ) {
+              
+              
+              %>
+              
+                        <tr>
+                          
+                          <td class="text-center border" ><%= students[i].regn %></td>
+                          
+                          <td class="border" >
+                            
+                            <a href="/computer/<%= students[i]._id %>">
+          
+                                <%= capitalizeFirstLetter(students[i].username) %>
+                                
+                            </a>
+                            
+                          </td>
+                          
+                          <td class="border"> <%= students[i].fname %> </td>
+                          
+                          <td class="border fst-italic"> <%= students[i].studentFee[k].narrationInput %> </td>
+                          
+                          <td class="border">Rs.  <%= students[i].studentFee[k].feeAmount %> </td>
+                      
+                          <td class="border">  <%= capitalizeFirstLetter(students[i].studentFee[k].verifierId.username) %> </td>
+        
+                        </tr>
+                        
+
+                        
+                        <% } } } } %>
+                            
+                       
+                        
+                      </tbody>
+                      
+                    </table>
+                    
+                    </div>
+            
+            </ul> <!--today fee review table end-->
+            
+            
+            <!--Today exam fee review table started-->
+   
+           <ul class="list-group"> 
+        
+              <div class="table-responsive">
+        
+              <table class="table border bg-white border-start border-end shadow-sm">
+                
+                   <tbody>
+                     
+                    <tr class="text-center">
+                        
+                      <th class="p-3 fw-normal text-secondary lead" colspan="6"> Exam Fee</th>
+                      
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="fw-bold text-dark border align-middle"> Regn.</td>
+                      
+                      <td class="fw-bold text-dark border align-middle"> Student's Name</td>
+                      
+                      <td class="fw-bold text-dark border align-middle"> Father's Name </td>
+                      
+                      <td class="fw-bold text-dark border align-middle"> Narration </td>
+      
+                      <td class="fw-bold text-dark border align-middle"> Amount </td>
+                      
+                      <td class="fw-bold text-dark border align-middle"> Entered By </td>
+      
+                    </tr>
+              <% 
+              
+              
+              
+             for (var i=0; i < students.length; i++) {
+              
+                 
+          
+                    if( students[i].studentExamFee != undefined ) {
+          
+                    for (var k=0; k < students[i].studentExamFee.length; k++) {
+                        
+                        if( students[i].studentExamFee[k] != undefined && students[i].studentExamFee[k].dateofpayment ==  '2021-06-26' ) {
+                            
+                            
+              
+              
+              %>
+              
+                        <tr>
+                          
+                          <td class="text-center border" ><%= students[i].regn %></td>
+                          
+                          
+                          
+                          <td class="border" >
+                            
+                            <a href="/computer/<%= students[i]._id %>">
+          
+                                <%= capitalizeFirstLetter(students[i].username) %>
+                                
+                            </a>
+                            
+                          </td>
+                          
+                          <td class="border"> <%= students[i].fname %> </td>
+                          
+                          <td class="border fst-italic"> <%= students[i].studentExamFee[k].narrationInput %> </td>
+                          
+                          <td class="border">Rs.  <%= students[i].studentExamFee[k].feeAmount %> </td>
+                      
+                          <td class="border">  <%= capitalizeFirstLetter(students[i].studentExamFee[k].verifierId.username) %> </td>
+        
+                        </tr>
+                        
+
+                        
+                        <% } } } } %>
+                            
+                       
+                        
+                      </tbody>
+                      
+                    </table>
+                    
+                    </div>
+            
+            </ul> <!--today exam fee review table end-->
+            
+            
+            
+            <!--Today other fee review table started-->
+   
+           <ul class="list-group"> 
+        
+              <div class="table-responsive">
+        
+              <table class="table border bg-white border-start border-end shadow-sm">
+                
+                   <tbody>
+                     
+                    <tr class="text-center">
+                        
+                      <th class="p-3 fw-normal text-secondary lead" colspan="6"> Other Fee</th>
+                      
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="fw-bold text-dark border align-middle"> Regn.</td>
+                      
+                      <td class="fw-bold text-dark border align-middle"> Student's Name</td>
+                      
+                      <td class="fw-bold text-dark border align-middle"> Father's Name </td>
+                      
+                      <td class="fw-bold text-dark border align-middle"> Narration </td>
+      
+                      <td class="fw-bold text-dark border align-middle"> Amount </td>
+                      
+                      <td class="fw-bold text-dark border align-middle"> Entered By </td>
+      
+                    </tr>
+              <% 
+              
+              
+              
+             for (var i=0; i < students.length; i++) {
+              
+                    if( students[i].studentOtherFee != undefined ) {
+          
+                    for (var k=0; k < students[i].studentOtherFee.length; k++) {
+                        
+                        if( students[i].studentOtherFee[k] != undefined && students[i].studentOtherFee[k].dateofpayment == '2021-06-26' ) {
+                            
+              %>
+              
+                        <tr>
+                          
+                          <td class="text-center border" ><%= students[i].regn %></td>
+                          
+                          
+                          
+                          <td class="border" >
+                            
+                            <a href="/computer/<%= students[i]._id %>">
+          
+                                <%= capitalizeFirstLetter(students[i].username) %>
+                                
+                            </a>
+                            
+                          </td>
+                          
+                          <td class="border"> <%= students[i].fname %> </td>
+                          
+                          <td class="border fst-italic"> <%= students[i].studentOtherFee[k].narrationInput %> </td>
+                          
+                          <td class="border">Rs.  <%= students[i].studentOtherFee[k].feeAmount %> </td>
+                      
+                          <td class="border">  <%= capitalizeFirstLetter(students[i].studentOtherFee[k].verifierId.username) %> </td>
+        
+                        </tr>
+                        
+
+                        
+                        <% } } } } %>
+                            
+                       
+                        
+                      </tbody>
+                      
+                    </table>
+                    
+                    </div>
+            
+            </ul> <!--today other fee review table end-->
+
+</main>
+    
+    <%- include('layouts/scripts') -%>
+    
+    <%- include('layouts/footer') -%>
+    
+
+
+  </body>
+  
+</html>

@@ -3,11 +3,14 @@
   
 <%- include('layouts/headers') -%>
 
+
+<%- include('ejsFunction') -%>
+
 <style>
 
-  body {
+body {
     
-  padding-top: 20px;
+  padding-top: 10px;
   
   background-color: #f5f5f5;
   
@@ -18,38 +21,72 @@
 
 <body class="text-center">
  
- <a href="/"><img class="mb-3" src="/img/icon.png" alt="" width="72" height="57"></a>
+ 
  
  
 <main class="form-register">
   
-  <div class="d-flex justify-content-between mb-3">
-      
-  <h5> <%= viewTitle -%></h5>
-  
-  <a class="btn btn-warning btn-sm" href="/stdList"><i class="fa fa-database"></i> View All Student</a>
-  
-</div>
+                <div class="d-flex justify-content-between mb-2">
+                  
+                    
+                <p class="lead fw-normal text-secondary"> <%= viewTitle -%></p>
+                
+                <a href="/"><img src="/img/icon.png" alt="" width="72" height="57"></a>
+                
+                <a class="small text-secondary" href="/stdList"><i class="fa fa-database text-secondary small"></i> View All Student</a>
+                
+              </div>
 
- <form action="/users/register" method="POST" autocomplete="off">
+ <form action="/users/register" method="POST" autocomplete="off" class="border rounded bg-white shadow p-3">
 
  <input type="hidden" name="_id" value="<%= students._id %>" aria-hidden="true">
     
    <div class="row g-2">
                                 
-    <div class="form-floating mb-2">
+    <div class="form-floating mb-2 col-lg-6">
       
-      <input type="text" class="form-control pl-3" id="floatingRegn" placeholder="regn" name="regn" maxlength="4" minlength="1" value="<%= students.regn %>" required>
+      <input type="number" class="form-control pl-3" id="floatingRegn" size="4" placeholder="regn" name="regn" maxlength="4" minlength="1" value="<%= students.regn %>" required>
       
-      <label for="floatingRegn">Regn No.</label>
+      <label for="floatingRegn" class="fw-light">Regn No.<span class="text-danger fw-bold">*</span></label>
       
     </div>
+    
+    
+    <div class="form-floating border rounded d-flex justify-content-around align-items-center mb-2 col-lg-6">
+      
+      <div class="form-check">
+        
+          <input class="form-check-input" type="radio" name="batchSession" id="flexRadioDefault1" value="june" required>
+          
+          <label class="form-check-label" for="flexRadioDefault1">
+            
+            June Session
+            
+          </label>
+          
+        </div>
+        
+        <div class="form-check">
+          
+          <input class="form-check-input" type="radio" name="batchSession" id="flexRadioDefault2" value="december" required>
+          
+          <label class="form-check-label" for="flexRadioDefault2">
+            
+            December Session
+            
+          </label>
+          
+        </div>
+      
+    </div>
+    
+  
     
     <div class="form-floating mb-2 col-lg-6">
       
       <input type="text" class="form-control" id="floatingUsername" placeholder="username" name="username" maxlength="30" value="<%= students.username %>" required>
       
-      <label for="floatingUserame">Name</label>
+      <label for="floatingUserame" class="fw-light"> Name <span class="text-danger fw-bold"> *</span></label>
       
     </div>
   
@@ -57,7 +94,7 @@
       
       <input type="text" class="form-control" id="floatingFname" placeholder="fname" name="fname" maxlength="30" value="<%= students.fname %>" required>
       
-      <label for="floatingFname">Father's Name</label>
+      <label for="floatingFname" class="fw-light"> Father's Name <span class="text-danger fw-bold"> *</span></label>
       
     </div>
     
@@ -65,7 +102,7 @@
       
       <input type="text" class="form-control" id="floatingAddress" placeholder="address" name="address" maxlength="60" value="<%= students.address %>" required>
       
-      <label for="floatingAddress">Address</label>
+      <label for="floatingAddress" class="fw-light"> Address <span class="text-danger fw-bold"> *</span></label>
       
     </div>
     
@@ -73,46 +110,82 @@
       
       <input type="text" class="form-control" id="floatingPhone" placeholder="phone" name="phone" minlength="10" maxlength="10" value="<%= students.phone %>" required>
       
-      <label for="floatingPhone">Phone</label>
+      <label for="floatingPhone" class="fw-light"> Mobile No. <span class="text-danger fw-bold"> *</span></label>
       
     </div>
     
     <div class="form-floating mb-2  col-lg-6">
       
-      <input type="email" class="form-control pl-3" id="floatingEmail" placeholder="emailId" name="emailId" maxlength="40" value="<%= students.emailId %>" required>
+      <input type="email" class="form-control pl-3" id="floatingEmail" placeholder="emailId" name="emailId" maxlength="40" value="<%= students.emailId %>" >
       
-      <label for="floatingEmail">Email Id</label>
+      <label for="floatingEmail" class="fw-light"> Email Id </span></label>
       
     </div>
     
     <div class="form-floating mb-2 col-lg-6">
       
-      <input type="text" class="form-control" id="floatingAadhar" placeholder="Aadharno" name="aadharNo" maxlength="12" minlength="12" value="<%= students.aadharNo %>" required>
+      <input type="text" class="form-control" id="floatingAadhar" placeholder="Aadharno" name="aadharNo" maxlength="12" minlength="12" value="<%= students.aadharNo %>" >
       
-      <label for="floatingAadhar"> Aadhar No.</label>
-      
-    </div>
-  
-    <div class="form-floating mb-2 col-lg-6">
-      
-      <input type="text" class="form-control" id="floatingBatchSession" placeholder="BatchSession" name="batchSession" maxlength="30" value="<%= students.batchSession %>" required>
-      
-      <label for="floatingBatchSession"> Batch / Session</label>
+      <label for="floatingAadhar" class="fw-light"> Aadhar No. </label>
       
     </div>
+    
     
     <div class="form-floating mb-2 col-lg-6">
       
       <input type="date" class="form-control" id="floatingDate" placeholder="DOB" name="dob" value="<%= students.dob %>" required>
       
-      <label for="floatingDate">Date of Birth</label>
+      <label for="floatingDate" class="fw-light"> Date of Birth <span class="text-danger fw-bold"> *</span></label>
       
     </div>
     
     
+    <div class="form-floating border rounded d-flex justify-content-around align-items-center mb-2 col-lg-6">
+      
+      <div class="form-check">
+        
+          <input class="form-check-input" type="radio" name="gender" value="male" id="flexRadioDefault3" required>
+          
+          <label class="form-check-label" for="flexRadioDefault3">
+            
+            Male
+            
+          </label>
+          
+        </div>
+        
+        <div class="form-check">
+          
+          <input class="form-check-input" type="radio" name="gender" value="female" id="flexRadioDefault4" required>
+          
+          <label class="form-check-label" for="flexRadioDefault4">
+            
+            Female
+            
+          </label>
+          
+        </div>
+        
+        <div class="form-check">
+          
+          <input class="form-check-input" type="radio" name="gender" value="other" id="flexRadioDefault5" required>
+          
+          <label class="form-check-label" for="flexRadioDefault5">
+            
+            Other
+            
+          </label>
+          
+        </div>
+      
+    </div>
+    
+    
+    
+    
 </div>
     
-    <button class="btn btn-lg btn-primary" type="submit">Register</button>
+    <button class="btn btn-lg btn-primary mt-2" type="submit">Register</button>
     
     <p class="mt-3 small"><span class="text-muted ">&copy; 2018<script>new Date().getFullYear()>2018&&document.write("-"+new Date().getFullYear());</script>, Jojo Computer Institute.</span></p>
   

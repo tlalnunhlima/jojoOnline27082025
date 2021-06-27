@@ -78,7 +78,17 @@
   padding-left: 10px;
   
 }
+
+.container .fontSize {
+  
+    font-size: small;
+  
+  }
+
+
 }
+
+/*media quiery of 990 end ===============================*/
 
 
 /*style form old static web page*/
