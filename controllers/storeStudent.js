@@ -100,8 +100,6 @@ function updateRecord(req, res) {
         
          console.log('miau miau student details updated')
          
-         console.log(req.body);
-         
         }
        
         else {

@@ -39,6 +39,38 @@ router.use('*', (req, res, next) => {
 });
 
 
+
+
+
+//ask authorisation to login
+router.post('/auth/login', require('../controllers/authLoginStudent'))
+
+
+//save new student to database
+router.post('/users/register', require('../controllers/authSaveNewStudent'), require('../controllers/storeStudent'))
+
+//update student fee payment
+router.post('/users/feeRegister', require('../controllers/storeStudentFee'))
+
+//update student exam fee 
+router.post('/users/examFeeRegister', require('../controllers/storeStudentExamFee'))
+
+
+//update student any other fee 
+router.post('/users/otherFeeRegister', require('../controllers/storeStudentOtherFee'))
+
+
+//save new student to database
+router.post('/staff/register', require('../controllers/storeStaff'))
+
+//auth login staff
+
+router.post('/authUser/loginStaff', require('../controllers/authLoginStaff'))
+
+
+
+
+
 //home page
 router.get('/', (req, res) => {
     
@@ -106,7 +138,7 @@ router.get('/stdList', async (req, res) => {
 });
 
 
-//new student register form
+//new student register form ======================================
 
 router.get('/register', (req, res) => {
     
@@ -124,10 +156,41 @@ router.get('/register', (req, res) => {
     } 
     
     res.redirect('/auth/loginStaff');
-});
+}); //end of new student register form ======================================
 
 
 
+//edit student details
+
+router.get('/editStudent/:id', async (req, res) => {
+    
+    if(req.session.adminIdentity) {
+    
+   await Student.findById(req.params.id, (err, doc) =>{
+       
+       if(!err) {
+        
+           return res.render('register', {
+       
+            viewTitle: 'Update student detail:',
+            
+            errors: req.flash('validationErrors') ||  req.flash('errors'),
+            
+            students: doc
+                
+                })
+            }
+        })
+        
+    }
+    
+    else {
+        
+        res.redirect('/')
+    }
+    
+})
+    
 
 
 
@@ -158,6 +221,11 @@ router.get('/auth/registerStaff', (req, res) => {
         })
 });
 
+
+
+
+
+
 router.get('/view/staffList', async (req, res) => {
     
     const staffs = await staff.find({})
@@ -171,6 +239,10 @@ router.get('/view/staffList', async (req, res) => {
             staffs
         })
 })
+
+
+
+
 
 //staff delete
 
@@ -189,6 +261,109 @@ router.get('/staffList/delete/:id', (req, res) => {
     });
     
 });
+
+
+
+
+    
+router.get('/std/login', (req, res) => {
+    
+    if(req.session.userId) {
+        
+        console.log('You are still logged in!')
+        
+        return res.redirect('/stdDashboard')//if user logged in redirect to home page
+     
+    }
+
+    res.render('studentLogin')
+    
+}) 
+
+
+
+
+
+
+
+
+//student dashboard
+router.get('/all/stdDashboard', (req, res) => {
+    
+    console.log(req.session.username)
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('stdDashboard', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3
+            
+        })
+        
+    }
+        
+        res.redirect('/')
+    
+}) 
+    
+    
+    
+router.get('/stdList/delete/:id', (req, res) => {
+    
+    Student.findByIdAndRemove(req.params.id, (err, doc) => {
+        
+        if (!err) {
+            
+            console.log('One recorded data deleted successfully')
+            
+            res.redirect('/stdList');
+            
+        }
+        
+        else { console.log('Error in student delete :' + err); }
+        
+    });
+});
+
+
+router.get('/auth/logout', (req, res) => {
+    
+    req.session.destroy(() => {
+        
+        res.redirect('/')
+        
+    })
+    
+})
+
+
+
+//erere
+
+router.get('/student/test', (req, res) => {
+    
+    res.render('testQuestion', {
+        
+        questions : dcaQuestion
+    })
+    
+})
+
+//assignment question end ============================
 
 
 
@@ -320,9 +495,9 @@ if(req.session.adminIdentity) {
 router.get('/viewFee/viewAllFeeReceived', async (req, res) => {
     
 
-            const startingDateWithoutTime = moment().format('2021-01-01'); //kumtir hriatna
+     const startingDateWithoutTime = moment().format('2021-01-01'); //kumtir hriatna
             
-            const currentDateWithoutTime = moment().format('YYYY-MM-DD'); //vawiin hriatna
+     const currentDateWithoutTime = moment().format('YYYY-MM-DD'); //vawiin hriatna
             
 
 if(req.session.adminIdentity) {
@@ -387,9 +562,9 @@ if(req.session.adminIdentity) {
 router.get('/viewFee/viewExamFeeReceived', async (req, res) => {
     
     
-            const startingDateWithoutTime = moment().format('2021-01-01'); //kumtir hriatna
+    const startingDateWithoutTime = moment().format('2021-01-01'); //kumtir hriatna
             
-            const currentDateWithoutTime = moment().format('YYYY-MM-DD'); //vawiin hriatna
+    const currentDateWithoutTime = moment().format('YYYY-MM-DD'); //vawiin hriatna
             
 
 if(req.session.adminIdentity) {
@@ -459,9 +634,9 @@ if(req.session.adminIdentity) {
 router.get('/viewFee/viewOtherFeeReceived', async (req, res) => {
     
     
-            const startingDateWithoutTime = moment().format('2021-01-01'); //kumtir hriatna
+   const startingDateWithoutTime = moment().format('2021-01-01'); //kumtir hriatna
             
-            const currentDateWithoutTime = moment().format('YYYY-MM-DD'); //vawiin hriatna
+   const currentDateWithoutTime = moment().format('YYYY-MM-DD'); //vawiin hriatna
             
 
 if(req.session.adminIdentity) {
@@ -606,164 +781,6 @@ if(req.session.adminIdentity) {
 
 
 
-//ask authorisation to login
-router.post('/auth/login', require('../controllers/authLoginStudent'))
-
-
-//save new student to database
-router.post('/users/register', require('../controllers/authSaveNewStudent'), require('../controllers/storeStudent'))
-
-//update student fee payment
-router.post('/users/feeRegister', require('../controllers/storeStudentFee'))
-
-//update student exam fee 
-router.post('/users/examFeeRegister', require('../controllers/storeStudentExamFee'))
-
-
-//update student any other fee 
-router.post('/users/otherFeeRegister', require('../controllers/storeStudentOtherFee'))
-
-
-//edit student details
-
-router.get('/editStudent/:id', async (req, res) => {
-    
-    if(req.session.adminIdentity) {
-    
-   await Student.findById(req.params.id, (err, doc) =>{
-       
-       if(!err) {
-        
-           return res.render('register', {
-       
-            viewTitle: 'Update student detail:',
-            
-                students: doc
-                
-                })
-            }
-        })
-        
-    }
-    
-    else {
-        
-        res.redirect('/')
-    }
-    
-})
-    
-
-    
-router.get('/std/login', (req, res) => {
-    
-    if(req.session.userId) {
-        
-        console.log('You are still logged in!')
-        
-        return res.redirect('/stdDashboard')//if user logged in redirect to home page
-     
-    }
-
-    res.render('studentLogin')
-    
-}) 
-
-
-//student dashboard
-router.get('/all/stdDashboard', (req, res) => {
-    
-    console.log(req.session.username)
-    
-    if(req.session.studentIdentity) {
-        
-       return res.render('stdDashboard', {
-            
-            username: req.session.username,
-            
-            link1: req.session.myDashboard1,
-            
-            link2: req.session.myDashboard2,
-            
-            link3: req.session.myDashboard3,
-            
-            link4: req.session.myDashboard4,
-            
-            href1: req.session.hrefLink1,
-            
-            href2: req.session.hrefLink2,
-            
-            href3: req.session.hrefLink3
-            
-        })
-        
-    }
-        
-        res.redirect('/')
-    
-}) 
-    
-    
-    
-router.get('/stdList/delete/:id', (req, res) => {
-    
-    Student.findByIdAndRemove(req.params.id, (err, doc) => {
-        
-        if (!err) {
-            
-            console.log('One recorded data deleted successfully')
-            
-            res.redirect('/stdList');
-            
-        }
-        
-        else { console.log('Error in student delete :' + err); }
-        
-    });
-});
-
-
-router.get('/auth/logout', (req, res) => {
-    
-    req.session.destroy(() => {
-        
-        res.redirect('/')
-        
-    })
-    
-})
-
-
-
-
-
-//save new student to database
-router.post('/staff/register', require('../controllers/storeStaff'))
-
-//auth login staff
-
-router.post('/authUser/loginStaff', require('../controllers/authLoginStaff'))
-
-
-
-
-
-//erere
-
-router.get('/student/test', (req, res) => {
-    
-    res.render('testQuestion', {
-        
-        questions : dcaQuestion
-    })
-    
-})
-
-//assignment question end ============================
-
-
-
-
 
 
 
@@ -804,8 +821,11 @@ router.get('/computer/:id', async (req, res) => {
             }
             
         })
+        
         .populate('studentFee.verifierId')
+        
         .populate('studentExamFee.verifierId')
+        
         .populate('studentOtherFee.verifierId');
         
         return;
