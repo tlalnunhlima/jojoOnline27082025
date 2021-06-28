@@ -102,6 +102,7 @@ router.get('/', (req, res) => {
 
 
 //student list for admin only view
+
 router.get('/stdList', async (req, res) => {
     
     const students = await Student.find({}).sort({regn : -1});
@@ -148,7 +149,7 @@ router.get('/register', (req, res) => {
 
             viewTitle: 'Register Student',
             
-            errors: req.flash('validationErrors') ||  req.flash('errors'),
+            errors: req.flash('validationErrors') &&  req.flash('errors'),
             
             students: req.body
             
@@ -174,13 +175,13 @@ router.get('/editStudent/:id', async (req, res) => {
        
             viewTitle: 'Update student detail:',
             
-            errors: req.flash('validationErrors') ||  req.flash('errors'),
+            errors: req.flash('validationErrors') &&  req.flash('errors'),
             
             students: doc
                 
-                })
+                });
             }
-        })
+        });
         
     }
     

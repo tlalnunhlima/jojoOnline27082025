@@ -77,11 +77,21 @@ function insertRecord(req, res) {
                 
                 .catch((error) => { 
                 
-                const validationErrors = Object.keys(error.errors).map(key => error.errors[key].message);
+                    const validationErrors = Object.keys(error.errors).map(key => error.errors[key].message);
+                    
+                    req.flash('validationErrors', validationErrors);
                 
-                req.flash('validationErrors', validationErrors);
                 
-                return res.redirect('/register');
+                return res.render('register', {
+                    
+                    viewTitle: 'Register Student',
+                    
+                    errors: 'Registration Number hi a awm tawh!',
+                    
+                    students: req.body
+                    
+                    
+                    });
                 
                 });
 
@@ -94,17 +104,17 @@ function insertRecord(req, res) {
 function updateRecord(req, res) {
     
    
-  Student.findOneAndUpdate({ _id: req.body._id}, req.body, { new: true }, (err, doc) => {
+  Student.findOneAndUpdate({ _id: req.body._id}, req.body, { new: true }, (error, doc) => {
        
-        if (!err) { res.redirect('/stdList')
+        if (doc) { res.redirect('/stdList')
         
          console.log('miau miau student details updated')
          
-        }
-       
-        else {
-      
-        console.log('Error during student record update : ' + err);
+        } if(error) {
+            
+                res.redirect('/stdList')
+                
+                console.log('Error during student record update : ' + error);
       
         }
         
