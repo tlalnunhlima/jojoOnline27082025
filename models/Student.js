@@ -214,8 +214,9 @@ const UserSchema = new Schema({
     
 });
 
-//duplicate checker
 
+
+//duplicate checker
 UserSchema.plugin(uniqueValidator);
 
 

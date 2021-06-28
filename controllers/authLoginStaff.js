@@ -46,17 +46,31 @@ module.exports = (req, res) => {
                     
                 } else {
                     
-                    console.log('password not match')
+                    //console.log('password not match')
                     
-                    res.redirect('/auth/loginStaff')
+                    //res.redirect('/auth/loginStaff')
+                    
+                    res.render('loginStaff', {
+                
+                            errors: 'Username or password incorrect!'
+                        
+                        
+                    });
+                    
+                    
                 }
             })
             
         } else {
             
-            console.log('no staff found')
+            //console.log('no staff found')
             
-            res.redirect('/auth/loginStaff')
+            //res.redirect('/auth/loginStaff')
+            
+            res.render('loginStaff', {
+                
+                errors: 'Username or password incorrect!'
+            })
         }
     })
 }

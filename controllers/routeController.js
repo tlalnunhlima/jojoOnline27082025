@@ -116,7 +116,7 @@ router.get('/register', (req, res) => {
 
             viewTitle: 'Register Student',
             
-            errors: req.flash('validationErrors'),
+            errors: req.flash('validationErrors') ||  req.flash('errors'),
             
             students: req.body
             
@@ -125,6 +125,76 @@ router.get('/register', (req, res) => {
     
     res.redirect('/auth/loginStaff');
 });
+
+
+
+
+
+
+// staff section ================================
+
+router.get('/auth/loginStaff', (req, res) => {
+    
+    res.render('loginStaff', {
+        
+        errors: req.flash('errors')
+        
+        
+    });
+    
+});
+
+
+
+
+//register staff
+
+router.get('/auth/registerStaff', (req, res) => {
+    
+    res.render('registerStaff', {
+
+            viewTitle: 'Register new staff here'
+            
+        })
+});
+
+router.get('/view/staffList', async (req, res) => {
+    
+    const staffs = await staff.find({})
+    
+    console.log(req.session)
+    
+        res.render('staffList', {
+            
+            viewTitle: 'Staff List',
+            
+            staffs
+        })
+})
+
+//staff delete
+
+router.get('/staffList/delete/:id', (req, res) => {
+    
+    staff.findByIdAndRemove(req.params.id, (err, doc) => {
+        
+        if (!err) {
+            
+            res.redirect('/view/staffList');
+            
+        }
+        
+        else { console.log('Error in staff delete :' + err); }
+        
+    });
+    
+});
+
+
+
+
+
+
 
 
 //view all group of fee
@@ -171,17 +241,16 @@ if(req.session.adminIdentity) {
 
 router.get('/viewFee/todayFeeReview', async (req, res) => {
     
-
-            
-            //hei hi vawiin date entirnan 2021-06-26 a ni;  moment().format('YYYY-MM-DD')
+    
+    //hei hi vawiin date entirnan 2021-06-26 a ni;  moment().format('YYYY-MM-DD')
             
 if(req.session.adminIdentity) {
     
-  await Student.find({$or: [{studentFee : { $elemMatch: {  dateofpayment : moment().format('YYYY-MM-DD')  } } }, 
+  await Student.find( { $or: [ {studentFee : { $elemMatch: {  dateofpayment : moment().format('YYYY-MM-DD')  } } }, 
   
-  {studentExamFee : { $elemMatch: {  dateofpayment : moment().format('YYYY-MM-DD')  } } },
+  { studentExamFee : { $elemMatch: {  dateofpayment : moment().format('YYYY-MM-DD')  } } },
   
-  {studentOtherFee : { $elemMatch: {  dateofpayment : moment().format('YYYY-MM-DD')  } } }
+  { studentOtherFee : { $elemMatch: {  dateofpayment : moment().format('YYYY-MM-DD')  } } }
   
   ] },
   
@@ -456,7 +525,7 @@ if(req.session.adminIdentity) {
 });
 
 
-//view by selecting date fee review list for admin only view
+//view fee by selecting date for admin only view
 
 router.get('/viewFee/viewFeeByDate/:dateofpayment', async (req, res) => {
     
@@ -480,7 +549,7 @@ if(req.session.adminIdentity) {
           
             res.render('viewFeeByDate', {
                 
-            viewTitle: 'Who pay today',
+            viewTitle: 'Your search date: ',
        
             username: req.session.username,
             
@@ -500,7 +569,9 @@ if(req.session.adminIdentity) {
            
             students: doc,
             
-            moment: moment
+            moment: moment,
+            
+            searchDate: req.params.dateofpayment
             
                 
                 });
@@ -540,7 +611,7 @@ router.post('/auth/login', require('../controllers/authLoginStudent'))
 
 
 //save new student to database
-router.post('/users/register', require('../controllers/storeStudent'))
+router.post('/users/register', require('../controllers/authSaveNewStudent'), require('../controllers/storeStudent'))
 
 //update student fee payment
 router.post('/users/feeRegister', require('../controllers/storeStudentFee'))
@@ -661,60 +732,15 @@ router.get('/auth/logout', (req, res) => {
     })
     
 })
-// staff section ================================
 
-router.get('/auth/loginStaff', (req, res) => {
-    
-    res.render('loginStaff')
-    
-});
 
-//register staff
 
-router.get('/auth/registerStaff', (req, res) => {
-    
-    res.render('registerStaff', {
-
-            viewTitle: 'Register new staff here'
-            
-        })
-});
-
-router.get('/view/staffList', async (req, res) => {
-    
-    const staffs = await staff.find({})
-    
-    console.log(req.session)
-    
-        res.render('staffList', {
-            
-            viewTitle: 'Staff List',
-            
-            staffs
-        })
-})
-
-//staff delete
-
-router.get('/staffList/delete/:id', (req, res) => {
-    
-    staff.findByIdAndRemove(req.params.id, (err, doc) => {
-        
-        if (!err) {
-            
-            res.redirect('/view/staffList');
-            
-        }
-        
-        else { console.log('Error in staff delete :' + err); }
-        
-    });
-    
-});
 
 
 //save new student to database
 router.post('/staff/register', require('../controllers/storeStaff'))
+
+//auth login staff
 
 router.post('/authUser/loginStaff', require('../controllers/authLoginStaff'))
 

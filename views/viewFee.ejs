@@ -27,34 +27,26 @@
     
         <ul class="list-group">
             
-              <li class="list-group-item bg-secondary text-white fw-bold" aria-current="true"> Categories</li>
+              <li class="list-group-item text-dark fw-bold" aria-current="true"> Categories</li>
               
-              <li class="list-group-item"><a class="text-muted" data-bs-toggle="tooltip" data-bs-placement="bottom" title="view today fee recieved" href="/viewFee/todayFeeReview"><i class="fas fa-calendar-day text-primary fw-bold"></i> Today Fee</a></li>
+              <li class="list-group-item"><a class="text-muted" data-bs-toggle="tooltip" data-bs-placement="bottom" title="view today fee recieved" href="/viewFee/todayFeeReview"><i class="fas fa-calendar-day text-primary fw-bold"></i> View Today Fee</a></li>
               
-              <li class="list-group-item"><a class="text-muted" data-bs-toggle="tooltip" data-bs-placement="bottom" title="view all fee recieved" href="/viewFee/viewAllFeeReceived"><i class="fas fa-calendar-week text-primary fw-bold"></i> Monthly Fee</a></li>
+              <li class="list-group-item"><a class="text-muted" data-bs-toggle="tooltip" data-bs-placement="bottom" title="view all fee recieved" href="/viewFee/viewAllFeeReceived"><i class="fas fa-calendar-week text-primary fw-bold"></i> View Monthly Fee</a></li>
               
-              <li class="list-group-item"><a class="text-muted" data-bs-toggle="tooltip" data-bs-placement="bottom" title="view exam fee" href="/viewFee/viewExamFeeReceived"><i class="fas fa-pen-nib text-primary fw-bold"></i> Exam Fee</a></li>
+              <li class="list-group-item"><a class="text-muted" data-bs-toggle="tooltip" data-bs-placement="bottom" title="view exam fee" href="/viewFee/viewExamFeeReceived"><i class="fas fa-pen-nib text-primary fw-bold"></i> View Exam Fee</a></li>
               
-              <li class="list-group-item"><a class="text-muted" data-bs-toggle="tooltip" data-bs-placement="bottom" title="view other fee" href="/viewFee/viewOtherFeeReceived"><i class="fas fa-feather text-primary fw-bold"></i> Other Fee</a></li>
+              <li class="list-group-item"><a class="text-muted" data-bs-toggle="tooltip" data-bs-placement="bottom" title="view other fee" href="/viewFee/viewOtherFeeReceived"><i class="fas fa-feather text-primary fw-bold"></i> View Other Fee</a></li>
               
-              
-              <li class="list-group-item"><a class="text-muted" data-bs-toggle="tooltip" data-bs-placement="bottom" title="view other fee" href="/viewFee/viewFeeByDate/<%= moment().format('2021-06-26') %>"><i class="fas fa-feather text-primary fw-bold"></i> View By Date</a></li>
-              
-              
-              <form action="/viewFee/viewFeeByDate/" method="get" autocomplete="off">
-              
+           
               <li class="list-group-item d-flex text-muted">
                   
-                <i class="fas fa-calendar-check fw-bold me-1"></i> View By Date
-              
-                <input type="date" style="width: 200px" class="form-control ms-2" id="dateSelect" placeholder="dateSelect" name="dateSelect" required>
+                <i class="fas fa-calendar-check fw-bold text-primary me-1"></i> 
                 
-                <button class="btn btn-primary ms-2" type="submit"> Search</button>
+                <input type="date" id="dateSelect" style="width: 200px" class="form-control ms-2" required />
+                
+                <a href="/viewFee/viewFeeByDate" id="searchFeeByDate" class="btn btn-primary ms-2"> View By Date</a>
               
               </li>
-              
-              </form>
-              
               
         </ul>
 
@@ -64,7 +56,43 @@
     
     <%- include('layouts/footer') -%>
     
+    <!--Search by date url siam remna jquery function-->
+    <script> 
+        
+        $(function() {
+            
+            
+          
+            
+            
+                    $('#searchFeeByDate').click( function(e) {
+                        
+                        e.preventDefault();
+                        
+                        
+                        //checkValidity() Returns true if an input element contains valid data.
+                        
+                    if ($("#dateSelect")[0].checkValidity()) {
+                        
+                        window.location = $(this).attr('href') + '/' + $('#dateSelect').val();
+                        
+                        return false;
+                        
+                    } else {
+                        
+                        //Validate Form : the best function for highlighting required fields
+                        
+                        $("#dateSelect")[0].reportValidity()
+                        
+                    }
+                        
+                    });
+                    
+                });
 
+        
+    </script>
+    
 
   </body>
   

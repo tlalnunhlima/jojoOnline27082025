@@ -21,9 +21,6 @@ body {
 
 <body class="text-center">
  
- 
- 
- 
 <main class="form-register">
   
                 <div class="d-flex justify-content-between mb-2">
@@ -36,6 +33,30 @@ body {
                 <a class="small text-secondary" href="/stdList"><i class="fa fa-database text-secondary small"></i> View All Student</a>
                 
               </div>
+              
+              
+   <% if(errors != null && errors.length > 0 ) { %>
+  
+
+  
+      <ul class="list-group"></ul>
+      
+      
+    
+      
+        <li class="list-group-item list-group-item-danger">
+          
+          <%= errors %>
+          
+        </li>
+  
+
+    
+    </ul>
+    
+    <% } %>
+  
+  
 
  <form action="/users/register" method="POST" autocomplete="off" class="border rounded bg-white shadow p-3">
 

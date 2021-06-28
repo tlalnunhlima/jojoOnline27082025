@@ -43,8 +43,6 @@
                     
                     <tr>
                       
-                      <td class="fw-bold text-muted border align-middle"> Sl. Nos</td>
-                      
                       <td class="fw-bold text-muted border align-middle"> Regn. </td>
                       
                       <td class="fw-bold text-muted border align-middle"> Student Name</td>
@@ -54,6 +52,8 @@
                       <td class="fw-bold text-muted border align-middle"> Amount </td>
                       
                       <td class="fw-bold text-muted border align-middle"> Date of Payment </td>
+                      
+                      <td class="fw-bold text-muted border align-middle"> Remarks </td>
                       
                       <td class="fw-bold text-muted border align-middle"> Entered By </td>
       
@@ -74,8 +74,6 @@
               
                         <tr>
                           
-                          <td class="text-center border" ><%= i + 1 %></td>
-                          
                           <td class="text-center border" ><%= students[i].regn %></td>
                           
                           <td class="border" >
@@ -93,6 +91,8 @@
                           <td class="border">Rs.  <%= students[i].studentOtherFee[k].feeAmount %> </td>
                       
                           <td class="border"><%= convertDate(students[i].studentOtherFee[k].dateofpayment) %></td>
+                          
+                          <td class="border text-danger"><%= capitalizeFirstLetter(students[i].studentOtherFee[k].remarks) %></td>
                           
                           <td class="border fst-italic">  <%= capitalizeFirstLetter(students[i].studentOtherFee[k].verifierId.username) %> </td>
         

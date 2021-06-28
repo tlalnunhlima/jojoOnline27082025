@@ -63,18 +63,30 @@ function insertRecord(req, res) {
           
    });
 
+  
+
                newStudent.save()
               
-                .then(() => console.log('meow : student data submitted successfully'))
+                .then(() => {
+                    
+                    console.log('meow : student data submitted successfully');
+                    
+                    res.redirect('/stdList');
+                    
+                })
                 
-                .catch((error) => Object.keys(error.errors).map(key => error.errors[key].message))
+                .catch((error) => { 
                 
-                console.log('Problem occurs during data insertion')
+                const validationErrors = Object.keys(error.errors).map(key => error.errors[key].message);
                 
+                req.flash('validationErrors', validationErrors);
                 
+                return res.redirect('/register');
                 
-                res.redirect('/stdList')
-}
+                });
+
+  
+    }
 
 
 
