@@ -14,11 +14,26 @@
 
     <main role="main" class="container p-2 mb-2">
       
+       <% if (loginIdName == 'adminJojo') { %>
+      
         <div class="text-center">
           
           <a href="/stdList" class="fw-light small"> <i class="far fa-list-alt text-primary"></i> Back to List </a>
           
         </div>
+        
+        <% } %>
+        
+        <% if ( loginIdName == 'computerStudent') { %>
+      
+        <div class="text-center">
+          
+          <a href="/all/stdDashboard" class="fw-light small"> <i class="far fa-list-alt text-primary"></i> Back Dashboard </a>
+          
+        </div>
+        
+        <% } %>
+        
 
         <ul class="nav nav-tabs" id="myTab" role="tablist">
           
@@ -246,6 +261,10 @@
                         </tr>
                         
                         <% } %>
+                        
+                        
+                        
+                        <% if (loginIdName == 'adminJojo') { %>
                             
                         <tr>
                           
@@ -265,6 +284,8 @@
                           </td>
                           
                         </tr>
+                        
+                        <%  } %>
                         
                       </tbody>
                       
@@ -341,6 +362,10 @@
                         </tr>
                         
                         <% } %>
+                        
+                        
+                        
+                        <% if (loginIdName == 'adminJojo') { %>
                             
                         <tr>
                           
@@ -360,6 +385,10 @@
                           </td>
                           
                         </tr>
+                        
+                        <% } %>
+                        
+                        
                         
                       </tbody>
                       
@@ -428,6 +457,9 @@
                         </tr>
                         
                         <% } %>
+                        
+                        
+                        <% if (loginIdName == 'adminJojo') { %>
                             
                         <tr>
                           
@@ -447,6 +479,8 @@
                           </td>
                           
                         </tr>
+                        
+                        <% } %>
                         
                       </tbody>
                       

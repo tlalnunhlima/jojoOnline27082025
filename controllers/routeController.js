@@ -92,11 +92,11 @@ router.get('/', (req, res) => {
             
             href3: req.session.hrefLink3
             
-        })
+        });
         
-        console.log(req.session)
+        console.log(req.session);
         
-})
+});
 
 
 
@@ -105,7 +105,7 @@ router.get('/', (req, res) => {
 
 router.get('/stdList', async (req, res) => {
     
-    const students = await Student.find({}).sort({regn : -1});
+    const students = await Student.find({}).sort({regn : -1}).populate('staffid');
     
     
    if(req.session.adminIdentity) {
@@ -139,6 +139,10 @@ router.get('/stdList', async (req, res) => {
 });
 
 
+
+
+
+
 //new student register form ======================================
 
 router.get('/register', (req, res) => {
@@ -157,7 +161,13 @@ router.get('/register', (req, res) => {
     } 
     
     res.redirect('/auth/loginStaff');
-}); //end of new student register form ======================================
+}); 
+
+//end of new student register form ======================================
+
+
+
+
 
 
 
@@ -265,21 +275,19 @@ router.get('/staffList/delete/:id', (req, res) => {
 
 
 
-
+//student login panel
     
-router.get('/std/login', (req, res) => {
+router.get('/std/loginStudent', (req, res) => {
     
-    if(req.session.userId) {
+    res.render('studentLogin', {
         
-        console.log('You are still logged in!')
+        errors: req.flash('errors'),
         
-        return res.redirect('/stdDashboard')//if user logged in redirect to home page
+        students: req.body
+        
+        });
      
-    }
-
-    res.render('studentLogin')
-    
-}) 
+});
 
 
 
@@ -289,13 +297,112 @@ router.get('/std/login', (req, res) => {
 
 
 //student dashboard
-router.get('/all/stdDashboard', (req, res) => {
+
+router.get('/all/stdDashboard', async (req, res) => {
     
-    console.log(req.session.username)
+ const students = await Student.find({});
     
     if(req.session.studentIdentity) {
         
        return res.render('stdDashboard', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            studentId: req.session.userId,
+            
+            students
+            
+        })
+        
+    }
+        
+        res.redirect('/')
+    
+}) 
+
+
+
+
+//student view profile and fee ====
+
+router.get('/all/computer/:id', async (req, res) => {
+    
+    if(req.session.studentIdentity) {
+    
+    await Student.findById(req.params.id, (err, doc) =>{
+       
+       if(!err) {
+        
+            res.render('studentPage', {
+       
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+           
+            students: doc
+                
+                })
+                
+                return;
+            }
+            
+        })
+        
+        .populate('studentFee.verifierId')
+        
+        .populate('studentExamFee.verifierId')
+        
+        .populate('studentOtherFee.verifierId');
+        
+        return;
+        
+    }
+
+        res.redirect('/all/stdDashboard')
+    
+})
+
+
+
+
+
+
+
+
+
+router.get('/all/dcatheorywelcomepage', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dcatheorywelcomepage', {
             
             username: req.session.username,
             
@@ -320,7 +427,10 @@ router.get('/all/stdDashboard', (req, res) => {
         res.redirect('/')
     
 }) 
-    
+
+
+
+
     
     
 router.get('/stdList/delete/:id', (req, res) => {
@@ -413,6 +523,9 @@ if(req.session.adminIdentity) {
 
 
 
+
+
+
 //today fee review list for admin only view
 
 router.get('/viewFee/todayFeeReview', async (req, res) => {
@@ -491,6 +604,10 @@ if(req.session.adminIdentity) {
 });
 
 
+
+
+
+
 //i want to see all fee received from the student irrespective of timestamp
 
 router.get('/viewFee/viewAllFeeReceived', async (req, res) => {
@@ -556,6 +673,11 @@ if(req.session.adminIdentity) {
         res.redirect('/stdList');
     
 });
+
+
+
+
+
 
 
 //exam fee review list for admin only view
@@ -630,6 +752,9 @@ if(req.session.adminIdentity) {
 
 
 
+
+
+
 //other fee review list for admin only view
 
 router.get('/viewFee/viewOtherFeeReceived', async (req, res) => {
@@ -699,6 +824,9 @@ if(req.session.adminIdentity) {
         res.redirect('/viewFee');
     
 });
+
+
+
 
 
 //view fee by selecting date for admin only view
@@ -813,6 +941,8 @@ router.get('/computer/:id', async (req, res) => {
             href2: req.session.hrefLink2,
             
             href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.adminIdentity,
            
             students: doc
                 
@@ -871,6 +1001,10 @@ router.get('/computer/:id/feeRegister', async (req, res) => {
 });
 
 // =========================================
+
+
+
+
 
 
 //exam fee payment form =========

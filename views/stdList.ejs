@@ -52,17 +52,17 @@
     
     <tr>
       
-      <th scope="col" class="ps-3 fw-normal" style="width: 85px">Regn.</th>
+      <th scope="col" class="ps-3 fw-bold text-secondary" style="width: 85px">Regn.</th>
       
-      <th scope="col" class="fw-normal">Name of Student</th>
+      <th scope="col" class="fw-bold text-secondary">Name of Student</th>
       
-      <th scope="col" class="fw-normal">Father's Name</th>
+      <th scope="col" class="fw-bold text-secondary">Father's Name</th>
       
-      <th scope="col" class="fw-normal">Address</th>
+      <th scope="col" class="fw-bold text-secondary">Address</th>
       
-      <th scope="col" class="fw-normal">Phone No</th>
+      <th scope="col" class="fw-bold text-secondary">Phone No</th>
       
-      <th scope="col" class="fw-normal">Action</th>
+      <th scope="col" class="fw-bold text-secondary">Action</th>
       
     </tr>
     
@@ -74,7 +74,7 @@
       
     <tr>
       
-      <th class="text-center" ><%= students[i].regn %></th>
+      <th class="text-center fw-normal" ><%= students[i].regn %></th>
       
       <td>
         
@@ -99,9 +99,12 @@
           <i class="fas fa-edit border p-1 text-muted rounded me-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"></i>
           
         </a>
+    
+                <% if( username == 'tmapuia') { %>
         
-        
+        <a href="/stdList/delete/<%= students[i]._id %>" onclick="return confirm('Are you sure to delete ' + '<%= students[i].username %>' +' record ?');"><i class="fas fa-trash-alt border p-1 text-muted rounded" aria-hidden="true"></i></a></td>
           
+                <% } %>
       </td>
       
     </tr>
@@ -117,6 +120,7 @@
 </main>
     
     <%- include('layouts/scripts') -%>
+    
     <%- include('layouts/footer') -%>
     
 

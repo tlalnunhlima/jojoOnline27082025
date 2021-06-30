@@ -41,14 +41,9 @@ module.exports = (req, res) => {
                     
                     req.session.hrefLink3 = staff.hrefLink[2],
                     
-                    
                     res.redirect('/stdList')
                     
                 } else {
-                    
-                    //console.log('password not match')
-                    
-                    //res.redirect('/auth/loginStaff')
                     
                     res.render('loginStaff', {
                 
@@ -62,10 +57,6 @@ module.exports = (req, res) => {
             })
             
         } else {
-            
-            //console.log('no staff found')
-            
-            //res.redirect('/auth/loginStaff')
             
             res.render('loginStaff', {
                 

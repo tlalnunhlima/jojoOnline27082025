@@ -1,56 +1,59 @@
 const Student = require('../models/Student')
 
+
+
+//student login authorization
+
 module.exports = (req, res) => {
     
     const { phone, dob } = req.body;
     
-    Student.findOne({phone: phone}, (error, std) => {
-        
-        if(std) {
-            
-            console.log('std found')
-            
-            Student.findOne({dob: dob}, (error, same) => {
-                
-                if(same) {
+    Student.find({phone: phone, dob: dob})
+    
+    
+    .then((Std) => {
                     
-                    console.log('student password matched')
+                    console.log('meow : student found');
                     
-                    req.session.userId = std._id
+                    console.log(Std);
                     
-                    req.session.username = std.username,
+                    req.session.userId = Std[0]._id,
                     
-                    req.session.studentIdentity = std.studentIdentity,
+                    req.session.username = Std[0].username,
                     
-                    req.session.myDashboard1 = std.myDashboard[0],
+                    req.session.studentIdentity = Std[0].studentIdentity,
                     
-                    req.session.myDashboard2 = std.myDashboard[1],
+                    req.session.myDashboard1 = Std[0].myDashboard[0],
                     
-                    req.session.myDashboard3 = std.myDashboard[2],
+                    req.session.myDashboard2 = Std[0].myDashboard[1],
                     
-                    req.session.myDashboard4 = std.myDashboard[3],
+                    req.session.myDashboard3 = Std[0].myDashboard[2],
                     
-                    req.session.hrefLink1 = std.hrefLink[0],
+                    req.session.myDashboard4 = Std[0].myDashboard[3],
                     
-                    req.session.hrefLink2 = std.hrefLink[1],
+                    req.session.hrefLink1 = Std[0].hrefLink[0],
                     
-                    req.session.hrefLink3 = std.hrefLink[2],
+                    req.session.hrefLink2 = Std[0].hrefLink[1],
+                    
+                    req.session.hrefLink3 = Std[0].hrefLink[2]
                     
                     res.redirect('/all/stdDashboard')
+
+                    })
                     
-                } else {
+    .catch(() => { 
+                
+    
+        return res.render('studentLogin', {
+                
+                errors: 'Username or password incorrect!',
+        
+                students: req.body
                     
-                    console.log('password not match')
                     
-                    res.redirect('/studentLogin')
-                }
-            })
-            
-        } else {
-            
-            console.log('no std found')
-            
-            res.redirect('/studentLogin')
-        }
-    })
+                    });
+                
+ 
+                })
+                
 }
