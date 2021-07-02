@@ -12,17 +12,32 @@
     <%- include ('ejsFunction') %> <!--function javascript ejs-->
     
 <main class="container">
+    
+      <div class="table-responsive">
+        
+              <table class="table bg-light shadow mt-3">
+               
+                <tbody>
+                  
+                  <tr class="d-flex justify-content-around">
+                    
+                    <td><a class="text-dark small" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Go to view fee" href="/viewFee"><i class="fas fa-arrow-left text-dark fw-bold"></i> Back </a></td>
+                    
+                    <td> <a class="text-dark small" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Go to Student List" href="/stdList"><i class="far fa-list-alt text-info fw-bold"></i> Student List</a></td>
+                    
+                  </tr>
+                  
+                </tbody>
+                
+              </table>
+      
+          </div>
   
 
-    <div class="d-flex justify-content-between align-items-center mt-4 table-responsive">
-      
-        <a class="text-dark small" data-bs-toggle="tooltip" data-bs-placement="bottom" title="goto view fee" href="/viewFee"><i class="fas fa-arrow-left text-dark fw-bold"></i> Back </a>
-        
+    <div class="text-center mt-4 table-responsive">
+    
          <p class="text-secondary fw-normal"><%= viewTitle %> Wef: 01/01/2021  </p>
 
-        <a class="text-dark small" data-bs-toggle="tooltip" data-bs-placement="bottom" title="goto student list" href="/stdList"><i class="far fa-list-alt text-info fw-bold"></i> Student List</a>
-
-    
     </div>
     
  <!--Monthly fee table started-->
@@ -31,31 +46,31 @@
         
               <div class="table-responsive">
         
-              <table class="table bg-white border shadow-sm">
+              <table class="table bg-white border shadow">
                 
                    <tbody>
                      
                     <tr class="text-center">
                         
-                      <th class="p-3 text-secondary lead" colspan="6"> All Exam Fee Statement</th>
+                      <th class="p-3 text-success fw-bold lead" colspan="7"> All Exam Fee Statement</th>
                       
                     </tr>
                     
-                    <tr>
+                    <tr class="bg-secondary">
                       
-                      <td class="fw-bold text-muted border align-middle"> Sl. Nos</td>
+                      <td class="fw-bold text-white border align-middle"> Sl. Nos</td>
                       
-                      <td class="fw-bold text-muted border align-middle"> Regn. </td>
+                      <td class="fw-bold text-white border align-middle"> Regn. </td>
                       
-                      <td class="fw-bold text-muted border align-middle"> Student Name</td>
+                      <td class="fw-bold text-white border align-middle"> Student Name</td>
                       
-                      <td class="fw-bold text-muted border align-middle"> Narration </td>
+                      <td class="fw-bold text-white border align-middle"> Narration </td>
       
-                      <td class="fw-bold text-muted border align-middle"> Amount </td>
+                      <td class="fw-bold text-white border align-middle"> Amount </td>
                       
-                      <td class="fw-bold text-muted border align-middle"> Date of Payment </td>
+                      <td class="fw-bold text-white border align-middle"> Date of Payment </td>
                       
-                      <td class="fw-bold text-muted border align-middle"> Entered By </td>
+                      <td class="fw-bold text-white border align-middle"> Entered By </td>
       
                     </tr>
                     
@@ -94,7 +109,7 @@
                       
                           <td class="border"><%= convertDate(students[i].studentExamFee[k].dateofpayment) %></td>
                           
-                          <td class="border fst-italic">  <%= capitalizeFirstLetter(students[i].studentExamFee[k].verifierId.username) %> </td>
+                          <td class="border">  <%= capitalizeFirstLetter(students[i].studentExamFee[k].verifierId.username) %> </td>
         
                         </tr>
                         

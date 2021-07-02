@@ -12,17 +12,32 @@
     <%- include ('ejsFunction') %> <!--function javascript ejs-->
     
 <main class="container">
+    
+    <div class="table-responsive">
+        
+              <table class="table bg-light shadow mt-3">
+               
+                <tbody>
+                  
+                  <tr class="d-flex justify-content-around">
+                    
+                    <td><a class="text-dark small" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Go to view fee" href="/viewFee"><i class="fas fa-arrow-left text-dark fw-bold"></i> Back </a></td>
+                    
+                    <td> <a class="text-dark small" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Go to Student List" href="/stdList"><i class="far fa-list-alt text-info fw-bold"></i> Student List</a></td>
+                    
+                  </tr>
+                  
+                </tbody>
+                
+              </table>
+      
+          </div>
   
 
-    <div class="d-flex justify-content-between align-items-center mt-4">
-      
-        <a class="text-dark small" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Go to view fee" href="/viewFee"><i class="fas fa-arrow-left text-dark fw-bold"></i> Back </a>
-        
+    <div class="text-center mt-4">
+
          <p class="text-secondary fw-normal"><%= viewTitle %> : <span class="text-danger"><%= moment().format('DD/MM/YYYY'); %> <%= moment().format("[(]dddd[)]"); %></span></p>
 
-        <a class="text-dark small" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Go to Student List" href="/stdList"><i class="far fa-list-alt text-info fw-bold"></i> Student List</a>
-
-    
     </div>
     
         <!--Today fee review table started-->
@@ -31,30 +46,29 @@
         
               <div class="table-responsive">
         
-              <table class="table border bg-white border-start border-end shadow-sm">
+              <table class="table border bg-white border-start border-end shadow">
                 
                    <tbody>
                      
                     <tr class="text-center">
                         
-                      <th class="p-3 fw-normal text-secondary lead" colspan="6"> Monthly Fee</th>
-                      
+                      <th class="p-3 fw-bold text-success lead" colspan="6"> Monthly Fee</th>
                       
                     </tr>
                     
-                    <tr>
+                    <tr class="bg-secondary">
                       
-                      <td class="fw-bold text-dark border align-middle"> Regn.</td>
+                      <td class="fw-bold text-white border align-middle small"> Regn.</td>
                       
-                      <td class="fw-bold text-dark border align-middle"> Student's Name</td>
+                      <td class="fw-bold text-white border align-middle small"> Student's Name</td>
                       
-                      <td class="fw-bold text-dark border align-middle"> Father's Name </td>
+                      <td class="fw-bold text-white border align-middle small"> Father's Name </td>
                       
-                      <td class="fw-bold text-dark border align-middle"> Narration </td>
+                      <td class="fw-bold text-white border align-middle small"> Narration </td>
       
-                      <td class="fw-bold text-dark border align-middle"> Amount </td>
+                      <td class="fw-bold text-white border align-middle small"> Amount </td>
                       
-                      <td class="fw-bold text-dark border align-middle"> Entered By </td>
+                      <td class="fw-bold text-white border align-middle small"> Entered By </td>
       
                     </tr>
               <% 
@@ -117,29 +131,29 @@
         
               <div class="table-responsive">
         
-              <table class="table border bg-white border-start border-end shadow-sm">
+              <table class="table border bg-white border-start border-end shadow">
                 
                    <tbody>
                      
                     <tr class="text-center">
                         
-                      <th class="p-3 fw-normal text-secondary lead" colspan="6"> Exam Fee</th>
+                      <th class="p-3 fw-bold text-success lead" colspan="6"> Exam Fee</th>
                       
                     </tr>
                     
-                    <tr>
+                    <tr class="bg-secondary">
                       
-                      <td class="fw-bold text-dark border align-middle"> Regn.</td>
+                      <td class="fw-bold text-white border align-middle small"> Regn.</td>
                       
-                      <td class="fw-bold text-dark border align-middle"> Student's Name</td>
+                      <td class="fw-bold text-white border align-middle small"> Student's Name</td>
                       
-                      <td class="fw-bold text-dark border align-middle"> Father's Name </td>
+                      <td class="fw-bold text-white border align-middle small"> Father's Name </td>
                       
-                      <td class="fw-bold text-dark border align-middle"> Narration </td>
+                      <td class="fw-bold text-white border align-middle small"> Narration </td>
       
-                      <td class="fw-bold text-dark border align-middle"> Amount </td>
+                      <td class="fw-bold text-white border align-middle small"> Amount </td>
                       
-                      <td class="fw-bold text-dark border align-middle"> Entered By </td>
+                      <td class="fw-bold text-white border align-middle small"> Entered By </td>
       
                     </tr>
               <% 
@@ -208,29 +222,29 @@
         
               <div class="table-responsive">
         
-              <table class="table border bg-white border-start border-end shadow-sm">
+              <table class="table border bg-white border-start border-end shadow">
                 
                    <tbody>
                      
                     <tr class="text-center">
                         
-                      <th class="p-3 fw-normal text-secondary lead" colspan="6"> Other Fee</th>
+                      <th class="p-3 fw-bold text-success lead" colspan="6"> Other Fee</th>
                       
                     </tr>
                     
-                    <tr>
+                    <tr class="bg-secondary">
                       
-                      <td class="fw-bold text-dark border align-middle"> Regn.</td>
+                      <td class="fw-bold text-white border align-middle small"> Regn.</td>
                       
-                      <td class="fw-bold text-dark border align-middle"> Student's Name</td>
+                      <td class="fw-bold text-white border align-middle small"> Student's Name</td>
                       
-                      <td class="fw-bold text-dark border align-middle"> Father's Name </td>
+                      <td class="fw-bold text-white border align-middle small"> Father's Name </td>
                       
-                      <td class="fw-bold text-dark border align-middle"> Narration </td>
+                      <td class="fw-bold text-white border align-middle small"> Narration </td>
       
-                      <td class="fw-bold text-dark border align-middle"> Amount </td>
+                      <td class="fw-bold text-white border align-middle small"> Amount </td>
                       
-                      <td class="fw-bold text-dark border align-middle"> Entered By </td>
+                      <td class="fw-bold text-white border align-middle small"> Entered By </td>
       
                     </tr>
               <% 

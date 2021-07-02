@@ -18,7 +18,7 @@
       
         <div class="text-center">
           
-          <a href="/stdList" class="fw-light small"> <i class="far fa-list-alt text-primary"></i> Back to List </a>
+          <a href="/stdList" class="fw-light small"> <i class="far fa-hand-point-left text-primary"></i> Back to List </a>
           
         </div>
         
@@ -28,7 +28,7 @@
       
         <div class="text-center">
           
-          <a href="/all/stdDashboard" class="fw-light small"> <i class="far fa-list-alt text-primary"></i> Back Dashboard </a>
+          <a href="/all/stdDashboard" class="fw-normal text-muted small"> <i class="far fa-hand-point-left text-primary"></i> Back Dashboard </a>
           
         </div>
         
@@ -39,22 +39,17 @@
           
           <li class="nav-item" role="presentation">
             
-            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Profile</button>
+            <button class="nav-link active fw-bold text-dark" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">  Profile</button>
           
           </li>
           
           <li class="nav-item" role="presentation">
            
-            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Fee</button>
+            <button class="nav-link fw-bold text-dark" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">  Fee</button>
           
           </li>
           
-          <li class="nav-item" role="presentation">
-            
-            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Assignment</button>
-          
-          </li>
-          
+
         </ul>
         
         <div class="tab-content" id="myTabContent">
@@ -65,15 +60,15 @@
           
            <ul class="list-group">
                
-               <div class="table-responsive ">
+               <div class="table-responsive">
                  
-               <table class="table bg-white studentTable">
+               <table class="table bg-white studentTable shadow">
                   
                   <tbody>
                       
                     <tr class="text-center">
                         
-                      <th class="p-3 text-secondary" colspan="6"> Basic Details</th>
+                      <th class="p-3 text-success" colspan="6"> Basic Details</th>
                       
                     </tr>
                     
@@ -137,13 +132,13 @@
               
               <div class="table-responsive ">
 
-                 <table class="table border bg-white">
+                 <table class="table border bg-white shadow">
                   
                   <tbody>
                       
                     <tr class="text-center">
                         
-                      <th class="p-3 text-secondary" colspan="6"> Other Details </th>
+                      <th class="p-3 text-success" colspan="6"> Other Details </th>
                       
                     </tr>
                     
@@ -203,38 +198,41 @@
         
               <div class="table-responsive">
         
-              <table class="table bg-white border-start border-end shadow-sm">
+              <table class="table bg-white border-start border-end border-bottom shadow">
                 
                    <tbody>
                      
                     <tr class="text-center">
                         
-                      <th class="p-3 text-secondary lead" colspan="6"> Course Fee / Monthly Fee Statement</th>
+                      <th class="fw-bold text-success border-bottom-0" colspan="7"> Course Fee / Monthly Fee Statement</th>
                       
                     </tr>
                     
                     <tr>
                       
-                      <td rowspan="2" class="fw-bold text-muted border align-middle"> Sl. Nos</td>
-                      
-                      <td rowspan="2" class="fw-bold text-muted border align-middle"> Narration </td>
-      
-                      
-                      <td rowspan="2"class="fw-bold text-muted border align-middle"> Amount </td>
-                      
-                      <td rowspan="2" class="fw-bold text-muted border align-middle"> Date of Payment </td>
-                      
-                      <td rowspan="2" class="fw-bold text-muted border align-middle"> Checked/Verified By </td>
-                      
-                       <td colspan="2" class="fw-bold text-muted border text-center align-middle"> Course Fee (Rs. 9,000/-) </td>
-                      
-                    </tr>
-                    
-                    <tr>
-                      
-                        <td class="fw-bold text-muted border text-success">Total Paid</td>
+                        <td colspan="5" class="border-top-0"></td>
                         
-                        <td class="fw-bold text-muted border">Balance</td>
+                        <td colspan="2" class="fw-bold text-white bg-secondary border  text-center align-middle small"> Course Fee (Rs. 9,000/-) </td>
+                        
+                      
+                    </tr>
+                    
+                    <tr class="bg-secondary">
+                      
+                      
+                      <td  class="fw-bold text-white border align-middle small"> Sl. Nos</td>
+                      
+                      <td class="fw-bold text-white border align-middle small"> Narration </td>
+                      
+                      <td class="fw-bold text-white border align-middle small"> Amount </td>
+                      
+                      <td  class="fw-bold text-white border align-middle small"> Date of Payment </td>
+                      
+                      <td  class="fw-bold text-white border align-middle small"> Entered By </td>
+                      
+                      <td class="fw-bold text-white border small">Total Paid</td>
+                        
+                        <td class="fw-bold text-white border small">Balance</td>
  
                       </tr>
             
@@ -243,7 +241,7 @@
               
                         <tr>
                           
-                          <td class="text-center border" ><%= i + 1 %></td>
+                          <td class="text-center border" ><%=  i + 1 %></td>
                           
                           <td class="border fst-italic"> <%= students.studentFee[i].narrationInput %> </td>
                           
@@ -251,7 +249,7 @@
                       
                           <td class="border"><%= convertDate(students.studentFee[i].dateofpayment) %></td>
                           
-                          <td class="border fst-italic">  <%= capitalizeFirstLetter(students.studentFee[i].verifierId.username) %> </td>
+                          <td class="border">  <%= capitalizeFirstLetter(students.studentFee[i].verifierId.username) %> </td>
         
                           <td class="border text-success">Rs. <%= showTotalAmount(students.studentFee[i].feeAmount)  %></td>
                           
@@ -272,9 +270,9 @@
                             
                           <!--add monthly fee button-->   
                       
-                              <a class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enter Fee" href="/computer/<%= students._id %>/feeRegister">
+                              <a class="text-dark shadow p-2 rounded" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enter Fee" href="/computer/<%= students._id %>/feeRegister">
                                 
-                                  <i class="fas fa-edit text-success fw-bold">
+                                  <i class="fas fa-edit text-danger fw-bold">
                                     
                                   </i> 
                                   
@@ -303,38 +301,42 @@
               
               <div class="table-responsive ">
 
-               <table class="table border table-responsive bg-white  shadow-sm">
+               <table class="table border table-responsive bg-white  shadow">
                 
                    <tbody>
                      
                     <tr class="text-center">
                         
-                      <th class="p-3 text-secondary lead" colspan="6"> Exam Fee</th>
+                      <th class="fw-bold text-success border-bottom-0" colspan="7"> Exam Fee Statement</th>
                       
                     </tr>
                     
                     <tr>
                       
-                      <td rowspan="2" class="fw-bold text-muted border align-middle" class="ps-3" style="width: 85px"> Sl. Nos</td>
-                      
-                      <td rowspan="2" class="fw-bold text-muted border align-middle"> Narration </td>
-      
-                      <td rowspan="2"class="fw-bold text-muted border align-middle"> Amount </td>
-                      
-                      <td rowspan="2" class="fw-bold text-muted border align-middle"> Date of Payment </td>
-                      
-                      <td rowspan="2" class="fw-bold text-muted border align-middle"> Checked/Verified By </td>
-                      
-                       <td colspan="2" class="fw-bold text-muted border text-center align-middle"> Exam Fee (Rs. 1,510/-) </td>
+                        <td colspan="5" class="border-top-0"></td>
+                        
+                        <td colspan="2" class="fw-bold text-white bg-secondary border text-center align-middle small"> Exam Fee (Rs. 1,510/-) </td>
+                        
                       
                     </tr>
                     
-                     <tr>
+                    <tr class="bg-secondary">
                       
-                        <td class="fw-bold text-muted border text-success">Total Paid</td>
+                      
+                      <td  class="fw-bold text-white border align-middle small"> Sl. Nos</td>
+                      
+                      <td class="fw-bold text-white border align-middle small"> Narration </td>
+                      
+                      <td class="fw-bold text-white border align-middle small"> Amount </td>
+                      
+                      <td  class="fw-bold text-white border align-middle small"> Date of Payment </td>
+                      
+                      <td  class="fw-bold text-white border align-middle small"> Entered By </td>
+                      
+                      <td class="fw-bold text-white border small">Total Paid</td>
                         
-                        <td class="fw-bold text-muted border">Balance</td>
-                        
+                        <td class="fw-bold text-white border small">Balance</td>
+ 
                       </tr>
               
             
@@ -352,7 +354,7 @@
                       
                           <td class="border"><%= convertDate(students.studentExamFee[i].dateofpayment) %></td>
                           
-                          <td class="border fst-italic">  <%= capitalizeFirstLetter(students.studentExamFee[i].verifierId.username) %> </td>
+                          <td class="border">  <%= capitalizeFirstLetter(students.studentExamFee[i].verifierId.username) %> </td>
         
                           <td class="border text-success">Rs. <%= showTotalExamFeeAmount(students.studentExamFee[i].feeAmount)  %></td>
                           
@@ -373,9 +375,9 @@
                             
                           <!--add exam fee button-->   
                       
-                              <a class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enter Fee" href="/computer/<%= students._id %>/examFeeRegister">
+                              <a class="text-dark shadow p-2 rounded" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enter Fee" href="/computer/<%= students._id %>/examFeeRegister">
                                 
-                                  <i class="fas fa-edit text-success fw-bold">
+                                  <i class="fas fa-edit text-danger fw-bold">
                                     
                                   </i> 
                                   
@@ -404,29 +406,29 @@
               
               <div class="table-responsive">
 
-               <table class="table border table-responsive bg-white  shadow-sm">
+               <table class="table border table-responsive bg-white  shadow">
                 
                    <tbody>
                      
                     <tr class="text-center">
                         
-                      <th class="p-3 text-secondary lead" colspan="6"> Other Fee ( Eg. Backlog fee, Adm fee etc.)</th>
+                      <th class="fw-bold text-success" colspan="6"> Any Other Fee </span></th>
                       
                     </tr>
                     
-                    <tr>
+                    <tr class="bg-secondary">
                       
-                      <td class="fw-bold text-muted border align-middle" class="ps-3" style="width: 85px"> Sl. Nos</td>
+                      <td class="fw-bold text-white border align-middle small" class="ps-3" style="width: 85px"> Sl. Nos</td>
                       
-                      <td  class="fw-bold text-muted border align-middle"> Narration </td>
+                      <td  class="fw-bold text-white border align-middle small"> Narration </td>
       
-                      <td class="fw-bold text-muted border align-middle"> Amount </td>
+                      <td class="fw-bold text-white border align-middle small"> Amount </td>
                       
-                      <td  class="fw-bold text-muted border align-middle"> Date of Payment </td>
+                      <td  class="fw-bold text-white border align-middle small"> Date of Payment </td>
                       
-                      <td  class="fw-bold text-muted border align-middle"> Checked/Verified By </td>
+                      <td  class="fw-bold text-white border align-middle small"> Entered By </td>
                       
-                       <td class="fw-bold text-muted border text-center align-middle"> Remarks </td>
+                       <td class="fw-bold text-white text-center align-middle small"> Remarks </td>
                       
                     </tr>
                     
@@ -447,7 +449,7 @@
                       
                           <td class="border"><%= convertDate(students.studentOtherFee[i].dateofpayment) %></td>
                           
-                          <td class="border fst-italic">  <%= capitalizeFirstLetter(students.studentOtherFee[i].verifierId.username) %> </td>
+                          <td class="border">  <%= capitalizeFirstLetter(students.studentOtherFee[i].verifierId.username) %> </td>
         
                           <td class="border text-success"> <%= students.studentOtherFee[i].remarks %> </td>
                           
@@ -463,13 +465,15 @@
                             
                         <tr>
                           
-                          <td colspan="6" class="text-end pt-3 pb-3">
+                          <td colspan="5" class="text-end pt-3 pb-3"></td>
+                          
+                          <td colspan="1" class="text-start pt-3 pb-3">
                             
                           <!--add other fee button-->   
                       
-                              <a class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enter Fee" href="/computer/<%= students._id %>/otherFeeRegister">
+                              <a class="text-dark shadow p-2 rounded" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enter Fee" href="/computer/<%= students._id %>/otherFeeRegister">
                                 
-                                  <i class="fas fa-edit text-success fw-bold">
+                                  <i class="fas fa-edit text-danger fw-bold shadow">
                                     
                                   </i> 
                                   

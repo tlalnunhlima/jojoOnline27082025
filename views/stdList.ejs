@@ -12,26 +12,22 @@
     <%- include ('ejsFunction') %> <!--function javascript ejs-->
     
 <main class="container">
-  
-   
-   
+
           <div class="table-responsive">
         
-              <table class="table bg-white border mt-3">
+              <table class="table bg-light shadow border-bottom mt-3">
                
-                
                 <tbody>
                   
                   <tr>
-                    
                     
                     <td><a class="text-dark ms-3 align-middle small float-end border-end pe-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Add New Student" href="/register"><i class="fas fa-user-plus text-success fw-bold"></i> Add Student</a></td>
                     
                     <td><a class="text-dark ms-3 align-middle small float-end border-end pe-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Check fee" href="/viewFee"><i class="fas fa-rupee-sign text-primary fw-bold"></i> View Fee</a></td>
                     
-                    <td><a class="text-dark ms-3 align-middle small float-end border-end pe-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Check fee received" href="/viewAllFeeReceived"><i class="fas fa-rupee-sign text-danger fw-bold"></i> View All Fee </a></td>
+                    <td><a class="text-dark ms-3 align-middle small float-end border-end pe-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Check fee received" href="/viewAllFeeReceived"><i class="fas fa-rupee-sign text-danger fw-bold"></i> View Etc </a></td>
                     
-                    <td><a class="text-dark ms-3 align-middle small float-end border-end pe-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Check Assignment" href="#"><i class="fas fa-book-reader text-info fw-bold"></i> View Assignment</a></td>
+                    <td><a class="text-dark ms-3 align-middle small float-end border-end pe-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Check Assignment" href="#"><i class="fas fa-book-reader text-info fw-bold"></i> Assignment</a></td>
                     
                   </tr>
                   
@@ -41,28 +37,27 @@
       
           </div>
           
-          <p class="lead text-secondary fw-normal"><%= viewTitle %></p>
+          <p class="lead text-secondary fw-bold"><%= viewTitle %></p>
 
-    
 <div class="table-responsive">
   
-<table class="table border bg-white shadow-sm">
+<table class="table border bg-white shadow">
   
-  <thead>
+  <thead class="bg-secondary">
     
     <tr>
       
-      <th scope="col" class="ps-3 fw-bold text-secondary" style="width: 85px">Regn.</th>
+      <th scope="col" class="ps-3 fw-bold text-white" style="width: 85px">Regn.</th>
       
-      <th scope="col" class="fw-bold text-secondary">Name of Student</th>
+      <th scope="col" class="fw-bold text-white">Name of Student</th>
       
-      <th scope="col" class="fw-bold text-secondary">Father's Name</th>
+      <th scope="col" class="fw-bold text-white">Father's Name</th>
       
-      <th scope="col" class="fw-bold text-secondary">Address</th>
+      <th scope="col" class="fw-bold text-white">Address</th>
       
-      <th scope="col" class="fw-bold text-secondary">Phone No</th>
+      <th scope="col" class="fw-bold text-white">Phone No</th>
       
-      <th scope="col" class="fw-bold text-secondary">Action</th>
+      <th scope="col" class="fw-bold text-white">Action</th>
       
     </tr>
     
@@ -96,13 +91,13 @@
         
         <a href="/editStudent/<%= students[i]._id %>">
           
-          <i class="fas fa-edit border p-1 text-muted rounded me-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"></i>
+          <i class="fas fa-edit border border-muted p-1 text-muted rounded me-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"></i>
           
         </a>
     
                 <% if( username == 'tmapuia') { %>
         
-        <a href="/stdList/delete/<%= students[i]._id %>" onclick="return confirm('Are you sure to delete ' + '<%= students[i].username %>' +' record ?');"><i class="fas fa-trash-alt border p-1 text-muted rounded" aria-hidden="true"></i></a></td>
+        <a href="/stdList/delete/<%= students[i]._id %>" onclick="return confirm('Are you sure to delete ' + '<%= students[i].username %>' +' record ?');"><i class="fas fa-trash-alt border p-1 text-danger rounded" aria-hidden="true"></i></a></td>
           
                 <% } %>
       </td>
@@ -122,8 +117,6 @@
     <%- include('layouts/scripts') -%>
     
     <%- include('layouts/footer') -%>
-    
-
 
   </body>
   
