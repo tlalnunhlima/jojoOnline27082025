@@ -322,6 +322,8 @@ router.get('/all/stdDashboard', async (req, res) => {
             
             href3: req.session.hrefLink3,
             
+            loginIdName: req.session.studentIdentity,
+            
             studentId: req.session.userId,
             
             students
@@ -366,6 +368,8 @@ router.get('/all/computer/:id', async (req, res) => {
             href3: req.session.hrefLink3,
             
             loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
            
             students: doc
                 
@@ -418,7 +422,11 @@ router.get('/all/dcatheorywelcomepage', (req, res) => {
             
             href2: req.session.hrefLink2,
             
-            href3: req.session.hrefLink3
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
             
         })
         
@@ -428,6 +436,201 @@ router.get('/all/dcatheorywelcomepage', (req, res) => {
     
 }) 
 
+
+//dca101 chapter  1
+
+router.get('/all/dca1semOnlineLessonChapter1', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca1semOnlineLessonChapter1', {
+           
+           chapterTitle: 'DCA-101 Fundamental of Computer (Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+            
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca101 chapter  2
+
+router.get('/all/dca1semOnlineLessonChapter2', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca1semOnlineLessonChapter2', {
+           
+           chapterTitle: 'DCA-101 Fundamental of Computer (Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+            
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca101 chapter  3
+
+router.get('/all/dca1semOnlineLessonChapter3', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca1semOnlineLessonChapter3', {
+           
+           chapterTitle: 'DCA-101 Fundamental of Computer (Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+            
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+
+//dca101 chapter  4
+
+router.get('/all/dca1semOnlineLessonChapter4', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca1semOnlineLessonChapter4', {
+           
+           chapterTitle: 'DCA-101 Fundamental of Computer (Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+            
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca101 chapter  5
+
+router.get('/all/dca1semOnlineLessonChapter5', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca1semOnlineLessonChapter5', {
+           
+           chapterTitle: 'DCA-101 Fundamental of Computer (Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+            
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
 
 
 

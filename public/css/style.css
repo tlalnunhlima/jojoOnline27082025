@@ -58,6 +58,16 @@
   
 }
 
+.accordion {
+  
+    z-index: 0;
+    
+    background-color: white;
+    
+    position: relative;
+
+}
+
 
 /*-------------media query for video fullscreen-----------*/
 @media only screen and (max-width: 990px) {
