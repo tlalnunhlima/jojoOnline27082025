@@ -64,8 +64,10 @@ router.post('/users/otherFeeRegister', require('../controllers/storeStudentOther
 router.post('/staff/register', require('../controllers/storeStaff'))
 
 //auth login staff
-
 router.post('/authUser/loginStaff', require('../controllers/authLoginStaff'))
+
+//computer student assignment
+router.post('/computerStudents/theoryAssignment', require('../controllers/storeStudentAssignment'));
 
 
 
@@ -106,7 +108,6 @@ router.get('/', (req, res) => {
 router.get('/stdList', async (req, res) => {
     
     const students = await Student.find({}).sort({regn : -1}).populate('staffid');
-    
     
    if(req.session.adminIdentity) {
     
@@ -241,15 +242,15 @@ router.get('/view/staffList', async (req, res) => {
     
     const staffs = await staff.find({})
     
-    console.log(req.session)
+    console.log(req.session);
     
         res.render('staffList', {
             
             viewTitle: 'Staff List',
             
             staffs
-        })
-})
+        });
+});
 
 
 
@@ -300,11 +301,14 @@ router.get('/std/loginStudent', (req, res) => {
 
 router.get('/all/stdDashboard', async (req, res) => {
     
- const students = await Student.find({});
+    
+  const thisStudent = await Student.findOne({_id: req.session.userId});
+  
+  console.log('========= ' + thisStudent);
     
     if(req.session.studentIdentity) {
         
-       return res.render('stdDashboard', {
+        return res.render('stdDashboard', {
             
             username: req.session.username,
             
@@ -326,15 +330,57 @@ router.get('/all/stdDashboard', async (req, res) => {
             
             studentId: req.session.userId,
             
-            students
-            
-        })
+            thisStudent
+     
+        });
         
     }
         
-        res.redirect('/')
+        res.redirect('/');
     
-}) 
+});
+
+
+
+//student check score
+
+router.get('/assignment/checkScore/:id', async (req, res) => {
+    
+  const thisAssignment = await Student.findOne({_id: req.params.id});
+  
+    if(req.session.studentIdentity) {
+        
+        return res.render('assignmentCheckScore', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisAssignment
+     
+        });
+        
+    }
+        
+        res.redirect('/');
+    
+});
 
 
 
@@ -349,7 +395,7 @@ router.get('/all/computer/:id', async (req, res) => {
        
        if(!err) {
         
-            res.render('studentPage', {
+            return res.render('studentPage', {
        
             username: req.session.username,
             
@@ -373,9 +419,8 @@ router.get('/all/computer/:id', async (req, res) => {
            
             students: doc
                 
-                })
-                
-                return;
+                });
+ 
             }
             
         })
@@ -390,17 +435,13 @@ router.get('/all/computer/:id', async (req, res) => {
         
     }
 
-        res.redirect('/all/stdDashboard')
+        res.redirect('/all/stdDashboard');
     
-})
+});
 
 
 
-
-
-
-
-
+//theory intro page
 
 router.get('/all/dcatheorywelcomepage', (req, res) => {
     
@@ -428,24 +469,23 @@ router.get('/all/dcatheorywelcomepage', (req, res) => {
             
             studentId: req.session.userId
             
-        })
+        });
         
     }
         
-        res.redirect('/')
+        res.redirect('/');
     
-}) 
+});
 
 
-//dca101 chapter  1
 
-router.get('/all/dca1semOnlineLessonChapter1', (req, res) => {
+//dca-101 intro page
+
+router.get('/all/dca101welcomepage', (req, res) => {
     
     if(req.session.studentIdentity) {
         
-       return res.render('dca1semOnlineLessonChapter1', {
-           
-           chapterTitle: 'DCA-101 Fundamental of Computer (Theory)',
+       return res.render('dca101welcomepage', {
             
             username: req.session.username,
             
@@ -471,6 +511,239 @@ router.get('/all/dca1semOnlineLessonChapter1', (req, res) => {
         
     }
         
+        res.redirect('/');
+    
+}); 
+
+
+
+//dca-102 intro page
+
+router.get('/all/dca102welcomepage', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca102welcomepage', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+            
+        });
+        
+    }
+        
+        res.redirect('/');
+    
+}); 
+
+
+
+//dca-103 intro page
+
+router.get('/all/dca103welcomepage', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103welcomepage', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+            
+        });
+        
+    }
+        
+        res.redirect('/');
+    
+}); 
+
+
+//dca-104 intro page
+
+router.get('/all/dca104welcomepage', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca104welcomepage', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+            
+        });
+        
+    }
+        
+        res.redirect('/');
+    
+}); 
+
+
+//dca-105 intro page
+
+router.get('/all/dca105welcomepage', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105welcomepage', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+            
+        });
+        
+    }
+        
+        res.redirect('/');
+    
+}); 
+
+
+
+
+//dca-106 intro page
+
+router.get('/all/dca106welcomepage', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106welcomepage', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+            
+        });
+        
+    }
+        
+        res.redirect('/');
+    
+}); 
+
+
+
+
+
+//dca101 chapter  1
+
+router.get('/all/dca1semOnlineLessonChapter1', (req, res) => {
+    
+
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca1semOnlineLessonChapter1', {
+           
+           chapterTitle: 'Fundamental of Computer (DCA-101:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
         res.redirect('/all/stdDashboard');
     
 });
@@ -484,7 +757,7 @@ router.get('/all/dca1semOnlineLessonChapter2', (req, res) => {
         
        return res.render('dca1semOnlineLessonChapter2', {
            
-           chapterTitle: 'DCA-101 Fundamental of Computer (Theory)',
+           chapterTitle: 'Fundamental of Computer (DCA-101:Theory)',
             
             username: req.session.username,
             
@@ -523,7 +796,7 @@ router.get('/all/dca1semOnlineLessonChapter3', (req, res) => {
         
        return res.render('dca1semOnlineLessonChapter3', {
            
-           chapterTitle: 'DCA-101 Fundamental of Computer (Theory)',
+           chapterTitle: 'Fundamental of Computer (DCA-101:Theory)',
             
             username: req.session.username,
             
@@ -563,7 +836,7 @@ router.get('/all/dca1semOnlineLessonChapter4', (req, res) => {
         
        return res.render('dca1semOnlineLessonChapter4', {
            
-           chapterTitle: 'DCA-101 Fundamental of Computer (Theory)',
+           chapterTitle: 'Fundamental of Computer (DCA-101:Theory)',
             
             username: req.session.username,
             
@@ -602,7 +875,46 @@ router.get('/all/dca1semOnlineLessonChapter5', (req, res) => {
         
        return res.render('dca1semOnlineLessonChapter5', {
            
-           chapterTitle: 'DCA-101 Fundamental of Computer (Theory)',
+           chapterTitle: 'Fundamental of Computer (DCA-101:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+            
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca101 chapter  6
+
+router.get('/all/dca1semOnlineLessonChapter6', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca1semOnlineLessonChapter6', {
+           
+           chapterTitle: 'Fundamental of Computer (DCA-101:Theory)',
             
             username: req.session.username,
             
@@ -634,15 +946,170 @@ router.get('/all/dca1semOnlineLessonChapter5', (req, res) => {
 
 
 
+//dca101 chapter  7
+
+router.get('/all/dca1semOnlineLessonChapter7', (req, res) => {
     
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca1semOnlineLessonChapter7', {
+           
+           chapterTitle: 'Fundamental of Computer (DCA-101:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+            
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
     
+});
+
+//dca101 chapter  8
+
+router.get('/all/dca1semOnlineLessonChapter8', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca1semOnlineLessonChapter8', {
+           
+           chapterTitle: 'Fundamental of Computer (DCA-101:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+            
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca101 chapter  9
+
+router.get('/all/dca1semOnlineLessonChapter9', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca1semOnlineLessonChapter9', {
+           
+           chapterTitle: 'Fundamental of Computer (DCA-101:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+            
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca101 chapter  10
+
+router.get('/all/dca1semOnlineLessonChapter10', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca1semOnlineLessonChapter10', {
+           
+           chapterTitle: 'Fundamental of Computer (DCA-101:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+            
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+    
+ //delete student record
+ 
 router.get('/stdList/delete/:id', (req, res) => {
     
     Student.findByIdAndRemove(req.params.id, (err, doc) => {
         
         if (!err) {
             
-            console.log('One recorded data deleted successfully')
+            console.log('One recorded data deleted successfully');
             
             res.redirect('/stdList');
             
@@ -651,7 +1118,31 @@ router.get('/stdList/delete/:id', (req, res) => {
         else { console.log('Error in student delete :' + err); }
         
     });
+    
 });
+
+
+ //delete assignment record
+ 
+router.get('/assignment/delete/:id/:theoryId', async (req, res) => {
+    
+
+await Student.updateOne({_id: req.params.id}, { $pull: { assignmentTheory : { _id : req.params.theoryId } } }, { multi: true }, (err, doc) => {
+        
+        if (!err) {
+            
+            console.log('One assignment data deleted successfully');
+            
+            res.redirect('/all/stdDashboard');
+            
+        }
+        
+        else { console.log('Error in assignment delete :' + err); }
+        
+    });
+    
+});
+
 
 
 router.get('/auth/logout', (req, res) => {

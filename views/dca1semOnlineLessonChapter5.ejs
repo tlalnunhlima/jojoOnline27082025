@@ -24,7 +24,7 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pt-2 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4">
             
             <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
           
@@ -38,7 +38,7 @@
                         
                           <div class="d-flex justify-content-between m-1">
                             
-                            <a href="dca1semOnlineLessonChapter2"><button type="button" class="btn btn-sm btn-outline-danger"> Chapter-5 </button></a>
+                            <a href="dca1semOnlineLessonChapter5"><button type="button" class="btn btn-sm btn-outline-danger"> Chapter-5 </button></a>
                             
                               <div class="dropdown">
                 
@@ -49,6 +49,8 @@
                                     </button>
                                     
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                      
+                                      <li><a class="dropdown-item" href="dca101welcomepage">Intro</a></li>
                                       
                                       <li><a class="dropdown-item" href="dca1semOnlineLessonChapter1">Chapter-1</a></li>
                                       
@@ -96,7 +98,7 @@
                   
                   </h2>
                   
-                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                  <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                     
                     <div class="accordion-body">
                       
@@ -148,7 +150,7 @@ Input Devices (Keyboard Devices, Point-and-Draw Devices, Data Scanning Devices, 
                       
                       <div class="ratio ratio-16x9">
                         
-                          <iframe src="https://www.youtube.com/embed/2pudhSPob9U" title="dca101 chapter-3 video" allowfullscreen></iframe>
+                          <iframe src="https://www.youtube.com/embed/2pudhSPob9U" title="dca101 chapter-5 video" allowfullscreen></iframe>
 
                           
                         </div>
@@ -308,39 +310,354 @@ persons.
                
                     <div class="accordion-body">
                       
+                      
+                      
+            <form action="/computerStudents/theoryAssignment" method="POST" autocomplete="off">
+              
+              
+              <input type="hidden" name="_id" value="<%= studentId %>" aria-hidden="true">
+              
+              <input type="hidden" name="subjectName" value="DCA-101 (Theory)" aria-hidden="true">
+              
+              <input type="hidden" name="chapterName" value="Chapter-5" aria-hidden="true">
+              
+                      
                       <h6 class="text-center">A hnuaia zawhnate hi chhang rawh.</h6>
 
             
-                  <p class="font-weight-normal mt-3">
-                    Q1. Name two examples of input device.
-
+                 <p class="fw-bold mt-3">
+                    
+                    Q1. One example of input device is ________.
+                    
                   </p>
-                  <p class="font-weight-normal mt-3">
-                    Ans=> ...
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-3">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault1" value="Hard Disk" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                  
+                                 Hard Disk
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault2" value="Monitor" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                  
+                                  Monitor
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault3" value="Printer" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3">
+                                  
+                                  Printer
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault4" value="Keyboard" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4">
+                                  
+                                 Keyboard
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                          
+   
+                    
+                 
                   </p>
-                  <p class="font-weight-normal mt-3">
+                  
+                  <p class="fw-bold mt-3">
+                    
                     Q2. _______ printers are character printers that form characters and images by spraying small drops of ink on a paper.
+                    
                   </p>
-                  <p class="font-weight-normal mt-3">
-                    Ans=> ...
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault1Q2" value="Inkjet" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q2">
+                                  
+                                  Inkjet
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault2Q2" value="Laser" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q2">
+                                  
+                                 Laser
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault3Q2" value="Dot Matrix" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q2">
+                                  
+                                 Dot Matrix
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault4Q2" value="None of the above" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q2">
+                                  
+                                 None of the above
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                    
                   </p>
-                  <p class="font-weight-normal mt-3">
-                    Q3. What is the full form of OMR? 
+                  
+                  <p class="fw-bold mt-3">
+                    
+                    Q3. OMR stands for ________?
+                    
                   </p>
-                  <p class="font-weight-normal mt-3">
-                    Ans=> ...
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault1Q3" value="Optical Character Reader" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q3">
+                                  
+                                 Optical Character Reader
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault2Q3" value="Optical Mark Reader" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q3">
+                                  
+                                  Optical Mark Reader
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault3Q3" value="Optical Mark Recognition" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q3">
+                                  
+                                 Optical Mark Recognition
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault4Q3" value="None of the above" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q3">
+                                  
+                                  None of the above
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                    
                   </p>
-                  <p class="font-weight-normal mt-3">
-                    Q4. A ______ is an input device used for converting (digitizing) pictures, maps, and drawings into digital form for input to computers.
+                  
+                  <p class="fw-bold mt-3">
+                    
+                    Q4. A ________ is an ideal output device for architects, engineers, city planners, and others who need to generate 
+                    high precision, hard-copy, graphic output of varying sizes.
+                    
                   </p>
-                  <p class="font-weight-normal mt-3">
-                    Ans=> ...
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault1Q4" value="Xerox" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q4">
+                                  
+                                  Xerox
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault2Q4" value="Photoshop" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q4">
+                                  
+                                  Photoshop
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault3Q4" value="Plotters" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q4">
+                                  
+                                 Plotters
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault4Q4" value="Flex Printer" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q4">
+                                  
+                                 Flex Printer
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                    
                   </p>
-                   Q5. A _____ is an ideal output device for architects, engineers, city planners, and others who need to generate high precision, hard-copy, graphic output of varying sizes.
+                  
+                  <p class="fw-bold mt-3">
+                    
+                   Q5. ________ devices allow the computer system to interact with the outside world by
+                        moving data into and out of the system.
+                   
                   </p>
-                  <p class="font-weight-normal mt-3">
-                    Ans=> ...
-                  </p>
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault1Q5" value="File Transfer" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q5">
+                                  
+                                 File Transfer
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault2Q5" value="Hard Disk" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q5">
+                                  
+                                  Hard Disk
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault3Q5" value="Primary and Secondary" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q5">
+                                  
+                                  Primary and Secondary
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault4Q5" value="Input/Output" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q5">
+                                  
+                                  Input/Output
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                  
+                    </p>
+                  
+                  
+                  
+                  <div class="text-center">
+                    
+                  <button class="btn btn-primary mt-2" type="submit" onclick="return confirm('I submit duh tak tak em?');">Submit</button>
+                  
+                  </div>
+                  
+                  
+                  
+                      
+                    </form>
+                      
+                      
+                      
+                      
                       
 
                     </div><!-- end of 4th collapse assignment-->
@@ -362,9 +679,9 @@ persons.
               
               <div class="d-flex justify-content-between">
               
-                <a href="dca1semOnlineLessonChapter3"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
+                <a href="dca1semOnlineLessonChapter4"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
               
-                <a href="dca1semOnlineLessonChapter5"><code> Next <i class="fas fa-step-forward"></i></code></a>
+                <a href="dca1semOnlineLessonChapter6"><code> Next <i class="fas fa-step-forward"></i></code></a>
                 
             </div>
               

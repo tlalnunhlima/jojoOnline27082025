@@ -24,7 +24,7 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pt-2 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4">
             
             <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
           
@@ -49,6 +49,8 @@
                                     </button>
                                     
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                      
+                                      <li><a class="dropdown-item" href="dca101welcomepage">Intro</a></li>
                                       
                                       <li><a class="dropdown-item" href="dca1semOnlineLessonChapter1">Chapter-1</a></li>
                                       
@@ -96,7 +98,7 @@
                   
                   </h2>
                   
-                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                  <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                     
                     <div class="accordion-body">
                       
@@ -258,41 +260,355 @@ the computer users. Examples are the Computer monitor and the computer printer.
                
                     <div class="accordion-body">
                       
+                      
+                      
+                      
+                      
+          <form action="/computerStudents/theoryAssignment" method="POST" autocomplete="off">
+              
+              
+              <input type="hidden" name="_id" value="<%= studentId %>" aria-hidden="true">
+              
+              <input type="hidden" name="subjectName" value="DCA-101 (Theory)" aria-hidden="true">
+              
+              <input type="hidden" name="chapterName" value="Chapter-2" aria-hidden="true">
+                      
                       <h6 class="text-center">A hnuaia zawhnate hi chhang rawh.</h6>
 
             
-                  <p class="font-weight-normal mt-3">
-                    Q1. Write five computer functional units.
+                 <p class="fw-bold mt-3">
+                    
+                    Q1. CPU is made up of ________?
+                    
                   </p>
-                  <p class="font-weight-normal mt-3">
-                    Ans=> ...
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-3">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault1" value="Primary and Secondary Storage Unit" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                  
+                                  Primary and Secondary Storage Unit
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault2" value="Input and Output Unit" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                  
+                                  Input and Output Unit
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault3" value="Control Unit and Arithmetic Logic Unit" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3">
+                                  
+                                  Control Unit and Arithmetic Logic Unit
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault4" value="None of these" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4">
+                                  
+                                 None of these
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                          
+   
+                    
+                 
                   </p>
-                  <p class="font-weight-normal mt-3">
-                    Q2. Name two parts of storage unit.
+                  
+                  <p class="fw-bold mt-3">
+                    
+                    Q2. ALU and CU are part of _____?
+                    
                   </p>
-                  <p class="font-weight-normal mt-3">
-                    Ans=> ...
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault1Q2" value="Central Processing Unit" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q2">
+                                  
+                                  Central Processing Unit
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault2Q2" value="Storage Unit" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q2">
+                                  
+                                  Storage Unit
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault3Q2" value="Input Unit" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q2">
+                                  
+                                 Input Unit
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault4Q2" value="Output Unit" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q2">
+                                  
+                                  Output Unit
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                    
                   </p>
-                  <p class="font-weight-normal mt-3">
-                    Q3. ALU and CU are part of _____?
+                  
+                  <p class="fw-bold mt-3">
+                    
+                    Q3. In the above BCO figure, right arrow symbol ( <i class="fas fa-arrow-right text-muted"></i>) indicates ________
+                    
                   </p>
-                  <p class="font-weight-normal mt-3">
-                    Ans=> ...
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault1Q3" value="Flows of instruction and data" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q3">
+                                  
+                                 Flows of instruction and data
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault2Q3" value="Control exercised by control unit" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q3">
+                                  
+                                  Control exercised by control unit
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault3Q3" value="Program circulation" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q3">
+                                  
+                                  Program circulation
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault4Q3" value="None of these" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q3">
+                                  
+                                  None of these
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                    
                   </p>
-                  <p class="font-weight-normal mt-3">
-                    Q4. Give one example of Output Unit.
+                  
+                  <p class="fw-bold mt-3">
+                    
+                    Q4. Computer has ________ functional independent units.
+                    
                   </p>
-                  <p class="font-weight-normal mt-3">
-                    Ans=> ...
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault1Q4" value="2" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q4">
+                                  
+                                  2
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault2Q4" value="3" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q4">
+                                  
+                                  3
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault3Q4" value="4" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q4">
+                                  
+                                 4
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault4Q4" value="5" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q4">
+                                  
+                                  5
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                    
                   </p>
-                   Q5. 1MB is equal to _____ kb.
+                  
+                  <p class="fw-bold mt-3">
+                    
+                   Q5. 1MB is equal to ________ kb.
+                   
                   </p>
-                  <p class="font-weight-normal mt-3">
-                    Ans=> ...
-                  </p>
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault1Q5" value="1" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q5">
+                                  
+                                  1
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault2Q5" value="8" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q5">
+                                  
+                                  8
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault3Q5" value="1000" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q5">
+                                  
+                                  1000
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault4Q5" value="1024" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q5">
+                                  
+                                  1024
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                  
+                    </p>
+                  
+                  
+                  
+                  <div class="text-center">
+                    
+                  <button class="btn btn-primary mt-2" type="submit" onclick="return confirm('I submit duh tak tak em?');">Submit</button>
+                  
+                  </div>
+                  
+                  
+                  
                       
+                    </form>
+
 
                     </div><!-- end of 4th collapse assignment-->
+                    
+                    
+                    
                       
                       </div>
                

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  
+<%- include('layouts/headers') -%>
+
+
+<body class="bg-light">
+    
+    <%- include('layouts/navbar') -%>
+    
+    <%- include ('ejsFunction') %> <!--function javascript ejs-->
+    
+
+
+    <!-- --------------main container section------------------ -->
+
+<div class="container">
+  
+    
+
+    <main class="ms-sm-auto px-md-4">
+      
+      <a href="../../all/stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small mt-3"></i> Back to Dashboard</a>
+      
+      <!--second lane-->
+
+      <p class="mt-3 text-danger fw-bold lead">Answer Key</p>
+      
+  
+        
+        <!--Assignment form started-->
+        
+
+            <form action="#" method="POST" autocomplete="off">
+        
+              
+            <input type="hidden" name="_id" value="<%= studentId %>" aria-hidden="true">
+
+                  <p class="fw-normal mt-3">
+                    
+                    Q1. Who is the father of Computer?
+                    
+                  </p>
+                  
+                  <p class="fw-normal mx-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault1" value="Charles Barbar" disabled>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                  
+                                  Charles Barbar
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault2" value="Charles Babbage" disabled>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                  
+                                  Charles Babbage
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault3" value="Steve Job" disabled>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3">
+                                  
+                                  Steve Job
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault4" value="Ada Lovelace" disabled>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4">
+                                  
+                                  Ada Lovelace
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                          
+                          <div class="text-success fw-bold"> Correct Answer: <span class="text-dark fw-normal">Charles Babbage</span></div>
+    
+                  </p>
+                  
+                  
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    Q2. Which one is not characteristic of Computer?
+                    
+                  </p>
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault1Q2" value="Accuracy" disabled>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q2">
+                                  
+                                  Accuracy
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault2Q2" value="Power of Remembering" disabled>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q2">
+                                  
+                                  Power of Remembering
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault3Q2" value="High IQ" disabled>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q2">
+                                  
+                                  High IQ
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault4Q2" value="Versatility" disabled>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q2">
+                                  
+                                  Versatility
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                          
+                          <div class="text-success fw-bold"> Correct Answer: <span class="text-dark fw-normal">High IQ</span></div>
+                    
+                  </p>
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    Q3. Digital Computer use the binary number system which is _________ ?
+                    
+                  </p>
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault1Q3" value="0 or 1" disabled>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q3">
+                                  
+                                  0 or 1
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault2Q3" value="1 or 2" disabled>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q3">
+                                  
+                                  1 or 2
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault3Q3" value="2 or 3" disabled>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q3">
+                                  
+                                  2 or 3
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault4Q3" value="None of these" disabled>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q3">
+                                  
+                                  None of these
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                          
+                          
+                          <div class="text-success fw-bold"> Correct Answer: <span class="text-dark fw-normal">0 or 1</span></div>
+                    
+                  </p>
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    Q4. ________ is a device that transforms data into a meaningful information?
+                    
+                  </p>
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault1Q4" value="analog" disabled>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q4">
+                                  
+                                  Analog
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault2Q4" value="digital" disabled>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q4">
+                                  
+                                  Digital
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault3Q4" value="speedometer" disabled>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q4">
+                                  
+                                  Speedometer
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault4Q4" value="computer" disabled>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q4">
+                                  
+                                  Computer
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                          
+                          
+                          
+                          <div class="text-success fw-bold"> Correct Answer: <span class="text-dark fw-normal">Computer</span></div>
+                    
+                  </p>
+                  
+                  <p class="fw-normal mt-3">
+                    
+                   Q5. Generation of computer for the year 2021 is ________?
+                   
+                  </p>
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault1Q5" value="2nd Generation" disabled>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q5">
+                                  
+                                  2nd Generation
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault2Q5" value="3rd Generation" disabled>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q5">
+                                  
+                                  3rd Generation
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault3Q5" value="4th Generation" disabled>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q5">
+                                  
+                                  4th Generation
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault4Q5" value="5th Generation" disabled>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q5">
+                                  
+                                  5th Generation
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                          
+                          
+                          
+                          <div class="text-success fw-bold"> Correct Answer: <span class="text-dark fw-normal">5th Generation</span></div>
+                  
+                    </p>
+                  
+                 
+    
+               </form>
+
+      
+      
+    </main>
+</div>
+
+    <%- include('layouts/scripts') -%>
+    
+    <%- include('layouts/footer') -%>
+
+  </body>
+  
+  
+</html>

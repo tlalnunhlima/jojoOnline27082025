@@ -177,6 +177,8 @@ const UserSchema = new Schema({
        
    }],
    
+   
+   
    totalCourseFee: {
        
        type: Number,
@@ -202,6 +204,34 @@ const UserSchema = new Schema({
        required: true
        
    },
+   
+   assignmentTheory: [
+       
+       {
+           
+        subjectName: String,
+        
+        chapterName: String,
+       
+        mcq1: String,
+       
+        mcq2: String,
+       
+        mcq3: String,
+       
+        mcq4: String,
+       
+        mcq5: String,
+       
+        dateSubmitted: {
+        
+        type: Date,
+        
+        default: new Date()
+        
+    }
+       
+   }],
     
     
     datePosted: {

@@ -55,6 +55,8 @@ function insertRecord(req, res) {
       
       studentExamFee: [],
       
+      assignmentTheory: [],
+      
       totalCourseFee: 9000,
       
       feeDiscount: 2000,

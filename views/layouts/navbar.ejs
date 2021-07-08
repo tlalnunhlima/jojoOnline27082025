@@ -65,12 +65,14 @@
           
           <a class="nav-link dropdown-toggle text-primary" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               
-            Hi, <b> <%= capitalizeFirstLetter(username) %> </b>
+           Hi, <i class="fas fa-user-circle"></i> </b>
             
           </a>
          
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
               
+            <li><a class="dropdown-item" href="#"><i class="far fa-user-circle text-primary"></i> <%= capitalizeFirstLetter(username) %></a></li>
+            
             <li><a class="dropdown-item" href="<%= href1 %>"><i class="far fa-list-alt text-info"></i> <%= link1 %></a></li>
             
             <li><a class="dropdown-item" href="<%= href2 %>"><i class="far fa-list-alt text-info"></i> <%= link2 %></a></li>
