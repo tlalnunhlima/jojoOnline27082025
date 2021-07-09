@@ -68,6 +68,12 @@
 
 }
 
+.btn-link {
+  
+  text-decoration: none;
+  
+}
+
 
 /*-------------media query for video fullscreen-----------*/
 @media only screen and (max-width: 990px) {

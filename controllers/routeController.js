@@ -1100,84 +1100,1199 @@ router.get('/all/dca1semOnlineLessonChapter10', (req, res) => {
     
 });
 
-    
- //delete student record
- 
-router.get('/stdList/delete/:id', (req, res) => {
-    
-    Student.findByIdAndRemove(req.params.id, (err, doc) => {
+
+// ================================
+
+
+//dca102 chapter  1
+
+router.get('/all/dca102onlineclasschapter1', (req, res) => {
+
+    if(req.session.studentIdentity) {
         
-        if (!err) {
+       return res.render('dca102onlineclasschapter1', {
+           
+           chapterTitle: 'Operating System (DCA-102:Theory)',
             
-            console.log('One recorded data deleted successfully');
+            username: req.session.username,
             
-            res.redirect('/stdList');
+            link1: req.session.myDashboard1,
             
-        }
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
         
-        else { console.log('Error in student delete :' + err); }
+    }
         
-    });
+        res.redirect('/all/stdDashboard');
     
 });
 
 
- //delete assignment record
- 
-router.get('/assignment/delete/:id/:theoryId', async (req, res) => {
-    
+//dca102 chapter  2
 
-await Student.updateOne({_id: req.params.id}, { $pull: { assignmentTheory : { _id : req.params.theoryId } } }, { multi: true }, (err, doc) => {
+router.get('/all/dca102onlineclasschapter2', (req, res) => {
+
+    if(req.session.studentIdentity) {
         
-        if (!err) {
+       return res.render('dca102onlineclasschapter2', {
+           
+           chapterTitle: 'Operating System (DCA-102:Theory)',
             
-            console.log('One assignment data deleted successfully');
+            username: req.session.username,
             
-            res.redirect('/all/stdDashboard');
+            link1: req.session.myDashboard1,
             
-        }
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
         
-        else { console.log('Error in assignment delete :' + err); }
+    }
         
-    });
+        res.redirect('/all/stdDashboard');
     
 });
 
 
 
-router.get('/auth/logout', (req, res) => {
-    
-    req.session.destroy(() => {
+//dca102 chapter  3
+
+router.get('/all/dca102onlineclasschapter3', (req, res) => {
+
+    if(req.session.studentIdentity) {
         
-        res.redirect('/')
+       return res.render('dca102onlineclasschapter3', {
+           
+           chapterTitle: 'Operating System (DCA-102:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
         
-    })
-    
-})
-
-
-
-//erere
-
-router.get('/student/test', (req, res) => {
-    
-    res.render('testQuestion', {
+    }
         
-        questions : dcaQuestion
-    })
+        res.redirect('/all/stdDashboard');
     
-})
-
-//assignment question end ============================
+});
 
 
 
+//dca102 chapter  4
+
+router.get('/all/dca102onlineclasschapter4', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca102onlineclasschapter4', {
+           
+           chapterTitle: 'Operating System (DCA-102:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+
+//dca102 chapter  5
+
+router.get('/all/dca102onlineclasschapter5', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca102onlineclasschapter5', {
+           
+           chapterTitle: 'Operating System (DCA-102:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca102 chapter  6
+
+router.get('/all/dca102onlineclasschapter6', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca102onlineclasschapter6', {
+           
+           chapterTitle: 'Operating System (DCA-102:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+
+//dca102 chapter  7
+
+router.get('/all/dca102onlineclasschapter7', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca102onlineclasschapter7', {
+           
+           chapterTitle: 'Operating System (DCA-102:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca102 chapter  8
+
+router.get('/all/dca102onlineclasschapter8', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca102onlineclasschapter8', {
+           
+           chapterTitle: 'Operating System (DCA-102:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+
+
+//dca102 chapter  9
+
+router.get('/all/dca102onlineclasschapter9', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca102onlineclasschapter9', {
+           
+           chapterTitle: 'Operating System (DCA-102:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+
+//dca102 chapter  10
+
+router.get('/all/dca102onlineclasschapter10', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca102onlineclasschapter10', {
+           
+           chapterTitle: 'Operating System (DCA-102:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+
+/*=====================dca103 theory started========================*/
+
+
+
+//dca103 chapter  1
+
+router.get('/all/dca103onlineclasschapter1', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103onlineclasschapter1', {
+           
+           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca103 chapter  2
+
+router.get('/all/dca103onlineclasschapter2', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103onlineclasschapter2', {
+           
+           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca103 chapter  3
+
+router.get('/all/dca103onlineclasschapter3', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103onlineclasschapter3', {
+           
+           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+
+//dca103 chapter  4
+
+router.get('/all/dca103onlineclasschapter4', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103onlineclasschapter4', {
+           
+           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca103 chapter  5
+
+router.get('/all/dca103onlineclasschapter5', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103onlineclasschapter5', {
+           
+           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+
+//dca103 chapter  6
+
+router.get('/all/dca103onlineclasschapter6', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103onlineclasschapter6', {
+           
+           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+
+//dca103 chapter  7
+
+router.get('/all/dca103onlineclasschapter7', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103onlineclasschapter7', {
+           
+           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+
+//dca103 chapter  8
+
+router.get('/all/dca103onlineclasschapter8', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103onlineclasschapter8', {
+           
+           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca103 chapter  9
+
+router.get('/all/dca103onlineclasschapter9', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103onlineclasschapter9', {
+           
+           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca103 chapter  10
+
+router.get('/all/dca103onlineclasschapter10', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103onlineclasschapter10', {
+           
+           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca103 chapter  11
+
+router.get('/all/dca103onlineclasschapter11', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103onlineclasschapter11', {
+           
+           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca103 chapter  12
+
+router.get('/all/dca103onlineclasschapter12', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103onlineclasschapter12', {
+           
+           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca103 chapter  13
+
+router.get('/all/dca103onlineclasschapter13', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103onlineclasschapter13', {
+           
+           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca103 chapter  14
+
+router.get('/all/dca103onlineclasschapter14', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103onlineclasschapter14', {
+           
+           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca103 chapter  15
+
+router.get('/all/dca103onlineclasschapter15', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103onlineclasschapter15', {
+           
+           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca103 chapter  16
+
+router.get('/all/dca103onlineclasschapter16', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103onlineclasschapter16', {
+           
+           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca103 chapter  17
+
+router.get('/all/dca103onlineclasschapter17', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103onlineclasschapter17', {
+           
+           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca103 chapter  18
+
+router.get('/all/dca103onlineclasschapter18', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103onlineclasschapter18', {
+           
+           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca103 chapter  19
+
+router.get('/all/dca103onlineclasschapter19', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103onlineclasschapter19', {
+           
+           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca103 chapter  20
+
+router.get('/all/dca103onlineclasschapter20', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103onlineclasschapter20', {
+           
+           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+/*=====================dca103 theory end========================*/
 
 
 
 
 
-//view all group of fee
 
 router.get('/viewFee',(req, res) => {
     
@@ -1768,6 +2883,43 @@ router.get('/computer/:id/otherFeeRegister', async (req, res) => {
 });
 // =========================================
 
+router.get('/auth/logout', (req, res) => {
+    
+    req.session.destroy(() => {
+        
+        res.redirect('/')
+        
+    })
+    
+})
+
+
+
+//===================================
+
+//delete assignment record
+ 
+router.get('/assignment/delete/:id/:theoryId', async (req, res) => {
+    
+
+await Student.updateOne({_id: req.params.id}, { $pull: { assignmentTheory : { _id : req.params.theoryId } } }, { multi: true }, (err, doc) => {
+        
+        if (!err) {
+            
+            console.log('One assignment data deleted successfully');
+            
+            res.redirect('/all/stdDashboard');
+            
+        }
+        
+        else { console.log('Error in assignment delete :' + err); }
+        
+    });
+    
+});
+
+
+//=================================================
 
 
 
