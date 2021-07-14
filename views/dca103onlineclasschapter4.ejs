@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,15 +28,23 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-103) </p>
             
             <hr>
                         
@@ -51,7 +58,7 @@
                             
                           </div>
 
-            <p class="fw-normal mx-auto mt-3">Chapter 4-ah hian PROOFING A DOCUMENT WITH SPELL AND GRAMMAR CHECK  kan en ho dawn a ni. </p>
+            <p class="fw-normal mx-auto mt-3">Chapter 4-ah hian <code>PROOFING A DOCUMENT WITH SPELL AND GRAMMAR CHECK</code>  kan en ho dawn a ni. </p>
             
             <hr>
             
@@ -101,7 +108,7 @@
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Explanation
                    
                     </button>
                   
@@ -111,7 +118,23 @@
 
                     <div class="accordion-body">
             
-                         No Video Available yet
+                         <p>Spelling and Grammar check hi English language bik type chuan a tangkai hle a. Mizo tawng erawh chu a hriat ve loh
+                         avangin a hnuaiah te a rawn thai sen thin a, buaiphah nan hman loh tur a ni. Spelling and Grammar hi duha OFF leh ON theih a ni.
+                         A awmna hi Office Button > Word Options > Proofing hnuaiah tho a awm a ni. 
+                         
+                                    <figure class="figure">
+  
+                                    <img src="/img/spellingCheck.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="540" alt="spellingCheck" />
+                                    
+                                    <figcaption class="figure-caption ps-2 text-danger"> Spelling and Grammar Check </figcaption>
+                                    
+                                    </figure>
+                         
+                         
+                         
+                         
+                         
+                         </p>
                       
                       </div>
                   
@@ -148,34 +171,34 @@
 
 
 <p>
-1.	Spelling & Grammar checker facility is available under Proofing group of
+1.	<code>Spelling & Grammar checker facility</code> is available under Proofing group of
 Review tab.
 </p><p>
-2.	Spell checker is a feature of Microsoft Word that checks the spelling in a text document.
+2.	<code>Spell checker</code> is a feature of Microsoft Word that checks the spelling in a text document.
 </p><p>
 
-3.	Grammar checker is a feature of Microsoft Word that checks the grammar in   a text document. Grammar checker mostly suggests ways to correct the sentence construction.
+3.<code>	Grammar checker</code> is a feature of Microsoft Word that checks the grammar in   a text document. Grammar checker mostly suggests ways to correct the sentence construction.
 </p><p>
 
-4.	The Spelling & Grammar check in Word locates both spelling and grammar mistakes simultaneously.
+4.	<code>The Spelling & Grammar check</code> in Word locates both spelling and grammar mistakes simultaneously.
 </p><p>
 
-5.	In a Word document, a red wavy line indicates a word not found in the dictionary which could mean an incorrect spelling. A green wavy  line  indicates a grammar mistake or some formatting problem.
+5.	In a Word document, a<code> red wavy line</code> indicates a word not found in the dictionary which could mean an incorrect spelling. <code>A green wavy  line </code> indicates a grammar mistake or some formatting problem.
 </p><p>
 
-6.	The readability Statistics evaluates the ease with which an average reader can understand the piece of writing. Flesh Reading Ease score rates text on  a 100-point scale. Flesch-Kincaid Grade Level score rates text on an U.S. grade-school level.
+6.	<code>The readability Statistics</code> evaluates the ease with which an average reader can understand the piece of writing. Flesh Reading Ease score rates text on  a 100-point scale. Flesch-Kincaid Grade Level score rates text on an U.S. grade-school level.
 </p><p>
 
-7.	Shortcut menu is a menu that appears when the mouse is right-clicked.
+7.	<code>Shortcut menu</code> is a menu that appears when the mouse is right-clicked.
 </p><p>
 
-8.	Dialogue box is an interactive box that pops up to a take a response (like Yes/No) from the user.
+8.	<code>Dialogue box </code>is an interactive box that pops up to a take a response (like Yes/No) from the user.
 </p><p>
 
-9.	The Thesaurus provides synonyms and antonyms for a word.  It  also  provides lists of related words and different forms of the selected word.
+9.	<code>The Thesaurus</code> provides synonyms and antonyms for a word.  It  also  provides lists of related words and different forms of the selected word.
 </p><p>
 
-10.	Word Count easily counts the number of words present in a document. Just look at the Status bar. Alternatively, Word Count option is also available on the Proofing group of Review tab.
+10.	<code>Word Count</code> easily counts the number of words present in a document. Just look at the Status bar. Alternatively, Word Count option is also available on the Proofing group of Review tab.
 </p>
 
 
@@ -560,15 +583,7 @@ Review tab.
               </div>
               
            <hr>
-            
-            <div class="d-flex justify-content-between">
-              
-                <a href="dcatheorywelcomepage"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter2"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-                
-            </div>
+ 
             
             </div>
             

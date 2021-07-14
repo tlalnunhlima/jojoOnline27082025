@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,15 +28,23 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-103) </p>
             
             <hr>
                         
@@ -51,9 +58,9 @@
                             
                           </div>
 
-            <p class="fw-normal mx-auto mt-3">Chapter 10 atang hian SPREADSHEET PACKAGE kan zir tan ang a, chu chu Microsoft Office Excel 
+            <p class="fw-normal mx-auto mt-3">Chapter 10 atang hian <code>SPREADSHEET PACKAGE</code> kan zir tan ang a, chu chu <code>Microsoft Office Excel</code> 
             
-            tihna a ni a. he chapter-ah hian INTRODUCTION TO SPREADSHEETS kan en ho dawn a ni. </p>
+            tihna a ni a. He chapter-ah hian <code>INTRODUCTION TO SPREADSHEETS</code> kan en ho dawn a ni. </p>
             
             <hr>
             
@@ -104,7 +111,7 @@ worksheet, exiting Excel) (1 MARK)
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Explanation
                    
                     </button>
                   
@@ -114,7 +121,26 @@ worksheet, exiting Excel) (1 MARK)
 
                     <div class="accordion-body">
             
-                         No Video Available yet
+                         <p>Microsoft Office Excel hi spreadsheet a ni a. Spreadsheets an tih chu calculator lian pui, duh duha number leh data
+                         type luh theihna a ni ber  mai a.  Excel hi khawvela spreadsheet lar ber pakhat a ni a. Excel-ah chuan row leh column in
+                         a inrin khat vekah a. Row leh column intawhna chu box angin a lang a, chu chu cell an ti a. Cell-ah hian thu te, number te,
+                         special characters te, symbol te leh graphics te kan dah lut thei vek a ni. </p>
+                         
+                         <p>Microsoft Office Excel-ah hian column 16,384 a awm a, row pawh 1,048,576 zet a awm a ni. Excel hi a lian hle a, an sawi dan chuan
+                         
+                         pawh pharhin km chanve a hlai, 26 km vela thui niin an sawi. </p>
+                         
+                         
+                         <figure class="figure">
+  
+                         <img src="/img/excelScreen.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="540" alt="excelScreen" />
+                                    
+                          <figcaption class="figure-caption ps-2 text-danger"> Excel Screen </figcaption>
+                                    
+                          </figure> 
+                         
+                         
+                         
                       
                       </div>
                   
@@ -149,20 +175,20 @@ worksheet, exiting Excel) (1 MARK)
                         
 <p><em>INTRODUCTION TO SPREADSHEETS (1 MARK) </em></p>
 <p>
-1.	An electronic spreadsheet is a computer program that provides rows and columns electronically to manage numbers and data. Putting it simply, a spreadsheet is a super calculator.
+1.	<code>An electronic spreadsheet</code> is a computer program that provides rows and columns electronically to manage numbers and data. Putting it simply, a spreadsheet is a super calculator.
 </p><p>
 
-2.	Microsoft Office Excel is a popular spreadsheet program; excel for short.
+2.	<code>Microsoft Office Excel</code> is a popular spreadsheet program; excel for short.
 </p><p>
 
 
-3.	Worksheet is another name for a spreadsheet.
+3.	<code>Worksheet</code> is another name for a spreadsheet.
 </p><p>
 
-4.	Excel comprises of a total of 16,384 columns and 1,048,576 rows.
+4.	Excel comprises of a total of <code>16,384 columns</code> and <code>1,048,576 rows.</code>
 </p><p>
 
-5.	The intersection of a row and column is called a cell.
+5.	The intersection of a row and column is called a <code>cell.</code>
 </p><p>
   
 6.	The cell on which you click is called active cell.
@@ -171,13 +197,13 @@ worksheet, exiting Excel) (1 MARK)
 7.	You can enter text, numbers, dates, formulas, etc., into any cell on a  worksheet.
 </p><p>
 
-8.	In a worksheet, text is left aligned in a cell whereas numeric data is right aligned.
+8.	In a worksheet, <code>text is left aligned</code> in a cell whereas <code>numeric data is right aligned.</code>
 </p><p>
 
-9.	AutoFill is a technique to fill a series of data automatically in a series.
+9.	<code>AutoFill</code> is a technique to fill a series of data automatically in a series.
 </p><p>
 
-10.	Fill handle is a small  square at  the corner of  a cell that can be dragged to fill a group of cells.
+10.	<code>Fill handle</code> is a small  square at  the corner of  a cell that can be dragged to fill a group of cells.
 </p><p>
 
 11.	To save a worksheet, go to Office button and click save.
@@ -578,14 +604,7 @@ worksheet, exiting Excel) (1 MARK)
               
            <hr>
             
-            <div class="d-flex justify-content-between">
-              
-                <a href="dcatheorywelcomepage"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter2"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-                
-            </div>
+
             
             </div>
             

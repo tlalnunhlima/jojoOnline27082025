@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,15 +28,23 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-103) </p>
             
             <hr>
                         
@@ -51,7 +58,7 @@
                             
                           </div>
 
-            <p class="fw-normal mx-auto mt-3">Chapter 11-ah hian USING FORMULAS IN EXCEL  kan en ho dawn a ni. </p>
+            <p class="fw-normal mx-auto mt-3">Chapter 11-ah hian <code>USING FORMULAS IN EXCEL</code>  kan en ho dawn a ni. </p>
             
             <hr>
             
@@ -102,7 +109,7 @@ calculations using formula, concept of worksheets and workbook) (2 MARKS)
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Explanation
                    
                     </button>
                   
@@ -112,7 +119,19 @@ calculations using formula, concept of worksheets and workbook) (2 MARKS)
 
                     <div class="accordion-body">
             
-                         No Video Available yet
+                         <p>Microsoft Office Excel hi kan sawi tak angin calculator lian tak ang a ni a. Formula te a chhut luh theih a.
+                         
+                         Formula kan chhut luh dawn chuan <code>equal to (=)</code> hi type hmasak zel tur a ni. Entirnan, 2 + 2 kan belh duh chuan kan
+                         duhna ber cell-ah kan awm ang a, =2+2 tiin kan type lut ang. Tichuan, keyboard-ah enter kan hmet ang a, a answer 4 a rawn display dawn a ni.</p>
+                         
+                         
+                         <figure class="figure">
+  
+                         <img src="/img/excelScreenformula.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="540" alt="excelScreenformula" />
+                                    
+                          <figcaption class="figure-caption ps-2 text-danger"> Excel Formula </figcaption>
+                                    
+                          </figure> 
                       
                       </div>
                   
@@ -149,10 +168,10 @@ calculations using formula, concept of worksheets and workbook) (2 MARKS)
 
 
 <p>
-1.	A formula in Excel always starts with an = sign.
+1.	A formula in Excel always starts with an <code>= sign.</code>
 </p><p>
 
-2.	Workbook – A collection of worksheets; each Excel document is a workbook.
+2.	<code>Workbook</code> – A collection of worksheets; each Excel document is a workbook.
 </p><p>
 
 3.	In Excel, calculation is done by typing the addresses of the cells in a formula along with mathematical operators like +, -, * and /.
@@ -161,7 +180,7 @@ calculations using formula, concept of worksheets and workbook) (2 MARKS)
 4.	A formula can be copied in multiple rows or columns using fill handle.
 </p><p>
 
-5.	By default, each Excel workbook has 3 worksheets.
+5.	By default, each Excel workbook has <code>3 worksheets.</code>
 </p><p>
 
 6.	Excel displays a tab representing each sheet, which can be used to move from sheet to sheet.
@@ -555,14 +574,7 @@ calculations using formula, concept of worksheets and workbook) (2 MARKS)
               
            <hr>
             
-            <div class="d-flex justify-content-between">
-              
-                <a href="dcatheorywelcomepage"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter2"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-                
-            </div>
+
             
             </div>
             

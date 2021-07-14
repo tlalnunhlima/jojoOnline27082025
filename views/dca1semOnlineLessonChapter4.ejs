@@ -16,7 +16,7 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
+
       
       
 
@@ -24,15 +24,23 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-101) </p>
             
             <hr>
                         
@@ -78,7 +86,7 @@
                             
                           </div>
 
-            <p class="fw-normal mt-3">Chapter-4 ah hian Secondary Storage Device kan zir dawn a ni. </p>
+            <p class="fw-normal mt-3">Chapter-4 ah hian <code>SECONDARY STORAGE DEVICES</code> kan zir ho dawn a ni. </p>
             
             <hr>
             
@@ -183,26 +191,26 @@ Sequential and Direct-Access Devices, Magnetic Tapes, Magnetic Disks, Optical Di
 
 <p>
 There are two main categories of
-storage devices. <b>Primary storage,</b> such
+storage devices. <code>Primary storage,</code> such
 as RAM, is used by computer systems to
 temporarily store and retrieve data.
-<b>Secondary storage devices,</b> such as hard drives stores data permanently.</p>
+<code>Secondary storage devices,</code> such as hard drives stores data permanently.</p>
 
 <p>
 Generally, memory/storage is
-classified into 2 categories - <b>Volatile
-Memory </b> - This loses its data, when
-power is switched off. <b>Non-Volatile Memory</b> - This is a permanent storage
+classified into 2 categories - <code>Volatile
+Memory </code> - This loses its data, when
+power is switched off. <code>Non-Volatile Memory</code> - This is a permanent storage
 and does not lose any data when power is switched off.</p>
 
 
-<p><b>Direct access</b> speaks to the ability to access something (often memory) using a specific address.
-<b>Sequential access</b> implies that there is a “stream”
+<p><code>Direct access</code> speaks to the ability to access something (often memory) using a specific address.
+<code>Sequential access</code> implies that there is a “stream”
 of items, and there is no address available for accessing
 a specific, individual item. E.g., Magnetic Tape.</p>
 
 
-<p><b>Magnetic tape </b>- is a long and narrow
+<p><code>Magnetic tape </code>- is a long and narrow
 strip of plastic
 thin magnetic material is
 coated on. A tape
@@ -210,50 +218,50 @@ consists of vertical
 columns called frames,
 and horizontal rows called channels or tracks.</p>
 
-<p><b>A magnetic disk </b>- is a storage device that uses a magnetization process to write, rewrite and
+<p><code>A magnetic disk </code>- is a storage device that uses a magnetization process to write, rewrite and
 access data. It is covered with a magnetic coating and stores data in the form of tracks, spots
 and sectors. Hard disks, zip disks and floppy disks are common examples of magnetic disks. </p>
 
 
-<p><b>An optical disk </b>- is a computer storage disk that stores data digitally and uses laser beams
+<p><code>An optical disk </code>- is a computer storage disk that stores data digitally and uses laser beams
 (transmitted from a laser head mounted on an optical disk drive) to read and write data. Eg.,
 Compact disks (CD), digital versatile/video disks (DVD) and Blu-ray disks.</p>
 
 
-<p><b>Data backup</b> - is the process of creating a copy of some data from an on-line storage device to a
+<p><code>Data backup</code> - is the process of creating a copy of some data from an on-line storage device to a
 secondary storage backup device such as, magnetic tape, zip disk, disk pack, or WORM disk.</p>
 
 
-<p><b>Online data storage </b>- provides very rapid access to data on a constant basis. It stores all frequently
+<p><code>Online data storage </code>- provides very rapid access to data on a constant basis. It stores all frequently
 used data. Computer systems often use hard disk or disk array as an on-line storage device.</p>
 
 
-<p><b>Offline storage </b> - An off-line storage is not under direct control of any computer. User can physically remove or
+<p><code>Offline storage </code> - An off-line storage is not under direct control of any computer. User can physically remove or
 disconnects it for storing away from the computer. Hence, it is also known disconnected storage. </p>
 
 
-<p><b>Near-line storage</b> - is an intermediate storage between on-line storage and off-line storage. It means
+<p><code>Near-line storage</code> - is an intermediate storage between on-line storage and off-line storage. It means
 nearly on-line. They often use mass storage devices such as tape library, CD jukebox, etc. as a near-line
 storage device.</p>
 
-<p><b>Flash Drive (Pen drive) </b> - is a compact device of the size of a pen. It enables easy
+<p><code>Flash Drive (Pen drive) </code> - is a compact device of the size of a pen. It enables easy
 transport of data from one computer to another. A user simply plugs it into a USB (Universal Serial Bus)
 port of a computer. Available storage capacities are 256MB, 512MB, 1GB, 2GB, 4GB, 8GB, 16GB, 32GB
 and 64GB.</p>
 
-<p><b>Memory card </b> - is flash memory based cards which is available as removable storage device. The
+<p><code>Memory card </code> - is flash memory based cards which is available as removable storage device. The
 most popular ones are Secure Digital (SD) and Multimedia Card (MMC). Storage capacity of these cards
 range from 8MB to 32GB. </p>
 
-<p><b>
-Hierarchical storage system (HSS) </b> - Different types of storages have different capacity, speed of
+<p><code>
+Hierarchical storage system (HSS) </code> - Different types of storages have different capacity, speed of
 access, and cost per bit stored. Since a single type of storage is not superior in all aspect, most computer
 systems build their storage solutions by making use of a hierarchy of storage technologies. Such a storage
 solution system is called Hierarchical
 Storage System (HSS).</p>
 
-<p><b>
-Flash memory </b> is a non-volatile
+<p><code>
+Flash memory </code> is a non-volatile
 memory chip used for storage and for
 transferring data between a personal
 computer (PC) and digital devices. It
@@ -652,15 +660,7 @@ digital cameras and solid-state drives.</p>
               </div>
               
               <hr>
-              
-              
-              <div class="d-flex justify-content-between">
-              
-                <a href="dca1semOnlineLessonChapter3"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter5"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-            </div>
+
               
               
               

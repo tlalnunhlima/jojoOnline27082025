@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,15 +28,23 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-103) </p>
             
             <hr>
                         
@@ -51,7 +58,7 @@
                             
                           </div>
 
-            <p class="fw-normal mx-auto mt-3">Chapter 14-ah hian USE OF SIMPLE STATISTICAL FUNCTIONS   kan en ho dawn a ni. </p>
+            <p class="fw-normal mx-auto mt-3">Chapter 14-ah hian <code>USE OF SIMPLE STATISTICAL FUNCTIONS</code>   kan en ho dawn a ni. </p>
             
             <hr>
             
@@ -102,7 +109,7 @@ Conditional function) (2 MARKS)
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Overview
                    
                     </button>
                   
@@ -112,7 +119,23 @@ Conditional function) (2 MARKS)
 
                     <div class="accordion-body">
             
-                         No Video Available yet
+                         <p>Statistical Functions lar zualte chu: SUM(), AVERAGE(), MAX(), MIN(), COUNT() an ni a. Statistical Function te hi
+                         an tangkai hle a. Kan hman thiam dan azirin calculation harsa tak tak pawh awlsamte tein a tih theih a ni. Function tam tak
+                         zinga pakhat count function hi entirna atan han hmang ta ila; count() function chu cell-a number awmzat chhiarna a ni a. Excel-ah chuan text leh number chi hrang hrang hrang chhut luhsa nei ta la. Chuta
+                         tang chuan number awmna cell bik engzat nge awm tih i hriat duh chuan count function hi hman tur a ni. </p>
+                         
+                         <p>A lema entir ang hian <code>A3 atang G8 (A3:G8)</code> inkarah hian number thenkhat leh test tih thumal kan chhu khat vek a. Chuta tang chuan count function
+                         hmangin =count(A3:G8) tiin cell pakahtah kan han type a. Enter kan han hmeh chuan 29 tih a rawn lang ta a ni. Number bik chauh 
+                         chhut luhna cell 29 a awm a rawn ti ta a ni.</p>
+                         
+                         
+                         <figure class="figure">
+  
+                         <img src="/img/statisticalfunction.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="540" alt="statisticalfunction" />
+                                    
+                          <figcaption class="figure-caption ps-2 text-danger"> Statistical Function (Count) </figcaption>
+                                    
+                          </figure> 
                       
                       </div>
                   
@@ -149,18 +172,18 @@ Conditional function) (2 MARKS)
 
 
 <p>
-1.	A function in Excel is a readymade formula. A wide range of such functions is available in Excel.
+1.	<code>A function in Excel </code>is a readymade formula. A wide range of such functions is available in Excel.
 </p><p>
-2.	Some commonly used functions are SUM(), AVERAGE(), MAX(), MIN(), COUNT().
+2.	Some commonly used functions are<code> SUM(), AVERAGE(), MAX(), MIN(), COUNT().</code>
 </p><p>
 
-3.	IF() is conditional function; it evaluates a condition and takes one of two specified actions.
+3.	<code>IF()</code> is conditional function; it evaluates a condition and takes one of two specified actions.
 </p><p>
 
 4.	The example format for IF() function is: =IF(A1 >= 33%, “PASS”, “FAIL”).
 </p><p>
 
-5.	A1:A5 represents a range.
+5.	A1:A5 represents a<code> range.</code>
 </p><p>
 
 6.	MAX(): to find the largest number in a range.
@@ -172,7 +195,7 @@ Conditional function) (2 MARKS)
 8.	COUNT(): to find the physical count of entries in a range.
 </p><p>
 
-9.	SUM(C6:H6) is equal to =C6+D6+E6+F6+G6+H6
+9.	<code>SUM(C6:H6)</code> is equal to =C6+D6+E6+F6+G6+H6
 </p><p>
 
 10.	Sizing handle which is a handle in the lower right corner can be dragged to resize the table.
@@ -181,7 +204,7 @@ Conditional function) (2 MARKS)
 11.	Sorting means arranging data in ascending or descending order.
 </p><p>
 
-12.	AutoSum button is in the Editing group of Home tab.
+12.	<code>AutoSum button</code> is in the Editing group of Home tab.
 </p><p>
 
 13.	Total Row is a special row that gives access to a variety of functions (such as AVERAGE, SUM, etc.)
@@ -191,7 +214,7 @@ Conditional function) (2 MARKS)
 14.	By default, a table has a header row. The header row of a table has filtering and sorting capabilities.
 </p><p>
 
-15.	Every column has filtering enabled in the header row to filter or sort table data quickly.
+15.	<code>Every column has filtering enabled in the header row</code> to filter or sort table data quickly.
 </p><p>
 
 16.	A calculated column can be created by entering a formula in one cell; the formula is automatically applied to the entire column.
@@ -590,14 +613,7 @@ Conditional function) (2 MARKS)
               
            <hr>
             
-            <div class="d-flex justify-content-between">
-              
-                <a href="dcatheorywelcomepage"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter2"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-                
-            </div>
+
             
             </div>
             

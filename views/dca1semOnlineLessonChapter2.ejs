@@ -16,7 +16,7 @@
 
     <main class="ms-sm-auto px-md-4">
       
-     <%- include('layouts/studentMenu') -%>
+  
       
       
 
@@ -24,15 +24,23 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+         <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-101) </p>
             
             <hr>
                         
@@ -78,7 +86,7 @@
                             
                           </div>
 
-            <p class="fw-normal mt-3">Chapter-2 ah hian Basic Computer Organization kan zir dawn a. Computer chhungah unit engzat nge awm tih leh data leh instruction kal kual dan kan zir dawn a ni. </p>
+            <p class="fw-normal mt-3">Chapter-2 ah hian <code>BASIC COMPUTER ORGANIZATION</code> kan zir ho dawn a ni. </p>
             
             <hr>
             
@@ -179,7 +187,7 @@
                       
                       
                         <em><p>2) BASIC COMPUTER ORGANIZATION - (5 MARKS)</p></em>
-                        <p><b>Computer</b> has five functional independent units
+                        <p><code>Computer</code> has five functional independent units
                         like <code> Input Unit, Memory Unit,
                         Arithmetic & Logic Unit,
                         Output Unit, and Control
@@ -198,26 +206,26 @@
 
 
 
-<p><b>Input Unit </b> - The data
+<p><code>Input Unit </code> - The data
 entry station or devices are
 termed as input units. Example - keyboard, mouse,
 scanner, joystick, joypad,
 graphics table, MICR etc.</p>
 
-<p><b>Control Unit (CU) </b> - It tells
+<p><code>Control Unit (CU) </code> - It tells
 the computer's memory, arithmetic and logic unit and input and output devices how to respond to the instructions that have
 been sent to the processor.</p>
 
 
-<p><b>Arithmetic Logic Unit (ALU)</b> - is a major component of the central processing unit of a computer
+<p><code>Arithmetic Logic Unit (ALU)</code> - is a major component of the central processing unit of a computer
 system. The major operations performed by the ALU are addition, subtraction, multiplication, division,
 logic and comparison.</p>
 
-<p><b>Memory Unit</b> - A bit is a binary digit, the smallest increment of data on a computer. A bit can hold
+<p><code>Memory Unit</code> - A bit is a binary digit, the smallest increment of data on a computer. A bit can hold
 only one of two values - 0 or 1, corresponding to the electrical values of off or on, respectively. Bits are 
 usually assembled into a group of eight to form a byte. A byte contains enough information to store a
 single ASCII character, like "h". </p>
-<p><b>Computer storage and memory measurement unit</b></p>
+<p><code>Computer storage and memory measurement unit</code></p>
 <p>1 bit  = 0 or 1</p>
 <p>8 bits  = 1 bytes</p>
 <p>1024 byte =  1 KB</p>
@@ -226,7 +234,7 @@ single ASCII character, like "h". </p>
 <p>1024 GBs  = 1 TB1</p>
  <p><small>Note: KB = Kilobyte, MB = Megabyte, GB = Gigabyte, TB = Terrabyte</small></p>
  
-<p><b>Output Unit</b> - The output unit would be composed of the devices that provide information back to
+<p><code>Output Unit</code> - The output unit would be composed of the devices that provide information back to
 the computer users. Examples are the Computer monitor and the computer printer. 
                       </p>
  
@@ -620,14 +628,7 @@ the computer users. Examples are the Computer monitor and the computer printer.
               
               <hr>
               
-              
-              <div class="d-flex justify-content-between">
-              
-                <a href="dca1semOnlineLessonChapter1"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter3"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-            </div>
+
               
               
               

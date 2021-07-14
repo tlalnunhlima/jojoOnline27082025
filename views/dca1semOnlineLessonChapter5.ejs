@@ -16,23 +16,28 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
-      
-      
 
         <!--a lane lai ta-->
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+           <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-101) </p>
             
             <hr>
                         
@@ -78,7 +83,7 @@
                             
                           </div>
 
-            <p class="fw-normal mt-3">Chapter-5 ah hian Input Output Device kan zir dawn a ni. </p>
+            <p class="fw-normal mt-3">Chapter-5 ah hian <code>INPUT-OUTPUT DEVICES</code> kan zir ho dawn a ni. </p>
             
             <hr>
             
@@ -190,51 +195,51 @@ Input Devices (Keyboard Devices, Point-and-Draw Devices, Data Scanning Devices, 
 
 <em><p>5) INPUT-OUTPUT DEVICES - (4 MARKS)</p></em>
 
-<p><b>Input and output (I/O) devices</b> allow the computer system to interact with the outside world by
+<p><code>Input and output (I/O) devices</code> allow the computer system to interact with the outside world by
 moving data into and out of the system. They are also known as peripheral devices because they
 surround a computer’s CPU and memory.</p>
 
-<p><b>An input device </b>is used to bring data into the system. Some input devices are - Keyboard, Mouse,
-Microphone, Bar code reader, Graphics tablet.  <b>A computer keyboard</b> is a typewriter-style device which is composed of buttons that
+<p><code>An input device </code>is used to bring data into the system. Some input devices are - Keyboard, Mouse,
+Microphone, Bar code reader, Graphics tablet.  <code>A computer keyboard</code> is a typewriter-style device which is composed of buttons that
 create letters, numbers, and symbols, as well as perform other functions. The most popular keyboard
-used today is the 101-keys QWERTY keyboard. <b>Point & Draw Devices</b> is a hardware input device that allows the user to move the mouse pointer.
+used today is the 101-keys QWERTY keyboard. <code>Point & Draw Devices</code> is a hardware input device that allows the user to move the mouse pointer.
 Good examples of pointing devices are a computer mouse, trackball, light pens and touch screen.
-Mouse is the most popular point and draw device. <b>Data scanning device </b> is an electronic device that scans printed or handwritten text documents,
+Mouse is the most popular point and draw device. <code>Data scanning device </code> is an electronic device that scans printed or handwritten text documents,
 images, or certain objects, and converts them into a digital file format. Eg., flatbed scanners and
-handheld scanners. <b>Optical Character Recognition (OCR) device </b> scanner first creates the bitmap image of the
+handheld scanners. <code>Optical Character Recognition (OCR) device </code> scanner first creates the bitmap image of the
 document and then the OCR software translates the array of grid points into ASCII text that the
-computer can interpret as letters, numbers, and special characters. <b>Optical Mark Reader (OMR)</b> is a scanner, which can recognize a pre-specified type of mark made by
+computer can interpret as letters, numbers, and special characters. <code>Optical Mark Reader (OMR)</code> is a scanner, which can recognize a pre-specified type of mark made by
 pencil or pen. For example, in objective type tests, the answer sheets are fed to an OMR device for
-grading with a computer automatically. <b>Bar-code reader</b> is a device for reading (de-coding) bar-coded data. Data coded in the form of small
+grading with a computer automatically. <code>Bar-code reader</code> is a device for reading (de-coding) bar-coded data. Data coded in the form of small
 lines are known as bar codes. All types of goods, books, postal packages, badges, tags, etc. use bar
-codes for unique identification purpose. <b>
-Magnetic-Ink Character Recognition (MICR)</b>  is similar to OCR. Banking industry uses it for faster
-cheque processing.  <b> A digitizer </b> is an input device used for converting (digitizing) pictures, maps, and drawings into
+codes for unique identification purpose. <code>
+Magnetic-Ink Character Recognition (MICR)</code>  is similar to OCR. Banking industry uses it for faster
+cheque processing.  <code> A digitizer </code> is an input device used for converting (digitizing) pictures, maps, and drawings into
 digital form for input to computers. Architects and engineers commonly use digitizers in the area of
 Computer Aided Design (CAD) for designing cars, building, medical devices, robots, mechanical parts,
-etc. <b> Electronic card readers </b> are electronic devices that can read plastic cards embedded with either a
+etc. <code> Electronic card readers </code> are electronic devices that can read plastic cards embedded with either a
 barcode, magnetic strip, computer chip or another storage medium. Eg. ATM (automatic teller
-machines) is also debit/credit card reader device. <b> Speech recognition devices </b> are input devices that allow a person to input data to a computer
+machines) is also debit/credit card reader device. <code> Speech recognition devices </code> are input devices that allow a person to input data to a computer
 system by speaking to it. </p>
 
 <hr class="w-25">
-<p> <b>AN OUTPUT DEVICE </b> - Output
+<p> <code>AN OUTPUT DEVICE </code> - Output
 devices generate computer outputs
 that are broadly of following two types
 - Soft-copy output and hard-copy
 output.
 
 <p>
-<b>Some output devices are </b> - <b>Monitors</b> are the most popular softcopy output devices used today. A
+<code>Some output devices are </code> - <code>Monitors</code> are the most popular softcopy output devices used today. A
 monitor is associated usually with a
 keyboard and together they form a
 video display terminal (VDT). A VDT
 (often referred to as just terminal) is both an input and output device. Two basic types of monitors are
 cathode-ray-tube (CRT) and LCD (Liquid Crystal display) flat-panel.
 
-<b>Printers </b> are the most popular hard-copy output devices used today. Different types of printers are
+<code>Printers </code> are the most popular hard-copy output devices used today. Different types of printers are
 described below.
-<b>Dot-Matrix Printers </b> are character
+<code>Dot-Matrix Printers </code> are character
 printers that print one character at a
 time. Dot-matrix printers are impact
 printers because they print by
@@ -242,39 +247,39 @@ hammering pins on an inked ribbon
 to leave ink impressions on a paper.
 The printing speeds 30 to 600
 characters per second.
-<b>Inkjet Printers</b> are character
+<code>Inkjet Printers</code> are character
 printers that form characters and
 images by spraying small drops of ink
 on a paper. The print head can
 contains upto 64 tiny nozzles. It has printing speeds ranging 40 to 300 characters per second. Inkjet
 printers are non impact printer and are both monochrome and color.
-<b>Drum printers</b> are line printers that print an entire line at a time. Recall that dot matrix and inkjet
+<code>Drum printers</code> are line printers that print an entire line at a time. Recall that dot matrix and inkjet
 printers print one character at a time. Due to impact printing, drum printers are noisy in operation and
 printing speeds are in the range of 300 to 2000 lines per minute.
-<b>Chain/Band Printers </b> are line
+<code>Chain/Band Printers </code> are line
 printers that print one line at a time.
 The chain/band rotates at a high
 speed. Unlike the drum of a drum
 printer, we can change the chain of
 the chain printer easily. Chain
 printers are impact printers.
-<b>Laser Printers </b> are page printers
+<code>Laser Printers </code> are page printers
 that print one page at a time. Main components of a laser printner are a laser beam source, a multi-sided mirror, a photoconductive drum, and
 toner. The most common laser printers have resolution of 600 dpi (dots per inch) to 1200 dpi. Laser printers are
 non impact printers.
-<b>Plotters </b> - A plotter is an ideal output device for architects, engineers, city planners, and others who
+<code>Plotters </code> - A plotter is an ideal output device for architects, engineers, city planners, and others who
 need to generate high precision, hard-copy, graphic output of varying sizes. Two types of plotters in
 common use are drum plotter and flatbed plotter.
 
-<b>Screen Image Projector </b> - is an output device, which is used to display information from a computer
+<code>Screen Image Projector </code> - is an output device, which is used to display information from a computer
 on a large screen so that a group of people can view it simultaneously. It has become common
 presentation equipment today.
 
-<b>Voice Response Systems </b> enables a computer to talk to a user. It has an audio-response device that
+<code>Voice Response Systems </code> enables a computer to talk to a user. It has an audio-response device that
 produces audio output. Voice response systems are of two types – voice reproduction system and
 speech synthesizer.
-<b>Voice reproduction system </b> produces audio output by selecting an audio output from a set of prerecorded audio responses. Eg., ATM machine audio help for guiding how to operate ATM system.
-<b>Speech Synthesizer </b> converts text information into spoken sentences. To produce speech, it
+<code>Voice reproduction system </code> produces audio output by selecting an audio output from a set of prerecorded audio responses. Eg., ATM machine audio help for guiding how to operate ATM system.
+<code>Speech Synthesizer </code> converts text information into spoken sentences. To produce speech, it
 combines basic sound units called phonemes. This is very useful for reading out text information to blind
 persons. 
 </p>
@@ -676,14 +681,7 @@ persons.
               
               <hr>
               
-              
-              <div class="d-flex justify-content-between">
-              
-                <a href="dca1semOnlineLessonChapter4"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter6"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-            </div>
+
               
               
               

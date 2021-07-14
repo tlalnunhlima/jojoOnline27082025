@@ -16,7 +16,7 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
+
       
       
       <!--a lane chung lam-->
@@ -29,15 +29,23 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+           <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-102) </p>
             
             <hr>
                         
@@ -83,7 +91,7 @@
                             
                           </div>
 
-            <p class="fw-normal mx-auto mt-3">Chapter-4 Microsoft Windows 7 Screen kan zir dawn a ni. </p>
+            <p class="fw-normal mx-auto mt-3">Chapter-4 ah hian <code> BASIC ELEMENTS OF OPENING SCREEN OF WIN 7</code> kan zir dawn a ni. </p>
             
             <hr>
             
@@ -133,7 +141,7 @@ The Desktop, Icons and their Types, The Taskbar, Elements of a Window
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Explanation
                    
                     </button>
                   
@@ -143,9 +151,11 @@ The Desktop, Icons and their Types, The Taskbar, Elements of a Window
 
                     <div class="accordion-body">
             
-                          No Video available
-                  
-                        <small>DCA-102 Chapter-4</small>
+                         <p>Computer kan han ON fel veleh hian thil lem lo lang a awm thin a. Hei hi opening screen a ni a, desktop tiin an sawi bawk a.
+                         He desktop-ah hian thil chi hrang hrang a awm a, icon te, taskbar te, start menu etc., te a lo awm nghal thin a ni.</p>
+                         
+                         <p>Desktop Item chi hrang hrang leh an hmingte hi chhinchhiah a tha khawp mai a. Computer thiam tur chuan heng an hming hriat hmasak
+                         hi a ngai a ni.</p>
                       
                       </div>
                   
@@ -183,11 +193,11 @@ The Desktop, Icons and their Types, The Taskbar, Elements of a Window
 
 <p>
   
-  <b>Windows Desktop: </b> Desktop is the first screen that appears when a computer is switched on. 
+  <code>Windows Desktop: </code> Desktop is the first screen that appears when a computer is switched on. 
 It remains in the background even if any program is running. A desktop will typically have icons, 
 Start Menu and Taskbar. Desktop is actually a folder in the    C drive, in the folder named Document and Settings.</p>
 
-<p><b>Icons and Their Types:</b> Icons are small pictures seen on the desktop. 
+<p><code>Icons and Their Types:</code> Icons are small pictures seen on the desktop. 
 All shortcut icons have a tiny curved arrow at the lower left corner. 
 The default icons  common to all computers, such as Computer, Documents, 
 Recycle Bin and Internet Explorer are also shortcuts, though they do not have arrow. 
@@ -196,35 +206,35 @@ Deleting a shortcut icon does not  delete the item associated with it; only the 
 
 
 <p>
-<b>The Taskbar:</b> The taskbar is the long horizontal bar at the bottom of  the screen. <br>
+<code>The Taskbar:</code> The taskbar is the long horizontal bar at the bottom of  the screen. <br>
 It  has three main sections: <br>i) on the extreme left is the Start button.<br>
 ii) The middle  section shows the program or files you have opened.<br>
 iii) On the extreme right is the notification area.
 </p>
 
-<p><b>ELEMENTS OF A WINDOW:</b></p>
+<p><code>ELEMENTS OF A WINDOW:</code></p>
 
-<p><b>Title Bar:</b> Just below the top border of the window is the Title bar.</p>
+<p><code>Title Bar:</code> Just below the top border of the window is the Title bar.</p>
 
-<p><b>Minimize, Maximize and Restore Buttons: </b> They are the three small buttons at the right end of the Title bar.</p>
+<p><code>Minimize, Maximize and Restore Buttons: </code> They are the three small buttons at the right end of the Title bar.</p>
 
-<p><b>Scroll Bars, Scroll Boxes and Scroll Buttons:</b> If a window is not long enough to display its contents completely, you can use vertical or horizontal scrollbar.</p>
+<p><code>Scroll Bars, Scroll Boxes and Scroll Buttons:</code> If a window is not long enough to display its contents completely, you can use vertical or horizontal scrollbar.</p>
 
-<p><b>Menu bar:</b> The row of words just below the Title bar constitute the Menu bar.</p>
+<p><code>Menu bar:</code> The row of words just below the Title bar constitute the Menu bar.</p>
 
-<p><b>Text boxes:</b> Text box is also called an edit box and   it is where you type in the information.</p>
+<p><code>Text boxes:</code> Text box is also called an edit box and   it is where you type in the information.</p>
 
-<p><b>Check boxes:</b> Check boxes are  small  square  boxes.</p>
+<p><code>Check boxes:</code> Check boxes are  small  square  boxes.</p>
 
-<p><b>Option Buttons:</b> Option are also called radio buttons</p>
+<p><code>Option Buttons:</code> Option are also called radio buttons</p>
 
-<p><b>Command Buttons:</b> are used to execute a command immediately.</p>
+<p><code>Command Buttons:</code> are used to execute a command immediately.</p>
 
-<p><b>List Boxes:</b> presents a list of options or items from which you can select.</p>
+<p><code>List Boxes:</code> presents a list of options or items from which you can select.</p>
 
-<p><b>Sliders:</b> works like a sliding control.</p>
+<p><code>Sliders:</code> works like a sliding control.</p>
 
-<p><b>Dialog box tabs:</b> Using the keyboard, you can press the Tab key to move between sections and press the Spacebar to select them.</p>
+<p><code>Dialog box tabs:</code> Using the keyboard, you can press the Tab key to move between sections and press the Spacebar to select them.</p>
 
 </p>
                       </div>
@@ -605,14 +615,7 @@ iii) On the extreme right is the notification area.
               
            <hr>
             
-            <div class="d-flex justify-content-between">
-              
-                <a href="dcatheorywelcomepage"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter2"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-                
-            </div>
+
             
             </div>
             

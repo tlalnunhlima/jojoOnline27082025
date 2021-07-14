@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,15 +28,23 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+           <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-102) </p>
             
             <hr>
                         
@@ -83,7 +90,7 @@
                             
                           </div>
 
-            <p class="fw-normal mx-auto mt-3">Chapter-6 ah hian Windows 7 Start Menu kan zir dawn a ni. </p>
+            <p class="fw-normal mx-auto mt-3">Chapter-6 ah hian <code> WINDOWS START MENU</code> kan zir dawn a ni. </p>
             
             <hr>
             
@@ -132,7 +139,7 @@
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Explanation
                    
                     </button>
                   
@@ -142,9 +149,23 @@
 
                     <div class="accordion-body">
             
-                          No Video available
-                  
-                        <small>DCA-102 Chapter-6</small>
+                          <p>A lema kan hmuh ang hian Window Start Menu-ah hian program chi hrang hrang a awm a. Start Menu hi a pawimawh hle a.
+                          Computer-a kan thil tih duh pawimawh ber ber hi start menu kaltlanga luh (access) a ngai a ni.
+                          
+                          <figure class="figure">
+  
+                            <img src="/img/windows_start_menu.jpg" class="float-end img-fluid ps-2 pb-2" width="600" height="400" alt="windows_start_menu" />
+                            
+                            <figcaption class="figure-caption ps-2 text-danger"> Window Start Menu.</figcaption>
+                            
+                            </figure>
+                          
+                          
+                          
+                          
+                          </p>
+                          
+                          
                       
                       </div>
                   
@@ -180,22 +201,22 @@
                         
                        <p><em>6.	WINDOWS START MENU (5 MARKS)</em></p>
 
-<p><b>Getting Started with the Start Menu:</b> Click on the Start button in the lower left corner of your computer screen; Or Press the Windows key on your keyboard.
+<p><code>Getting Started with the Start Menu:</code> Click on the Start button in the lower left corner of your computer screen; Or Press the Windows key on your keyboard.
 </p>
 
-<p><b>All Programs:</b> It display the Program menu, which contains many application programs you can run.</p>
+<p><code>All Programs:</code> It display the Program menu, which contains many application programs you can run.</p>
 
-<p><b>Control	Panel:</b>	helps	change	the	settings	and customise the functionality of your computer.</p>
+<p><code>Control	Panel:</code>	helps	change	the	settings	and customise the functionality of your computer.</p>
 
-<p><b>Help and Support:</b> In case you want some help while doing some activity on Windows, click help  and  support.</p>
+<p><code>Help and Support:</code> In case you want some help while doing some activity on Windows, click help  and  support.</p>
 
-<p><b>Printers and Faxes:</b> It allows you to see the current status of the Printers and Faxes.</p>
+<p><code>Printers and Faxes:</code> It allows you to see the current status of the Printers and Faxes.</p>
 
-<p><b>Search: </b> It displays a Window by which you can find files, folders, computers, people, pictures, etc.</p>
+<p><code>Search: </code> It displays a Window by which you can find files, folders, computers, people, pictures, etc.</p>
 
-<p><b>Run:</b> if you want to use the Run box in Windows 7, you can type Run in the Search  box and press Enter, OR press the shortcut keys Windows key + R.</p>
+<p><code>Run:</code> if you want to use the Run box in Windows 7, you can type Run in the Search  box and press Enter, OR press the shortcut keys Windows key + R.</p>
 
-<p><b>Below are a list of commands you can type into the Run dialog box</b></p>
+<p><code>Below are a list of commands you can type into the Run dialog box</code></p>
 
 <table class="table w-75 border p-2 mx-auto">
   
@@ -686,14 +707,7 @@
               
            <hr>
             
-            <div class="d-flex justify-content-between">
-              
-                <a href="dcatheorywelcomepage"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter2"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-                
-            </div>
+
             
             </div>
             

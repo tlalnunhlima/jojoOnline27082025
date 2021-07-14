@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,15 +28,23 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-103) </p>
             
             <hr>
                         
@@ -51,7 +58,7 @@
                             
                           </div>
 
-            <p class="fw-normal mx-auto mt-3">Chapter 8-ah hian INSERTING TABLE kan en ho dawn a ni. </p>
+            <p class="fw-normal mx-auto mt-3">Chapter 8-ah hian <code>INSERTING TABLE</code> kan en ho dawn a ni. </p>
             
             <hr>
             
@@ -101,7 +108,7 @@
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Explanation
                    
                     </button>
                   
@@ -111,7 +118,20 @@
 
                     <div class="accordion-body">
             
-                         No Video Available yet
+                        <p>Table kan tih chu row leh column a siam box a ni a. Table chhungah chuan text te, graphics te a dah theih a ni.
+                        Table-a row leh column te hi a dah belh theih a, a delete leh theih bawk a. Tin, table hi kan insert velehah a cheina leh
+                        a tihdanglamna hmanrua a rawn lang thin a, chu chu Table Tools an ti a. Chuta tang chuan table chu a siam rem theih a ni.
+                        </p>
+                        
+                        <figure class="figure">
+  
+                         <img src="/img/msWordTable.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="540" alt="msWordTable" />
+                                    
+                          <figcaption class="figure-caption ps-2 text-danger"> MS Word Table </figcaption>
+                                    
+                          </figure> 
+                        
+                        
                       
                       </div>
                   
@@ -147,23 +167,23 @@
 <p><em>INSERTING TABLE (2 MARKS) : </em></p>
 
 <p>
-1.	Table – A grid containing boxes of text or graphics.
+1.	<code>Table</code> – A grid containing boxes of text or graphics.
 </p><p>
-2.	Row – A horizontal array in a table.
+2.	<code>Row</code> – A horizontal array in a table.
 </p><p>
-3.	Column – A vertical array in a table.
+3.	<code>Column </code>– A vertical array in a table.
 </p><p>
-4.	Cell – A box in a table.
+4.<code>	Cell</code> – A box in a table.
 </p><p>
-5.	A table is a grid of rows and columns. The box formed by the intersection of a row and column is called cell.
+5.<code>	A table </code>is a grid of rows and columns. The box formed by the intersection of a row and column is called cell.
 </p><p>
-6.	The Table Tools tab gets activated when insertion point is kept anywhere on the table.
+6.<code>	The Table Tools tab</code> gets activated when insertion point is kept anywhere on the table.
 </p><p>
 7.	New rows and columns can be inserted in a table. Existing rows and columns can also be deleted. Deleting and inserting rows and columns buttons are available in Layout under Table Tools.
 </p><p>
 8.	The sum of the numerical entries in a row or column can be calculated by entering the relevant formula.
 </p><p>
-9.	Cell in a table can be merged or split using the buttons Merge Cells and Split Cells available in Layout under Table Tools.
+9.	<code>Cell in a table</code> can be merged or split using the buttons Merge Cells and Split Cells available in Layout under Table Tools.
 </p><p>
 10.	To make the table look more attractive, it can be auto formatted with predefined styles, available in Design under Table Tools.
 </p><p>
@@ -559,14 +579,7 @@
               
            <hr>
             
-            <div class="d-flex justify-content-between">
-              
-                <a href="dcatheorywelcomepage"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter2"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-                
-            </div>
+
             
             </div>
             

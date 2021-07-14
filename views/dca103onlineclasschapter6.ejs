@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,15 +28,23 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-103) </p>
             
             <hr>
                         
@@ -51,7 +58,7 @@
                             
                           </div>
 
-            <p class="fw-normal mx-auto mt-3">Chapter 6-ah hian IMPROVING THE LOOK OF A DOCUMENTS  kan en ho dawn a ni. </p>
+            <p class="fw-normal mx-auto mt-3">Chapter 6-ah hian <code>IMPROVING THE LOOK OF A DOCUMENTS</code>  kan en ho dawn a ni. </p>
             
             <hr>
             
@@ -102,7 +109,7 @@ setting, Format painter, Inserting symbols, Using supersript and subscript) (1 M
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Explanation
                    
                     </button>
                   
@@ -112,7 +119,19 @@ setting, Format painter, Inserting symbols, Using supersript and subscript) (1 M
 
                     <div class="accordion-body">
             
-                         No Video Available yet
+                         <p>Word-ah hian thuziak chei theihna hmanrua hi a awm nual a, tin, document pawh cheimawi theihna leh a landan tihdanglam
+                         theihna hmanrua a awm nual bawk.</p>
+                         
+                         
+                         <figure class="figure">
+  
+                                    <img src=" /img/improvinglook.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="540" alt="improvinglook" />
+                                    
+                                    <figcaption class="figure-caption ps-2 text-danger"> Some Tools for Improving the Look of a Document </figcaption>
+                                    
+                                    </figure>
+                         
+                        
                       
                       </div>
                   
@@ -148,45 +167,45 @@ setting, Format painter, Inserting symbols, Using supersript and subscript) (1 M
 <p><em>IMPROVING THE LOOK OF A DOCUMENTS (1 MARK) :</em></p>
 
 <p>
-1.	Shading is used for applying a background colour to a text.
+1.	<code>Shading</code> is used for applying a background colour to a text.
 </p><p>
 
-2.	Bullet is a special character such as a dot or asterisk used to mark items in a list.
+2.	<code>Bullet</code> is a special character such as a dot or asterisk used to mark items in a list.
 </p><p>
 
-3.	Portrait Orientation – in this, the paper is taller than it is wider.
+3.	<code>Portrait Orientation</code> – in this, the paper is taller than it is wider.
 </p><p>
 
-4.	Landscape Orientation – in this, the paper is wider than it is taller.
+4.	<code>Landscape Orientation </code>– in this, the paper is wider than it is taller.
 </p><p>
 
-5.	Special Characters – such as @, #, %, $, *, etc.
+5.	<code>Special Characters</code> – such as @, #, %, $, *, etc.
 </p><p>
 
-6.	Subscript is a character or symbol written slightly below and to the side of another character.
+6.	<code>Subscript</code> is a character or symbol written slightly below and to the side of another character.
 </p><p>
 
-7.	Superscript is a character or symbol written above and to the side of another character.
+7.	<code>Superscript</code> is a character or symbol written above and to the side of another character.
 </p><p>
 
-8.	A border is used to emphasize portions of a document. To create border, go to Page Layout tab > Page background group > select Page border.
+8.	<code>A border</code> is used to emphasize portions of a document. To create border, go to Page Layout tab > Page background group > select Page border.
 </p><p>
 
 9.	To choose bullet and numbering, click Home tab > paragraph group >
 choose Bullets or Numbering tab.
 </p><p>
 
-10.	There are six pre-defined margin settings: Normal, Narrow, Moderate, Wide, Mirrored and Office default.
+10.	<code>There are six pre-defined margin settings:</code> Normal, Narrow, Moderate, Wide, Mirrored and Office default.
 </p><p>
 
 11.	The most common page size is the A4 size. Some other standard sizes are
 Letter, Legal, Executive, B5, etc.
 </p><p>
 
-12.	The format painter lets you copy format applied in one section of  the document on to another portion of the document.
+12.	<code>The format painter </code>lets you copy format applied in one section of  the document on to another portion of the document.
 </p><p>
 
-13.	Symbols can either be inserted using the Insert Symbol button on  the  Symbols group on the Insert tab or by typing the shortcut  keys or  codes  on  the keyboard.
+13.	<code>Symbols</code> can either be inserted using the Insert Symbol button on  the  Symbols group on the Insert tab or by typing the shortcut  keys or  codes  on  the keyboard.
 </p><p>
 
 14.	You can create smiley ☺ by typing :) or :-). (c) for ©, (r) for ®, --> for >, ==>
@@ -575,14 +594,7 @@ for >, <=> for #, etc.
               
            <hr>
             
-            <div class="d-flex justify-content-between">
-              
-                <a href="dcatheorywelcomepage"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter2"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-                
-            </div>
+
             
             </div>
             

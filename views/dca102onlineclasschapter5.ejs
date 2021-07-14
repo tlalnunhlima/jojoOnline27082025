@@ -16,7 +16,7 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
+
       
       
       <!--a lane chung lam-->
@@ -29,15 +29,23 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-102) </p>
             
             <hr>
                         
@@ -83,7 +91,7 @@
                             
                           </div>
 
-            <p class="fw-normal mx-auto mt-3">Chapter-5 ah hian Windows 7 file management kan zir dawn a ni. </p>
+            <p class="fw-normal mx-auto mt-3">Chapter-5 ah hian <code> FILE MANAGEMENT IN WINDOWS 7</code> kan zir dawn a ni. </p>
             
             <hr>
             
@@ -134,7 +142,7 @@
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Explanation
                    
                     </button>
                   
@@ -144,9 +152,10 @@
 
                     <div class="accordion-body">
             
-                          No Video available
-                  
-                        <small>DCA-102 Chapter-5</small>
+                          <p>Operating System hnathawh pawimawh tak pakhat chu file management hi a ni a. Computer hmangtute hian file siam te, folder
+                          siamte kan duh thin a, OS tanpuina hmangin awlsam takin kan duhna hmun apiangah file kan siam thei a, folder te kan siam thei a ni.</p>
+                          
+                          <p>File siam dan te, folder siam dan te leh a delete leh dante chu a hnuaiah hian english-a ziah a ni a, ngun takin chhiar la, han ti ve chhin teh le.</p>
                       
                       </div>
                   
@@ -182,38 +191,38 @@
                         
                        <p> <em>5.	FILE MANAGEMENT IN WINDOWS 7 (5 MARKS) </em></p>
 
-<p><b>File:</b> is any collection of related information that is given a name  and stored on  a  disk. 
+<p><code>File:</code> is any collection of related information that is given a name  and stored on  a  disk. 
 Windows file names have two parts; the file's name, then a period followed by  the extension (suffix). 
 The extension is a three- or four-letter abbreviation that  signifies the file type.
 For     example,     in <code>letter.docx</code> the     filename      is letter and      the      extension  is <code>.docx</code>. 
 Extensions are important because they tell your computer what icon to use for the file, and what application can open the file. For example, the <code>.docx</code> extension tells your computer that the file is a Microsoft Word file..
 </p>
 
-<p><b>Folder:</b> is a special kind of file that contains a list of other files or subfolders.</p>
+<p><code>Folder:</code> is a special kind of file that contains a list of other files or subfolders.</p>
 
 <p>
   
-<b>Folder Tree:</b> The arranging power of the folder system lies in the fact that it is hierarchical. Hierarchical means that folders can contain other folders.
+<code>Folder Tree:</code> The arranging power of the folder system lies in the fact that it is hierarchical. Hierarchical means that folders can contain other folders.
 
 </p>
 
-<p><b>Selecting Files and Folders: </b> To select a file or folder, click on the file or folder. 
+<p><code>Selecting Files and Folders: </code> To select a file or folder, click on the file or folder. 
 To select all the items in a folder, click the Edit menu and choose Select All.  Or press Ctrl + A keys together on the keyboard.</p>
-<p><b>Creating a folder:</b><br>
+<p><code>Creating a folder:</code><br>
 1.	Right-click in the window where you wish to make a new folder. Point to New.<br>
 2.	Select Folder. A new folder by the default name New Folder gets created.<br>
 3.	Rename the folder to a new desired name.<br>
 4.	Or you can press Ctrl + Shift + N to create a new folder without using the mouse.<br>
 </p>
 
-<p><b>To rename a file or folder:</b><br>
+<p><code>To rename a file or folder:</code><br>
 
 1.	Right-click on the item and select Rename, or select the file and press F2.<br>
 2.	Type the new name and press Enter or click on the item.<br>
 </p>
 
 <p>
-<b>Copy a File or Folder:</b><br>
+<code>Copy a File or Folder:</code><br>
 
 
 1.	Select the file you wish to copy by clicking over it.<br>
@@ -223,11 +232,11 @@ Copy from the shortcut menu that appears.<br>
 4.	On the Edit menu click Paste. Alternately, you can again right-click and choose Paste in the shortcut menu that appears.<br>
 </p>
 
-<p><b>Moving a File or Folder:</b> One easy way to move a file is using a method called drag and drop.</p>
+<p><code>Moving a File or Folder:</code> One easy way to move a file is using a method called drag and drop.</p>
 
 
 <p>
-<b>To delete a computer file or folder:</b><br>
+<code>To delete a computer file or folder:</code><br>
 1.	Right-click the file or folder that you want to delete, and then choose Delete.<br>
 2.	You can press the Delete key on your keyboard or choose delete from Edit menu.<br>
 </p>
@@ -616,14 +625,6 @@ Copy from the shortcut menu that appears.<br>
               
            <hr>
             
-            <div class="d-flex justify-content-between">
-              
-                <a href="dcatheorywelcomepage"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter2"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-                
-            </div>
             
             </div>
             

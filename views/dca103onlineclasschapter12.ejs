@@ -16,28 +16,30 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
-      
-      
       <!--a lane chung lam-->
 
-
-          
-
-        
+     
         <!--a lane lai ta-->
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-103) </p>
             
             <hr>
                         
@@ -51,7 +53,7 @@
                             
                           </div>
 
-            <p class="fw-normal mx-auto mt-3">Chapter 12-ah hian UNDERSTANDING CELL REFERENCING IN EXCEL kan en ho dawn a ni. </p>
+            <p class="fw-normal mx-auto mt-3">Chapter 12-ah hian <code>UNDERSTANDING CELL REFERENCING IN EXCEL</code> kan en ho dawn a ni. </p>
             
             <hr>
             
@@ -102,7 +104,7 @@ referencing) (2 MARKS)
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Explanation
                    
                     </button>
                   
@@ -112,7 +114,21 @@ referencing) (2 MARKS)
 
                     <div class="accordion-body">
             
-                         No Video Available yet
+                         <p>Excel-ah hian formula kan hman dawn chuan equal to (=) hman zel tur a ni a. Cell danga number emaw data emaw kan
+                         hman dawn chuan a cell hming zawkin calculate tur a ni. Chu chu cell referencing an ti a. Cell reference an tih chu
+                         ABC... leh 123... inkawp a ni. Column hi ABC zelin a hming sawi a ni a. Row hi 123-in a hming sawi a ni. A lema kan
+                         hmuh ang hian E column zawn thla leh 4 row phei intawhna tak chu E4 a ni.</p>
+                         
+                         <figure class="figure">
+  
+                         <img src="/img/cellReferencing.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="540" alt="Cell Referencing" />
+                                    
+                          <figcaption class="figure-caption ps-2 text-danger"> Cell Referencing </figcaption>
+                                    
+                          </figure> 
+                         
+                         
+                         
                       
                       </div>
                   
@@ -148,25 +164,25 @@ referencing) (2 MARKS)
 <p><em> UNDERSTANDING CELL REFERENCING IN EXCEL (2 MARKS) </em></p>
 
 <p>
-1.	Cell referencing refers to the way cells are entered in a formula.
+1.	<code>Cell referencing</code> refers to the way cells are entered in a formula.
 </p><p>
 
-2.	References that changes automatically when copy them to a new cell are known as Relative references.
+2.	References that changes automatically when copy them to a new cell are known as <code>Relative references.</code>
 </p><p>
 
 3.	Relative reference is the default in Excel.
 </p><p>
 
-4.	Unlike relative references, absolute references do not change when copied or filled; indicated by putting dollar sign $ before.
+4.	Unlike relative references, <code>absolute references</code> do not change when copied or filled; indicated by putting dollar sign $ before.
 </p><p>
 
-5.	Reference that have either the column or row value absolute and the other relative are known as mixed references.
+5.	Reference that have either the column or row value absolute and the other relative are known as <code>mixed references.</code>
 </p><p>
 
-6.	$E$5 is an example of both row and column absolute.
+6.	<code>$E$5 </code>is an example of both row and column absolute.
 </p><p>
 
-7.	E$4 is an example of column relative, row absolute.
+7.	<code>E$4</code> is an example of column relative, row absolute.
 </p>
 
 
@@ -551,15 +567,7 @@ referencing) (2 MARKS)
               </div>
               
            <hr>
-            
-            <div class="d-flex justify-content-between">
-              
-                <a href="dcatheorywelcomepage"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter2"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-                
-            </div>
+
             
             </div>
             

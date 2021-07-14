@@ -16,28 +16,34 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
-      
-      
+ 
       <!--a lane chung lam-->
 
-
-          
-
-        
+    
         <!--a lane lai ta-->
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-101) </p>
+            
+          
+            
             
             <hr>
                         
@@ -83,7 +89,7 @@
                             
                           </div>
 
-            <p class="fw-normal mx-auto mt-3">He subject-ah hian computer bulthut kan zir dawn a. Computer part leh a chhehvel te kan zir ang. </p>
+            <p class="fw-normal mx-auto mt-3">He chapter-ah hian <code> INTRODUCTION </code> kan en ho dawn a ni. </p>
             
             <hr>
             
@@ -199,24 +205,24 @@
 
                         <p> <em>1. INTRODUCTION - (5 MARKS) </em> </p>
                         <p>
-                        <b>Computer</b> - Computer is a device that transforms data into meaningful information. Data can be
+                        <code>Computer</code> - Computer is a device that transforms data into meaningful information. Data can be
                         anything like marks obtained by you in various subjects. It can also be name, age, sex, weight, height,
                         etc. of all the students in a class.
                         </p>
                         <p>
-                        <b>Analog Computers</b> - Analogue computers are used in some specific applications, like the flight
+                        <code>Analog Computers</code> - Analogue computers are used in some specific applications, like the flight
                         computer in aircraft, ships, submarines, refrigerator, and speedometer of your bike, etc.
                         
                         </p>
                         
                         <p>
-                        <b>Digital Computers </b> – Digital computers use the binary number system, which has two digits i.e., 0
+                        <code>Digital Computers </code> – Digital computers use the binary number system, which has two digits i.e., 0
                         and 1. A binary digit is called a bit. Here the information is represented in the groups of bits. Some of
                         the best examples of digital computers are your laptop, calculators, smart phones, etc.
                         
                         </p>
                         <p>
-                        <b>Characteristics of Computers</b> -
+                        <code>Characteristics of Computers</code> -
                         
                         <ul>
                           
@@ -241,12 +247,12 @@
                         
                         <p>
                         
-                        <b>The evolution of Computers </b> - Charles Babbage is considered the father of modern digital
+                        <code>The evolution of Computers </code> - Charles Babbage is considered the father of modern digital
                         programmable computer. He has invented first analytical computer in the year 1822.
                         
                         </p>
                         
-                        <p><b>Computer Generations</b> -</p>
+                        <p><code>Computer Generations</code> -</p>
                         
                         
                         <ol>
@@ -645,14 +651,7 @@
               
            <hr>
             
-            <div class="d-flex justify-content-between">
-              
-                <a href="dcatheorywelcomepage"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter2"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-                
-            </div>
+ 
             
             </div>
             

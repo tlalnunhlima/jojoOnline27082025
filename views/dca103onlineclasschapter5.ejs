@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,15 +28,23 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-103) </p>
             
             <hr>
                         
@@ -51,7 +58,7 @@
                             
                           </div>
 
-            <p class="fw-normal mx-auto mt-3">Chapter 5-ah hian FINDING AND REPLACING TEXT  kan en ho dawn a ni. </p>
+            <p class="fw-normal mx-auto mt-3">Chapter 5-ah hian <code>FINDING AND REPLACING TEXT</code>  kan en ho dawn a ni. </p>
             
             <hr>
             
@@ -101,7 +108,7 @@
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Explanation
                    
                     </button>
                   
@@ -111,8 +118,23 @@
 
                     <div class="accordion-body">
             
-                         No Video Available yet
-                      
+                         <p>Finding and Replace option hi Word-a thil type thin tan chuan hmanraw tangkai tak mai a ni a. Thuziak phek tam 
+                         tak nei ta ila, chutah chuan word emaw phrase emaw zawng chhuak duh ila, find option kan hmang ang a. Find chuana shortcut
+                         key CTRL + F a ni a. Tin, kan word zawn chhuah chu word dangin emaw thlak (change) duh ila, replace kan hmang dawn a ni. Replace
+                         option shortcut key chu CTRL + H a ni a. He option pahnih hi a tangkai hle a, thuziak dik lo siamthat lehna atan leh 
+                         thu thenkhat thlak danglam nan a tangkai em em a ni.</p>
+                         
+                         
+                         
+                          <figure class="figure">
+  
+                                    <img src="/img/findandreplace.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="540" alt="findandreplace" />
+                                    
+                                    <figcaption class="figure-caption ps-2 text-danger"> Find and Replace Option </figcaption>
+                                    
+                                    </figure>
+                         
+                        
                       </div>
                   
                   </div>
@@ -148,26 +170,26 @@
 
 
 <p>
-1.	Find and Replace is a feature of Microsoft Word that finds a string of characters (a word, part of a word or a few words) and replaces it with a string.
+1.	<code>Find and Replace</code> is a feature of Microsoft Word that finds a string of characters (a word, part of a word or a few words) and replaces it with a string.
 </p><p>
 
-2.	With Find and Replace features, you can search for and replace both text and formatting either selectively or throughout the document.
+2.	<code>With Find and Replace features,</code> you can search for and replace both text and formatting either selectively or throughout the document.
 </p><p>
 
-3.	Uppercase is capital letters of English alphabets (A, B, C ...)
+3.	<code>Uppercase</code> is capital letters of English alphabets (A, B, C ...)
 </p><p>
 
-4.	Lowercase is a small letters of English alphabet (a, b, c...)
+4.	<code>Lowercase</code> is a small letters of English alphabet (a, b, c...)
 </p><p>
 
-5.	To change all occurrences of a particular word, the Replace All option in the
+5.	<code>To change all occurrences of a particular word,</code> the Replace All option in the
 Find and Replace dialogue box can be used.
 </p><p>
-6.	In the Find and Replace operation, lowercase words are replaced with
+6.	<code>In the Find and Replace operation,</code> lowercase words are replaced with
 lowercase and uppercase with uppercase automatically.
 </p><p>
 
-7.	The Replace option is found under Editing group of the Home tab.
+7.	<code>The Replace option</code> is found under Editing group of the Home tab.
 </p>
 
 
@@ -553,14 +575,7 @@ lowercase and uppercase with uppercase automatically.
               
            <hr>
             
-            <div class="d-flex justify-content-between">
-              
-                <a href="dcatheorywelcomepage"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter2"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-                
-            </div>
+
             
             </div>
             

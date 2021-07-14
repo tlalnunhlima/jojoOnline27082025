@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,15 +28,23 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-103) </p>
             
             <hr>
                         
@@ -51,7 +58,7 @@
                             
                           </div>
 
-            <p class="fw-normal mx-auto mt-3">Chapter 9-ah hian MAIL MERGE kan en ho dawn a ni. </p>
+            <p class="fw-normal mx-auto mt-3">Chapter 9-ah hian <code>MAIL MERGE</code> kan en ho dawn a ni. </p>
             
             <hr>
             
@@ -102,7 +109,7 @@ Merging documents) (3 MARKS)
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Explanation
                    
                     </button>
                   
@@ -112,7 +119,21 @@ Merging documents) (3 MARKS)
 
                     <div class="accordion-body">
             
-                         No Video Available yet
+                         <p>Mail Merge hi a hmanna a tam hle a. Tum khatah mi tam tak hnena lehkha thawn emaw document emaw  siam nana tangkai taka
+                         hman theih a ni a. Office-a thawk emaw pawla in hmang thin te tan phei chuan hman tangkai thiam a tha hle a ni. </p>
+                         
+                         <p>Mail Merge-ah hian document ruakah thu kan type a, chumi chhungah chuan data kan dahlut thin. Entirnan, committee kohna lehkha
+                         lo siam dawn ta ila, document ruak kan hawng ang a, chutah chuan committee kohna chu kan type ang. Chu chu <code>master document</code> an ti a.
+                         Chumi zawhah committee member te hming list kan type leh ang. Chu chu <code>data source</code> an ti. A hnuaia kan hmuh hi mail merge
+                         button awmna a ni a. A tih dan kimchang chu practical video ah kan la en ho dawn nia. </p>
+                        
+                        <figure class="figure">
+  
+                         <img src="/img/mailMerge.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="540" alt="mailMerge" />
+                                    
+                          <figcaption class="figure-caption ps-2 text-danger"> Mail Merge </figcaption>
+                                    
+                          </figure> 
                       
                       </div>
                   
@@ -148,19 +169,19 @@ Merging documents) (3 MARKS)
 <p><em>MAIL MERGE(3 MARKS) : </em></p>
 
 <p>
-1.	Mail Merge is a tool to produce multiple copies of a document.
+1.	<code>Mail Merge</code> is a tool to produce multiple copies of a document.
 </p><p>
 
-2.	Start Mail Merge group is in Mailings Tab.
+2.	<code>Start Mail Merge group</code> is in Mailings Tab.
 </p><p>
 
-3.	Mail Merge allows merging a master document and a data source.
+3.	<code>Mail Merge</code> allows merging a master document and a data source.
 </p><p>
 
-4.	The master document contains the body of  the letter  with placeholders for  the variable information.
+4.	<code>The master document</code> contains the body of  the letter  with placeholders for  the variable information.
 </p><p>
 
-5.	The data source is a database, which has the variable information.
+5.	<code>The data source</code> is a database, which has the variable information.
 </p><p>
 
 6.	The main or the master document is created by using Start Mail Merge button, in Start Mail Merge group, under Mailing tab.
@@ -172,7 +193,7 @@ Merging documents) (3 MARKS)
 8.	In field names, spaces are not allowed and the first character must be an alphabet.
 </p><p>
 
-9.	In the master document, the merge field names enclosed by << >> act as
+9.	<code>In the master document,</code> the merge field names enclosed by << >> act as
 placeholders.
 </p><p>
 
@@ -183,8 +204,8 @@ button.
 11.	Master document and merged documents can be separately saved.
 </p><p>
 
-12.	The data source is saved as an Access database. Starting with Access 2007,
-.accdb is the default Access file format.
+12.	The data source is saved as an <code>Access database. </code>Starting with Access 2007,
+<code>.accdb</code> is the default Access file format.
 </p>
 
 
@@ -569,15 +590,7 @@ button.
               </div>
               
            <hr>
-            
-            <div class="d-flex justify-content-between">
-              
-                <a href="dcatheorywelcomepage"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter2"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-                
-            </div>
+
             
             </div>
             

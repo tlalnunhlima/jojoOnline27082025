@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,15 +28,23 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-103) </p>
             
             <hr>
                         
@@ -52,9 +59,9 @@
                             
                           </div>
 
-            <p class="fw-normal mx-auto mt-3">Chapter 17 atang hian PRESENTATION PACKAGE kan zir tan ang a, chu chu Microsoft Office Powerpoint tihna a ni a.
+            <p class="fw-normal mx-auto mt-3">Chapter 17 atang hian <code>PRESENTATION PACKAGE</code> kan zir tan ang a, chu chu <code>Microsoft Office Powerpoint</code> tihna a ni a.
             
-            He chapter-ah hian INTRODUCTION TO POWERPOINT kan en ho dawn a ni. </p>
+            He chapter-ah hian <code>INTRODUCTION TO POWERPOINT</code> kan en ho dawn a ni. </p>
             
             <hr>
             
@@ -105,7 +112,7 @@ Different types of slide layouts, Getting started, Creating a presentation) (3 M
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Overview
                    
                     </button>
                   
@@ -115,7 +122,17 @@ Different types of slide layouts, Getting started, Creating a presentation) (3 M
 
                     <div class="accordion-body">
             
-                         No Video Available yet
+                        <p>PowerPoint hi thusawi tanpuitu atana big screen-a an play thin presentation siamna a ni a. Powerpoint-ah chuan
+                        a phek hi slide an ti a. Thusawi tur a zirin slide tlem te atanga tam tak a ni thei a. Slide-ah chuan thuziak te,
+                        thlalak te leh video te a dah theih a ni.</p>
+                        
+                        <figure class="figure">
+  
+                         <img src="/img/powerpointScreen.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="540" alt="powerpointScreen" />
+                                    
+                          <figcaption class="figure-caption ps-2 text-danger"> PowerPoint Screen </figcaption>
+                                    
+                          </figure> 
                       
                       </div>
                   
@@ -152,16 +169,16 @@ Different types of slide layouts, Getting started, Creating a presentation) (3 M
 
 
 <p>
-1.	PowerPoint is a popular presentation graphics program from Microsoft.
+1.	<code>PowerPoint</code> is a popular presentation graphics program from Microsoft.
 </p><p>
-2.	Presentation refers to communicating with an audience using slides with text and graphics displayed on a screen.
+2.	<code>Presentation</code> refers to communicating with an audience using slides with text and graphics displayed on a screen.
 </p><p>
-3.	Slide is a rectangular display with text and graphics; a series of slides make   up a presentation.
+3.	<code>Slide</code> is a rectangular display with text and graphics; a series of slides make   up a presentation.
 </p><p>
 
 4.	Layout is an arrangement of different elements such as text and graphics on    a slide.
 </p><p>
-5.	PowerPoint offers  nine (9) built-in AutoLayouts.
+5.	PowerPoint offers  <code>nine (9) </code>built-in AutoLayouts.
 </p><p>
 6.	A slide may comprise of text, charts, tables, etc.
 </p><p>
@@ -176,7 +193,7 @@ Different types of slide layouts, Getting started, Creating a presentation) (3 M
 11.	Some of the basic elements of a slide are Title, Subtitle, Footnote and Border.
 </p><p>
  
-12.	PowerPoint slides are saved with the extension .pptx.
+12.	PowerPoint slides are saved with the extension <code>.pptx.</code>
 </p>
 
 
@@ -561,14 +578,7 @@ Different types of slide layouts, Getting started, Creating a presentation) (3 M
               
            <hr>
             
-            <div class="d-flex justify-content-between">
-              
-                <a href="dcatheorywelcomepage"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter2"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-                
-            </div>
+
             
             </div>
             

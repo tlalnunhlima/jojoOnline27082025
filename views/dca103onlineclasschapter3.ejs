@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,15 +28,23 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-103) </p>
             
             <hr>
                         
@@ -51,7 +58,7 @@
                             
                           </div>
 
-            <p class="fw-normal mx-auto mt-3">Chapter 3-ah hian USING AUTOCORRECT kan en ho dawn a ni. </p>
+            <p class="fw-normal mx-auto mt-3">Chapter 3-ah hian <code>USING AUTOCORRECT</code> kan zir ho dawn a ni. </p>
             
             <hr>
             
@@ -101,7 +108,7 @@
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Explanation
                    
                     </button>
                   
@@ -111,7 +118,18 @@
 
                     <div class="accordion-body">
             
-                         No Video Available yet
+                         <p>Auto Correct hi hman thiam chuan thil tangkai tak a ni a. Spelling kan type sual palh te pawh amahin a rawn siamtha thei thin a.
+                         A tangkai hle a ni. Entirnan, Sentence intanna hawrrawp hmasa ber hi hawrrawppui zel tur a ni a. Chu chu lo ti hawrrawpte palh ila, amahin
+                         hawrrawppuiah a chantir leh thei a ni. A hman tangkaina tam tak a awm a. Nakinah practical lesson lamah kan la en ho zel dawn a ni. </p>
+                         
+                                    <figure class="figure">
+  
+                                    <img src="/img/autocorrect.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="540" alt="autocorrect" />
+                                    
+                                    <figcaption class="figure-caption ps-2 text-danger"> Auto Correct </figcaption>
+                                    
+                                    </figure>
+                         
                       
                       </div>
                   
@@ -147,10 +165,12 @@
 <p><em>USING AUTOCORRECT (1 MARK)</em></p>
 
 <p></p>
-1.	AutoCorrect is a feature that automatically corrects some character combinations in a certain way, like teh as the, (c) as ©, etc.
+1.	<code>AutoCorrect</code> is a feature that automatically corrects 
+some character combinations in a certain way, like teh as the, (c) as ©, etc.
 </p>
 <p>
-2.	Menu path for turning on AutoCorrect is: Office button → Word Option → Proofing → AutoCorrect → Replace text as You Type.
+2.	<code>Menu path for turning on AutoCorrect is</code>: 
+Office button → Word Options → Proofing → AutoCorrect → Replace text as You Type.
 </p>
 
 
@@ -536,14 +556,7 @@
               
            <hr>
             
-            <div class="d-flex justify-content-between">
-              
-                <a href="dcatheorywelcomepage"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter2"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-                
-            </div>
+
             
             </div>
             

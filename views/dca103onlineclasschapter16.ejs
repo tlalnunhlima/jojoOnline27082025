@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,15 +28,23 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-103) </p>
             
             <hr>
                         
@@ -52,7 +59,7 @@
                             
                           </div>
 
-            <p class="fw-normal mx-auto mt-3">Chapter 16-ah hian WORKING WITH GRAPHS AND CHARTS kan en ho dawn a ni. </p>
+            <p class="fw-normal mx-auto mt-3">Chapter 16-ah hian <code>WORKING WITH GRAPHS AND CHARTS</code> kan en ho dawn a ni. </p>
             
             <hr>
             
@@ -103,7 +110,7 @@ charts, Updating charts, changing the chart type, previewing and printing charts
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Overview
                    
                     </button>
                   
@@ -113,7 +120,18 @@ charts, Updating charts, changing the chart type, previewing and printing charts
 
                     <div class="accordion-body">
             
-                         No Video Available yet
+                         <p>Excel chart hi Microsoft word hmanga chart siam aimahin a awlsam zawk a. Excel-ah chuan data kha a bul maiah a type theih a, 
+                        kha kha data series atan a hman nghal theih a. Microsoft word-ah erawh chuan document chhung a mi ni lovin data kha excel atanga lak a nih kha kan la hre reng em aw?
+                         Excel-a chart siam tur chuan Insert tab > Charts group ah luh tur a ni.</p>
+                         
+                         
+                         <figure class="figure">
+  
+                         <img src="/img/excelChart.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="540" alt="excelChart" />
+                                    
+                          <figcaption class="figure-caption ps-2 text-danger"> Excel Charts </figcaption>
+                                    
+                          </figure> 
                       
                       </div>
                   
@@ -149,25 +167,25 @@ charts, Updating charts, changing the chart type, previewing and printing charts
 <p><em> WORKING WITH GRAPHS AND CHARTS (3 MARKS): </em></p>
 
 <p>
-1.	Chart sheet is a separate worksheet created for the chart.
+1.	<code>Chart sheet </code>is a separate worksheet created for the chart.
 </p><p>
 
-2.	Data series refers to the row or column of data for a chart.
+2.	<code>Data series</code> refers to the row or column of data for a chart.
 </p><p>
 
-3.	Embedded chart is a chart included in the same worksheet as data.
+3.	<code>Embedded chart</code> is a chart included in the same worksheet as data.
 </p><p>
 
-4.	Multiple data series is a data series with several rows or columns.
+4.	<code>Multiple data series</code> is a data series with several rows or columns.
 </p><p>
 
-5.	Bar chart is a chart with bars whose lengths are proportional to data values.
+5.	<code>Bar chart</code> is a chart with bars whose lengths are proportional to data values.
 </p><p>
 
-6.	Charts can be embedded on the data sheet itself or produced in a separate chart sheet.
+6.	<code>Charts</code> can be embedded on the data sheet itself or produced in a separate chart sheet.
 </p><p>
 
-7.	Pie charts are limited to one data series. Column charts can show all the selected data.
+7.	<code>Pie charts</code> are limited to one data series. Column charts can show all the selected data.
 </p><p>
 
 8.	Location and size of a chart can be adjusted by dragging and resizing.
@@ -571,14 +589,7 @@ charts, Updating charts, changing the chart type, previewing and printing charts
               
            <hr>
             
-            <div class="d-flex justify-content-between">
-              
-                <a href="dcatheorywelcomepage"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter2"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-                
-            </div>
+
             
             </div>
             

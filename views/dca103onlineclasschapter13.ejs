@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,15 +28,23 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-103) </p>
             
             <hr>
                         
@@ -51,7 +58,7 @@
                             
                           </div>
 
-            <p class="fw-normal mx-auto mt-3">Chapter 13-ah hian EDITING A WORKSHEET, FORMATTING AND PRINTING A WORKSHEET  kan en ho dawn a ni. </p>
+            <p class="fw-normal mx-auto mt-3">Chapter 13-ah hian <code>EDITING A WORKSHEET, FORMATTING AND PRINTING A WORKSHEET</code> kan en ho dawn a ni. </p>
             
             <hr>
             
@@ -102,7 +109,7 @@ a worksheet) (3 MARKS)
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Explanation
                    
                     </button>
                   
@@ -112,7 +119,29 @@ a worksheet) (3 MARKS)
 
                     <div class="accordion-body">
             
-                         No Video Available yet
+                         <p>
+                           Cell chhunga data kan edit dawn chuan <code>double-click </code> hmasak zet tur a ni a. Vawi khat click-a kan type nghal
+                           mai chuan data or thuziak awmsa kha a bo vek dawn a ni. Tin, kan edit duhna cell-a kan awm laiin keyboard key
+                           <code>F2 </code>kan hmet thei bawk. 
+                           
+                         </p>
+                         
+                         <p>
+                          Excel sheet kan print dawnin kan adjust hmasa thin tur a ni a. <code>Print Preview</code> hmasa lovin print command pek nghal tawp loh tur a ni.
+                          Print preview atang hian kan adjust nghal thei a, tin,
+                          print dialog box atangin kan print duh danin kan select thei bawk. 
+                           
+                         </p>
+                         
+                         <figure class="figure">
+  
+                         <img src="/img/printPreview.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="540" alt="printPreview" />
+                                    
+                          <figcaption class="figure-caption ps-2 text-danger"> Print Preview Button </figcaption>
+                                    
+                          </figure> 
+                         
+                        
                       
                       </div>
                   
@@ -148,62 +177,61 @@ a worksheet) (3 MARKS)
 <p><em> EDITING A WORKSHEET, FORMATTING AND PRINTING A WORKSHEET (3 MARKS) </em></p>
 
 <p>
-1.	Editing means making changes to an existing worksheet, like  adding  new data, deleting data, correcting data, etc.
+1.	<code>Editing</code> means making changes to an existing worksheet, like  adding  new data, deleting data, correcting data, etc.
 </p><p>
-2.	Range refers to a group of adjacent cells.
-</p><p>
-
-3.	Copying means reproducing an entry in a different location, keeping the original.
- </p><p>
-4.	Moving means removing an entry form its original location and placing it in a new location.
+2.	<code>Range</code> refers to a group of adjacent cells.
 </p><p>
 
-5.	Clearing means permanently erasing entries from a cell or a range.
+3.	You can <code>double-click</code> on the cell requiring editing and alter its contents; or
+press<code> F2 </code>after selecting the cell.
 </p><p>
 
-6.	Undo is a tool to cancel the last change and restoring the previous content.
-</p><p>
-
-7.	Redo is a tool to cancel the effect of Undo.
-</p><p>
-
-8.	Copy and Paste button are used for copying entries from one location to another.
-</p><p>
-
-9.	Cut and Paste buttons are used for moving contents.
-</p><p>
-
-10.	You can double-click on the cell requiring editing and alter its contents; or
-press F2 after selecting the cell.
-</p><p>
-
-11.	A column (or row) can be inserted in a worksheet by selecting Insert on the
+4.	A column (or row) can be inserted in a worksheet by selecting Insert on the
 shortcut menu.
 </p><p>
 
-12.	A column (or row) can be deleted in a worksheet by selecting Insert on the
-shortcut menu.
+
+5.	To clear the cell contents in a worksheet, first select the range and then select Clear Contents on the shortcut menu.
 </p><p>
 
-13.	To clear the cell contents in a worksheet, first select the range and then select Clear Contents on the shortcut menu.
+6.	<code>To change column width,</code> place cell pointer on the border between the two column headers and drag the mouse pointer either left or right, or double- click on the border to fit width to contents.
 </p><p>
 
-14.	To change column width, place cell pointer on the border between the two column headers and drag the mouse pointer either left or right, or double- click on the border to fit width to contents.
+7.	<code>Editing</code> is a group in Home Tab in Excel.
 </p><p>
 
-15.	Rename is not an item in the shortcut menu.
+8.	To insert a row between rows 12 and 13, you will select Row 13.
 </p><p>
 
-16.	Editing is a group in Home Tab in Excel.
+9.	If you insert a new column between Columns C and D, the data previously on Column D is found on Column E.
+</p>
+<p>
+  <b>Printing</b>
 </p><p>
+<code>Print one or several worksheets</code>
 
-17.	Insert is a menu in group of Home Tab.
 </p><p>
+Select the worksheets that you want to print. <br>
 
-18.	To insert a row between rows 12 and 13, you will select Row 12.
+Click File > Print, or press CTRL+P.<br>
+
+Click the Print button or adjust Settings before you click the Print button.<br>
 </p><p>
+<code>Print one or several workbooks</code>
+</p><p>
+All workbook files that you want to print must be in the same folder.<br>
 
-19.	If you insert a new column between Columns C and D, the data previously on Column D is found on Column E.
+Click File > Open.<br>
+
+Hold down CTRL click the name of each workbook to print, and then click Print.<br>
+</p><p>
+<code>Print all or part of a worksheet</code>
+</p><p>
+Click the worksheet, and then select the range of data that you want to print.<br>
+
+Click File, and then click Print.<br>
+
+Under Settings, click the arrow next to Print Active Sheets and select the appropriate option.<br>
 
 </p>
 
@@ -589,15 +617,7 @@ shortcut menu.
               </div>
               
            <hr>
-            
-            <div class="d-flex justify-content-between">
-              
-                <a href="dcatheorywelcomepage"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter2"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-                
-            </div>
+
             
             </div>
             

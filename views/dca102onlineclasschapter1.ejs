@@ -16,7 +16,7 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
+  
       
       
       <!--a lane chung lam-->
@@ -29,15 +29,23 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-102) </p>
             
             <hr>
                         
@@ -83,7 +91,7 @@
                             
                           </div>
 
-            <p class="fw-normal mx-auto mt-3">Chapter-1 ah Operating System chungchanga introduction kan zir dawn a ni. </p>
+            <p class="fw-normal mx-auto mt-3">Chapter-1 ah <code>INTRODUCTION</code> kan zir ho dawn a ni. </p>
             
             <hr>
             
@@ -132,7 +140,7 @@
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Explanation
                    
                     </button>
                   
@@ -142,9 +150,16 @@
 
                     <div class="accordion-body">
             
-                          No Video available
-                  
-                        <small>DCA-102 Chapter-1</small>
+                         <p> Computer-ah chuan operating system hi software pawimawh ber pakhat a ni a. Operating system tel lo chuan
+                           computer hi a nung thei lo a ni. 
+                           
+                            Computer Operating System chi hrang hrang a awm a, chungte chu:- Microsoft Windows te, Linux te, UNIX te leh Boss te an ni. </p>
+                           
+                           <p>Operating system hian computer tan hna (management) a thawk a, a tel lo chuan engmah a khawih theih loh va, computer
+                           pawh a nung thei lo a ni. 
+                           File process tu, security lo tifeltu, computer part hrang hrang lo manage tu, memory lo manage tu etc., a ni a. 
+                           A hna thawh hi a pawimawh em em a ni.
+                           </p>
                       
                       </div>
                   
@@ -155,9 +170,7 @@
                 
                 <!--end of video section-->
                 
-                
-                
-                <div class="accordion-item">  <!--textbook started-->
+              <div class="accordion-item">  <!--textbook started-->
                   
                   <h2 class="accordion-header" id="panelsStayOpen-headingThree">
                     
@@ -183,25 +196,25 @@
 <p>The set of instructions given to a computer to perform a task is called a program.
 The most important program for a computer is the operating system (OS).</p>
 
-<p><b>What is an Operating System?</b> An operating system is an integrated set 
+<p><code>What is an Operating System?</code> An operating system is an integrated set 
 of specialised programs that are used to manage the resources and overall operations of a computer. </p>
 
 <p>Example of Operating System: </p>
 
 <p>
-<b>(i) Windows:</b> MS-DOS was a predecessor of the Windows Operating System. The MS-DO OS used a Character User
+<code>(i) Windows:</code> MS-DOS was a predecessor of the Windows Operating System. The MS-DO OS used a Character User
 Interface   (CUI).   It   means   that   it   understood text-based
 commands. Windows on the other hand incorporates a Graphical User Interface (GUI). 
 GUI uses pictorial icons rather than text, to help the user interact with an application.
 </p>
 
-<p><b>(ii) UNIX:</b> Unix is a multi-user, multi-tasking and virtual-
+<p><code>(ii) UNIX:</code> Unix is a multi-user, multi-tasking and virtual-
 memory operating system that runs on a wide variety of hardware platforms. Unix
 was developed at AT & T Thompson.
 </p>
 
 <p>
-<b>iii) GNU/LINUX: </b> Linux is an UNIX-like computer operating system. It is a free and
+<code>iii) GNU/LINUX: </code> Linux is an UNIX-like computer operating system. It is a free and
 open-source  program.  It  was  originally  developed  by  Linus  Torvalds  in  1991  for
 personal   computers.   Today   it   is   a   leading   OS   for   servers,   mainframe   and
 supercomputers.  Android  is  also  built  on the
@@ -210,36 +223,36 @@ most popular Linux distribution packages.
 </p>
 
 <p>
-<b>iv) BOSS:</b> AA GNU/Linux based operating
+<code>iv) BOSS:</code> AA GNU/Linux based operating
 system developed by C-DAC (Centre for Development of Advanced Computing) available in various Indian languages.
 </p>
 
 <p>Main Functions Of Operating System Are</p>
 
-<p><b>(i) Process Management: </b> The role of the OS is to allocate hardware and software
+<p><code>(i) Process Management: </code> The role of the OS is to allocate hardware and software
 resources so that a process could be smoothly executed.</p>
 
 <p>
-<b>(ii) Memory Management:</b> The operating system manages the Primary Memory/Main Memory (RAM). Main memory can be accessed directly by the CPU.  
+<code>(ii) Memory Management:</code> The operating system manages the Primary Memory/Main Memory (RAM). Main memory can be accessed directly by the CPU.  
 For a program to be executed, it should be first loaded in the main memory </p>
 
 
-<p><b>(iii)	File Management: </b>The term file management refers to manipulation of documents and 
+<p><code>(iii)	File Management: </code>The term file management refers to manipulation of documents and 
 data in files on a computer. Thus, file management, which includes organizing, naming, protecting, 
 accessing and using files, is one of  the key functions  of an operating system.</p>
 
 
-<p><b>(iv)	Device Management:</b> The role of the operating system is to bring in a seamless coordination between 
+<p><code>(iv)	Device Management:</code> The role of the operating system is to bring in a seamless coordination between 
 various devices that are being used to accomplish the task of  the user.</p>
 
-<p><b>(v)	Input/Output Management:</b> It carries I/O management,  co-ordinates  and assigns to them.</p>
+<p><code>(v)	Input/Output Management:</code> It carries I/O management,  co-ordinates  and assigns to them.</p>
 
-<p><b>(vi)	Scheduling: </b>It establishes and enforces the job priority order.</p>
+<p><code>(vi)	Scheduling: </code>It establishes and enforces the job priority order.</p>
 
-<p><b>(vii)	Time-sharing:</b> It coordinates and assigns compilers, assemblers, 
+<p><code>(vii)	Time-sharing:</code> It coordinates and assigns compilers, assemblers, 
 utility programs and other software packages to various users working on the computer system.</p>
 
-<p><b>(viii)	Security Management:</b> It establishes data security and integrity.</p>
+<p><code>(viii)	Security Management:</code> It establishes data security and integrity.</p>
 
                         
 
@@ -624,14 +637,7 @@ utility programs and other software packages to various users working on the com
               
            <hr>
             
-            <div class="d-flex justify-content-between">
-              
-                <a href="dcatheorywelcomepage"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter2"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-                
-            </div>
+
             
             </div>
             

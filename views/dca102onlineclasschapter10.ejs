@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,15 +28,23 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+           <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-102) </p>
             
             <hr>
                         
@@ -83,7 +90,7 @@
                             
                           </div>
 
-            <p class="fw-normal mx-auto mt-3">Chapter 10-ah hian Extra point to remember kan en ho dawn a ni. </p>
+            <p class="fw-normal mx-auto mt-3">Chapter 10-ah hian <code> POINTS TO REMEMBER </code> kan en ho dawn a ni. </p>
             
             <hr>
             
@@ -129,35 +136,7 @@
                 
                 
                 
-                
-                <div class="accordion-item"> <!--video section started-->
-                  
-                  <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                    
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                      
-                      Video
-                   
-                    </button>
-                  
-                  </h2>
-                  
-                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-
-                    <div class="accordion-body">
-            
-                          No Video available
-                  
-                        <small>DCA-102 Chapter-10</small>
-                      
-                      </div>
-                  
-                  </div>
-                
-                </div>
-                
-                
-                <!--end of video section-->
+               <!--end of video section-->
                 
                 
                 
@@ -182,9 +161,9 @@
                       <p class="fw-light rounded">
                         
                         
-                   <p><em>Extra Points to Remember:</em></p>
+                   <p><em>Points to Remember:</em></p>
 
-<p>1.	<b>A WILDCARD character</b> is a symbol used to replace or represent one or
+<p>1.	<code>A WILDCARD character</code> is a symbol used to replace or represent one or
 more characters. The most common wildcards are the asterisk (*), which
 represents one or more characters and question mark (?) that represents a single character. 
 For instance, if you want to search all Microsoft word file  inside  one’s folder, just type *.docx in 
@@ -196,13 +175,13 @@ the search box. The  windows will find  all Microsoft word file irrespective of 
 </p>
 
 <p>
-3.	<b>BIOS</b> - (Basic Input/Output System and also known as the System BIOS, ROM BIOS or PC BIOS) is firmware used to perform hardware initialization during the booting process (power-on startup), and
+3.	<code>BIOS</code> - (Basic Input/Output System and also known as the System BIOS, ROM BIOS or PC BIOS) is firmware used to perform hardware initialization during the booting process (power-on startup), and
 to provide runtime services for operating systems and programs.
 
 </p>
 
 <p>
-4.	<b>The KERNEL</b> is a computer program that is the
+4.	<code>The KERNEL</code> is a computer program that is the
 core of a computer's systems, it is one of
 operating system. On most the first programs loaded
 on start-up (after	the bootloader).	It	handles
@@ -210,48 +189,48 @@ memory and peripherals like keyboards, monitors, printers, and speakers.
 </p>
 
 <p>
-5.	<b>A SHELL</b> is a user interface for access  to an operating system's services. In general, operating system shells use either a command-line interface (CLI)
+5.	<code>A SHELL</code> is a user interface for access  to an operating system's services. In general, operating system shells use either a command-line interface (CLI)
 or graphical user interface (GUI). It is named a shell because it is the outermost layer around the operating system kernel.
 </p>
 
 <p>
-6.	<b>GNU</b> stands for ‘Gnu is Not Unix’.
+6.	<code>GNU</code> stands for ‘Gnu is Not Unix’.
 </p>
 
 <p>
-7.	<b>Clipboard:</b> The clipboard is a temporary holding area for  information.  Clipboard is in computer’s memory; the Clipboard involves three commands: Cut, Copy and Paste.
+7.	<code>Clipboard:</code> The clipboard is a temporary holding area for  information.  Clipboard is in computer’s memory; the Clipboard involves three commands: Cut, Copy and Paste.
 </p>
 
 <p>
-8.	<b>FIFO</b> is an acronym for First In, First Out, a method for organising and manipulating a data.
+8.	<code>FIFO</code> is an acronym for First In, First Out, a method for organising and manipulating a data.
 </p>
 
 <p>
-9.	<b>LILO</b> is an acronym for Last In, Last Out, a method of storing data where the data stored last will be accessed last.
+9.	<code>LILO</code> is an acronym for Last In, Last Out, a method of storing data where the data stored last will be accessed last.
 </p>
 
 <p>
-10.	<b>File Allocation Table (FAT)</b> is a computer file system architecture and originally designed in 1977 for use on floppy disks. FAT was used almost universally on hard disks throughout the DOS and Windows 9x eras for two decades.
+10.	<code>File Allocation Table (FAT)</code> is a computer file system architecture and originally designed in 1977 for use on floppy disks. FAT was used almost universally on hard disks throughout the DOS and Windows 9x eras for two decades.
 </p>
 
 <p>
-11.	<b>NTFS (New Technology File System)</b> is a file system  developed  by Microsoft. Starting with Windows NT 3.1, it is the default file system of the Windows NT family.
+11.	<code>NTFS (New Technology File System)</code> is a file system  developed  by Microsoft. Starting with Windows NT 3.1, it is the default file system of the Windows NT family.
 </p>
 
 <p>
-12.	<b>A SPECIAL CHARACTER </b> is a character that is not an alphabetic or numeric character. Some special characters are;- @, %, $, &, !, *, etc.
+12.	<code>A SPECIAL CHARACTER </code> is a character that is not an alphabetic or numeric character. Some special characters are;- @, %, $, &, !, *, etc.
 </p>
 
 <p>
-13.	<b>32-bit vs 64-bit:</b> A 64-bit processor is more capable than a 32-bit processor, because it can handle more data at once. 32-bit processors are perfectly capable of handling a limited amount of RAM (in Windows, 4GB or less), and 64-bit processors are capable of utilizing much more.
+13.	<code>32-bit vs 64-bit:</code> A 64-bit processor is more capable than a 32-bit processor, because it can handle more data at once. 32-bit processors are perfectly capable of handling a limited amount of RAM (in Windows, 4GB or less), and 64-bit processors are capable of utilizing much more.
 </p>
 
 <p>
-14.	<b>DOS commands </b> are of two types;<code> internal and external</code>. The internal commands are those commands that are automatically  loaded  in  the memory. Some internal commands are; Cls, Dir, Date, Time, Copy con, Type, Ren, Del etc. The external commands are  not  permanent  part  of  the memory. To execute or run this commands an external file is required. Some commonly used DOS external commands are;- CHKDSK, Diskcopy, Format, Tree, Deltree etc.
+14.	<code>DOS commands </code> are of two types;<code> internal and external</code>. The internal commands are those commands that are automatically  loaded  in  the memory. Some internal commands are; Cls, Dir, Date, Time, Copy con, Type, Ren, Del etc. The external commands are  not  permanent  part  of  the memory. To execute or run this commands an external file is required. Some commonly used DOS external commands are;- CHKDSK, Diskcopy, Format, Tree, Deltree etc.
 </p>
 
 <p>
-15.	<b>BOOTING: </b> Boot means ‘start’ or make the computer system ready for taking instructions. When the computer is first switched on, it is called cold booting. When the computer is already ON and is being reset, it is  called  warm  booting.             
+15.	<code>BOOTING: </code> Boot means ‘start’ or make the computer system ready for taking instructions. When the computer is first switched on, it is called cold booting. When the computer is already ON and is being reset, it is  called  warm  booting.             
  </p>                   
                     
                     
@@ -636,14 +615,7 @@ or graphical user interface (GUI). It is named a shell because it is the outermo
               
            <hr>
             
-            <div class="d-flex justify-content-between">
-              
-                <a href="dcatheorywelcomepage"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter2"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-                
-            </div>
+
             
             </div>
             

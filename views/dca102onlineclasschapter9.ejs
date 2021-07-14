@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,15 +28,23 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+           <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-102) </p>
             
             <hr>
                         
@@ -83,7 +90,7 @@
                             
                           </div>
 
-            <p class="fw-normal mx-auto mt-3">Chapter 9-ah hian Command Prompt and MS-DOS Commands kan zir dawn a ni. </p>
+            <p class="fw-normal mx-auto mt-3">Chapter 9-ah hian <code> COMMAND PROMPT AND MS-DOS COMMANDS </code> kan zir dawn a ni. </p>
             
             <hr>
             
@@ -142,7 +149,7 @@
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Explanation
                    
                     </button>
                   
@@ -152,9 +159,23 @@
 
                     <div class="accordion-body">
             
-                          No Video available
-                  
-                        <small>DCA-102 Chapter-9</small>
+                      <p>A lema kan hmuh hi command prompt a ni a. MS-DOS command ti pawhin a sawi theih bawk. Computer zir tirh chuan a tangkaina
+                      a tam loh hmel viau thin a, amaherawhchu, hetiang command line hi a tangkai em em a, a powerful bawk a. Tuna kan website kan design lai pawh hian
+                      server-a program command nan kan hmang tel a, a tangkai em em a ni. Tuna kan zir chin tur erawh chu command ho te te leh common zual deuh deuh te a ni dawn a ni.</p>
+                          
+                          <figure class="figure">
+  
+                            <img src="/img/commandPrompt.jpg" class="float-end img-fluid ps-2 pb-2" width="600" height="540" alt="Command Prompt" />
+                            
+                            <figcaption class="figure-caption ps-2 text-danger"> Command Prompt </figcaption>
+                            
+                            </figure>
+                          
+                          
+                          
+                          
+                          
+                         
                       
                       </div>
                   
@@ -194,7 +215,7 @@ MS-DOS for Microsoft Disk Operating System is an operating system with a command
 
 </p>
 <p>
-<b>To get command prompt, do this:</b><br>
+<code>To get command prompt, do this:</code><br>
 
 1.	Click Start Button > All Programs > Accessories > Command Prompt.<br>
 2.	Or Press Window key    + R, type CMD and press enter.<br>
@@ -204,7 +225,7 @@ MS-DOS for Microsoft Disk Operating System is an operating system with a command
 <p>
 The most common MS-DOS internal command is listed below:-
 </p>
-    <table class="table w-75 border p-2 mx-auto">
+    <table class="table border p-2">
   
   <thead class="border">
     
@@ -718,14 +739,7 @@ The most common MS-DOS internal command is listed below:-
               
            <hr>
             
-            <div class="d-flex justify-content-between">
-              
-                <a href="dcatheorywelcomepage"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter2"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-                
-            </div>
+
             
             </div>
             

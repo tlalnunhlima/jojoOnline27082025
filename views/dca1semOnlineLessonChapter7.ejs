@@ -16,23 +16,27 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
-      
-      
-
         <!--a lane lai ta-->
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-101) </p>
             
             <hr>
                         
@@ -78,7 +82,7 @@
                             
                           </div>
 
-            <p class="fw-normal mt-3">Chapter-7 ah hian Computer Language kan zir dawn a ni. </p>
+            <p class="fw-normal mt-3">Chapter-7 ah hian <code>COMPUTER LANGUAGES</code> kan zir ho dawn a ni. </p>
             
             <hr>
             
@@ -185,20 +189,20 @@ Characteristics of a Good Programming Language, Slecting a Luanguage for Coding 
                       
 <p><em>7) COMPUTER LANGUAGES - (4 MARKS) </em></p>
 
-<p>There are two major types of programming languages. These are <b>Low Level Languages and High
-Level Languages.</b> Low Level languages are
-further divided into <b>Machine language and
-Assembly language.</b></p>
+<p>There are two major types of programming languages. These are <code>Low Level Languages and High
+Level Languages.</code> Low Level languages are
+further divided into <code>Machine language and
+Assembly language.</code></p>
 
 
-<p><b>Machine Language</b> is the language of the
+<p><code>Machine Language</code> is the language of the
 computer and is the only language that is
 directly understood by the computer. We also
 call it machine code and it is written as strings
 of 1’s and 0’s.</p>
 
 
-<p><b>Assembly Language </b> - It is the first step to
+<p><code>Assembly Language </code> - It is the first step to
 improve the programming structure introduced in
 1952. In this language, the machine codes
 comprising of 1's and 0's are substituted by
@@ -207,14 +211,14 @@ improve their understanding. Eg. START PRGRAM
 AT 1000. </p>
 
 <p>
-<b>Assembler</b> - The set of symbols and letters
+<code>Assembler</code> - The set of symbols and letters
 forms the assembly language and a translator
 program (called Assembler) is required to translate the programs written in assembly language into machine language for execution by the computer. It is
 considered to be a second-generation language.
 Machine and assembly languages are also called low-level programming languages.</p>
 
 
-<p><b>High Level Languages </b> - You know that assembly language and machine language require extensive
+<p><code>High Level Languages </code> - You know that assembly language and machine language require extensive
 knowledge of computer hardware. To overcome this limitation, a user writes the instructions in English
 like sentences to perform the logic of the problem irrespective of the type of computer you are using.
 The language used for this is referred to as high-level language.
@@ -226,7 +230,7 @@ COBOL, BASIC, PASCAL, C and C++), some more High-Level Languages (Java, C#, RPG,
 SNOBOL).</p>
 
 <p>
-<b>Compiler </b> - It is a program that
+<code>Compiler </code> - It is a program that
 translates the instructions of higherlevel languages to machine
 language. It is called compiler
 because it compiles every program
@@ -238,7 +242,7 @@ language is called source program. After this program is converted to machine la
 it is called object program. A compiler, however, cannot detect logic errors. </p>
 
 <p>
-<b>Interpreter </b> - An interpreter is another type of
+<code>Interpreter </code> - An interpreter is another type of
 program translator used for translating higherlevel language instructions into machine
 language instructions. It takes one statement of
 higher-level language at a time, translates it into
@@ -246,7 +250,7 @@ machine language and executes it immediately. </p>
 
 
 <p>
-<b>Subprogram </b>– is a program written in a manner that a programmer can use it in other programs
+<code>Subprogram </code>– is a program written in a manner that a programmer can use it in other programs
 whenever needed without rewriting. We refer to a subprogram by different names in different
 programming languages. For example, other names used for it are subroutine, subprocedure, and
 function. </p>
@@ -641,14 +645,7 @@ function. </p>
               
               <hr>
               
-              
-              <div class="d-flex justify-content-between">
-              
-                <a href="dca1semOnlineLessonChapter6"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter8"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-            </div>
+
               
               
               

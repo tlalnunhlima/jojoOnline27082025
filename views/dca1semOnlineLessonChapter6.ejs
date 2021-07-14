@@ -16,23 +16,27 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
-      
-      
-
         <!--a lane lai ta-->
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-101) </p>
             
             <hr>
                         
@@ -78,7 +82,7 @@
                             
                           </div>
 
-            <p class="fw-normal mt-3">Chapter-6 ah hian Computer Software kan zir dawn a ni. </p>
+            <p class="fw-normal mt-3">Chapter-6 ah hian <code>COMPUTER SOFTWARE</code> kan zir ho dawn a ni. </p>
             
             <hr>
             
@@ -197,7 +201,7 @@ hardware is normally a one-time expense,
 whereas software is a continuing expense.</p>
 
 
-<p><b>Computer software, or simply software,</b> is a
+<p><code>Computer software, or simply software,</code> is a
 collection of data or computer instructions that
 tell the computer how to work. In other word,
 the term software refers to a set of computer
@@ -208,7 +212,7 @@ documents (flowcharts, manuals, etc.) describing the programs, and how they are 
 can be divided into -</p>
 
 <p>
-<b>• Application software </b> - is a set of
+<code>• Application software </code> - is a set of
 one or more programs, which solves a
 specific problem, or does a specific task.
 Some commonly know application
@@ -217,18 +221,18 @@ Spreadsheet software, database
 software, graphics software, personal assistance software, education software, entertainment software.</p>
 
 
-<p><b>• System software </b> is a set of one or more programs, which controls the operation and/or
+<p><code>• System software </code> is a set of one or more programs, which controls the operation and/or
 extends the processing capability of a computer system. Programs included in a system software
 package are called system programs, and programmers who prepare system software are referred to
 as system programmers.</p>
 
 
-<p><b>Logical System Architecture </b> - Hardware is at the centre; system software surrounds the hardware,
+<p><code>Logical System Architecture </code> - Hardware is at the centre; system software surrounds the hardware,
 application software layer then surrounds the system software. Finally, the users’ layer consists of the
 user interfaces provided by the application software.</p>
 
 <p>
-<b>Firmware </b> refers to a sequence of
+<code>Firmware </code> refers to a sequence of
 instruction (software) substituted for
 hardware. The software is stored in
 ROM chip of the computer, and is
@@ -236,7 +240,7 @@ executed whenever the computer
 has to multiply two numbers.</p>
 
 <p>
-<b>Middleware </b>- This software layer
+<code>Middleware </code>- This software layer
 is known as middleware because it
 sits in the middle, between the
 operating system and applications.
@@ -635,15 +639,7 @@ services. </p>
               </div>
               
               <hr>
-              
-              
-              <div class="d-flex justify-content-between">
-              
-                <a href="dca1semOnlineLessonChapter5"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter7"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-            </div>
+
               
               
               

@@ -16,22 +16,30 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
+
       
 
         <!--a lane lai ta-->
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-101) </p>
             
             <hr>
                         
@@ -77,7 +85,7 @@
                             
                           </div>
 
-            <p class="fw-normal mt-3">Chapter-3 ah hian Computer Processor leh Memory kan zir dawn a ni. </p>
+            <p class="fw-normal mt-3">Chapter-3 ah hian <code>PROCESSOR AND MEMORY</code> kan zir ho dawn a ni. </p>
             
             <hr>
             
@@ -180,14 +188,14 @@
                         <em><p>3) PROCESSOR AND MEMORY - (5 MARKS)</p></em>
 
 
-<p><b>A central processing unit (CPU)</b> is the brain of a computer system and also called a central
+<p><code>A central processing unit (CPU)</code> is the brain of a computer system and also called a central
 processor or main processor. </code></p>
 
 
-<p><b>Parts of CPU </b>-</p>
+<p><code>Parts of CPU </code>-</p>
 
 
-<p><b>Arithmetic Logic Unit (ALU)</b> - It is the part of computer processor (CPU) can be used to perform
+<p><code>Arithmetic Logic Unit (ALU)</code> - It is the part of computer processor (CPU) can be used to perform
 arithmetic and logic operations. </p>
 
 
@@ -195,16 +203,16 @@ arithmetic and logic operations. </p>
 (AU) arithmetic unit and a logic unit (LU).</blockquote>
 
 
-<p><b>Control Unit (CU)</b> - is a component of a computer's CPU that directs the operation of the
+<p><code>Control Unit (CU)</code> - is a component of a computer's CPU that directs the operation of the
 processor. It tells the computer's memory, arithmetic and logic unit and input and output devices
 how to respond to the instructions that have been sent to the processor.</p>
 
-<p><b>Registers </b> - When the CPU runs a computer program, it needs somewhere to store the data that
+<p><code>Registers </code> - When the CPU runs a computer program, it needs somewhere to store the data that
 the instructions operate on (the data that they read and write). This storage is called a register. A CPU usually
 has many registers. The register is the fastest memory. They are part of the CPU chip itself. </p>
 
 
-<p><b>Instruction Sets </b> - The CPU is an electronic machine that works on a list of computer things to do,
+<p><code>Instruction Sets </code> - The CPU is an electronic machine that works on a list of computer things to do,
 called instructions. It reads the list of instructions and runs (executes) each one in order. A list of
 instructions that a CPU can run is a computer program. The instruction set provides commands
 to the processor, to tell it what it needs to do.</p>
@@ -214,7 +222,7 @@ A modern processor often run so fast that
 gigahertz (GHz) is used instead. One GHz is one
 billion cycles per second. </p>
 
-<p><b>Type of Processor</b> -
+<p><code>Type of Processor</code> -
 There are two primary manufacturers of computer microprocessors. Intel and Advanced Micro
 Devices (AMD) lead the market in terms of speed and quality. Intel's desktop CPUs include Celeron,
 Pentium and Core.
@@ -222,18 +230,18 @@ AMD's desktop processors include Sempron, Athlon and Phenom. Intel makes Celeron
 M and Core mobile processors for notebooks.</p>
 
 
-<p><b>Main Memory </b> - The main memory in a computer is called Random Access Memory. It is also known
+<p><code>Main Memory </code> - The main memory in a computer is called Random Access Memory. It is also known
 as RAM. RAM is a volatile memory and loses all its data when the power is switched off. Main memory
 is available in two types - Dynamic Random Access Memory (DRAM) and Static Random Access
 Memory (SRAM). </p>
 
 <p>
-<b>Storage Evaluation Criteria </b> - Storage systems are the devices—such as hard disks, optical disks and
+<code>Storage Evaluation Criteria </code> - Storage systems are the devices—such as hard disks, optical disks and
 magnetic disks—used for data storage. Any storage unit of computer system is characterized by
 storage capacity, access time, cost per bit of storage, volatile and random access. </p>
 
 <p>
-<b>Main Memory Organization</b> -
+<code>Main Memory Organization</code> -
 Main memory of a computer
 system consists of several small
 storage areas called location or
@@ -253,7 +261,7 @@ factors such as the number of available address registers in the CPU. In the cas
 can only address a memory capacity of up to 4 GB. As for a 64-bit computer, the memory capacity is
 unlimited.</p>
 
-<p><b>Types of Memory Chips </b> -
+<p><code>Types of Memory Chips </code> -
  RAM chips are of two types –
 dynamic and static. The main
 memory of most computers uses
@@ -264,11 +272,11 @@ non-volatile memory chip in which
 data is stored permanently. We can only read and use data stored in a ROM chip. We cannot
 stores, permanent stores, or dead stores. </p>
 
-<p><b>Cache Memory</b> - Cache Memory is a special very high-speed memory. Cache memory is an
+<p><code>Cache Memory</code> - Cache Memory is a special very high-speed memory. Cache memory is an
 extremely fast memory type that acts as a buffer between RAM and the CPU.</p>
 
 
-<p><b>HIT/MISS:</b> When the CPU refers to memory and finds the word in cache, it is said to pro
+<p><code>HIT/MISS:</code> When the CPU refers to memory and finds the word in cache, it is said to pro
 Otherwise, it is a miss. The performance of cache memory is frequently measured in terms of a quantity
 called hit ratio. Hit ratio = hit / (hit+miss)</p>
  
@@ -660,14 +668,7 @@ called hit ratio. Hit ratio = hit / (hit+miss)</p>
               
               <hr>
               
-              
-              <div class="d-flex justify-content-between">
-              
-                <a href="dca1semOnlineLessonChapter2"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter4"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-            </div>
+
               
               
               

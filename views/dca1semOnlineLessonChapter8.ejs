@@ -16,23 +16,27 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
-      
-      
-
         <!--a lane lai ta-->
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-101) </p>
             
             <hr>
                         
@@ -78,7 +82,7 @@
                             
                           </div>
 
-            <p class="fw-normal mt-3">Chapter-8 ah hian classification of computers kan zir dawn a ni. </p>
+            <p class="fw-normal mt-3">Chapter-8 ah hian <code>CLASSIFICATION OF COMPUTERS</code> kan zir ho dawn a ni. </p>
             
             <hr>
             
@@ -186,17 +190,17 @@ Supercomputers, Client and Server Computers, Handheld Computers (Tablet PC, PDA/
        <p><em>8) CLASSIFICATION OF COMPUTERS - (4 MARKS)</em></p>
        
        
-<p><b>Notebook computer </b> – They are also known as laptop.
-<b>Personal Computer </b> – A pc is a non-portable, general purpose computer that fits on a normal size
+<p><code>Notebook computer </code> – They are also known as laptop.
+<code>Personal Computer </code> – A pc is a non-portable, general purpose computer that fits on a normal size
 office table and is used by one person at a time.</p>
 
-<p><b>Workstations </b> – A workstation is a powerful desktop computer designed to meet computing needs
+<p><code>Workstations </code> – A workstation is a powerful desktop computer designed to meet computing needs
 of engineers, architects, and other professionals who need greater processing power, larger storage,
 and better graphics display facility than what normal PCs provide. Unlike PCs that run any OS, all
 workstations generally run UNIX operating system or its variant such AIX (IBM), Solaris (SUN) and HPUX (HP).</p>
 
-<p><b>
-Mainframe computers </b> – Several
+<p><code>
+Mainframe computers </code> – Several
 organizations such as banks, insurance
 companies, hospitals, railways, etc., need
 on-line processing of large number of
@@ -206,15 +210,15 @@ processing capabilities. Two major
 vendors of mainframe systems are IBM
 and DEC. </p>
 
-<p><b>
-Super computers </b> - Supercomputers
+<p><code>
+Super computers </code> - Supercomputers
 are used for intensive computation tasks
 in various fields, including quantum
 mechanics, weather forecasting, climate research, oil and gas exploration, and Film and TV Industries
 etc. We measure speed of modern supercomputers in teraflops and petaflops. </p>
 
 <p>
-<b>Client and Server computers </b>- Servers are nothing but dedicated computers which are set-up to
+<code>Client and Server computers </code>- Servers are nothing but dedicated computers which are set-up to
 offer some services to the clients. Eg., <i>File server </i>– It provides a central storage facility to store files of
 several users on a network. <i>Database server</i> – It manages a centralized database, and enables several
 users on a network to have a shared access to same database. <i>Print server </i> – It manages one or more
@@ -222,7 +226,7 @@ printers, and accepts and processes print requests from any user in a network. <
 translates names into network addresses enabling different computers on a network to communicate
 with each other.</p>
 
-<p><b>Handheld Computers </b> – A handheld computer is a device whose size, weight, and design are such
+<p><code>Handheld Computers </code> – A handheld computer is a device whose size, weight, and design are such
 that a user can use it comfortably by holding it in hand. It is also known as palmtop because it can be
 kept on palm and operated. E.g., Tablet PC, PDA/Pocket PC, smartphone etc.</p>
 
@@ -616,15 +620,7 @@ kept on palm and operated. E.g., Tablet PC, PDA/Pocket PC, smartphone etc.</p>
               
               <hr>
               
-              
-              <div class="d-flex justify-content-between">
-              
-                <a href="dca1semOnlineLessonChapter7"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter9"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-            </div>
-              
+
               
               
               </div>

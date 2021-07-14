@@ -478,6 +478,49 @@ router.get('/all/dcatheorywelcomepage', (req, res) => {
 });
 
 
+/*==================================*/
+
+
+//practical intro page
+
+router.get('/all/dcapracticalwelcomepage', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dcapracticalwelcomepage', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+            
+        });
+        
+    }
+        
+        res.redirect('/');
+    
+});
+
+
+/*==================================*/
+
+
 
 //dca-101 intro page
 
@@ -718,7 +761,7 @@ router.get('/all/dca1semOnlineLessonChapter1', (req, res) => {
         
        return res.render('dca1semOnlineLessonChapter1', {
            
-           chapterTitle: 'Fundamental of Computer (DCA-101:Theory)',
+           chapterTitle: 'Fundamental of Computer',
             
             username: req.session.username,
             
@@ -757,7 +800,7 @@ router.get('/all/dca1semOnlineLessonChapter2', (req, res) => {
         
        return res.render('dca1semOnlineLessonChapter2', {
            
-           chapterTitle: 'Fundamental of Computer (DCA-101:Theory)',
+           chapterTitle: 'Fundamental of Computer',
             
             username: req.session.username,
             
@@ -796,7 +839,7 @@ router.get('/all/dca1semOnlineLessonChapter3', (req, res) => {
         
        return res.render('dca1semOnlineLessonChapter3', {
            
-           chapterTitle: 'Fundamental of Computer (DCA-101:Theory)',
+           chapterTitle: 'Fundamental of Computer',
             
             username: req.session.username,
             
@@ -836,7 +879,7 @@ router.get('/all/dca1semOnlineLessonChapter4', (req, res) => {
         
        return res.render('dca1semOnlineLessonChapter4', {
            
-           chapterTitle: 'Fundamental of Computer (DCA-101:Theory)',
+           chapterTitle: 'Fundamental of Computer',
             
             username: req.session.username,
             
@@ -875,7 +918,7 @@ router.get('/all/dca1semOnlineLessonChapter5', (req, res) => {
         
        return res.render('dca1semOnlineLessonChapter5', {
            
-           chapterTitle: 'Fundamental of Computer (DCA-101:Theory)',
+           chapterTitle: 'Fundamental of Computer',
             
             username: req.session.username,
             
@@ -914,7 +957,7 @@ router.get('/all/dca1semOnlineLessonChapter6', (req, res) => {
         
        return res.render('dca1semOnlineLessonChapter6', {
            
-           chapterTitle: 'Fundamental of Computer (DCA-101:Theory)',
+           chapterTitle: 'Fundamental of Computer',
             
             username: req.session.username,
             
@@ -954,7 +997,7 @@ router.get('/all/dca1semOnlineLessonChapter7', (req, res) => {
         
        return res.render('dca1semOnlineLessonChapter7', {
            
-           chapterTitle: 'Fundamental of Computer (DCA-101:Theory)',
+           chapterTitle: 'Fundamental of Computer',
             
             username: req.session.username,
             
@@ -992,7 +1035,7 @@ router.get('/all/dca1semOnlineLessonChapter8', (req, res) => {
         
        return res.render('dca1semOnlineLessonChapter8', {
            
-           chapterTitle: 'Fundamental of Computer (DCA-101:Theory)',
+           chapterTitle: 'Fundamental of Computer',
             
             username: req.session.username,
             
@@ -1031,7 +1074,7 @@ router.get('/all/dca1semOnlineLessonChapter9', (req, res) => {
         
        return res.render('dca1semOnlineLessonChapter9', {
            
-           chapterTitle: 'Fundamental of Computer (DCA-101:Theory)',
+           chapterTitle: 'Fundamental of Computer',
             
             username: req.session.username,
             
@@ -1070,7 +1113,7 @@ router.get('/all/dca1semOnlineLessonChapter10', (req, res) => {
         
        return res.render('dca1semOnlineLessonChapter10', {
            
-           chapterTitle: 'Fundamental of Computer (DCA-101:Theory)',
+           chapterTitle: 'Fundamental of Computer',
             
             username: req.session.username,
             
@@ -1112,7 +1155,7 @@ router.get('/all/dca102onlineclasschapter1', (req, res) => {
         
        return res.render('dca102onlineclasschapter1', {
            
-           chapterTitle: 'Operating System (DCA-102:Theory)',
+           chapterTitle: 'Operating System',
             
             username: req.session.username,
             
@@ -1151,7 +1194,7 @@ router.get('/all/dca102onlineclasschapter2', (req, res) => {
         
        return res.render('dca102onlineclasschapter2', {
            
-           chapterTitle: 'Operating System (DCA-102:Theory)',
+           chapterTitle: 'Operating System',
             
             username: req.session.username,
             
@@ -1191,7 +1234,7 @@ router.get('/all/dca102onlineclasschapter3', (req, res) => {
         
        return res.render('dca102onlineclasschapter3', {
            
-           chapterTitle: 'Operating System (DCA-102:Theory)',
+           chapterTitle: 'Operating System',
             
             username: req.session.username,
             
@@ -1231,7 +1274,7 @@ router.get('/all/dca102onlineclasschapter4', (req, res) => {
         
        return res.render('dca102onlineclasschapter4', {
            
-           chapterTitle: 'Operating System (DCA-102:Theory)',
+           chapterTitle: 'Operating System',
             
             username: req.session.username,
             
@@ -1271,7 +1314,7 @@ router.get('/all/dca102onlineclasschapter5', (req, res) => {
         
        return res.render('dca102onlineclasschapter5', {
            
-           chapterTitle: 'Operating System (DCA-102:Theory)',
+           chapterTitle: 'Operating System',
             
             username: req.session.username,
             
@@ -1310,7 +1353,7 @@ router.get('/all/dca102onlineclasschapter6', (req, res) => {
         
        return res.render('dca102onlineclasschapter6', {
            
-           chapterTitle: 'Operating System (DCA-102:Theory)',
+           chapterTitle: 'Operating System',
             
             username: req.session.username,
             
@@ -1350,7 +1393,7 @@ router.get('/all/dca102onlineclasschapter7', (req, res) => {
         
        return res.render('dca102onlineclasschapter7', {
            
-           chapterTitle: 'Operating System (DCA-102:Theory)',
+           chapterTitle: 'Operating System',
             
             username: req.session.username,
             
@@ -1389,7 +1432,7 @@ router.get('/all/dca102onlineclasschapter8', (req, res) => {
         
        return res.render('dca102onlineclasschapter8', {
            
-           chapterTitle: 'Operating System (DCA-102:Theory)',
+           chapterTitle: 'Operating System',
             
             username: req.session.username,
             
@@ -1430,7 +1473,7 @@ router.get('/all/dca102onlineclasschapter9', (req, res) => {
         
        return res.render('dca102onlineclasschapter9', {
            
-           chapterTitle: 'Operating System (DCA-102:Theory)',
+           chapterTitle: 'Operating System',
             
             username: req.session.username,
             
@@ -1470,7 +1513,7 @@ router.get('/all/dca102onlineclasschapter10', (req, res) => {
         
        return res.render('dca102onlineclasschapter10', {
            
-           chapterTitle: 'Operating System (DCA-102:Theory)',
+           chapterTitle: 'Operating System',
             
             username: req.session.username,
             
@@ -1514,7 +1557,7 @@ router.get('/all/dca103onlineclasschapter1', (req, res) => {
         
        return res.render('dca103onlineclasschapter1', {
            
-           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+           chapterTitle: 'Office Automation Software',
             
             username: req.session.username,
             
@@ -1553,7 +1596,7 @@ router.get('/all/dca103onlineclasschapter2', (req, res) => {
         
        return res.render('dca103onlineclasschapter2', {
            
-           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+           chapterTitle: 'Office Automation Software',
             
             username: req.session.username,
             
@@ -1592,7 +1635,7 @@ router.get('/all/dca103onlineclasschapter3', (req, res) => {
         
        return res.render('dca103onlineclasschapter3', {
            
-           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+           chapterTitle: 'Office Automation Software',
             
             username: req.session.username,
             
@@ -1632,7 +1675,7 @@ router.get('/all/dca103onlineclasschapter4', (req, res) => {
         
        return res.render('dca103onlineclasschapter4', {
            
-           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+           chapterTitle: 'Office Automation Software',
             
             username: req.session.username,
             
@@ -1671,7 +1714,7 @@ router.get('/all/dca103onlineclasschapter5', (req, res) => {
         
        return res.render('dca103onlineclasschapter5', {
            
-           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+           chapterTitle: 'Office Automation Software',
             
             username: req.session.username,
             
@@ -1711,7 +1754,7 @@ router.get('/all/dca103onlineclasschapter6', (req, res) => {
         
        return res.render('dca103onlineclasschapter6', {
            
-           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+           chapterTitle: 'Office Automation Software',
             
             username: req.session.username,
             
@@ -1751,7 +1794,7 @@ router.get('/all/dca103onlineclasschapter7', (req, res) => {
         
        return res.render('dca103onlineclasschapter7', {
            
-           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+           chapterTitle: 'Office Automation Software',
             
             username: req.session.username,
             
@@ -1791,7 +1834,7 @@ router.get('/all/dca103onlineclasschapter8', (req, res) => {
         
        return res.render('dca103onlineclasschapter8', {
            
-           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+           chapterTitle: 'Office Automation Software',
             
             username: req.session.username,
             
@@ -1830,7 +1873,7 @@ router.get('/all/dca103onlineclasschapter9', (req, res) => {
         
        return res.render('dca103onlineclasschapter9', {
            
-           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+           chapterTitle: 'Office Automation Software',
             
             username: req.session.username,
             
@@ -1869,7 +1912,7 @@ router.get('/all/dca103onlineclasschapter10', (req, res) => {
         
        return res.render('dca103onlineclasschapter10', {
            
-           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+           chapterTitle: 'Office Automation Software',
             
             username: req.session.username,
             
@@ -1908,7 +1951,7 @@ router.get('/all/dca103onlineclasschapter11', (req, res) => {
         
        return res.render('dca103onlineclasschapter11', {
            
-           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+           chapterTitle: 'Office Automation Software',
             
             username: req.session.username,
             
@@ -1947,7 +1990,7 @@ router.get('/all/dca103onlineclasschapter12', (req, res) => {
         
        return res.render('dca103onlineclasschapter12', {
            
-           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+           chapterTitle: 'Office Automation Software',
             
             username: req.session.username,
             
@@ -1986,7 +2029,7 @@ router.get('/all/dca103onlineclasschapter13', (req, res) => {
         
        return res.render('dca103onlineclasschapter13', {
            
-           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+           chapterTitle: 'Office Automation Software',
             
             username: req.session.username,
             
@@ -2024,7 +2067,7 @@ router.get('/all/dca103onlineclasschapter14', (req, res) => {
         
        return res.render('dca103onlineclasschapter14', {
            
-           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+           chapterTitle: 'Office Automation Software',
             
             username: req.session.username,
             
@@ -2063,7 +2106,7 @@ router.get('/all/dca103onlineclasschapter15', (req, res) => {
         
        return res.render('dca103onlineclasschapter15', {
            
-           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+           chapterTitle: 'Office Automation Software',
             
             username: req.session.username,
             
@@ -2102,7 +2145,7 @@ router.get('/all/dca103onlineclasschapter16', (req, res) => {
         
        return res.render('dca103onlineclasschapter16', {
            
-           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+           chapterTitle: 'Office Automation Software',
             
             username: req.session.username,
             
@@ -2141,7 +2184,7 @@ router.get('/all/dca103onlineclasschapter17', (req, res) => {
         
        return res.render('dca103onlineclasschapter17', {
            
-           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+           chapterTitle: 'Office Automation Software',
             
             username: req.session.username,
             
@@ -2180,7 +2223,7 @@ router.get('/all/dca103onlineclasschapter18', (req, res) => {
         
        return res.render('dca103onlineclasschapter18', {
            
-           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+           chapterTitle: 'Office Automation Software',
             
             username: req.session.username,
             
@@ -2219,7 +2262,7 @@ router.get('/all/dca103onlineclasschapter19', (req, res) => {
         
        return res.render('dca103onlineclasschapter19', {
            
-           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+           chapterTitle: 'Office Automation Software',
             
             username: req.session.username,
             
@@ -2257,7 +2300,7 @@ router.get('/all/dca103onlineclasschapter20', (req, res) => {
         
        return res.render('dca103onlineclasschapter20', {
            
-           chapterTitle: 'Office Automation Software (DCA-103:Theory)',
+           chapterTitle: 'Office Automation Software',
             
             username: req.session.username,
             
@@ -2291,6 +2334,1318 @@ router.get('/all/dca103onlineclasschapter20', (req, res) => {
 
 
 
+/*=====================dca104 theory started========================*/
+
+
+
+//dca104 chapter  1
+
+router.get('/all/dca104onlineclasschapter1', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca104onlineclasschapter1', {
+           
+           chapterTitle: 'Internet Technology',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca104 chapter  2
+
+router.get('/all/dca104onlineclasschapter2', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca104onlineclasschapter2', {
+           
+           chapterTitle: 'Internet Technology',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca104 chapter  3
+
+router.get('/all/dca104onlineclasschapter3', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca104onlineclasschapter3', {
+           
+           chapterTitle: 'Internet Technology',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+
+//dca104 chapter  4
+
+router.get('/all/dca104onlineclasschapter4', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca104onlineclasschapter4', {
+           
+           chapterTitle: 'Internet Technology',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+
+//dca104 chapter  5
+
+router.get('/all/dca104onlineclasschapter5', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca104onlineclasschapter5', {
+           
+           chapterTitle: 'Internet Technology',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca104 chapter  6
+
+router.get('/all/dca104onlineclasschapter6', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca104onlineclasschapter6', {
+           
+           chapterTitle: 'Internet Technology',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+
+// ==================104 theory end=========================
+
+
+
+// ==================105 theory started=========================
+
+//dca105 chapter  1
+
+router.get('/all/dca105onlineclasschapter1', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105onlineclasschapter1', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+
+//dca105 chapter  2
+
+router.get('/all/dca105onlineclasschapter2', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105onlineclasschapter2', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca105 chapter  3
+
+router.get('/all/dca105onlineclasschapter3', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105onlineclasschapter3', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca105 chapter  4
+
+router.get('/all/dca105onlineclasschapter4', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105onlineclasschapter4', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca105 chapter  5
+
+router.get('/all/dca105onlineclasschapter5', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105onlineclasschapter5', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca105 chapter  6
+
+router.get('/all/dca105onlineclasschapter6', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105onlineclasschapter6', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca105 chapter  7
+
+router.get('/all/dca105onlineclasschapter7', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105onlineclasschapter7', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca105 chapter  8
+
+router.get('/all/dca105onlineclasschapter8', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105onlineclasschapter8', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca105 chapter  9
+
+router.get('/all/dca105onlineclasschapter9', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105onlineclasschapter9', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca105 chapter  10
+
+router.get('/all/dca105onlineclasschapter10', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105onlineclasschapter10', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca105 chapter  11
+
+router.get('/all/dca105onlineclasschapter11', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105onlineclasschapter11', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca105 chapter  12
+
+router.get('/all/dca105onlineclasschapter12', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105onlineclasschapter12', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca105 chapter  13
+
+router.get('/all/dca105onlineclasschapter13', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105onlineclasschapter13', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+// ==================105 theory end=========================
+
+
+// ==================106 theory started=========================
+
+
+//dca106 chapter  1
+
+router.get('/all/dca106onlineclasschapter1', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106onlineclasschapter1', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+
+//dca106 chapter  2
+
+router.get('/all/dca106onlineclasschapter2', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106onlineclasschapter2', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+
+//dca106 chapter  3
+
+router.get('/all/dca106onlineclasschapter3', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106onlineclasschapter3', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca106 chapter  4
+
+router.get('/all/dca106onlineclasschapter4', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106onlineclasschapter4', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+
+//dca106 chapter  5
+
+router.get('/all/dca106onlineclasschapter5', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106onlineclasschapter5', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca106 chapter  6
+
+router.get('/all/dca106onlineclasschapter6', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106onlineclasschapter6', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca106 chapter  7
+
+router.get('/all/dca106onlineclasschapter7', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106onlineclasschapter7', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+
+
+//dca106 chapter  8
+
+router.get('/all/dca106onlineclasschapter8', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106onlineclasschapter8', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca106 chapter  9
+
+router.get('/all/dca106onlineclasschapter9', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106onlineclasschapter9', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca106 chapter  10
+
+router.get('/all/dca106onlineclasschapter10', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106onlineclasschapter10', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca106 chapter  11
+
+router.get('/all/dca106onlineclasschapter11', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106onlineclasschapter11', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca106 chapter  12
+
+router.get('/all/dca106onlineclasschapter12', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106onlineclasschapter12', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca106 chapter  13
+
+router.get('/all/dca106onlineclasschapter13', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106onlineclasschapter13', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+
+//dca106 chapter  14
+
+router.get('/all/dca106onlineclasschapter14', (req, res) => {
+
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106onlineclasschapter14', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+
+
+// ==================106 theory end=========================
 
 
 

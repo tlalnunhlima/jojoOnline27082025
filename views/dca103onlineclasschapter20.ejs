@@ -16,9 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
-      
-      
       <!--a lane chung lam-->
 
 
@@ -29,15 +26,23 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+            <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-103) </p>
             
             <hr>
                         
@@ -52,7 +57,7 @@
                             
                           </div>
 
-            <p class="fw-normal mx-auto mt-3">Chapter 20-ah hian ADDING SPECIAL EFFECTS IN A PRESENTATION kan en ho dawn a ni. </p>
+            <p class="fw-normal mx-auto mt-3">Chapter 20-ah hian <code>ADDING SPECIAL EFFECTS IN A PRESENTATION</code> kan zir ho dawn a ni. </p>
             
             <hr>
             
@@ -103,7 +108,7 @@ sound effects, Setting slide timings, Rehearse timings, Grouping and ungrouping 
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Overview
                    
                     </button>
                   
@@ -113,7 +118,17 @@ sound effects, Setting slide timings, Rehearse timings, Grouping and ungrouping 
 
                     <div class="accordion-body">
             
-                         No Video Available yet
+                        <p>Powerpoint siam hi uluk a ngai hle a. Mipui hmaa play tur, show tur a nih avangin uluk a tha hle. A tul a nih chuan
+                        
+                        animation te apply ve tur a ni a, tin watermark te, sound te, a inhmeh tur picture te dah tur a ni.</p>
+                        
+                        <figure class="figure">
+  
+                         <img src="/img/powerpointEffect.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="540" alt="powerpointEffect" />
+                                    
+                          <figcaption class="figure-caption ps-2 text-danger"> Presentation Design Sample </figcaption>
+                                    
+                          </figure> 
                       
                       </div>
                   
@@ -150,19 +165,19 @@ sound effects, Setting slide timings, Rehearse timings, Grouping and ungrouping 
 
 
 <p>
-1.	Watermark is a semitransparent image used as a background in a slide.
+1.	<code>Watermark </code> is a semitransparent image used as a background in a slide.
 </p><p>
-2.	Slide Master is the top slide that stores information about the them and slide layouts.
+2.	<code>Slide Master</code> is the top slide that stores information about the theme and slide layouts.
 </p><p>
 3.	Normal view is the view that allows editing content on a slide.
 </p><p>
 4.	Footer is a line of text in the bottom margin.
 </p><p>
-5.	Animation refers to making a picture to show movements.
+5.	<code>Animation</code> refers to making a picture to show movements.
 </p><p>
-6.	Grouping is tying up a set of pictures so that they always move together.
+6.	<code>Grouping</code> is tying up a set of pictures so that they always move together.
 </p><p>
-7.	Word Art is text written in a stylised manner.
+7.	<code>Word Art</code> is text written in a stylised manner.
 </p><p>
 8.	Watermark can be placed on the Master Slide so that it automatically appears in the entire deck.
 </p><p>
@@ -170,15 +185,15 @@ sound effects, Setting slide timings, Rehearse timings, Grouping and ungrouping 
 </p><p>
 10.	Date and time, footer and slide number appear on the bottom-right corner of the slide.
 </p><p>
-11.	Sounds can be added to a presentation to make it more effective.
+11.	<code>Sounds</code> can be added to a presentation to make it more effective.
 </p><p>
-12.	Slide timing refers to the length of time a slide appears on the screen.
+12.	<code>Slide timing</code> refers to the length of time a slide appears on the screen.
 </p><p>
 13.	Different slide timings can be set for different slides by using the Rehearse Timing options.
 </p><p>
 14.	Slide Master Option is available in View tab.
 </p><p>
-15.	In Date & Time dialogue box, date, slide number and footer adjustment can be made.
+15.	<code>In Date & Time dialogue box,</code> date, slide number and footer adjustment can be made.
 </p>
 
 
@@ -562,14 +577,7 @@ sound effects, Setting slide timings, Rehearse timings, Grouping and ungrouping 
               
            <hr>
             
-            <div class="d-flex justify-content-between">
-              
-                <a href="dcatheorywelcomepage"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter2"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-                
-            </div>
+
             
             </div>
             

@@ -16,23 +16,27 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
-      
-      
-
         <!--a lane lai ta-->
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-101) </p>
             
             <hr>
                         
@@ -78,7 +82,7 @@
                             
                           </div>
 
-            <p class="fw-normal mt-3">Chapter-9 ah hian Information and Society kan zir dawn a ni. </p>
+            <p class="fw-normal mt-3">Chapter-9 ah hian <code>INFORMATION TECHNOLOGY AND SOCIETY</code> kan zir ho dawn a ni. </p>
             
             <hr>
             
@@ -189,7 +193,7 @@ Information Kiosks, Special Effects in Movies.
        <p><em>9) INFORMATION TECHNOLOGY AND SOCIETY - (4 MARKS)</em></p>
        
 
-<p><b>The Information Technology Act, 2000 (also known as ITA-2000, or the IT Act) </b> is an Act of the Indian
+<p><code>The Information Technology Act, 2000 (also known as ITA-2000, or the IT Act) </code> is an Act of the Indian
 Parliament (No 21 of 2000) notified on 17
 October 2000. It is the primary law in India
 dealing with cybercrime and electronic
@@ -211,7 +215,7 @@ under the law. </p>
 of the Information Technology (IT) Act, 2000 and in supersession of the earlier 
 Information Technology (Intermediary Guidelines) Rules 2011.</li>
 </ol>
-<p><b>Information Kiosk </b> - An Information Kiosk Machine provides multi-features to the user and the
+<p><code>Information Kiosk </code> - An Information Kiosk Machine provides multi-features to the user and the
 features are - Kiosk Machine gives an accurate and precise detail about the product and services in a
 descriptive manner. It is mainly targeted to implement this machine where there is a large number of a
 crowd such as Shopping mall, Airport, Metros, Railway Station etc. </p>
@@ -606,14 +610,7 @@ crowd such as Shopping mall, Airport, Metros, Railway Station etc. </p>
               
               <hr>
               
-              
-              <div class="d-flex justify-content-between">
-              
-                <a href="dca1semOnlineLessonChapter8"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter10"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-            </div>
+
               
               
               

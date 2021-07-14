@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,15 +28,23 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+           <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-102) </p>
             
             <hr>
                         
@@ -83,7 +90,7 @@
                             
                           </div>
 
-            <p class="fw-normal mx-auto mt-3">Chapter 8-ah hian Essential Windows Accessories kan zir dawn a ni. </p>
+            <p class="fw-normal mx-auto mt-3">Chapter 8-ah hian <code> ESSENTIALS WINDOWS ACCESSORIES </code> kan zir dawn a ni. </p>
             
             <hr>
             
@@ -133,7 +140,7 @@
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Explanation
                    
                     </button>
                   
@@ -143,9 +150,22 @@
 
                     <div class="accordion-body">
             
-                          No Video available
-                  
-                        <small>DCA-102 Chapter-8</small>
+                          <p>Windows Accessories hi windows OS-in a rawn chhawm tel program pawimawh tak tak leh tangkai tak tak te an ni a.
+                          Calculator te, notepad te leh windows media player te hi kan hman nasat pawl an ni. Tin, a hnuaia thlalaka lang bakah hian
+                          System Tools tangkai tak tak a awm bawk a, Control panel hi a pui ber pakhat a ni.
+                          
+                          <figure class="figure">
+  
+                            <img src="/img/windows_accessories.jpg" class="float-end img-fluid ps-2 pb-2" width="400" height="540" alt=" Windows Accessories" />
+                            
+                            <figcaption class="figure-caption ps-2 text-danger"> Windows Accessories and System Tools.</figcaption>
+                            
+                            </figure>
+                          
+                          
+                          
+                          
+                          </p>
                       
                       </div>
                   
@@ -185,28 +205,28 @@
 They are called Windows Accessories or Tools.</p>
 
 <p>Let us look at some of them.</p>
-<p><b>
-Calculator:</b> The Calculator program is located in the Accessories folder. 
+<p><code>
+Calculator:</code> The Calculator program is located in the Accessories folder. 
 Choose Start  >  All Programs  >  Accessories  >  Calculator to start Calculator application, 
 or alternately you can open Run dialog box (Start  >   Run) then type calc and hit enter. </p>
 
-<p><b>Paint: </b> (formerly Paintbrush) is a program used to create drawings on the computer. 
+<p><code>Paint: </code> (formerly Paintbrush) is a program used to create drawings on the computer. 
 It also located in the Accessories folder. Choose Start  >  All Programs  >  Accessories  >  Paint to start Paint application, 
 or alternately you  can  open  Run dialog box (Start  >  Run) then type mspaint and hit enter.</p>
 
-<p><b>
-WordPad</b> is a basic word processor and it can format and print text, including fonts, bold, italic, colored, and centered text, etc., 
+<p><code>
+WordPad</code> is a basic word processor and it can format and print text, including fonts, bold, italic, colored, and centered text, etc., 
 but lacks vital functions such as a spell checker, thesaurus, and control over pagination. 
 It does not support footnotes or endnotes. Choose Start  >  All Programs  >  Accessories  >  Wordpad to start Paint application, 
 or alternately you can open Run dialog box (Start  >   Run)  dialog  box then type wordpad and hit enter.</p>
 
-<p><b>Notepad: </b> Notepad is primarily used for creating files with plain text, that is, the text which is unformatted. 
+<p><code>Notepad: </code> Notepad is primarily used for creating files with plain text, that is, the text which is unformatted. 
 The file extension of Notepad is .txt.</p>
 
-<p><b>SYSTEM TOOLS:</b> Windows includes some of  the system utilities such as Disk Cleanup, Disk Defragmenter, System Restore, 
+<p><code>SYSTEM TOOLS:</code> Windows includes some of  the system utilities such as Disk Cleanup, Disk Defragmenter, System Restore, 
 and Control Panel and so on. </p>
 
-<p><b>Disk Cleanup:</b> In Windows 7, Vista, and XP, Disk Cleanup frees disk space by cleaning areas that gather unneeded files. </p>
+<p><code>Disk Cleanup:</code> In Windows 7, Vista, and XP, Disk Cleanup frees disk space by cleaning areas that gather unneeded files. </p>
 
 
 <p>
@@ -216,8 +236,8 @@ To run Disk Cleanup:<br>
 •	Select from the four areas that Disk Cleanup will check and clean up.<br>
 </p>
 
-<p><b>
-Disk Defragment:</b> When your computer crashes or freezes, the drive becomes fragmented. This means the files may be broken up
+<p><code>
+Disk Defragment:</code> When your computer crashes or freezes, the drive becomes fragmented. This means the files may be broken up
 and stored in different locations in your computer. This causes programs and files to run more slowly. <br>
 To run Disk Defragmenter:<br>
 
@@ -227,7 +247,7 @@ All Programs > Accessories > System Tools
 
 •	Select the drive you want to clean and click OK. Click Analyze. This may take several minutes. Click Close or Defragment.</p>
 
-<p><b>System Restore:</b> System restore is a feature of Windows that allows you to roll back the system to the same configuration 
+<p><code>System Restore:</code> System restore is a feature of Windows that allows you to roll back the system to the same configuration 
 it had at an earlier time.<br>
 
 To run System Restore:<br>
@@ -236,13 +256,13 @@ To run System Restore:<br>
 •	The System Restore screen will come up. Follow the on screen instructions<br>
 </p>
 
-<p><b>Control Panel:</b> is used for adding hardware, installing and uninstalling software, controlling user accounts, 
+<p><code>Control Panel:</code> is used for adding hardware, installing and uninstalling software, controlling user accounts, 
 and changing accessibility options. The Control Panel has two views, 
 Classic View and Category View, and it is possible to  switch  between these through an 
 option that appears on either the left side or top of the window. </p>
 
-<p><b>
-Entertainment:</b> The entertainment tools, such as Sound Recorder, volume Control, Windows Media Player, etc., allow you to play audio, video, or animation files and to control the settings for multimedia hardware devices.
+<p><code>
+Entertainment:</code> The entertainment tools, such as Sound Recorder, volume Control, Windows Media Player, etc., allow you to play audio, video, or animation files and to control the settings for multimedia hardware devices.
 </p>
 
                         </p>
@@ -625,14 +645,7 @@ Entertainment:</b> The entertainment tools, such as Sound Recorder, volume Contr
               
            <hr>
             
-            <div class="d-flex justify-content-between">
-              
-                <a href="dcatheorywelcomepage"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter2"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-                
-            </div>
+
             
             </div>
             

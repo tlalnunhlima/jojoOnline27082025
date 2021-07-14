@@ -16,23 +16,27 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
-      
-      
-
         <!--a lane lai ta-->
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+          <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-101) </p>
             
             <hr>
                         
@@ -78,7 +82,7 @@
                             
                           </div>
 
-            <p class="fw-normal mt-3">Chapter-10 ah hian computer lamtawi (abbreviation) kan en ho dawn a ni. </p>
+            <p class="fw-normal mt-3">Chapter-10 ah hian <code>Lamtawi (Abbreviation)</code> kan zir ho dawn a ni. </p>
             
             <hr>
             
@@ -124,34 +128,7 @@
                 </div>  <!--Syllabus video end-->
                 
                 
-                
-                
-                <div class="accordion-item"> <!--video section started-->
-                  
-                  <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                    
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                      
-                      Video
-                   
-                    </button>
-                  
-                  </h2>
-                  
-                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-
-                    <div class="accordion-body">
-                      
-                      
-                      <p>No Video Available (Video a awm lo)</p>
-                        
-                        <small>DCA-101 Chapter-10 </small>
-                      
-                      </div>
-                  
-                  </div>
-                
-                </div>
+             
                 
                 
                  <!--end of video section-->
@@ -704,15 +681,7 @@ Y2K - Year Two Thousand</p>
               </div>
               
               <hr>
-              
-              
-              <div class="d-flex justify-content-between">
-              
-                <a href="dca1semOnlineLessonChapter9"><code> <i class="fas fa-step-backward"></i> Prev Chapter </code></a>
-              
-                <a href="dca102welcomepage"><code> Next Subject <i class="fas fa-step-forward"></i></code></a>
-                
-            </div>
+
               
               
               

@@ -16,7 +16,7 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
+
       
       
       <!--a lane chung lam-->
@@ -29,15 +29,23 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+           <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small"> <i class="fas fa-home"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : </p>
+            
             <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            
+            <p class="text-muted fw-light text-center mt-0"> (DCA-102) </p>
             
             <hr>
                         
@@ -83,7 +91,7 @@
                             
                           </div>
 
-            <p class="fw-normal mx-auto mt-3">Chapter-2 ah Operating System basic kan zir dawn a ni. </p>
+            <p class="fw-normal mx-auto mt-3">Chapter-2 ah <code>OPERATING SYSTEM BASIC</code> kan zir dawn a ni. </p>
             
             <hr>
             
@@ -149,7 +157,7 @@ Types of Operating System
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Explanation
                    
                     </button>
                   
@@ -159,9 +167,23 @@ Types of Operating System
 
                     <div class="accordion-body">
             
-                          No Video available
-                  
-                        <small>DCA-102 Chapter-2</small>
+                         <p>Kan sawi tak angin Operating System hi computer innghatpui ber pakhat a ni a. A hnathawh dan azirin chi hrang hrangah
+                         thendarh leh a ni. Mi pakhat chauhin a khawih chi chu single use an ti a, vawi khata thil tam tak tithei chu multi-tasking 
+                         operating system an ti a ni. Microsoft Windows siam, tuna desktop Computer te leh Laptop kan hman mek ang chi te hi chu
+                         mi pakhat chauhin a hman theih, mahse thil tam tak
+                         kan tih theihna a nih avangin single user-multi tasking operating system a ni. </p>
+                         
+                         <p>Operating system hian a siamtute dahsa ni lo program tam tak a install theih a. Operating system chungah software danger
+                               kan installed leh thei a ni. Tunlaiah chuan smartphone kan nei vek tawh a, kan duh hun hunah play store atangin
+                               game leh program (app) dang kan install thei ang hi a ni. Kan zirlaia subject thenkhat Pagemaker te, Photoshop te, Ms-word te 
+                               pawh hi operating system a chhawm lo va, install chawp a ngai a ni. Microsoft Windows 7-ah software kan install chuan
+                               a awmna bik a awm thin a, start menu > all programs chhungah a awm thin a ni.</p>
+                               
+                          <p>Computer part hi device an ti a. Operating system hian device kan vuah apiang hi a lo hre vek lo va, device driver te install a ngaih
+                          chang a awm thin. Entirnan, printer kan lei thar chuan printer driver kha kan install zet loh chuan document a print thei lo thin a ni.</p>
+                      
+                          <p>Operating system hi chhe thei a ni a, a hnathawh tur ang thawk lo palh thei a ni. Virus te a kai thei a, chuvangin anti-virus te install
+                          a ngai thin a ni. Hetiang ang operating system tana tangkai tak tak software hi Utility Software an ti a ni. </p>
                       
                       </div>
                   
@@ -199,29 +221,29 @@ Types of Operating System
 
 <p>TYPES OF OPERATING SYSTEM ARE:</p>
 
-<p><b>i)	Real-time Operating System (RTOS)</b> – This kind of operating system is primarily used to control machinery, 
+<p><code>i)	Real-time Operating System (RTOS)</code> – This kind of operating system is primarily used to control machinery, 
 scientific instruments and industrial systems. Thus, in an RTOS, key to operations is time precision rather than the 
 efficiency of the processor.</p>
 
 
-<p><b>
-ii)	Single Use/Single Tasking Operating System</b> - As the name implies, this operating system is designed to manage the 
+<p><code>
+ii)	Single Use/Single Tasking Operating System</code> - As the name implies, this operating system is designed to manage the 
 computer so that one user  can  effectively do one thing at a time. The Palm OS for Palm handheld computers is a good.</p>
 
-<p><b>
-iii)	Single-user, multi-tasking </b>- This is the type of operating system most  people  use on their desktop and laptop computers today. Microsoft's Windows and Apple's Mac OS platforms are both
+<p><code>
+iii)	Single-user, multi-tasking </code>- This is the type of operating system most  people  use on their desktop and laptop computers today. Microsoft's Windows and Apple's Mac OS platforms are both
 examples.</p>
 
-<p><b>
-iv)	Multi-user, multi-tasking </b>- A multi-user operating system allows many different users to take advantage of the 
+<p><code>
+iv)	Multi-user, multi-tasking </code>- A multi-user operating system allows many different users to take advantage of the 
 computer's resources simultaneously. Unix and VMS are good examples.</p>
 
-<p><b>v)	Operating System Base on Interfaces </b>– A text-based user interface (see the image to the left) displays text, and its commands are usually typed on a command  
+<p><code>v)	Operating System Base on Interfaces </code>– A text-based user interface (see the image to the left) displays text, and its commands are usually typed on a command  
 line using a keyboard. With a graphical user interface (see the right-hand image), 
 the functions are carried out by clicking or moving buttons, icons and  menus  by means of a pointing device.</p>
 
 
-<p><b>Running Programs</b></p>
+<p><code>Running Programs</code></p>
 <p>
 You can run applications or programs by choosing any one of them from the Start menu or from the All Programs menu. 
 The All Programs menu,  lists  all  the  programs that have been installed on the computer.<br>
@@ -231,7 +253,7 @@ choose the All Programs menu to see the listing of all the installed programs.<b
 3.	In case you wish to open a document associated with the program, click on the Start button and choose the program along with the document name.<br>
 </p>
 
-<p><b>Managing Hardwares </b></p>
+<p><code>Managing Hardwares </code></p>
 
 <p>A computer is a mixed of hardware and software. Every piece of hardware come with software called a ‘device driver’, 
 for example, the printer will have a printer driver, a mouse will have its own mouse driver.</p>
@@ -248,7 +270,7 @@ particular type of hardware device that is attached to a computer. In Windows op
 a device driver file usually has a file name suffix of .DLL or .EXE.  
 A virtual device driver usually has the suffix of .VXD </p>
 
-<p><b>Enhancing Operating System With Utility Softwares</b></p>
+<p><code>Enhancing Operating System With Utility Softwares</code></p>
 
 <p>Utility software is system software which aims to analyse, configure, optimise, maintain and take best use of a computer’s resources. 
 Utility  software  is  also referred to as service program, service routine or utility routine. Some typical examples under 
@@ -259,15 +281,15 @@ the category are as follows.</p>
   <ul>  
   
   
-  <li><b>	Anti-virus programs</b> – The purpose of anti-virus is to prevent, detect and remove malware like viruses, worms or Trojans.
+  <li><code>	Anti-virus programs</code> – The purpose of anti-virus is to prevent, detect and remove malware like viruses, worms or Trojans.
 </li>
-  <li><b>	Encryption/decryption tools</b> – Encryption is a  process  of  converting sensitive data into a form that cannot be read easily by unauthorised people. Decryption is converting the encrypted data back to its original form.
+  <li><code>	Encryption/decryption tools</code> – Encryption is a  process  of  converting sensitive data into a form that cannot be read easily by unauthorised people. Decryption is converting the encrypted data back to its original form.
 </li>
-  <li><b>Firewall</b> - is a network security system that monitors  and controls  incoming and outgoing network traffic based on predetermined security rules. A firewall typically establishes a barrier between a trusted  internal  network  and untrusted external network, such as the Internet.
+  <li><code>Firewall</code> - is a network security system that monitors  and controls  incoming and outgoing network traffic based on predetermined security rules. A firewall typically establishes a barrier between a trusted  internal  network  and untrusted external network, such as the Internet.
 </li>
-  <li><b>Backup Utilities</b> - are computer programs used to perform a backup; they create supplementary exact copies of files, databases or entire computers.
+  <li><code>Backup Utilities</code> - are computer programs used to perform a backup; they create supplementary exact copies of files, databases or entire computers.
 </li>
-  <li><b>Screensavers </b>- is a computer program that blanks the screen or fills it with moving images or patterns when the computer is not in use.
+  <li><code>Screensavers </code>- is a computer program that blanks the screen or fills it with moving images or patterns when the computer is not in use.
 </li>
  
 </ul>
@@ -657,14 +679,7 @@ the category are as follows.</p>
               
            <hr>
             
-            <div class="d-flex justify-content-between">
-              
-                <a href="dcatheorywelcomepage"><code> <i class="fas fa-step-backward"></i> Prev </code></a>
-              
-                <a href="dca1semOnlineLessonChapter2"><code> Next <i class="fas fa-step-forward"></i></code></a>
-                
-                
-            </div>
+
             
             </div>
             
