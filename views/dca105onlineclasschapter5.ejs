@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,25 +28,31 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+            <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
-            <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small text-secondary"> <i class="fas fa-home text-primary"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : (DCA-105) </p>
+            
+            <p class="text-dark text-center fw-light fs-1 mt-1"> <%= chapterTitle  %></p>
             
             <hr>
                         
                           <div class="d-flex justify-content-between m-1">
                             
-                            <button type="button" class="btn btn-sm btn-outline-danger"> Chapter-5</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"> Chapter-5</button>
                             
                               <div class="dropdown">
                 
-                                    <button class="btn btn-sm btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                       
                                       Select Chapter
                                     
@@ -143,7 +148,7 @@ Adjustment Layer or Fill Layer.
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Overview
                    
                     </button>
                   
@@ -153,11 +158,22 @@ Adjustment Layer or Fill Layer.
 
                     <div class="accordion-body">
             
-                             No Video available yet DCA-105 Chapter-5
-                      
-                      
-                      
-                      
+                             <p>Photoshop-ah hian thlalak lan dan a tihdanglam theih a. Colour pek te, tihfiah te leh tihen te a theih a.
+                             Photo adjustment hi chi hnih a awm a; <code>pakhatna</code> chu Menu atanga kal a ni a. Chu chu Photoshop screen 
+                             chung lam atanga luh niin Image > Adjustments tih atanga adjust tur a ni a. <code>Pahnihna</code> chu Photoshop screen hnuai
+                             lam ding lamah awmin Layer palette hnuaia Adjustment Layer button atanga adjust tur a ni. Pahnihna hi a tha mah zawk a,
+                             layer atanga adjust a nih avangin thlalak a tichhe ve lo (non-destructive) a ni. Pakhatna erawh hi chu thlalaka 
+                             adjust a nih avangin thlalak a tichhia (destructive) a ni.
+                             </p>
+                             
+                             <figure class="figure">
+  
+                             <img src="/img/photoshopAdjustmentLayer.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="540" alt="photoshopAdjustmentLayer" />
+                                        
+                              <figcaption class="figure-caption ps-2 text-danger"> Photoshop Adjustment Layer Example </figcaption>
+                                        
+                              </figure> 
+   
                       </div>
                   
                   </div>
@@ -196,7 +212,7 @@ Adjustment Layer or Fill Layer.
 
 <p>
 In this section we are going to take a look at Global Adjustments. 
-This means adjusting the whole image to correct colour, contrast or exposure of an image.
+This means adjusting the whole image to correct <code>colour, contrast or exposure</code> of an image.
 </p><p>
 There are two different ways in which you can apply an adjustment to an image. 
 </p><p>
@@ -211,9 +227,9 @@ The <code>second </code>method for applying an adjustment is non-destructive and
 •	Choose Layer > New Adjustment Layer, and choose an option. Name the layer, set layer options, and click OK.<br>
 </p><p>
 There are many different adjustments, but the most useful adjustments for beginners to 
-start with are: Levels, Hue/Saturation (please see no. 9 below for hue/saturation adjustment).
+start with are: <code> Levels, Hue/Saturation </code>(please see no. 9 below for hue/saturation adjustment).
 </p><p>
-When you apply a Levels correction you will notice that there is a histogram, 
+When you apply a Levels correction you will notice that there is a <code> histogram, </code>
 this is a representation of all of the tonal values in the image. 
 The black point slider on the left is set at 0 which is pure black 
 and the white point slider on the right is set at 255 which is pure white.
@@ -222,7 +238,8 @@ and the white point slider on the right is set at 255 which is pure white.
 <code>FILLING LAYERS:</code>
 </p><p>
 •	Choose Layer > New Fill Layer, and choose an option. Name the layer, 
-set layer options, and click OK. Or Click the New Adjustment Layer button   
+set layer options, and click OK. Or <br>
+Click the New Adjustment Layer button   
 at the bottom of the Layers panel, and choose a fill layer type.
 </p><p>
 <code>EDITING ADJUSTMENT AND FILL LAYERS:</code>

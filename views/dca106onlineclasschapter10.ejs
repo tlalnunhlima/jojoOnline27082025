@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,25 +28,31 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+            <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
-            <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small text-secondary"> <i class="fas fa-home text-primary"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : (DCA-106) </p>
+            
+            <p class="text-dark text-center fw-light fs-1 mt-1"> <%= chapterTitle  %></p>
             
             <hr>
                         
                           <div class="d-flex justify-content-between m-1">
                             
-                            <button type="button" class="btn btn-sm btn-outline-danger"> Chapter-10</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"> Chapter-10</button>
                             
                               <div class="dropdown">
                 
-                                    <button class="btn btn-sm btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                       
                                       Select Chapter
                                     
@@ -150,7 +155,7 @@ Views.
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Overview
                    
                     </button>
                   
@@ -160,8 +165,13 @@ Views.
 
                     <div class="accordion-body">
             
-                             No Video available yet DCA-106 Chapter-10
-                      
+                             <p>Story Editor hi Edit story tia sawi a ni bawk a. Pagemaker-a kan thuziak edit theihna anih bakah a awmna kan hriat loh
+                             word zawnna leh replace theihna a ni a, tin, spelling dik leh dik loh check theihna hmun a ni.</p>
+                             
+                            <figure class="figure">
+                            <img src="/img/storyEditor.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="auto" alt="storyEditor" />
+                            <figcaption class="figure-caption ps-2 text-danger"> Story Editor</figcaption>
+                            </figure>
 
                       </div>
                   
@@ -197,84 +207,115 @@ Views.
 
 <p><em>10. THE STORY EDITOR </em></p>
 
-Using Story Editor
-To edit text in a format that looks and behaves more like a word processor use the Story Editor. The Story Editor displays all the text in a particular story at the same size in block format for easy editing, even if the story spans several pages in your document. A scroll bar to the right of the text allows you to scroll through the text block. The Spell Checker and the Find and Change commands are available only within the Story Editor. Because the Story Editor does not display all of the text enhancements, editing and typing text here is faster than in the layout mode.
-Opening the Story Editor
-Menu Option:
-1.	Click on the block of text you want to edit
-2.	From the Edit menu, select Edit Story
-The text of the entire story will now appear in the Story Editor.
-Mouse Option:
+<p>
+The Story Editor is yet another way to type and edit text in PageMaker. 
+Just click the text you want to edit, press Ctrl + E (or use Edit > Edit Story from the menu), 
+and your story appears in its own word processing window. All the text tool’s editing commands 
+(insert, delete cut and paste) are available in the Story Editor. 
+The Story Editor is also equipped with two powerful features that are not there when you use the text tool: 
+a spelling checker and a search-and-replace feature.
+</p><p>
+
+<code>Opening the Story Editor</code>
+</p><p>
+Menu Option:<br>
+1.	Click on the block of text you want to edit<br>
+2.	From the Edit menu, select Edit Story<br>
+3. The text of the entire story will now appear in the Story Editor.
+</p><p>
+Mouse Option:<br>
 1.	To access the Story Editor with the Pointer tool, triple-click in a text block
- 
-Using the Find and Change Feature
-PageMaker allows you to search stories in the Story Editor for specific words or phrases and to replace all or some of the occurrences with other words or phrases. In order to simply find an occurrence, use the Find feature. In order to change some or all of the occurrences to something else, use the Change feature.
-Using Find
+ </p><p>
+<code>Using the Find and Change Feature</code>
+</p><p>
+PageMaker allows you to search stories in the Story Editor for specific words or phrases and 
+to replace all or some of the occurrences with other words or phrases. 
+In order to simply find an occurrence, use the <code>Find</code> feature. 
+In order to change some or all of the occurrences to something else, use the <code>Change</code> feature.
+</p><p>
+<code>Using Find</code>
+</p><p>
 Make sure you are in the Story Editor. The Spelling, Find, Find Next, and Change commands are available only in Story Editor.
-The Find feature allows you multiple choices in searching your document and story. The Search story function allows you to work with: 
-Selected text	The Find feature will search only the text you have selected.
-Current story	The Find feature will only search the current open story.
-All stories	The Find feature will search all stories.
+The Find feature allows you multiple choices in searching your document and story. 
+</p><p>
 1.	From the Utilities menu, select Find…
-The Find dialog box will appear on the screen.
+The Find dialog box will appear on the screen.<br>
  
-2.	In the Find What box, type the word or phrase to look for
-3.	Click FIND
-4.	To find subsequent occurrences of the word or phrase, from the Utilities menu, click FIND NEXT
-When no more occurrences exist, the Search Complete dialog box will appear.
-5.	Click OK
-6.	To find another word or phrase, repeat steps 2-5
-7.	When finished, close the Find dialog box
-Using Change
+2.	In the Find What box, type the word or phrase to look for<br>
+3.	Click FIND<br>
+4.	To find subsequent occurrences of the word or phrase, from the Utilities menu, click FIND NEXT.
+When no more occurrences exist, the Search Complete dialog box will appear.<br>
+5.	Click OK<br>
+6.	To find another word or phrase, repeat steps 2-5<br>
+7.	When finished, close the Find dialog box<br>
+</p><p>
+<code>Using Change</code>
+</p><p>
 Make sure you are in the Story Editor.
+</p><p>
 1.	From the Utilities menu, select Change…
-The Change dialog box will appear on the screen.
+The Change dialog box will appear on the screen.<br>
  
-2.	In the Find What text box type the word or phrase to find
-3.	In the Change to box type the replacement word or phrase
-4.	To find the first occurrence of the word or phrase, click the FIND button
+2.	In the Find What text box type the word or phrase to find<br>
+3.	In the Change to box type the replacement word or phrase<br>
+4.	To find the first occurrence of the word or phrase, click the FIND button<br>
 OR
-To find and change all occurrences of the word or phrase, click CHANGE ALL
+To find and change all occurrences of the word or phrase, click CHANGE ALL<br>
 (If you selected Change All, skip to step 7.)
-WARNING: Use Change All with caution. You may change words you did not mean to change. If you do use Change All, select the Whole Word option and review the document to make sure all replacements make sense.
-5.	If you selected Find in step 4, you now have several options
-• To change the word, click CHANGE
-• To ignore the word, click IGNORE
-• To find the next word, click FIND NEXT
-• To change the word and find the next one, click CHANGE AND FIND
-• To change all occurrences of the word, click CHANGE ALL
-6.	When the Search Complete dialog box appears, click OK
-7.	Type in a new word or phrase to find and change
+</p><p>
+<em>WARNING: Use Change All with caution. You may change words you did not mean to change. 
+If you do use Change All, select the Whole Word option and review the document to make sure all replacements make sense.</em>
+</p><p>
+5.	If you selected Find in step 4, you now have several options<br>
+• To change the word, click CHANGE<br>
+• To ignore the word, click IGNORE<br>
+• To find the next word, click FIND NEXT<br>
+• To change the word and find the next one, click CHANGE AND FIND<br>
+• To change all occurrences of the word, click CHANGE ALL<br>
+6.	When the Search Complete dialog box appears, click OK<br>
+7.	Type in a new word or phrase to find and change 
 OR
-Click CLOSE
-Using Spell Check
-Spelling can only be checked in the Story Editor. The Spell Check feature of PageMaker checks your text against the computer’s dictionary. If the computer does not recognize a word, the top left corner of the dialog box will read “Unknown word” followed by the unrecognized word. You have the option of ignoring the word, replacing the word with a new spelling, or adding the word to the computer’s dictionary.
-If you want the word to remain in the document spelled as it is, click IGNORE. For example, the computer will probably not recognize your first and last name, but you do not want their spelling changed. The word will be added to a temporary dictionary that is active until you exit PageMaker.
-WARNING: If you are working in a general access computer lab, DO NOT add words to the dictionary; simply click IGNORE.
-Check Spelling
+Click CLOSE<br>
+</p><p>
+<code>Using Spell Check</code>
+</p><p>
+Spelling can only be checked in the Story Editor. 
+The Spell Check feature of PageMaker checks your text against the computer’s dictionary. 
+If the computer does not recognize a word, the top left corner of the dialog box will read “Unknown word” 
+followed by the unrecognized word. You have the option of ignoring the word, replacing the word with a new spelling, 
+or adding the word to the computer’s dictionary.
+If you want the word to remain in the document spelled as it is, click IGNORE. 
+For example, the computer will probably not recognize your first and last name, 
+but you do not want their spelling changed. 
+The word will be added to a temporary dictionary that is active until you exit PageMaker.
+</p><p>
+WARNING: If you are working in a general Jojo Computer Institute lab, DO NOT add words to the dictionary; simply click IGNORE.
+</p><p>
+<code>Check Spelling</code>
+</p><p>
 1.	From the Utilities menu, select Spelling…
-The Spelling dialog box will appear on the screen.
+The Spelling dialog box will appear on the screen.<br>
  
-2.	OPTIONAL: To check all stories in your document, select the All Stories option.
-3.	Click START
+2.	OPTIONAL: To check all stories in your document, select the All Stories option.<br>
+3.	Click START<br>
 4.	If all the words are recognized by the computer’s dictionary, No Spelling Errors Detected will appear in the upper left of the dialog box
-If this happens continue with step 6.
-o	If a word is not recognized by the computer’s dictionary Unknown Word will appear in the upper left of the dialog box. In the Change To box, delete it and type a new spelling. If this happens, continue with step 5.
-o	If the word is mispelled and the computer’s dictionary recognizes it, the word will appear in the Change To box. In the text area below the Change To box, the computer will list possible spellings for the mispelled word. Select the correct choice, and move on to step 5.
-5.	Click REPLACE
-When the spell check is done, the phrase “Spelling Check Complete” will appear.
-6.	Click CLOSE
-Exiting the Story Editor
-1.	From the Edit menu, select Edit Layout
+If this happens continue with step 6.<br>
+	i) If a word is not recognized by the computer’s dictionary Unknown Word will appear in the upper left of the dialog box. 
+In the Change To box, delete it and type a new spelling. If this happens, continue with step 5.<br>
+ ii) If the word is mispelled and the computer’s dictionary recognizes it, the word will appear in the Change To box. 
+In the text area below the Change To box, the computer will list possible spellings for the mispelled word. 
+Select the correct choice, and move on to step 5.<br>
+5.	Click REPLACE. When the spell check is done, the phrase “Spelling Check Complete” will appear.<br>
+6.	Click CLOSE<br>
+</p><p>
+<code>Exiting the Story Editor</code>
+</p><p>
+1.	From the Edit menu, select Edit Layout<br>
 OR
-From the Story menu, select Close Story
+From the Story menu, select Close Story<br>
 OR
-Click the CLOSE box
-
-
-
-
-                      </p>
+Click the CLOSE box<br>
+        </p>
              
                       </div>
                   

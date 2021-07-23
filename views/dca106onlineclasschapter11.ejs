@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,25 +28,31 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+            <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
-            <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small text-secondary"> <i class="fas fa-home text-primary"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : (DCA-106) </p>
+            
+            <p class="text-dark text-center fw-light fs-1 mt-1"> <%= chapterTitle  %></p>
             
             <hr>
                         
                           <div class="d-flex justify-content-between m-1">
                             
-                            <button type="button" class="btn btn-sm btn-outline-danger"> Chapter-11</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"> Chapter-11</button>
                             
                               <div class="dropdown">
                 
-                                    <button class="btn btn-sm btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                       
                                       Select Chapter
                                     
@@ -144,7 +149,7 @@ Styles, Applying Styles to Text, Changing Styles, Modifying Styles Text.
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Overview
                    
                     </button>
                   
@@ -154,9 +159,17 @@ Styles, Applying Styles to Text, Changing Styles, Modifying Styles Text.
 
                     <div class="accordion-body">
             
-                             No Video available yet DCA-106 Chapter-11
+                             <p>Pagemaker-ah hian Style awmsa kan apply thei a, keimahni duh danin style kan siam chawp thei bawk. Style kan neihsa chuan
+                             kan duhna lai apiangah kan apply thei dawn a ni. Entirnan, lehkhabu lo ziak ta ila, chapter tin chuan hming nei zel ta se, chu kan chapter hming apiangah
+                             chuan style hran bik leh hawrrawp danglam bik, paragraph a mi nena inang lo deuh kan apply thei dawn a ni. Style hman tangkai thiam hi a tha a, a
+                             hna a tiawlsamin en a tinuam a, hna a tirang thei bawk a ni.</p>
+                             
+                             
+                                                         <figure class="figure">
+                            <img src="/img/defineStyle.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="auto" alt="defineStyle" />
+                            <figcaption class="figure-caption ps-2 text-danger"> Define Styles and Style Option Palette</figcaption>
+                            </figure>
                       
-
                       </div>
                   
                   </div>
@@ -190,62 +203,78 @@ Styles, Applying Styles to Text, Changing Styles, Modifying Styles Text.
                         
 
 <p><em>11.	PageMaker Styles </em></p>
-
-PageMaker Styles
-A style is simply a definition of the type, paragraph, tab, and hyphenation settings for a specific type of text in your document.
-
-
- 
+<p>
+<code>PageMaker Styles : </code>A style is simply a definition of the type, paragraph, tab, and hyphenation settings for a specific type of text in your document.
 Styles are helpful for documents that have several formatting changes (e.g., titles, section headings, text, lists) and for projects that more than one person is working on. Styles can make documents more consistent and they will save you time (especially if you decide to make global changes to your document).
-
+</p><p>
 You are already familiar with much of the work that goes into creating styles because you know how to define your type specifications. There are two basic steps to working with styles:
 
-Define the style
-Apply the style
-As with most programs, planning ahead and thinking about your document can save you a lot of time when creating and modifying your styles. This document contains the following sections:
+<code>Define the style</code> and<code> Apply the style.</code>
+</p><p>
+<code>Creating a Style</code> : You have several options while creating a style. For example, you can define a new style based on an already existing one and/or work ahead by choosing a style for the paragraph following the newly created one.
+</p><p>
+1. From the Type menu, select Define Styles… The Define Styles dialog box appears.<br>
+2. Click NEW… The Style Options dialog box appears.<br>
+3. In the Name box, type a name for your new style.
+</p><p>
+4. <em>OPTIONAL: To define a new style based on an already existing one, from the Based on pull-down listing, select the 
+desired existing style. If you like everything about a style except the tab stops, you can change the tabs and give 
+the style a new name – everything else will remain the same.
+</em></p><p>
+5. <em>OPTIONAL: To select a style for the paragraph following the newly created paragraph style, 
+from the Next style pull-down listing, make the desired selection.</em>
+</p><p>
+6. Define the style by making the appropriate changes through the following buttons:
+</p><p>
+<b>CHAR…</b><br>
 
-Creating a Style
-Applying a Style
-Editing a Style
-return to topCreating a Style
-You have several options while creating a style. For example, you can define a new style based on an already existing one and/or work ahead by choosing a style for the paragraph following the newly created one.
-
-From the Type menu, select Define Styles…
-The Define Styles dialog box appears.
-define styles listing
-
-
-Click NEW…
-The Style Options dialog box appears.
-style options dialog box
-
-In the Name box, type a name for your new style
-
-OPTIONAL: To define a new style based on an already existing one, from the Based on pull-down listing, select the desired existing style
-If you like everything about a style except the tab stops, you can change the tabs and give the style a new name – everything else will remain the same.
-
-OPTIONAL: To select a style for the paragraph following the newly created paragraph style, from the Next style pull-down listing, make the desired selection
-
-Define the style by making the appropriate changes through the following buttons:
-CHAR…
 Used to define the type specifications including font, type size, leading and enhancements (e.g., boldfacing).
-PARA…
+</p><p>
+<b>PARA…</b><br>
 Used to define the paragraph specifications including paragraph margins, space between paragraphs, widow/orphan control and page/column break control.  
-TABS
+</p><p>
+<b>TABS</b><br>
 Used to define the tab settings.  
-HYPH…
+</p><p>
+<b>HYPH…</b><br>
 Used to turn hyphenation on and off and for controlling the hyphenation process.  
+</p><p>
+7. To close the Style Options dialog box, click OK<br>
+8. To close the Define Style dialog box, click OK
+</p><p>
 
-To close the Style Options dialog box, click OK
+<code>Applying a Style</code>
+</p><p>
+Applied styles will affect the text from paragraph return to paragraph return. To apply a style for one complete paragraph, you need to place your insertion point within the paragraph. When you want to apply a style to multiple paragraphs at once, you must select at least one character from each paragraph.
+</p><p>
+<code>Applying a Style Using the Menu</code>
+</p><p>
+1. Place the insertion point within or highlight the paragraph you want to apply the style to <br>
+2. From the Type menu, select Type Style » select the appropriate style<br>
+</p><p>
+<code>Applying a Style Using the Style Palette</code>
+</p><p>
+1. If necessary, to display the Style Palette, from the Window menu, select Show Styles. 
+The Style Palette appears.<br>
+2. Place the insertion point within or highlight the paragraph you want to apply the style to<br>
+3. From the Style Palette, select the appropriate style
+ </p><p> 
+ <code>Editing a Style</code>
+  </p><p> 
+You may decide later that the specifications originally set for a style are not what you want. You can edit the style so that the change you make occurs for every instance of that style in your document.
+ </p><p> 
+1. From the Type menu, select Define Styles…
 
-To close the Define Style dialog box, click OK
+From the list of style names, select the style that you want to edit <br>
 
+2. Click EDIT<br>
 
+3. Make the appropriate changes using the TYPE, PARAGRAPH, TABS, and HYPHENATION buttons<br>
 
+4. To close the Style Options dialog box, click OK<br>
 
-
-                      </p>
-             
+5. To close the Define Style dialog box, click OK<br>
+</p>
                       </div>
                   
                   </div>

@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,25 +28,31 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+            <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
-            <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small text-secondary"> <i class="fas fa-home text-primary"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : (DCA-105) </p>
+            
+            <p class="text-dark text-center fw-light fs-1 mt-1"> <%= chapterTitle  %></p>
             
             <hr>
                         
                           <div class="d-flex justify-content-between m-1">
                             
-                            <button type="button" class="btn btn-sm btn-outline-danger"> Chapter-11</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"> Chapter-11</button>
                             
                               <div class="dropdown">
                 
-                                    <button class="btn btn-sm btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                       
                                       Select Chapter
                                     
@@ -119,7 +124,7 @@
                         <em>
                        
                   11. WORKING WITH MASKS: (3 - Marks)
-Creating Masks in Quick Mask Mode, Storing Masks in Alpha Channels
+                      Creating Masks in Quick Mask Mode, Storing Masks in Alpha Channels
 
                   
                         </em> 
@@ -141,7 +146,7 @@ Creating Masks in Quick Mask Mode, Storing Masks in Alpha Channels
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Overview
                    
                     </button>
                   
@@ -151,10 +156,26 @@ Creating Masks in Quick Mask Mode, Storing Masks in Alpha Channels
 
                     <div class="accordion-body">
             
-                             No Video available yet DCA-105 Chapter-11
-                      
-                      
-                      
+                             <p>Tun tumah hian a hmaa kan la zir loh <code>quick mask</code> leh
+                             <code>storing mask</code> kan zir dawn a ni. Quick mask hian a tum tak chu selection siamthat a ni. Entirnan, mahni thlalak hi a background thlak duh ta ila, kan taksa
+                             chin leh a background chin chu kan lakhran a ngai dawn a. La hrang tur chuan kan select hran a ngai ang. Taksa chin chauh select chu quick mask hmanga tihin a awlsam bik dawn a ni. Selection Tool 
+                             <img src="/img/selectionTool.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="auto" alt="selectionTool" /> hmanga i select na lai chu
+                             quick mask mode hmangin a edit leh theih a. Edit laiin brush emaw pencil tool emaw hman tur a ni a. 
+                             Foreground leh background colour-ah a dum leh var hman tur a ni. Black colour chuan select area a tizim a, white colour chuan select a siam belh a ni.</p>
+                             
+                             <p><code>QUICK MASK</code></p>
+                             <figure class="figure">
+  
+                             <img src="/img/quickMask.png" class="img-fluid ps-2 pb-2" width="auto" height="540" alt="quickMask" />
+                                        
+                              <figcaption class="figure-caption ps-2 text-danger"> Selecting in Standard mode and Quick Mask mode :: 
+                                </figcaption>
+                                <em>A. Standard mode 
+                              B. Quick Mask mode 
+                              C. Select lai chu a var angin a lang ang.
+                              D. Select ve loh lai chu a dum angin a lang.
+                                 </em>       
+                              </figure> 
                       
                       </div>
                   
@@ -196,19 +217,21 @@ Creating Masks in Quick Mask Mode, Storing Masks in Alpha Channels
 CREATING MASKS IN QUICK MASK MODE: </code>If you want to make a change to a select part of an image, 
 you can use a Quick Mask. Areas painted black on a mask are protected, and areas painted white are editable (unprotected).
  </p><p>
-Follow these steps to create your very own Quick Mask:
+<code>Follow these steps to create your very own Quick Mask:</code>
 </p><p>
 •	Open a new document and, using any selection tool, select the element you want in your image.<br>
 •	Click the Edit in Quick Mask Mode button in the Tools panel (or press the Q key).<br>
 •	Refine the mask by using brush or pencil tool.<br>
 •	After you finish editing your mask, click the Edit in Standard Mode button in the Tools panel to exit the Quick Mask. You can also press the Q key.<br>
-</p><p>
-To apply layer mask for changing image background, do this:<br>
+</p>
+ 
+<p>
+
+<code>To apply layer mask for changing image background, do this:</code><br>
 1.	In Photoshop, open two images for the foreground and background image.<br>
 2.	Drag the foreground image on top of the background image. Press Ctrl + T (same as click edit > Free transform) for resizing the image if required.<br>
 3.	In the foreground image, select part of the area by using any selection tool. (Do not be careful here, you can adjust selection area again later)<br>
-4.	To create a mask that reveals the entire layer, click the Add Layer<br>
-Mask   button in the Layers panel, OR choose Layer > Layer Mask > Reveal Selection.<br>
+4.	To create a mask that reveals the entire layer, click the Add Layer Mask button in the Layers panel, OR <br>choose Layer > Layer Mask > Reveal Selection.<br>
 5.	Refine the selected area using the Brush tool, press [ or ] to resize the diameter of the Brush. 
 Switch to foreground and background color to adjust the selected part of an image. Remember 
 that areas painted black on a mask are hidden and areas painted white are shown.<br>
@@ -219,7 +242,7 @@ If you have made a particularly time-consuming selection or one that you will ne
 you can save the selection as a channel and then load it whenever you need it. However, 
 in order to load a selection into an image you need to have saved one first.<br>
 </p><p>
-To save the selection as a channel, try this:<br>
+<code>To save the selection as a channel, try this:</code><br>
 1.	Select Select → Save Selection from the menu. 
 The Save Selection dialog box appears. Here you can specify the name of your selection and it will appear within the Channels palette.<br>
 2.	Select Select → Deselect from the menu or press Ctrl + D.<br>

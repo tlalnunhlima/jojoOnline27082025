@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,25 +28,31 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+            <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
-            <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small text-secondary"> <i class="fas fa-home text-primary"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : (DCA-106) </p>
+            
+            <p class="text-dark text-center fw-light fs-1 mt-1"> <%= chapterTitle  %></p>
             
             <hr>
                         
                           <div class="d-flex justify-content-between m-1">
                             
-                            <button type="button" class="btn btn-sm btn-outline-danger"> Chapter-9</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"> Chapter-9</button>
                             
                               <div class="dropdown">
                 
-                                    <button class="btn btn-sm btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                       
                                       Select Chapter
                                     
@@ -145,7 +150,7 @@ Grid Manager.
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Overview
                    
                     </button>
                   
@@ -155,8 +160,19 @@ Grid Manager.
 
                     <div class="accordion-body">
             
-                             No Video available yet DCA-106 Chapter-9
-                      
+                             <p>Pagemaker-ah hian sentence inkar te, word inkar te, letter inkar te leh paragraph inkar te hi tizima tihzau theih a ni a.
+                             Character emaw paragraph inkar emaw kan siam rem dawn chuan Character/Paragraph Specification Dialog Box atang emaw Control Palette atangin emaw kan siam rem thei a ni.</p>
+                             
+                             <p>Indent/Tab: Indent hmang hian paragraph te, sentence te kan tawlh tir dual dual thei a. Indent set tur hian tih dan kawng hrang 3 a awm a ni.
+                             Indent/Tab hman tangkaina langsar em em pakhat chu paragraph intanna sentence apiangah a ni a. Lehkhabu leh novel bu te Bible te pawh hi
+                             ngun taka i en chuan paragraph intanna sentence chu a tawlhlut hret vek ang. Chutiang ang siam ve tur chuan kan thuziakna paragraph chu
+                             kan select all (CTRL + A) ang a, CTRL + I kan hmet ang. Indent/Tab dialog box a lo chhuak ang a. A chung lam point khat chu mouse hmangin Tab
+                             khat i tawlh phei ang a, i apply ang a, i Ok dawn a ni.</p>
+                             
+                             <figure class="figure">
+                            <img src="/img/indentTab.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="auto" alt="indentTab" />
+                            <figcaption class="figure-caption ps-2 text-danger"> Indent Tab Dialog Box </figcaption>
+                            </figure>
 
                       </div>
                   
@@ -191,44 +207,123 @@ Grid Manager.
                         
 
 <p><em>9. WORKING WITH LARGE AMOUNT OF TEXTS </em></p>
-Formatting Paragraph in PageMaker
+<p>
+<b>Formatting</b> is the process of changing the general arrangement of text, i.e., 
+improving the appearance of the text by using various fonts, fonts colors, and font styles.
+</p><p>
+<code>Character Specifications</code>
+</p><p>
+  Character formatting means displaying text in a certain way. 
+  Character formatting consists of text properties - bold, italic, underline, font type, font size, font colour, etc. 
+    The steps to apply character formatting to text are as follows :
+ </p><p>
+1. Select the text to be formatted. <br>
 
- 
+2. Choose Type > Character in menu bar (or) Press Ctrl + T on the keyboard.
 
+The Character Specifications dialog box appears.<br>
 
+3. Make the appropriate changes in the dialog box.<br>
 
-Paragraph attributes specify how your paragraphs appear on the page – alignment, position of indents and tabs and the amount of space before and after the paragraphs. In PageMaker, a paragraph is any contiguous text followed by a paragraph return. You can apply attributes to selected paragraphs or you can change the attributes of all paragraphs of a particular paragraph style.
-PageMaker provides several ways to apply paragraph attributes, including the Styles palette, which lists a predefined group of character and paragraph attributes applied to selected paragraphs and the Control palette.
+<ul>
+  <li>Click the drop-down menu arrow of the Font box and select the desired font.</li>
 
-You can Format Paragraph by using these simple few steps:
-1.Using the text tool, click and insertion point in a single paragraph or select a range of paragraphs.
-2.Choose Type > Paragraph. The Paragraph Specification dialog box lets you apply formatting not available on the Control palette.
+<li>Click the drop-down menu arrow of the Font Size box and select the font size.</li>
 
+<li>Click the drop-down menu arrow of the Font Color box and select the desired colour.</li>
 
+<li>Click the Bold, Italic, or Underline buttons to make the text bold, italic, or underlined respectively.</li>
+</ul>
 
+4. Click on OK.
+    </p><p>
+      <figure class="figure">
+                            <img src="/img/characterSpecifications.png" class="float-end img-fluid ps-2 pb-2" width="auto" height="auto" alt="characterSpecifications" />
+                            <figcaption class="figure-caption ps-2 text-danger"> Character Specifications Dialog Box </figcaption>
+                            </figure>
+ </p><p>
 
+<code>To modify character attributes using the Character Control Palette:</code>
+ </p><p>
+1. Select the text you want to modify.<br>
 
+2. Make the appropriate changes in the Control palette. 
+  </p><p>    
+  
+    <figure class="figure">
+                            <img src="/img/characterControlPalette.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="auto" alt="characterControlPalette" />
+                            <figcaption class="figure-caption ps-2 text-danger"> Character Control Palette </figcaption>
+                            </figure>
+            </p><p> 
+                            
+<code>Changing Text Colour</code>
+  </p><p> 
+You can change the colour of the text. Your design may look beautiful if you choose a text colour other than black. To colour characters
+  </p><p> 
+1. Select the text you want to colour.<br>
 
-3.Select formatting options.
+2. Choose Window > Show Colors in Menu bar. The Colors palette appears.<br>
 
-Formatting Paragraphs by Editing Paragraph Styles:
-(a)Choose Window > Show Styles.
+3. Click the colour you want to apply to the selected text.<br>
 
+4. The characters change to the colour you selected in the palette.<br>
+</p><p> 
+<code>Paragraph Specifications</code>
+</p><p>
+  PageMaker provides several ways to apply paragraph attributes, including the Styles palette, which lists a 
+  predefined group of character and paragraph attributes applied to selected paragraphs and the Control palette.
+  </p><p>
+    You can Format Paragraph by using these simple few steps:
+    </p><p>
+1. Using the text tool, click and insertion point in a single paragraph or select a range of paragraphs.<br>
+2. Choose Type > Paragraph. The Paragraph Specification dialog box lets you apply formatting not available on the Control palette.<br>
+3. Select formatting options
+</p><p>
+                          <figure class="figure">
+                            <img src="/img/paragraphSpecifications.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="auto" alt="paragraphSpecifications" />
+                            <figcaption class="figure-caption ps-2 text-danger"> Paragraph Specifications</figcaption>
+                            </figure>
+</p><p>                            
+<code>Setting indents and tabs:</code>
+</p><p>
+Indents and tabs are powerful tools for positioning text. 
+Indents move text inward from the right and left edges of a text object, 
+and tabs position text at specific locations in a text object.
+</p><p>
+Following are the ways in which indents can be set:
+</p><p>
+1. Move indent markers in the Indents or Tabs dialog box.<br>
+2. Type indent values in the Paragraph Specifications dialog box.<br>
+3. Type indent values on the Control palette in paragraph view.<br>
+</p><p>
+<code>1. To set indent using the Indents or Tab ruler:</code>
+</p><p>
+(a) In layout view, click an insertion point in a paragraph or group of paragraphs.<br>
+(b) Choose Type > Indents / Tabs<br>
+(c) Drag the indent markers on the ruler to where you want left, right and first 
+line indents to be. When you release a marker, the indentation is displayed in the Position box.<br>
+(d) Click OK to set the indents.<br>
+</p><p>
+ <code> 2. To set indent using the Paragraph command:</code>
+  </p><p>
+(a) Click an insertion point in a paragraph or select a group of paragraphs.<br>
+(b) Choose Type > Paragraph <br>
+(c) Type values for the Indents options and then click OK.
+</p><p>
+  <code> 3. To set indent using the Control Palette:</code> 
+  </p><p>
+(a) Click an insertion point in a paragraph or select a group of paragraphs.<br>
+(b) Choose Window > Show Control Palette, or click the Control palette to activate it. 
+If the palette is in character view, click the paragraph – view button to display the paragraph options.<br>
+(c) Type values for the Indents options and then click Apply.<br>
+</p><p>
 
-
-
-
-
-
-
-
-(b)Press Ctrl (Window) or Command (Mac OS) and click a paragraph style to edit. This opens the Style Options dialog box.
-(c)Click Char, Para, Tabs or Hyph to select paragraph – level formatting options. The changes affect all paragraphs with that style.
-
-
-
-                      </p>
-             
+                             <figure class="figure">
+                            <img src="/img/controlPaletteParagraphMode.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="auto" alt="controlPaletteParagraphMode" />
+                            <figcaption class="figure-caption ps-2 text-danger"> Control Palette Paragraph Mode</figcaption>
+                            </figure>
+  
+  </p>
                       </div>
                   
                   </div>

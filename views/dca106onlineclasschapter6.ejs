@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,25 +28,31 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+            <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
-            <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small text-secondary"> <i class="fas fa-home text-primary"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : (DCA-106) </p>
+            
+            <p class="text-dark text-center fw-light fs-1 mt-1"> <%= chapterTitle  %></p>
             
             <hr>
                         
                           <div class="d-flex justify-content-between m-1">
                             
-                            <button type="button" class="btn btn-sm btn-outline-danger"> Chapter-6</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"> Chapter-6</button>
                             
                               <div class="dropdown">
                 
-                                    <button class="btn btn-sm btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                       
                                       Select Chapter
                                     
@@ -147,7 +152,7 @@ Changing the Staking Order of Objects, Locking Objects.
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Overview
                    
                     </button>
                   
@@ -157,9 +162,24 @@ Changing the Staking Order of Objects, Locking Objects.
 
                     <div class="accordion-body">
             
-                             No Video available yet DCA-106 Chapter-6
-                      
-
+                             <p>Control Palette hi transformation tool pawimawh ber a ni a. Toolbox-a i awmna a zirin control palette hi a landan a lo
+                             danglam thin. Text tool i click chuan i text leh paragraph tihdanglamna a lo chhuak ang a. Pointer tool i click chuan object (thlalak/drawing/text block)
+                             tih danglamna tur a lo chhuak ang.</p>
+                             
+                             <p>Object hi a khawmin a dah theih a. Chu chu grouping an ti a. Group tur chuan object pakhat aia tam neih phawt a ngai a, tin,
+                             kan select vek a ngai bawk a. Select laiin SHIFT key hmeh tel zel tur a ni a. Kan select vek hnuah Element menu > Group click tur a ni. 
+                             (CTRL + G hmeh theih a ni bawk). Group khatah an awm chuan kan move emaw kan copy emaw a nih pawhin vawi khatah a kal rual vek thin a ni. Object te hi
+                             lock position-ah a dah theih a, kan lock a nih chuan a awmna ngaiah khawih chet theih lovin a awm thin a ni. Lock tur chuan Element menu > Lock Position
+                             click tur a ni. He element menu ah tho hian ungroup na leh unlock-na awm bawk a ni.</p>
+                             
+                             <figure class="figure">
+  
+                              <img src="/img/controlPalette.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="auto" alt="controlPalette" />
+                                        
+                              <figcaption class="figure-caption ps-2 text-danger"> Control Palette in defferent mode </figcaption>
+                                      
+                              </figure> 
+                             
                       </div>
                   
                   </div>
@@ -192,50 +212,49 @@ Changing the Staking Order of Objects, Locking Objects.
                       <p class="fw-light rounded">
                         
 
-<p><em>1.	PAGEMAKER BASICS </em></p>
+<p><em> 6. TRANSFORMATIONS </em></p>
 
-<p>
-<code>INTRODUCTION: </code>PageMaker was one of the first desktop publishing programs,
-introduced in 1985 by Aldus Corporation. Aldus Mencius is called the father of publishing.
+<p><b>The PageMaker Control Palette</b>
 </p><p>
-<b>PAGEMAKER ENVIRONMENT</b>
+The PageMaker Control Palette displays the settings and properties of selected text, object or paragraph. 
 </p><p>
-<code>Menu Bar: </code>The standard menu bar contains all the main menus for File, Layout, Element and other utilities.
+<code>To display the Control Palette :</code> Click on the Window menu and then select Show Control Palette from the drop-down box.
 </p><p>
-<code>Ruler:</code> The top and left ruler bars helps you to precisely position the cursor, text, and graphics in the page. 
-The view the rulers select View > Show Rulers.
+<code>To stop displaying the control palette :</code> Click on the Window menu and then select Hide Control Palette from the drop-down box.
 </p><p>
-<code>Master Page Icon: </code>The Master Page icon showed the position of the master Pages.
+<b>Character and Paragragh Modes</b></p><p>
+You can use the Control Palette to format text when you are in layout view or in the story editor. You can switch between two modes as desired to format your text:
+<code>1) Character Mode 2)	Paragraph Mode </code>
+</p><p><code>Control Palette In Character Mode :</code> Use this mode to change character attributes including fonts, type size, type style, leading, Kerning, tracking and width of your text.
 </p><p>
-<code>Page Icon: </code>The Page icon shows the list of pages in the publication with the currently selected pages in black. 
+<code>Control Palette In Paragraph Mode :</code> Use this mode to display and change the attributes of one or more selected paragraphs. You can adjust attributes such as displays paragraph styles, indentation, alignment, paragraph spacing and alignment as well as grid alignment and grid spacing.
 </p><p>
-<code>Pasteboard: </code>Surrounding the page is an area of white space called the Pasteboard. It is used to store graphics
-and texts as you work. Items you place on the pasteboard are visible from any page and can be selected 
-and moved regardless of the page you are currently working on.
+<b>Three Other Modes of the Control Palette</b>
 </p><p>
-
-<b>FILE MENU:</b>
+<code>The Pointer Mode :</code> The Pointer View indicates the X and Y coordinates of your pointer as you move it within the PageMaker window.<br>
+<code>Placed Object Mode :</code> When you select an image using your Pointer tool, the Placed Object View 
+will display information on that graphic, such as its height, width and coordinates. 
+It also gives you the options to crop, scale and rotate the image <br>
+<code>In-Line Graphic Mode :</code> The In-Line Graphic View displays information about a selected image relative to the text that is around it. It also enables you to crop the image, as well as increase or decrease the spacing between the image and the text that surrounds it.
 </p><p>
-<code>New: </code>New command is used to create a new publication. 
+<b>To group the object</b>
 </p><p>
-<code>Open: </code>Open allow you to open an existing PageMaker file. 
+1. To group the object, the first thing you need to do is to press the <code>Shift + mouse click </code>to select the object.<br>
+2. Later, open the Element menu and then click the Group command.<br>
+3. Now, you could see that the objects are being group.
 </p><p>
-<code>Save:</code> Save command saves the current publication.
+<b>
+Changing the Stacking Order of Objects:</b>
 </p><p>
-<code>Revert:</code> Revert command rolls back all the changes made since the last save.
-</p><p>
-
-<code>Place: </code>Place command is used to place text and graphics into the publication.
-</p><p>
-
-<code>Acquire:</code> The Acquire command is used to scan an image into your publication.
-</p><p> 
-<code>Export: </code>Export command lets format you select.
+Whenever you draw an object that overlaps another object, the last one drawn is placed on top. 
+This stacking effect can cause some objects to seemingly disappear. 
+To stacking order of the object can be changed. 
+To do this, select it and choose one of the Bring or Send options on the Element > Arrange Menu.
 </p>
-
-
-
-                      </p>
+<figure class="figure">
+<img src="/img/arrangeObject.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="auto" alt="arrangeObject" />
+<figcaption class="figure-caption ps-2 text-danger"> Stacking Order of Object </figcaption>
+</figure> 
              
                       </div>
                   

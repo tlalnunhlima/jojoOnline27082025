@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,25 +28,31 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+            <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
-            <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small text-secondary"> <i class="fas fa-home text-primary"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : (DCA-106) </p>
+            
+            <p class="text-dark text-center fw-light fs-1 mt-1"> <%= chapterTitle  %></p>
             
             <hr>
                         
                           <div class="d-flex justify-content-between m-1">
                             
-                            <button type="button" class="btn btn-sm btn-outline-danger"> Chapter-12</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"> Chapter-12</button>
                             
                               <div class="dropdown">
                 
-                                    <button class="btn btn-sm btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                       
                                       Select Chapter
                                     
@@ -143,7 +148,7 @@ Restarting Page Numbering, Creating a Table of Contents.
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Overview
                    
                     </button>
                   
@@ -153,8 +158,24 @@ Restarting Page Numbering, Creating a Table of Contents.
 
                     <div class="accordion-body">
             
-                             No Video available yet DCA-106 Chapter-12
-                      
+                             <p>He chapter-ah hian Book leh TOC kan zir dawn a. Utilities menu hnuaia awm ve ve an ni. Book hi pagemaker file hrang hrang link-na a ni a. TOC hi 
+                             chu lehkhabu chhunga zawnawlna siamna a ni. </p>
+                             
+                             <p><code>Book:</code> He command hian tangkaina deuh mai a neih chu pagemaker file hrang hrang a combine thei leh a phek number indawta
+                             a dah thei hi a ni a. Entirna han pe ta ila; Lehkhabu i ziak a nih chuan pagemaker file pakhatah i dah vek lo maithei a. File
+                             thenkhat chu chapter hrang hrang dah nan te, thenkhat chu thuhmahruai atan te leh thenkhat chu lehkhabu kara milem zeh tur
+                             dah nante i hmang mai thei a ni. Chung file hrang hrang chu Utilities > Book hmangin a combine thei a. A combine kan han tih chuan
+                             a phek number indawt si, mahse file hrang nisiin a dah thei a ni. Number indawta kan dah duh chuan Auto numbering-ah khan Next Page
+                             button kha clicked a ngai a ni.</p>
+                             
+                             <p><code>TOC:</code> hi table of content tihna a ni a. Zawnawlna kan ti mai ang chu. Lehkhabu phek hmasa lamah hian a lehkhabu thupui leh
+                             a phek number zat tarlannan an hmang thin a. Hei hian lehkhabu chhunga mahni duhlai bik zawn a tiawlsam hle a ni.</p>
+                             
+                             
+                            <figure class="figure">
+                            <img src="/img/bookAndToc.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="auto" alt="bookAndToc" />
+                            <figcaption class="figure-caption ps-2 text-danger"> Book and TOC Menu</figcaption>
+                            </figure>
 
                       </div>
                   
@@ -189,113 +210,80 @@ Restarting Page Numbering, Creating a Table of Contents.
                         
 
 <p><em>12. LONG DOCUMENTS FEATURES </em></p>
+<p>
+<b>BOOK : </b>
+</p><p>
 
-Creating Booklet Brochures
-Using the setup specifications listed here will result in a booklet-style brochure with two panels on each side of the page 
-that can be used for text and/or graphics. Two setups are provided. The two-page booklet uses columns to separate the “pages”. 
-The four-page booklet uses the Build Booklet feature to assist with layout.
+Use this command to create a of publications to be treated as a single document called a <code> Book. </code>
+You can work with each publication in the book separately too or you can tell PageMaker to perform certain tasks showing or 
+creating an index, creating a table of contents, 
+or printing the entire book in one go.
+</p><p>
+This command can be called from <code>Utilities menu. </code>
+Book publication list dialog box lets you create a book list and control the page numbering of the publication in that list. 
+The options of the dialog box are discussed below:
+</p><p>
+<uL>
+  <li><code>Insert:</code> Add the publication selected in the list box on the left to the book on the right.</li>
+  <li><code>Remove:</code> Use this to remove the selected publication from the book list. </li>
+  <li><code>Move up/Move down:</code> The command moves  por down one position in the book list. 
+This becomes necessary when you have to make sure that the page numbering in the publications 
+is not to be disturbed and their sequence remains the same. </li>
+  <li><code>Auto renumbering:</code> PageMaker repaginates and prints the publication of the book in the order they appear in the book list.</li>
+  <li> You can choose the options as following: 
+    <ul>
+      
+      <li><code>None: </code> Do not renumber the pages.</li>
+      <li><code>New page: </code>The next publication in the Book should start from the next page of the previous publication entry. </li>
+      <li><code>Next odd/even page:</code> Certain books have the style of starting all new chapters from the next odd page or next even page, use this option for the same. One of the commands which works on Book is Table of Contents, let us see how it uses t. 
+</li>
+    </ul>
+    
+    
+  </li>
+</uL>
 
+</p><p>
+<b>TABLE OF CONTENTS: </b>
+</p><p>
+This command is used to generate Table of Contents (TOC). 
+This can be created for a single publication or a number of publications if the book list is used. 
+The created TOC is in the form of a new text story which can be placed on any page of the current publication or can be 
+placed in a new publication for printing.
+</p><p>
+<code>Generate the Table of Contents</code>
+</p><p>
+  
+  <ol>
+    
+    <li>Go to the Utilities menu and select Create TOC, then enter the title of your Table of Contents.
+</li>
+    <li>Select the checkbox and radio button items you want and make sure the Between Entry and Page Number box contains this info: ^t. Click OK. The upward-pointing arrow and the letter "t" ensure that PageMaker places leader dots between the TOC item and the page number.
+</li>
+    <li>Position the cursor in the upper-left corner of the page where you want the table of contents and click. Your TOC will be placed there
+</li>
+    
+  </ol>
+  
+  
+</p><p>
+<code>Tag Items for the Table of Contents</code>
+</p><p>
+  <ol>
+    <li>Click to place the cursor at the beginning or anywhere within the line of text you want to include in the table of contents.
+</li>
+    <li>Go to the Type menu and select Paragraph.
+</li>
+    <li>Select the Include in Table of Contents checkbox and click OK.
+</li>
+    <li>Repeat steps 1 to 3 for every entry you want to include in this document's TOC.
+</li>
+    
+  </ol>
+ </p>
 
- 
-return to topTwo-Page Booklet
-The document and column setups given here result in a grid like the one shown. Columns divide a standard 8.5″ X 11″ sheet into 
-two “pages.” The Space between columns measurement gives sufficient room for folding.
-
-Two-page booklet outline
-
-Document Setup
-From the File menu, select New…
-The Document Setup dialog box appears.
-Document setup dialog box
-
-From the Page size pull-down menu, select Letter
-
-By Orientation, select Wide
-
-
-By Options, make sure Double-sided and Facing are selected
-
-In the Number of Pages text box, type 2
-
-Under Margins, in the Inside and Outside text boxes, type 0.5
-
-Under Margins, in the Top and Bottom text boxes, type 0.666
-
-Click OK
-
-Column Guide Setup
-From the Layout menu, select Column Guides…
-The Column Guides dialog box appears.
-Column guides dialog box
-
-In the Number of Columns text box, type 2
-
-In the Space between columns text box, type 0.667
-
-Click OK
-Your brochure is now ready for text and graphics.
-
-return to topFour-Page Booklet
-The document setup given here results in a grid like the one shown. The setup provides four 
-individual pages and allows you options that the two-page booklet does not. For example, you can use 
-master pages to format specific pages. This setup also allows you to easily expand the booklet, 
-if needed, by one or more pages.
-
-Four-page booklet outline
-
-Document Setup
-From the File menu, select New…
-The Document Setup dialog box appears.
-Document setup dialog box
-
-From the Page size pull-down menu, select Letterhalf
-
-By Orientation, select Tall
-
-By Options, make sure Double-sided and Facing are selected
-
-In the Number of Pages text box, type 4
-
-Under Margins, in the Inside text box, type 0.5
-
-Under Margins, in the Outside text box, type 0.583
-
-Under Margins, in the Top and Bottom text boxes, type 0.666
-
-Click OK
-Your booklet is now ready for text and graphics.
-
-return to topUsing Build Booklet
-Use the Build Booklet plug-in once you have completed the layout of your text and graphics. 
-When you print front to back on your paper, the pages of the booklet will be ordered correctly.
-
-Small changes can be made to the publication once you have run Build Booklet. However, 
-be careful of making changes that may alter the flow of text and therefore the organization of your pages.
-If you need to make substantial changes after you have run Build Booklet, make them in the original publication and 
-then re-run Build Booklet.
-
-NOTE: Build Booklet creates a new publication so be sure that you have sufficient drive or disk space to accommodate it.
-
-Macintosh: This Build Booklet feature is not available on Macintosh versions of PageMaker.
-
-To run Build Booklet
-From the Utilities menu, select Plug-ins » Build Booklet...
-The Build Booklet dialog box appears.
-Build booklet dialog box
-
-From the Layout pull-down list, select 2-up saddle stitch
-
-Click OK
-A dialog box appears asking if you want to save your original publication before it is closed.
-
-Click YES
-A new, untitled publication is created. You are now ready to print. You may also want to save this new layout of your 
-publication, giving it a different name than your original publication.
-
-
-
-                      </p>
-             
+    
+               
                       </div>
                   
                   </div>

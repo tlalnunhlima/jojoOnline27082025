@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,25 +28,31 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+            <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
-            <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small text-secondary"> <i class="fas fa-home text-primary"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : (DCA-106) </p>
+            
+            <p class="text-dark text-center fw-light fs-1 mt-1"> <%= chapterTitle  %></p>
             
             <hr>
                         
                           <div class="d-flex justify-content-between m-1">
                             
-                            <button type="button" class="btn btn-sm btn-outline-danger"> Chapter-7</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"> Chapter-7</button>
                             
                               <div class="dropdown">
                 
-                                    <button class="btn btn-sm btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                       
                                       Select Chapter
                                     
@@ -148,7 +153,7 @@ Columns, Create Keyline, Bullets and Numbering, Add Continued Line.
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Overview
                    
                     </button>
                   
@@ -158,7 +163,61 @@ Columns, Create Keyline, Bullets and Numbering, Add Continued Line.
 
                     <div class="accordion-body">
             
-                             No Video available yet DCA-106 Chapter-7
+                             <p>Pagemaker 7.0 ah hian Table siamna hi a chhawm lo va, a hranpaa install chawp ngai a ni. A hrana install chawp leh ai
+                             chuan a tihdan kawng dang, awlsam zawk leh harsa lo zawk hmangin table hi kan siam dawn a ni. He chapter i rawn zir thlen tawh
+                             chuan microsoft word-a table siam chu thiam tawh tura ngaih i ni a, chuvangin, Microsoft Word kan hmang tangkai dawn a ni. </p>
+                             
+                             <p>Microsoft Word-ah Table kan siam ang a. Pagemaker-ah kan dahluh ang. A dah luh dan hi chi hnih a awm a; pakhat chu copy paste
+                             tawp a ni a. Pakhat leh chu insert object atanga dah luh a ni. </p>
+                             
+                             <p>Copy paste hmanga dahluh:<br>
+                             
+                             <ol>
+                               <li>Microsoft Word-ah table i siam ang a, i duh ang thlapa i siam zawhah table chauh chu i copy ang.</li>
+                               <li>Pagemaker-ah i lut ang a, Edit menu > Paste Special... ah i click ang. </li>
+                               <li>Enhanced metafile-ah i click ang a, i ok ang.</li>
+                               <li>Pagemaker-ah chuan table a lo lang a, pointer tool hmangin i resize ang.</li>
+                               
+                             </ol>
+                             
+                              <p>Insert Object hmanga dahluh:<br>
+                             
+                             <ol>
+                               <li>Pagemaker-ah Edit menu > Insert Object... ah i click ang a.</li>
+                               <li>Create new-ah Microsoft Office Word Document i click ang a, i ok ang. </li>
+                               <li>Microsoft Word a rawn inhawng ang a, tah chuan Insert Tab > Table button i click ang.</li>
+                               <li>Microsoft Word-ah chuan table i siam ang a, i siam lai chuan chuan keyboard-ah CTRL + S i click ang.</li>
+                               <li>Microsoft Word-a CTRL + S i click apiangin Pagemaker-ah a in update ve zel ang.</li>
+                               <li>Microsoft Word-a chu i duh chuan close button atangin i close thei.</li>
+                               <li>Pagemaker-a table lo lang chu pointer tool hmangin i resize ang.</li>
+                               <li>Table chu siamthat emaw edit emaw i duh chuan table-ah chuan i double-click ang a, microsoft word
+                               a rawn inhawng leh ang a, tah chuan i edit leh mai ang.</li>
+                               
+                             </ol>
+                             
+                             <figure class="figure">
+                              <img src="/img/insertObject.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="auto" alt="insertObject" />
+                              <figcaption class="figure-caption ps-2 text-danger"> Insert Object </figcaption>
+                              </figure> 
+                             
+                             </p>
+                             <p><code>Balancing Column:</code> Pagemaker phek khat hi column khat a ni. Bible hi column hnih a ni. Pagemaker-ah hian column
+                             kan siam dawn chuan Layout Menu > Column guides... ah kan click ang a. Number of columns ah kan mamawh zat number kan type ang a, kan ok ang. Kan column siam
+                             chhunga thuziak chu rualkhai taka kan adjust duh chuan Utilities menu > plug-ins ah kan click ang a, Balance Columns... atangin kan adjust ang. </p>
+                             
+                             <p><code>Create Keyline:</code> Hei hi headline cheimawina ang a ni a. Headline tur bik uluk taka siam kan duh chuan Create Keyline hi kan hmang thei ang.
+                             Utilities menu > plug-ins > Keyline... ah kan kal ang a. Extends ah khan points (5) etc., kan dah ang a, kan duh chuan attributes button atangin 
+                             a background te kan siam danglam thei bawk.</p>
+                             
+                             <p><code>Bullets and Numbering : </code> Hei hi paragraph list siamna a ni a. 123.. te, abc... te, i)ii)iii)... etc., ang chi te hi Numbering a ni a. Dot te, circle te leh
+                             symbol dang hmanga list siam hi bullets a ni.</p>
+                             
+                            <p><code>Add Continued Line : </code> Hei hi phek tawp lamah <em>continued on page...</em> thuziak  dahna leh phek intan tirhnaah <em>continued from page...</em> tih thuziak zehtelna a ni.
+                            Utilities menu > plug-ins > Add Cont'd line... ah luh tur  a ni.</p>
+                             <figure class="figure">
+                              <img src="/img/keyline.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="auto" alt="keyline" />
+                              <figcaption class="figure-caption ps-2 text-danger"> Pagemaker Plug-ins </figcaption>
+                              </figure> 
                       
 
                       </div>
@@ -195,57 +254,101 @@ Columns, Create Keyline, Bullets and Numbering, Add Continued Line.
 
 <p><em>7. UTILITIES </em></p>
 
-Creating Table In PageMaker
-
-There is no concept of tables native in PageMaker, except for the buggy Adobe Table that is included with PageMaker. You can make tables with the line drawing tools and rule above and below paragraph settings, but you must be patient to do this. You will also need to get familiar with Indents and Tabs (CTRL+I) to make PageMaker native tables. Combined with the line tool and rule above and below paragraphs, you can make some good tables.
-
+<p><b>Creating Table In PageMaker</b>
+</p><p>
+<em><del>There is no concept of tables native in PageMaker, except for the buggy Adobe Table that is included with PageMaker. 
+You can make tables with the line drawing tools and rule above and below paragraph settings, but you must be patient to do this. 
+You will also need to get familiar with Indents and Tabs (CTRL+I) to make PageMaker native tables. 
+Combined with the line tool and rule above and below paragraphs, you can make some good tables.</del></em>
+</p><p>
 Having said all that, about the best practices with PageMaker, there is another way if you are on Windows. You can copy and paste tables you make in Microsoft Word to PageMaker. 
+</p><p>
+<code>Copy and paste table:</code>
+</p><p>
+1) Make a table of your choice in Word, Select or Copy the whole table, and nothing but the table. <br>
+2) Switch to your PageMaker document. Choose Paste Special from the Edit menu. Choose Enhanced Metafile.<br>
+3) You should now have a nice table.
 
-Here is the secret:
-1.) Make a table of your choice in Word, Select or Copy the whole table, and nothing but the table.
-
-
-
-2.) Switch to your PageMaker document. Choose Paste Special from the Edit menu. Choose Enhanced Metafile.
-
-
-
-
-
-
-You should now have a nice table.
-
-
-
-
-It usually works, but some service bureaus and printers have trouble with it. I have never had any problems, but I have pretty good luck in these matters.
-But there is another and much easier way of making a table with all its contents, that is just by using Edit > Insert Object command.
-
-Follow these steps:
-1.Go to ‘Edit’ Menu option in PageMaker and click ‘Insert object’.
-
-
-
-2. This will open the ‘Insert Object’ dialog box.
-
-
-
-3. Choose ‘Microsoft Word’ from the Object Type option.
-
-
-
-4. This will open Microsoft Word-here you create your table along with its content.
-
-5. Simply select the File > Update command or ‘Ctr + S’ key from Microsoft Word.
-
-
-
+</p><p>
+There is another and much easier way of making a table with all its contents, that is just by using Edit menu > Insert Object command.
+</p><p>
+<code>Using Edit menu > Insert Object command</code>
+</p><p>
+1. Go to ‘Edit’ Menu option in PageMaker and click ‘Insert object’.<br>
+2. This will open the ‘Insert Object’ dialog box.<br>
+3. Choose ‘Microsoft Word’ from the Object Type option.<br>
+4. This will open Microsoft Word-here you create your table along with its content.<br>
+5. Simply select ‘Ctr + S’ key from Microsoft Word Or Close MS word after you finish.<br>
 6. This will automatically import your Word table to PageMaker document.
+</p><p>
+<code>Sorting Pages:</code>
+</p><p>
+1. Go to Layout menu > Sort Pages... <br>
+2. Sorting pages is a matter of clicking and dragging. <br>
+3. You select the page to move by clicking it; for multiple pages, hold down Shift as you click each one. <br>
+4. Once selected, drag any of the selected pages to the desired new location. <br>
+5. If your publication is double sided, then PageMaker shows you pages in pairs and treats its page spread as a single entity. <br>
+6. When you reorder pages, the thumbnails of each page are resorted, and the original page number, with dotted lines around it, is shown next to the new page number.
+</p><p>
+<figure class="figure">
+<img src="/img/sortingPage.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="auto" alt="sortingPage" />
+<figcaption class="figure-caption ps-2 text-danger"> Sorting Pages </figcaption>
+</figure> 
+</p><p>
+  <b>Bullets and numbering : </b>
+  </p><p>
+1. With the text tool, highlight the lines to which you want to add bullets or 
+numbers or put your cursor at the start of the first line (paragraph).<br>
+2. Select Utilities > Plug-ins > Bullets and numbering… from the menu bar.<br>
+3. In the Bullets and numbering dialog box select the style of 
+bullet you want to use from the choices given or use the Edit button to select a different font or bullet or size for the bullet.<br>
+4. If you want a numbered list instead of bullets, select the Numbers button. 
+Choose a numbering style and specify the number range to use if you don’t want to start with number 1.<br>
+5. If you highlight the text you want bulleted or numbered, 
+choose Only selected paragraphs for the Range; otherwise, specify the number of paragraphs that you want bulleted.<br>
+6. Select Ok to add your selected bullet or number style.
+</p><p>
+<b>Add Cont’d Line : </b>
+</p><p>Many publications use jump lines (“Continued on…” and “Continued from…”) to tell the reader where to find the next or previous section of a story.
+<em>WARNING: Perform this step when layout and pagination are finalized; although PageMaker initially supplies the correct page number, the number is not updated when changes in pagination occur.
+</em>
+</p><p>
+1. Finalize the layout of the publication <br>
+2. With the pointer tool, select the text block on the page where you want the jump line<br>
+3. From the Utilities menu, select Plug-ins » Add cont’d line…
+The Continuation notice dialog box appears.<br>
+4. Specify whether you want to add the jump line to the top or bottom of the text block<br>
+5. Click OK
+   </p><p>  
+   <b>Balance columns:</b>
+   </p><p>  
+Sometimes you must balance the columns on a page to be of equal size so that their top and bottom edge align.
+</p><p>
+1. First of all make more than two columns from layout menu by columns command.<br>
+2. Now type the text in each column.<br>
+3. Select that all column's text by pointer tool.<br>
+4. Click on the utilities menu.<br>
+5. Choose plug-ins then click on the balance columns command.<br>
+6. Select an alignment option.<br>
+7. Click on ok button.
+</p><p> 
+<b>Key line:</b>
+</p><p> 
+You can create the border automatically by drawing a box around the object.
+Steps:
+</p><p> 
+1. Draw a rectangle box or circle<br>
+2. Select it.<br>
+3. Click on the utilities menu.<br>
+4. Choose plug-ins command.<br>
+5. Click on key line command.<br>
+6. Type the distance you want to extend.<br>
+7. Click on the attributes to open the fill and line dialog box.<br>
+8. Then set fill and line attributes such as line, weight and fill color.<br>
+9. Select a position for the key line in front of the object.<br>
+10. Click on the ok button.
 
-
-
-                      </p>
-             
+</p>
                       </div>
                   
                   </div>

@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,25 +28,31 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+            <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
-            <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small text-secondary"> <i class="fas fa-home text-primary"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : (DCA-105) </p>
+            
+            <p class="text-dark text-center fw-light fs-1 mt-1"> <%= chapterTitle  %></p>
             
             <hr>
                         
                           <div class="d-flex justify-content-between m-1">
                             
-                            <button type="button" class="btn btn-sm btn-outline-danger"> Chapter-3</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"> Chapter-3</button>
                             
                               <div class="dropdown">
                 
-                                    <button class="btn btn-sm btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                       
                                       Select Chapter
                                     
@@ -143,7 +148,7 @@ Layers, Grouping Layers.
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Overview
                    
                     </button>
                   
@@ -153,10 +158,21 @@ Layers, Grouping Layers.
 
                     <div class="accordion-body">
             
-                             No Video available yet DCA-105 Chapter-3
-                      
-                      
-                      
+                            <p>Photoshop layer hi darthlalang zawrhna dawra darthlalang (glass) an rem thuah ang hi a ni a. Thlalak or thuziak te a awm
+                            a nih loh chuan a langtlang (transparent) vek a ni. Layer hi a tangkai hle a, photoshop atanga siam tawh phawt hi chuan
+                            layer chi hrang hrang remkhawm a ni ti ila kan sawi sual lo vang. Khawthlerah han chhuak la, signboard intar te kha han en teh,
+                            thuziak te, milem te a lo inpawlh nuaih mai thei a. Chutiang i hmuh chuan layer chi hrang an hmang tih hria ang che. 
+                            Thuziak tlem te chauh chu signboard-ah chuan a lo awm a nih pawhin an thuziak leh a background chu layer hran a ni tho dawn a ni. </p>
+                            
+                            
+                            
+                              <figure class="figure">
+  
+                             <img src="/img/photoshopLayer.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="540" alt="photoshopLayer" />
+                                        
+                              <figcaption class="figure-caption ps-2 text-danger"> Photoshop Layers </figcaption>
+                                        
+                              </figure> 
                       
                       </div>
                   

@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,25 +28,31 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+            <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
-            <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small text-secondary"> <i class="fas fa-home text-primary"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : (DCA-106) </p>
+            
+            <p class="text-dark text-center fw-light fs-1 mt-1"> <%= chapterTitle  %></p>
             
             <hr>
                         
                           <div class="d-flex justify-content-between m-1">
                             
-                            <button type="button" class="btn btn-sm btn-outline-danger"> Chapter-2</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"> Chapter-2</button>
                             
                               <div class="dropdown">
                 
-                                    <button class="btn btn-sm btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                       
                                       Select Chapter
                                     
@@ -147,7 +152,7 @@ Document.
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Overview
                    
                     </button>
                   
@@ -157,10 +162,18 @@ Document.
 
                     <div class="accordion-body">
             
-                             No Video available yet DCA-106 Chapter-1
-                      
-                      
-                      
+                             <p>Pagemaker-a document kan hawn thar dawnin File > New-ah kan kal tlangpui a, chutah chuan document setup box a lo lang ang a.
+                             A hnuaia English-a inhrilhfiah ang khuan setting chu tihdanglam theih a ni a. Setting kan tihfel hnuah pawh kan tihdanglam leh duh
+                             chuan File Menu > Document Setup... ah click-in tihdanglam leh theih a ni. </p>
+                             
+                             
+                              <figure class="figure">
+  
+                              <img src="/img/documentSetup.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="auto" alt="documentSetup" />
+                                        
+                              <figcaption class="figure-caption ps-2 text-danger"> Pagemaker Document Setup </figcaption>
+                                      
+                              </figure> 
                       
                       </div>
                   
@@ -196,246 +209,89 @@ Document.
 
 <p><em>2.	WORKING WITH A PUBLICATION </em></p>
 
-How to Create a New Document
-There are two methods you can use to create a new document in PageMaker:
-
-
-Use a built-in PageMaker template
-Use the Document Setup dialog box
-This tutorial focuses on the basics of creating a new document using the Document Setup dialog box. A later tutorial in this series will demonstarte how to use PageMaker’s built-in templates.
-
-Creating a New Document From Scratch
-Click on the File menu, and select New… from the drop-down menu. This will open up the Document Setup dialog box.
-
-.
-The Document Setup dialog box
-
-Using the Document Setup Dialog Box
-The Document Setup dialog box enables you to customize your document design. It provides a range of options that you can use to select your page size, specify the document’s orientation, print a double-sided document, rotate your document, enlarge or reduce your printout, as well as adjusting the printable area. The sections below describe each of the options in the Document set up box.
-
-
-.
-
-
-The Document Setup Dialog Box
-
-Document Setup Options
-
-
-Page Size
-
-Dimensions
-
-Orientation
-
-Setting Page Size
-
-PageMaker provides a number of standard page sizes that you can choose from. You can customize a standard page size to fit your needs under Dimensions.
-
-Setting Page Dimensions
-
-The default page dimensions differ based on the Page Size that you select. For example, the default for a Letter size paper is are 8.5"x11" while the default for an A4 size paper is 8.268"x 11.693"You can, however, adjust the dimensions of your selected paper size by typing in new values into the two page dimension boxes.
-
-Page Orientation
-
-
-Select your page orientation to be Tall or Wide.
-
-Selecting Options For Single and Multiple Pages
-Your selections in the Options section will determine how PageMaker will handle a document that has multiple pages.
-
-Single-sided
-
-Select this option by un-checking the Double-sided box. The single-sided option creates a publication that will print on only one side of each page. Only one master page will be created.
-
-
-Double-sided
-
-Select this option for a publication that will print on both sides of each page. The pages will still be displayed one at a time on your screen. However, two master pages will be created.
-
-Facing Pages
-
-Select this option to display two pages at a time on your screen (all except page 1, which is typically displayed alone). This is the appropriate option if you are working on a booklet or magazine, which will have their pages set up to face each other, much like a book’s. You cannot have facing pages unless they are double sided.
-
-.
-
-
-Settings for Single-sided Document
-
-Adjust Layout
-
-Select this option if you want to change your document’s properties after it has been created. The Adjust Layout option forces PageMaker to re-arrange your document to fit new settings.
-
-Number of Pages
-
-Use this option to change the total number of pages that you want to have in your document. Type the desired number into the Number of pages text box.Change the number of pages by typing the appropriate number in the Number of pages text box.
-
-Restart page numbering
-
-PageMaker will, by default, begin all numbered pages from page 1. Select the “Restart page numbering” option if you are working with numbered pages, and want your document to start with a page number other than 1. Check the Restart page numbering and then type the desired starting number into the Start page# text box.
-
-Setting Your Margins
-Select the margins for your document in this section. A margin refers to the space between your text or image and the edge of your page. Margins are defined as Inside and Outside, or Right and Left.
-
-*When you set up your document for double-sided printing, your margins will be defined as Inside and Outside. The Inside margin is in the inner side of the page, where the document binding will be.
-
-*When you set up your document for single-sided printing, your margins will be defined as Right and Left.
-
-Margin Options
-
-
-Margins for a Double-sided Document
-
-Margins for a Single-sided Document
-
-Other Document Options
-Target Output Resolution
-
-Use this section to select the resolution for your final document. If you intend to print your document, select the default resolution of 300 dpi.
-
-Compose to Printer
-
-Use this section to specify the printer that you will use to print the document. If your computer is part of a network that has more than one printer, use the drop-down box to select the particular one you want to print to. PageMaker uses your selection to determine the available fonts, printable area and other settings.
-
-Numbers
-
-Click on the Numbers button to select the style of page numbers for your document. Click on OK to save your selection.
-
-Print Options
-Select the Resolution for a print document
-
-Adjust the Resolution for a print document
-
-Select a Printer
-
-Select the Number Style for Page Numbers
-
-Page Number Style
-
-
-
-PageMaker gives you two options for saving your documents:
-
-
-1. Use the Save command
-
-To save a new document
-To save any moifications that you make to an existing document
-2. Use the Save As command
-
-To re-name an existing file
-To save as a template
-To save in a PageMaker 6.5 format
-To compact a large file
-How to Use the “Save” Command
-Use the Save command to save a new document as well as any additional changes you make to a document that you have previously saved. Here’s how to save your document using this command:
-
-Click on File and then select Save from the drop-down menu. Clicking this option will open the Save Publication dialog box.
-Use the Save in drop-down list and the navigation window to navigate to the folder where you want to save your document.
-In the File name text box, type in the name of your file. For a new document, this replaces the document’s default name from Untitled.
-In the Save as type drop-down list, select the desired file type: Publication, Template or A copy in 6.5 format.
-When you are done, click the SAVE button. PageMaker will save all modifications you have made since the last save.
-Using the “Save” Command
-
-
-How to Use the “Save As…” Command
-Re-naming an Existing File
-
-When you use the Save As command to re-name an existing file, PageMaker saves a copy of the document under the new name, leaving the original-titled file unchanged from the last time it was saved. The new file name will now appear in the title bar, and any further modifications will be saved to the new file.
-
-
-Saving as a Template
-
-You can save the formatting in a particular document by saving it as a template. This template can then be used in subsequent documents, and this saves you time by not having to format all over again.
-
-Saving in a PageMaker 6.5 format
-
-Saving your document in the earlier 6.5 formats makes it possible to share your documents with users who don’t have Adobe PageMaker 7.0
-
-Compacting a Large File
-
-If you have a large document that is hogging disk space, you can use the Save As command to compact it to take up much less disc space.
-
-Open the File menu and select the Save As option
-Do not change the file name. Click on the Save button
-Click Yes when prompted whether you want to replace the existing file.
-Once you click Yes, PageMaker will reorganize and save the file to take up less disc space on your drive.
-
-Quick Tip
-
-The Save As command can also be used to save a new document.
-
-Using the “Save As” command
-
-
-Inserting & Removing Pages
-Once you have begun working on a document, you may decide that the number of pages you originally assigned to the document is not enough or perhaps too many. You can adjust the number of pages by inserting or removing them.
-
-
- 
-return to topInserting Pages
-To insert additional pages into your document:
-
-Place your cursor in the page that you want the additional pages to precede or follow
-
-From the Layout menu, select Insert Pages…
-The Insert Pages dialog box appears.
-insert pages dialog box
-
-In the Insert Pages dialog box, type the number of pages you want to insert and indicate whether you want them to appear before or after the current page
-
-Click INSERT
-
-
-return to topRemoving Pages
-To remove extra pages from your document:
-
-From the Layout menu, select Remove Pages…
-The Remove Pages dialog box appears.
-remove pages dialog box
-
-Type the range for the page numbers you want to remove
-For example, if you want to remove page 7 only, you would fill in: 
-Remove page 7 through 7
-
-Click OK
-
-To confirm that you want to remove those pages, click OKInserting & Removing Pages
-Once you have begun working on a document, you may decide that the number of pages you originally assigned to the document is not enough or perhaps too many. You can adjust the number of pages by inserting or removing them.
-
-
- 
-return to topInserting Pages
-To insert additional pages into your document:
-
-Place your cursor in the page that you want the additional pages to precede or follow
-
-From the Layout menu, select Insert Pages…
-The Insert Pages dialog box appears.
-insert pages dialog box
-
-In the Insert Pages dialog box, type the number of pages you want to insert and indicate whether you want them to appear before or after the current page
-
-Click INSERT
-
-
-return to topRemoving Pages
-To remove extra pages from your document:
-
-From the Layout menu, select Remove Pages…
-The Remove Pages dialog box appears.
-remove pages dialog box
-
-Type the range for the page numbers you want to remove
-For example, if you want to remove page 7 only, you would fill in: 
-Remove page 7 through 7
-
-Click OK
-
-To confirm that you want to remove those pages, click OK
-
-
-
+<p>
+  
+<b> How to Create a New Document </b></p><p>
+There are two methods you can use to create a new document in PageMaker: 
+</p><p>
+1. <code>Creating a New Document From Scratch</code>  ( 2. <em>Pahnihna chu template atangin a ni a. Template hi chu kan hman meuh loh avangin kan zir lo mai ang.</em>)
+</p><p>
+  <ul>
+    <li>Click on the File menu, and select New… from the drop-down menu.</li>
+    <li>This will open up the Document Setup dialog box.</li>
+
+  </ul>
+  </p><p>
+
+</p><p>
+<code>
+The Document Setup dialog box</code> enables you to customize your document design. 
+</p><p>
+<code>Page Size : </code>PageMaker provides a number of standard page sizes that you can choose from. You can customize a standard page size to fit your needs under Dimensions.
+</p><p>
+<code>Dimensions :</code> The default page dimensions differ based on the Page Size that you select. 
+For example, the default for a Letter size paper is are 8.5"x11" while the default for an A4 size paper is 8.268"x 11.693". You can, however, adjust the dimensions of your selected paper size by typing in new values into the two page dimension boxes.
+</p><p>
+<code>Orientation :</code> Select your page orientation to be Tall or Wide.
+</p><p>
+Options : 
+
+</p><p>
+<code>Single-sided : </code>Select this option by un-checking the Double-sided box. The single-sided option creates a publication that will print on only one side of each page. Only one master page will be created.
+
+</p><p>
+<code>Double-sided : </code>Select this option for a publication that will print on both sides of each page. The pages will still be displayed one at a time on your screen. However, two master pages will be created.
+</p><p>
+<code>Facing Pages : </code>Select this option to display two pages at a time on your screen (all except page 1, which is typically displayed alone). 
+This is the appropriate option if you are working on a booklet or magazine, which will have their pages set up to face each other, much like a book’s. 
+You cannot have facing pages unless they are double sided.
+</p><p>
+
+</p><p>
+<code>Adjust Layout : </code>Select this option if you want to change your document’s properties after it has been created. The Adjust Layout option forces PageMaker to re-arrange your document to fit new settings.
+</p><p>
+<code>Number of Pages : </code>Use this option to change the total number of pages that you want to have in your document. 
+Type the desired number into the Number of pages text box. 
+Change the number of pages by typing the appropriate number in the Number of pages text box.
+</p><p>
+<code>Restart page numbering : </code>PageMaker will, by default, begin all numbered pages from page 1. Select the “Restart page numbering” option if you are working with numbered pages, and want your document to start with a page number other than 1. Check the Restart page numbering and then type the desired starting number into the Start page# text box.
+</p><p>
+<code>Margins :</code> Select the margins for your document in this section. A margin refers to the space between your text or image and the edge of your page. Margins are defined as Inside and Outside, or Right and Left.
+</p><p>
+<code>Target Output Resolution :</code> Use this section to select the resolution for your final document. If you intend to print your document, select the default resolution of 300 dpi.
+</p><p>
+<code>Compose to Printer :</code> Use this section to specify the printer that you will use to print the document. 
+</p><p>
+<b>Saving Document </b>
+</p><p>
+<code>PageMaker gives you two options for saving your documents:</code> <br>
+1. Use the Save command from File Menu to save a new document, <br>
+2. To save any modifications that you make to an existing document, use the Save As command
+</p><p>
+<code>Re-naming an Existing File :</code> When you use the Save As command to re-name an existing file, PageMaker saves a copy of the document under the new name, leaving the original-titled file unchanged from the last time it was saved. The new file name will now appear in the title bar, and any further modifications will be saved to the new file.
+
+</p><p>
+<code>Saving as a Template :</code> You can save the formatting in a particular document by saving it as a template. This template can then be used in subsequent documents, and this saves you time by not having to format all over again.
+</p><p>
+<code>Saving in a PageMaker 6.5 format : </code>Saving your document in the earlier 6.5 formats makes it possible to share your documents with users who don’t have Adobe PageMaker 7.0
+</p><p>
+
+<b>Inserting & Removing Pages</b>
+</p><p>
+<code>Inserting Pages :</code> To insert additional pages into your document, <br>
+
+1. Place your cursor in the page that you want the additional pages to precede or follow <br>
+2. From the Layout menu, select Insert Pages… The Insert Pages dialog box appears.<br>
+3. In the Insert Pages dialog box, type the number of pages you want to insert and indicate 
+whether you want them to appear before or after the current page <br>
+4. Click Insert.
+</p><p>
+<code>Removing Pages :</code> To remove extra pages from your document, <br>
+
+1. From the Layout menu, select Remove Pages… The Remove Pages dialog box appears.<br>
+2. Type the range for the page numbers you want to remove <br>
+3. For example, if you want to remove page 7 only, you would fill in: Remove page 7 through 7 <br>
+4. To confirm that you want to remove those pages, click OK
                       </p>
              
                       </div>

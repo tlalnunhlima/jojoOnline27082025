@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,25 +28,31 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+            <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
-            <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small text-secondary"> <i class="fas fa-home text-primary"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : (DCA-106) </p>
+            
+            <p class="text-dark text-center fw-light fs-1 mt-1"> <%= chapterTitle  %></p>
             
             <hr>
                         
                           <div class="d-flex justify-content-between m-1">
                             
-                            <button type="button" class="btn btn-sm btn-outline-danger"> Chapter-13</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"> Chapter-13</button>
                             
                               <div class="dropdown">
                 
-                                    <button class="btn btn-sm btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                       
                                       Select Chapter
                                     
@@ -143,7 +148,7 @@ Threading Text Frames, Converting Other Objects to Frames, Text Frames.
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Overview
                    
                     </button>
                   
@@ -153,8 +158,27 @@ Threading Text Frames, Converting Other Objects to Frames, Text Frames.
 
                     <div class="accordion-body">
             
-                             No Video available yet DCA-106 Chapter-13
-                      
+                             <p>Pagemaker hian frame siamna frame tool a nei a. Chu chu toolbox-ah a awm a. A lema kan hmuh ang hian frame tool chu
+                             chi thum a awm a. A lai takah a in cross (X) vek a ni. Frame tool hmanna ber chu frame chhunga thuziak dahluh nan leh
+                             frame chhunga thlalak dah luh nante a ni a. Frame pianhmang ang zelin a chhunga thuziak leh thlalak te chu a awm thin a ni.</p>
+                             
+                            <figure class="figure">
+                            <img src="/img/3FrameTool.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="auto" alt="3FrameTool" />
+                            <figcaption class="figure-caption ps-2 text-danger"> 3 Frame Tools</figcaption>
+                            </figure>
+                            
+                            <p>Frame tool pathum zinga i duh ber hmangin pagemaker phek ruakah i duh size a lianin drawing siam la, i siam zawhah 
+                            text tool la la, thu han type teh. Frame chhung zelah thuziak te chu a awm ang. Frame chhunga thuziak emaw thlalak emaw milin
+                            frame chu kan dah duh chuan frame option-ah kan kal ang a, <code>size frame to fit content</code> button click tur a ni. 
+                            Chu chu Element menu > Frame > Frame Options... ah a awm a ni.</p>
+
+                             <figure class="figure">
+                            <img src="/img/frameOption.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="auto" alt="frameOption" />
+                            <figcaption class="figure-caption ps-2 text-danger"> Element Menu > Frame > Frame Options</figcaption>
+                            </figure>
+
+
+
 
                       </div>
                   
@@ -190,16 +214,50 @@ Threading Text Frames, Converting Other Objects to Frames, Text Frames.
 
 <p><em>13. WORKING WITH FRAMES </em></p>
 
-RESTANGLE FRAME
-Rectangle Frame is used to type text inside a box. First select the toll and draw the area to be enclosed by 
-the rectangular frame, then select the text tool and click inside the drawn frame to enter text. The text will 
-be constrained to the rectangular frame.
+<p>
+<code>Placing Text in a Frame :</code> 
+</p><p>
+You can also use frames to hold text in place of using text blocks. To place text in a Frame
+</p><p>
+1. Click on one of a Frame tool from the Toolbox.<br>
+2. Draw a frame with one of PageMaker’s Frame tools (Rectangle frame tool or Ellipse Frame Tool or Polygon frame Tool). 
+Make sure the object remains selected.<br>
+3. Click on File. The File menu will appear.<br>
+4. Click on Place. The Place dialog box will appear.<br>
+5. Locate the document that contains the text you want to place, select it.<br>
+6. Click on Open.<br>
+7. Click in a frame to place the text in it. The text will be placed in the frame.
+</p><p>
+<code>Linking Frames containing Text (Threading text frame)</code>
+</p><p>
+A single frame may not be large enough to hold an entire story when you are using a large amount of text, 
+you can link frames together so that an entire story is visible. To link Frames containing text
+</p><p>
+1.     Draw a second frame with the Frame tool of your choice.<br>
+2.     Click the first frame to select it.<br>
+3.     Click on the red triangle to load the text icon.<br>
+4.     Click the second frame. PageMaker flows the text into the second frame.<br>
+</p><p>
+<code>Converting text in a Text block to a Frame</code>
+</p><p>
+After created text in a text block, if you want to convert it to a frame. You can do this by using these steps.
+</p><p>
+1.     Draw the frame of your choice using one of the PageMaker’s Frame tool.<br>
+2.     Select the text block you want to insert in the frame.<br>
+3.     Click the frame while pressing the Shift key. Now both elements will be selected.<br>
+4.     Choose Element > Frame > Attach Content on the Menu bar.<br>
+5.     Now the text appears in the frame.
+</p><p>
+<code>Separating Text from the Frame</code>
+</p><p>
+Once text has been attached to a frame or flowed inside it, you can separate the text and frame.
 
+To separate text from a frame
+</p><p>
 
-
-
-                      </p>
-             
+1. Click the frame with the Pointer tool.<br>
+2. Choose Element > Frame > Delete Content in the menu bar. The text will not appear in the frame.             
+ </p>
                       </div>
                   
                   </div>

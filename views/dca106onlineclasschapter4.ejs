@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,25 +28,31 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+            <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
-            <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small text-secondary"> <i class="fas fa-home text-primary"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : (DCA-106) </p>
+            
+            <p class="text-dark text-center fw-light fs-1 mt-1"> <%= chapterTitle  %></p>
             
             <hr>
                         
                           <div class="d-flex justify-content-between m-1">
                             
-                            <button type="button" class="btn btn-sm btn-outline-danger"> Chapter-4</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"> Chapter-4</button>
                             
                               <div class="dropdown">
                 
-                                    <button class="btn btn-sm btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                       
                                       Select Chapter
                                     
@@ -146,7 +151,7 @@ Page, Unthreading Text Blocks, Rethreading Text Blocks.
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Overview
                    
                     </button>
                   
@@ -156,7 +161,31 @@ Page, Unthreading Text Blocks, Rethreading Text Blocks.
 
                     <div class="accordion-body">
             
-                             No Video available yet DCA-106 Chapter-4
+                            <p>Pagemaker-ah thu kan chhut dawn chuan Text tool kan hmang tur a ni a. Toolbox-ah khan i kal ang a, text tool kha i click ang a, chutah
+                            document-a i chhut tan duhna laiah khan i click tur a ni. Pagemaker-ah chuan thu kan chhut tawh hrim hrim chuan text block a insiam zel thin a. Text block
+                            chu i hmuh duh chuan thu i chhut zawhah toolbox-ah kal la, pointer tool kha click la, chumi hmang chuan i thu chhutna lai vel kha han click la,
+                            a chung leh hnuaiah i thu chhut lo khuaptu line i hmu ang. Khami line hmang khan i thuziak kha i pawt sawn thei a, i tizimin i tizau thei bawk a ni. Tin,
+                            thu i type hmain i mouse kha dinglamah i duh tawka zauin han rin hmasa la, i rinkual khung ang tiat chiahin text block a rawn insiam ang a.
+                            Rinsa lem lo pawhin thu a type theih vek a, i rinsa loh chuan ding lam tawp thlengin block a kal phei ang.</p>
+                            
+                            <p>Pagemaker-ah hian thuziak lang kim lo a awm chuan a hnuai lamah symbol sen a awm thin a. Pointer tool hmang khan han click la, thuziak lang kim lo a awm chuan
+                            symbol sen vât a lo awm ang a. Khami hmang khan phek tharah emaw column tharah emaw a phek awl laiah emaw
+                            thuziak leng lo zawng chu nemkai theih a ni. Khatianga nemkai hrang hrang kha <code>Threaded Text </code>an ti a. 
+                            Mahni duhna hmuna mouse hmanga nemkai chawp zel hi manual flow a ni a, automatic-a thuziak chuang zawng zawng vawi khata
+                            nemkai hi autoflow an ti a. Autoflow hmanga phek thar pakhata kan nemkai chuan phek thar dang siam belh ngai lovin a mamawh zat phek thar a rawn insiam nghal thin. Phek khatah
+                            emaw phek hranah emaw pawh ni se, text block a inthlunzawm tawh chuan a hnuai lamah + sign a awm zel ang a, i pawh zim emaw i pawh zau emaw chuan block dangte
+                            pawh an lo insiamrem ve zel ang.</p>
+                      
+                               <figure class="figure">
+  
+                              <img src="/img/threading.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="auto" alt="threadingtext" />
+                                        
+                              <figcaption class="figure-caption ps-2 text-danger"> Threading Text </figcaption>
+                                      
+                              </figure> 
+                      
+                      
+                      
                       
 
                       </div>
@@ -194,95 +223,91 @@ Page, Unthreading Text Blocks, Rethreading Text Blocks.
 <p><em>  4. THE TEXT TOOL </em></p>
 
 <p>
-PageMaker’s Text Boxes
-A text box is a “container” for your text. It is a confined area on your document that is designed to hold text. The text you type into your document will automatically be enclosed in a text box. You can determine the size by creating the text box before you begin typing. You can also resize and reposition your text boxes using the Pointer tool. Here’s How to create a text box:
+<code>PageMaker’s Text Boxes :</code> A text box is a “container” for your text. 
+It is a confined area on your document that is designed to hold text. 
+The text you type into your document will automatically be enclosed in a text box. You can determine the size by creating the text box before you begin typing. 
+You can also resize and reposition your text boxes using the Pointer tool. 
+</p><p>
+<code>Here’s How to create a text box:</code>
+</p><p>
 
+1. Click on the Text tool in the Toolbox.<br>
+2. Move your cursor back to your document. <br>
+3. Your cursor will turn into an I-Beam once you move it over your document.<br>
+4. Click anywhere on your document within the margin guides, and then drag the mouse to the right to create a rectangular box.<br>
+5. Release your mouse when you have a text box of the size you want. Your cursor will automatically position itself inside the box.<br>
+6. Begin typing in your text. You may also paste text into the text box.<br>
+7. Once you are done typing in your text, simply click on the Pointer tool in the toolbox to de-select the text box.<br>
+</p><p>
+<em>Quick Tip:</em> If the text is too small for you to read when you start typing, click on the View menu and the select Zoom In.
+</p><p>
+<code>To delete text : </code>
+</p><p>
+1. Tap the Delete key or simply start typing, which will replace the selected text.<br>
+2. Click on the Edit menu, and then select Clear.
+</p><p>
+<code>To copy or move the text</code>
+</p><p>
+1. Click on the Edit menu.<br>
+2. Select the Cut, Copy or Paste command.
+</p><p>
+<code>To change the type style</code>
+</p><p>
+1. Click on the Type menu <br>
+2. Select your desired option
+</p><p>
+<code>Typing Large Amounts of Text : </code>
+</p><p>
+<em>If you have a lot of text to add to your document, you can use PageMaker’s Story Editor.</em>
+</p><p>
 
-PageMaker’s Text Tool
-Creating a New Text Box
-Click on the Text tool in the Toolbox.
-Move your cursor back to your document. Your cursor will turn into an I-Beam once you move it over your document.
-Click anywhere on your document within the margin guides, and then drag the mouse to the right to create a rectangular box.
-Release your mouse when you have a text box of the size you want. Your cursor will automatically position itself inside the box.
-Begin typing in your text. You may also paste text into the text box.
-Once you are done typing in your text, simply click on the Pointer tool in the toolbox to de-select the text box.
-Quick Tip: If the text is too small for you to read when you start typing, click on the View menu and the select Zoom In.
+<code>How to Import a Text File Using the “Place” Command</code>
 
-Using the Text Tool to Edit your Text
-Once you have created a text box and entered your text, you can then edit it much as you would in Microsoft Word. For this purpose, you will primarily use the Text tool and the Type menu.
+</p><p>
+1. Open the File menu, and then select Place… from the drop-down menu. This opens the Place dialog box.<br>
+2. Scroll to the folder that your text file is in and double click to open it. <br>
+3. Click on the Open button. Your cursor will change to a loaded text icon. <br>
+4. Click on the spot on the document where you want to import your desired text. <br>
+5. Your text will flow downwards to import as much of the text as will fit into your column, text block or page.<br>
+6. Edit and format your text as needed.
+</p><p>
+<em>Quick Tip : You can import your text or graphic directly into a new text box. When the cursor changes 
+to a loaded icon in Step #3, click and drag the mouse in a downward, 
+diagonal direction. This will create a text box. Once you release the mouse, 
+your imported file will be placed into this text box.</em>
+</p><p>
 
-Click on the Text tool from the toolbox.
-Position the cursor at the beginning of the text you want to format.
-Click and drag the I-beam across the text to select it.
-Edit the selected text as follows
+<code>Threading text blocks </code>
+</p><p>
+All text in PageMaker resides inside containers called<code> text blocks.</code>
+A Text block can be connected to other text block so that the text in one text block can flow into another text block. 
+Text blocks that are connected in this way are <code>threaded.</code> The process of connecting text among text blocks is called<code> threading text. </code>
+Text that flows through one or more threaded blocks is called a <code>story.</code> Once you have a loaded text icon, 
+you can use one of three text-flow options to place text in text blocks. To cancel a loaded text icon, 
+click the pointer tool in the toolbox; no text is deleted.
 
-To delete text
-
-Tap the Delete key or simply start typing, which will replace the selected text.
-Click on the Edit menu, and then select Clear.
-To copy or move the text
-
-Click on the Edit menu
-Select the Cut, Copy or Paste command
-To change the type style
-
-Click on the Type menu
-Select your desired option
-Typing Large Amounts of Text
-PageMaker is specifically designed as a desktop publishing application, and is therefore not very well-suited for typing large amounts of text. It is better suited for typing and formatting titles, headlines, captions as well as headers and footers.
-
-If you have a lot of text to add to your document, you can use the Place command to import text from a word processor, such as Microsoft Word or WordPerfect, or you can use PageMaker’s Story Editor.
-
-
-To learn more about typing and editing large volumes of text for PageMaker, refer to these two tutorials later in this series of PageMaker tutorials:
-
-Using the Place Command to Import Text and Graphics
-Using PageMaker’s Story Editor
-
-How to Import a Text File Using the “Place” Command
-Open the File menu, and then select Place… from the drop-down menu. This opens the Place dialog box.
-Scroll to the folder that your text file is in and double click to open it. Locate and double click on the file that you want to place.
-Click on the Open button. Your cursor will change to a loaded text icon. Position your cursor at the spot on your document where you want to import the text file.
-Click on the spot on the document where you want to import your desired text. Your text will flow downwards to import as much of the text as will fit into your column, text block or page.
-Edit and format your text as needed.
-Quick Tip
-
-You can import your text or graphic directly into a new text box. When the cursor changes to a loaded icon in Step #3, click and drag the mouse in a downward, diagonal direction. This will create a text box. Once you release the mouse, your imported file will be placed into this text box.
-
-.
-
-
-Importing Large Amounts of Text
-Place-Window Shade
-
-If you have a large amount of text from Microsof Word or another source, it may not fit into the column or page that you place it in. When the amount of text you place overruns your column or page, a red, downward-pointing arrow will appear on the bottom handle of your text block, unless you select Autoflow.
-
-
-Flowing Text in Your Document
-There are two methods you can use to place an external text file into a PageMaker document:
-
-Manual Flow - Lets you manually place the remaining text into another column or page
-Autoflow - Lets your text flow automatically into the next column or successive pages.
-Manual Flow
-
-Click on the red arrow to continue placing text. The cursor will change back to a loaded text icon.
-Position the loaded text icon at another spot on your document, and click. Once again, the text will flow to the bottom of the column, text block or page.
-Repeat this step until you have placed all your text. When all the text has been placed, the bottom handle will be empty.
-Autoflow
-
-The Loaded text Icons
-
-Open the Layout menu from the menu bar.
-
-Select the Autoflow command from the drop-down menu. The loaded text icon will change to have a curved arrow rather than little horizontal lines.
-
-Click on a spot on the document to place your text. The text will be placed automatically, flowing from one column or page to the next. PageMaker will add more pages as needed.
-
-Avoid Text Formatting Before Importing
-If you intend to place a text file into a PageMaker document, it is generally best to use as little or no formatting. Microsoft Word contains a ton of formatting so it’s best to copy the text into Notepad or Wordpad before importing it. Once you have imported the text into your document, you can then format, edit and otherwise manipulate the text in PageMaker.
-
-
-                      </p>
+</p><p>
+<code>Manual Flow</code>
+</p><p>
+1. Click on the red arrow to continue placing text. The cursor will change back to a loaded text icon.<br>
+2. Position the loaded text icon at another spot on your document, and click. <br>
+3. Once again, the text will flow to the bottom of the column, text block or page.<br>
+4. Repeat this step until you have placed all your text. <br>
+5. When all the text has been placed, the bottom handle will be empty.
+</p><p>
+<code>Autoflow</code>
+</p><p>
+1. Open the Layout menu from the menu bar.<br>
+2. Select the Autoflow command from the drop-down menu. The loaded text icon will change to have a curved arrow rather than little horizontal lines.<br>
+3. Click on a spot on the document to place your text. The text will be placed automatically, flowing from one column or page to the next.<br> 
+4. PageMaker will add more pages as needed.
+</p><p>
+<code>Avoid Text Formatting Before Importing :</code>
+</p><p>
+If you intend to place a text file into a PageMaker document, it is generally best to use as little or no formatting. 
+Microsoft Word contains a ton of formatting so it’s best to copy the text into Notepad or Wordpad before importing it. 
+Once you have imported the text into your document, you can then format, edit and otherwise manipulate the text in PageMaker.
+</p>
              
                       </div>
                   

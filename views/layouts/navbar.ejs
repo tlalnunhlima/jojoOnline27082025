@@ -6,17 +6,19 @@
 
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow sticky-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
   
   <div class="container-fluid">
       
     <a class="navbar-brand fw-bold pt-0 pb-0" href="/">
         
-      <img src="/img/icon.png" alt="" width="40" height="32"> Jojo Computer Institute
+      <img src="/img/icon.png" alt="" width="40" height="32" /> Jojo Computer Institute
       
     </a>
     
-    <button class="navbar-toggler threeLine" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler threeLine" type="button" data-bs-toggle="collapse" 
+    
+    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       
       <span class="navbar-toggler-icon"></span>
       
@@ -28,7 +30,7 @@
           
         <li class="nav-item">
             
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <a class="nav-link active" aria-current="page" href="/"> Home </a>
           
         </li>
         
@@ -37,13 +39,16 @@
           <a class="nav-link active" aria-current="page" href="/">Photos</a>
           
         </li>
+        
         <li class="nav-item">
+          
           <a class="nav-link active" aria-current="page" href="/">FAQ</a>
+          
         </li>
         
+        <% if(!loggedIn) { %>
+        
         <li class="nav-item dropdown ms-2">
-            
-          <% if(!loggedIn) { %>
           
           <a type="button" class="nav-link dropdown-toggle btn btn-outline-warning text-dark fw-bold" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             
@@ -64,6 +69,8 @@
           <% } %>
           
           <% if(loggedIn) { %>
+          
+          <li class="nav-item dropdown ms-2">
           
           <a class="nav-link dropdown-toggle text-primary" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               

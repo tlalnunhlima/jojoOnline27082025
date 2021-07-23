@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,25 +28,31 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+            <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
-            <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small text-secondary"> <i class="fas fa-home text-primary"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : (DCA-106) </p>
+            
+            <p class="text-dark text-center fw-light fs-1 mt-1"> <%= chapterTitle  %></p>
             
             <hr>
                         
                           <div class="d-flex justify-content-between m-1">
                             
-                            <button type="button" class="btn btn-sm btn-outline-danger"> Chapter-8</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"> Chapter-8</button>
                             
                               <div class="dropdown">
                 
-                                    <button class="btn btn-sm btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                       
                                       Select Chapter
                                     
@@ -147,7 +152,7 @@ Master Page Items, Showing Master Pages, About the Adjust Layout Option.
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Overview
                    
                     </button>
                   
@@ -157,9 +162,20 @@ Master Page Items, Showing Master Pages, About the Adjust Layout Option.
 
                     <div class="accordion-body">
             
-                             No Video available yet DCA-106 Chapter-8
+                             <p>Master page hi pagemaker phek chunglam leh hnuaia lama awm tur thuziak siamna a ni a. Master page-a thuziak or symbol kan dah tawh hi chu phek tinah a lang vek thin. Page number te, chapter hming te,
+                             lehkhabu hming etc., ang chi te hi master page atanga siam tur a ni a. Master page chu page icon bulah a awm a, L R icon kha 
+                             master page icon a ni.</p>
+                             
+                             <p><code>Phek number pek dan: </code> Phek number hi a chung lam emaw a hnuai lamah emaw pek thin a ni a. Page number siam turin
+                             document master-ah kal tur a ni. L R icon-ah khan click la, phek thar a lo lang ang. Vei lam phekah phek number lang se i tihna laiah
+                             khan CTRL + ALT + P hmet la, LM tih a lo lang ang. Dinglamah CTRL + ALT + P hi hmet leh la, RM tih a lo lang ang. Tichuan, phek pangngaia lut phei turin
+                             page icon-ah click la, phek tinah phek number chu a lo lang dawn a ni. </p>
+                             
+                            <figure class="figure">
+                            <img src="/img/masterPage.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="auto" alt="masterPage" />
+                            <figcaption class="figure-caption ps-2 text-danger"> Master Page Icon </figcaption>
+                            </figure>
                       
-
                       </div>
                   
                   </div>
@@ -194,87 +210,115 @@ Master Page Items, Showing Master Pages, About the Adjust Layout Option.
 
 <p><em>8. MASTER PAGES </em></p>
 
-Using Master Pages
-Master pages act as template pages for your document. Master pages save you time because they allow you to type or draw information once on the master pages so that this information appears on all the pages of your document.
-
-
+<p><b>Master Pages</b>
+</p><p>
+Any text or object that you place on the master page will appear on the entire document pages to which the master is applied. 
+Master Pages commonly contain repeating logos, page numbers, headers, and footers. 
+They also contain non-printing layout guides, such as column guides, ruler guides, and margin guides.
+</p><p>
+A master item cannot be selected on a document page.
+You can create, modify, and delete objects on master pages just like any other objects, 
+but you must do so from the master pages themselves.
+</p><p>
+<figure class="figure">
+<img src="/img/masterPageIcon.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="auto" alt="masterPageIcon" />
+<figcaption class="figure-caption ps-2 text-danger"> Master Page Icon </figcaption>
+</figure>
+</p><p>
  
-Depending on what type of document you are creating, master pages may or may not be a useful feature for you. It is most useful when creating documents where the same elements need to appear at the same location on each (or at least most) pages.
+<b>Inserting Page Numbers in Master Pages</b>
+</p><p>
+To make page numbers appear on every page
+</p><p>
+1. Click on Master Pages icon. <br>
+2. Then click on Text Tool. Now the cursor changes to I - beam.<br>
+3. Then click on the left Master page where you want to put the page number.<br>
+4. Press Ctrl + Alt + P.<br>
+5. The page number displays as ‘LM’ on the left Master Page.<br>
+6. Similarly click on the right Master page where you want to put the page number.<br>
+7. Press Ctrl + Alt + P.<br>
+8. The page number displays as ‘RM’ on the right Master Page, but will appear correctly on the actual pages.
+</p><p>
+  <code>To specify the starting page number or numbering system:</code>
+  </p><p>
+1. Choose File > Document Setup<br>
+2. To start pagination at a certain number type the starting page in Start Page #.<br>
+</p><p>
+<code>To specify the numbering system</code>
+</p><p>
+1. Choose File > Document Setup<br>
+2. Click numbers.<br>
+3. Select the numbering system you want to use, and then click OK.<br>
+</p><p>
+ <b>Hiding and Showing Master Page Palette</b>  
+</p><p>
+  1. To show master page palette, then choose View > Display Master items (which is usually ticked).<br>
+  2. To hide master page palette, then choose Window> Show Master Pages in the menu bar. The Master Pages Palette appears.
+  </p><p>
+  <figure class="figure">
+<img src="/img/masterPagePalette.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="auto" alt="masterPagePalette" />
+<figcaption class="figure-caption ps-2 text-danger"> Master Page Palette </figcaption>
+</figure>
+</p><p>
+ <b>To create a Master Page</b>
+</p><p>
+Master Pages can be created from scratch, based on existing master pages or from the
+guides and specification set on individual pages.
+</p><p>
+<code>To make from scratch:</code>
+</p><p>
+1. Window > Master Pages <br>
+2. New Master Page... from the master page palette pop-up menu<br>
+3. Type in name<br>
+4. Set the margins, columns and space between<br>
+5. Click OK button
+</p><p>
+<code>From an existing master page</code>
+</p><p>
+1. Window > Master Pages<br>
+2. Select master page to be duplicated<br>
+3. Click Duplicate master... from the master page palette menu and type a name for your master page.<br>
+4. Click Duplicate button<br>
+4. New master page will appear, edit as required.<br>
+</p><p>
+<code>From an existing page</code>
+</p><p>
+1. Turn to the publication page you want to make a new master page<br>
+2. Window > Master Pages<br>
+3. Save Page As from the master page palette menu<br>
+4. Type in name<br>
+6. Click Save button
+</p><p>
+  <b>APPLYING MASTER PAGES</b>
+  </p><p>
+A new master page has no effect until it is applied to the specific pages. The Document
+Master is applied to all pages in your initial publication.
+</p><p>
+<code>To apply master pages</code>
+</p><p>
+1. Turn to the page you want to apply the master page<br>
+2. Window > Master Pages<br>
+3. Click on the master page name or icon and it is applied<br>
+</p><p>
+<code>To apply on selected pages</code>
+</p><p>
 
-return to topDesign Elements
-Some elements that might be useful to include on your master pages:
+1. Window > Master Pages<br>
+2. Click to your selected master page<br>
+3. Go to palette pop-pu menu, click apply<br>
+4. In apply master, type page number in page range Eg., 4-10<br>
+5. Click apply button<br>
 
-a layout grid (with non-printing ruler guides)
-page numbers, headers and footers
-any graphic that you want to appear at the same location on every page
-column guides
-return to topFormatting Master Pages
-Click the L/R page icons
+ </p><p>
+<code>To delete</code>
+</p><p>
+1. Window > Master Pages<br>
+2. Select the master page<br>
+3. Click Delete Icon...<br>
+4. Click OK to confirm<br>
 
-Add all text and graphic elements that you want to appear on each page of your document and create any necessary columns
-
-When finished, click the icon for the page(s) you want to view
-
-
-return to topCreating Additional Master Pages
-By default, the Document Master is applied to all pages in your initial publication. For some pages of your publication, it might be helpful to have a different master page to apply. After creating additional master pages, PageMaker will display the newly created master page in the publication window and add its name to the Master Pages palette.
-
-From the Window menu, select Show Master Pages…
-The Master Pages palette appears.
-Master Pages palette menu
-
-From the Master Pages palette, select New Master Page…
-The New Master Page dialog box appears.
-New Master Page dialog box
-
-In the Name text box, type a name for the master
-
-Specify whether you would like a single page or a two-page spread
-
-In the Margins and Column Guides sections, format your page(s) as desired
-
-Click OK
-
-return to topApplying Master Pages
-By default, the Document Master is applied to all pages in your initial publication. To apply elements from another master page to a page in your publication, do the following:
-
-Move to the page(s) on which you want the master items displayed
-
-From the Master Pages palette, select the master page you would like to apply
-
-return to topDisplaying Master Elements
-The Display Master Items feature may already be activated through PageMaker’s default settings. If you are not seeing the master page items on your document, do the following:
-
-Move to the page on which you want the master items displayed
-
-From the View menu, select Display Master Items
-The selection will have a checkmark next to it.
-
-return to topHiding Master Elements
-Hiding All of the Elements
-Move to the page on which you do not want the master items displayed
-
-From the View menu, remove the checkmark from Display Master Items
-
-Hiding Selected Elements
-Using the rectangle tool and the shading options, draw a white rectangle over the items you wish to hide
-For more information about doing this see Drawing with PageMaker.
-
-return to topNumbering Pages
-To have PageMaker automatically do the page numbering:
-
-On a master page, with the Text tool, create a text box
-
-Macintosh: Press [Cmd]+[Option]+[P]
-Windows: Press [Ctrl]+[Alt]+[P]
-
-When this is done on a master page, either RM (right master) or LM (left master) will appear. When you move to a “regular” page, the proper page number will appear
-
-
-
-                      </p>
-             
-                      </div>
+</p><p>
+                    </div>
                   
                   </div>
                 

@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,25 +28,31 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+            <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
-            <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small text-secondary"> <i class="fas fa-home text-primary"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : (DCA-105) </p>
+            
+            <p class="text-dark text-center fw-light fs-1 mt-1"> <%= chapterTitle  %></p>
             
             <hr>
                         
                           <div class="d-flex justify-content-between m-1">
                             
-                            <button type="button" class="btn btn-sm btn-outline-danger"> Chapter-10</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"> Chapter-10</button>
                             
                               <div class="dropdown">
                 
-                                    <button class="btn btn-sm btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                       
                                       Select Chapter
                                     
@@ -142,7 +147,7 @@ Working with Spot Channels.
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Overview
                    
                     </button>
                   
@@ -152,10 +157,20 @@ Working with Spot Channels.
 
                     <div class="accordion-body">
             
-                             No Video available yet DCA-105 Chapter-10
-                      
-                      
-                      
+                             <p>Colour Channel chuan heng rawng te hi a hmang a; red, green, blue, cyan, magenta, yellow leh black te. Heng colour
+                             te hi Channel Palette (Layer palette bul) ah a hmuh theih a. Colour Channel hi black and white-a dah dawn emaw colour
+                             mal tih danglam kan duh emaw chuan a click hran bik theih a. Hetiang hian han click leh la; Select Image → Mode → CMYK Color...
+                             Hetianga i tih chuan RGB kha CMYK colour-ah a lo inthlak ang a, colour channel-a colour hming pawh a lo tam lehzual dawn a ni. (CMYK hi printer colour
+                             ink awm dan a ni tih hria ila)</p>
+                             
+                             
+                             <figure class="figure">
+  
+                             <img src="/img/colourChannel.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="540" alt="colourChannel" />
+                                        
+                              <figcaption class="figure-caption ps-2 text-danger"> Photoshop Colour Channel Palette </figcaption>
+                                        
+                              </figure>  
                       
                       </div>
                   

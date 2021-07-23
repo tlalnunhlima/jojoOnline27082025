@@ -6,7 +6,7 @@ const express = require('express')
 
 const mongoose = require('mongoose')
 
-const ejs = require('ejs')
+const ejs = require('ejs');
 
 const app = express();
 
@@ -15,7 +15,7 @@ const app = express();
 
 app.set('view engine', 'ejs');
 
-app.set('port', (process.env.PORT || 3000))
+app.set('port', (process.env.PORT || 3000));
 
 
 // public express static
@@ -38,9 +38,9 @@ mongoose.set('useCreateIndex', true);
 
 //all the link goes to routeController
 
-const routeController = require('./controllers/routeController')
+const routeController = require('./controllers/routeController');
 
-app.use('/', routeController)
+app.use('/', routeController);
 
 
 
@@ -48,6 +48,6 @@ app.use('/', routeController)
 
  app.listen(app.get('port'), () => {
   
-    console.log('App is listening on port:' + app.get('port'))
+    console.log('App is listening on port:' + app.get('port'));
     
  });

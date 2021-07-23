@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,25 +28,31 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+            <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
-            <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small text-secondary"> <i class="fas fa-home text-primary"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : (DCA-105) </p>
+            
+            <p class="text-dark text-center fw-light fs-1 mt-1"> <%= chapterTitle  %></p>
             
             <hr>
                         
                           <div class="d-flex justify-content-between m-1">
                             
-                            <button type="button" class="btn btn-sm btn-outline-danger"> Chapter-2</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"> Chapter-2</button>
                             
                               <div class="dropdown">
                 
-                                    <button class="btn btn-sm btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                       
                                       Select Chapter
                                     
@@ -142,7 +147,7 @@ Setting Image Size and Mode, Copying and Pasting Images, Cloning Images, Types o
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Overview
                    
                     </button>
                   
@@ -152,7 +157,23 @@ Setting Image Size and Mode, Copying and Pasting Images, Cloning Images, Types o
 
                     <div class="accordion-body">
             
-                             No Video available yet DCA-105 Chapter-2
+                            <p>
+                              He chapter-ah hian thlalak tihlen leh tihtet dan te, resize dan te, thlalak copy paste dan te kan zir ang a. 
+                              A hnuaia kaihhruaina angin step by step-in tih ve i tum dawn nia.
+                              Tin, clone dan te kan zir bawk ang.
+                              Clone dan hi thiam harsa lo tak mai, mahse mawi taka chhuah tur chuan uluk ngai deuh mai a ni a. A hnuaia thlalak kan hmuh
+                              ang hian nangma thlalak chi hrang hrang hmun khatah clone i tum ve dawn nia.
+                      
+                            </p>
+                            
+                            
+                              <figure class="figure">
+  
+                             <img src="/img/cloningImage.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="540" alt="cloneImage" />
+                                        
+                              <figcaption class="figure-caption ps-2 text-danger"> Clone Image Sample </figcaption>
+                                        
+                              </figure> 
                       
                       
                       
@@ -192,26 +213,26 @@ Setting Image Size and Mode, Copying and Pasting Images, Cloning Images, Types o
 <p><em>2. WORKING WITH THE IMAGES (4 marks) </em></p>
 
 <p>
-<b>SETTING IMAGE SIZE AND MODE:</b> To open a new Photoshop preset size, follow the steps below:<br>
+<code>SETTING IMAGE SIZE AND MODE:</code> To open a new Photoshop preset size, follow the steps below:<br>
 1.	In the main menu, go to File > New.<br>
 2.	In the New dialog box, click on the Preset dropdown menu. 
 You will see several preset sizes, such as 2 x 3, 4 x 6, 5 x 7, 8 x 10 with the preset resolution of 200 ppi.<br>
 3.	Choose the size that you wish and click OK.<br>
 
 </p><p>
-<b>NOTE:</b> All the preset sizes are in portrait orientation. If you wish to resize an image with the 
+<code>NOTE:</code> All the preset sizes are in portrait orientation. If you wish to resize an image with the 
 landscape orientation, you need to create your own preset. <br>To create your own size, do the following:<br>
 1.	Type in the values for Width and Height, for example 7 x 5 in the new dialog box.<br>
 2.	Type in your desired resolution. (Eg. 150 ppi). Press Ok.<br>
 </p><p>
-<b>RESIZING DIGITAL PHOTOS:</b> To resize the digital photos without losing the quality, follow these steps:<br>
+<code>RESIZING DIGITAL PHOTOS:</code> To resize the digital photos without losing the quality, follow these steps:<br>
 1.	Open the digital photo you wish to resize.<br>
 2.	In the main menu, go to View > Rulers. You will be able to see the dimension of your photo.<br>
 3.	In the main menu, go to Image > Image Size.<br>
 4.	In the Image Size dialog box, check the Resample Image box off. 
 Type in your desired resolution (anything between 150 and 300 ppi). Press Ok.<br>
 </p><p>
-<b>ENLARGING:</b> If you want to make your digital photo into a poster size image, 
+<code>ENLARGING:</code> If you want to make your digital photo into a poster size image, 
 you can do it in the Image Size dialog box. However, 
 just increasing the dimensions will make the image appear 
 blurry and pixilated. <br>
@@ -224,7 +245,7 @@ To enlarge the image without losing the quality, follow these steps:<br>
 5.	Continue enlarging by 10 percent till you are satisfied with the size.<br>
 </p><p>
 
-<b>COPYING AND PASTING IMAGES:</b> Adobe Photoshop allows you
+<code>COPYING AND PASTING IMAGES:</code> Adobe Photoshop allows you
 to copy and paste selections to create duplicates or move data from one file to another.<br>
 Step 1: Click either the Marquee tool or the Lasso tool icon. Marquee allows 
 you to select a predefined shape, while with the lasso you can draw your own selection.<br>
@@ -239,12 +260,12 @@ It will appear on a new layer in the center of the image,
 after which you can position it using the Move Tool.<br>
 
 </p><p>
-<b>CLONING IMAGES:</b> We can clone image by using clone stamp. Clone stamp is used for copying object that we want to copy.<br>
+<code>CLONING IMAGES:</code> We can clone image by using clone stamp. Clone stamp is used for copying object that we want to copy.<br>
 1.	Select the Clone stamp tool from the tools box or pressing the “S” key from the keyboard.<br>
 2.	Press ALT and click where you want to clone.<br>
 3.	Start cloning by clicking where you want to keep the copy.<br>
 </p><p>
-<b>TYPES OF IMAGES: </b>Some popular file formats in photoshop are:<br>
+<code>TYPES OF IMAGES: </code>Some popular file formats in photoshop are:<br>
 </p><p>                        
 1.	PSD - Photoshop Document: This is the
 photoshop default file extension format is .psd <br>

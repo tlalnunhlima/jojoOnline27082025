@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,25 +28,31 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+            <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
-            <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small text-secondary"> <i class="fas fa-home text-primary"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : (DCA-106) </p>
+            
+            <p class="text-dark text-center fw-light fs-1 mt-1"> <%= chapterTitle  %></p>
             
             <hr>
                         
                           <div class="d-flex justify-content-between m-1">
                             
-                            <button type="button" class="btn btn-sm btn-outline-danger"> Chapter-14</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"> Chapter-14</button>
                             
                               <div class="dropdown">
                 
-                                    <button class="btn btn-sm btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                       
                                       Select Chapter
                                     
@@ -143,7 +148,7 @@ Another, Moving Layers, Locking Layers, Deleting Layers.
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Overview
                    
                     </button>
                   
@@ -153,8 +158,16 @@ Another, Moving Layers, Locking Layers, Deleting Layers.
 
                     <div class="accordion-body">
             
-                             No Video available yet DCA-106 Chapter-14
-                      
+                             <p>Pagemaker layers hi photoshop layer lo zir sil tawh tan chuan hriat thiam harsa a ni lo vang. Pagemaker leh Photoshop hi
+                             Adobe company siam ve ve a nih avangin layer palette landan pawh a inang hle a ni. Layer chu darthlalang zawrhna dawra darthlalang
+                             (glass) remthuah thlapa an dah ang hi a ni. Layer hi a langtlang vek a, thuziak emaw thil lem (drawing) emaw a awm chauhin
+                             a indawt dan kan hmu thiam thin. Layer hi kan siam chawp zel a ni loh chuan layer pakhat thil hrang hrang a inawmplawh thin a,
+                             siam rem a tiharsa fo thin. Chuvangin, drawing tool kan hmang dawn a nih chuan layer create hmasak zel hi a finthlak hle a ni.</p>
+                             
+                            <figure class="figure">
+                            <img src="/img/pagemakerLayers.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="auto" alt="pagemakerLayers" />
+                            <figcaption class="figure-caption ps-2 text-danger"> Pagemaker Layer Palette</figcaption>
+                            </figure>
 
                       </div>
                   
@@ -190,93 +203,37 @@ Another, Moving Layers, Locking Layers, Deleting Layers.
 
 <p><em>14.	WORKING WITH LAYERS </em></p>
 
+<p>
 
+<b>LAYERS</b>
+</p><p>
+In PageMaker there is layers. 
+This allows you to organize your document into a series  of  overlapping layers, controlling their stack order, 
+appearance and locking preferences.
+</p><p>
+  <code>Showing Layer Palette</code>
+</p><p>
+  1. Click Window menu > Show layers...
+ </p><p> 
+<code>Creating a New Layer and Setting its Options</code>
+</p><p>
 
-LAYERS
-In PageMaker 6.5 there is layers, which are normally only found in high-end graphic packages. This allows you to organize your document into a series  of  overlapping layers, controlling their stack order, appearance and locking preferences.
+To create a new layer, follow these steps:
+</p><p>
+1. Select New Layer from the Layer palette menu.<br>
 
-USING LAYERS
-In this exercise you will learn to use Layers.
+2. Choose any of the following options:<br>
+<ul>
+  <li>Type a name of the layer in the Name text box. 
+By default layers are named according to the order in which they were created. </li>
+  <li>Select a color from the Selection Color pop-up menu to indicate selected objects in that layer.</li>
+  <li>Select or deselect the Show option to display or hide the layer.</li>
+  <li>Select or deselect the Lock option to lock or unlock objects on the layer.</li>
+</ul>
 
-•	Click Window menu.
+3. Click OK.
 
-•	Select Show Layers.
-
-•	Click Layers palette fly-out menu.
-
-•	Select “New Layer” option.
-
-
-
-
-New Layer dialog box opens up. Click OK.
- 
-
- 
-
-The New Layer added is displayed on the Layer Palette with Green Color icon and the name Layer 2. Click the Layers Palette fly-out menu.
-
-Select “New Layer” Option.
-
-
-New Layer dialog Box opens up. Click OK.
-
- 
-
-The new Layer added is displayed on the Layer Palette with Blue Color icon and the name Layer 3. Click Layer2.
-
-•	Click File menu.
-
-•	Select Place from the drop down menu.
-
-•	The place dialog box opens up. Double-Click “Bouquet.tif “.
-
-•	Move the Pointer to the Work area and Click it.
-
-You can now see the imported image on your Screen. Now click on the icon showing an eye next to Layer2 to hid the Layer.
- 
-
- 
-
-Click Layer 3.
-
-
-•	Select the oval tool.
-•	Click Element menu.
-•	Select Stroke.
-
- 
-
-•	Select 6pt.
-
-•	Draw an Oval.
-
-•	Now select the Text Tool.
-
-•	Click inside the Oval and type “Happy”. Press the Tab Key.
-
-•	Type “New” and Press the Tab Key.
- 
-
- 
-
-•	Type “Year” and Press the Tab Key.
-
-•	Select the entire text using the Text tool.
-•	Select Blue color from the colors palette.
-
- 
-
-•	Click anywhere Outside the Selection.
-
-•	Unhide Layer 2.
-
-Now from this exercise you learn to place text and graphics together using Layers.
-
-
-
-
-                      </p>
+</p>
              
                       </div>
                   

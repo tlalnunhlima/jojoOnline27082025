@@ -16,7 +16,6 @@
 
     <main class="ms-sm-auto px-md-4">
       
-      <%- include('layouts/studentMenu') -%>
       
       
       <!--a lane chung lam-->
@@ -29,25 +28,31 @@
         
         <div class="row">
           
-          <div class="mx-auto shadow-sm rounded px-4 pb-4">
+           <div class="mx-auto shadow-sm rounded px-4 pb-4 mt-3">
             
-            <a href="stdDashboard" class="small"> <i class="far fa-hand-point-left text-primary small"></i> Dashboard</a>
-          
-          <div class="mx-auto">
-          
-        <div class="mt-0 text-justify">
-          
-            <h4 class="text-dark text-center fw-normal mt-1"> <%= chapterTitle  %></h4>
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small text-secondary"> <i class="fas fa-home text-primary"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+          <div class="mt-0 rounded text-justify">
+            
+            <p class="text-muted fw-light text-center mb-0"> You are Learning : (DCA-106) </p>
+            
+            <p class="text-dark text-center fw-light fs-1 mt-1"> <%= chapterTitle  %></p>
             
             <hr>
                         
                           <div class="d-flex justify-content-between m-1">
                             
-                            <button type="button" class="btn btn-sm btn-outline-danger"> Chapter-5</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"> Chapter-5</button>
                             
                               <div class="dropdown">
                 
-                                    <button class="btn btn-sm btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                       
                                       Select Chapter
                                     
@@ -145,7 +150,7 @@ and Embedding (OLE), Setting Up an OLE Liked Object, Embedding an OLE Object, Te
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      Overview
                    
                     </button>
                   
@@ -155,9 +160,28 @@ and Embedding (OLE), Setting Up an OLE Liked Object, Embedding an OLE Object, Te
 
                     <div class="accordion-body">
             
-                             No Video available yet DCA-106 Chapter-5
+                            <p>Pagemaker-ah thlalak dah luh kan zir ang a. Pakhatna chu place hmangin a ni a, pakhat chu insert object hmangin a ni ang.
+                            Place hmanga thlalak dah lut turin File menu > Place tihah kal tur a ni a, tichuan, i computer chhunga i thlalak duh ber i open ang a,
+                            pagemaker-ah i dah lut ang.</p>
+                            
+                            <p>Pahnihna chu Insert object atangin a ni a. Edit Menu > Insert Object... ah i click ang a. Dialog box thar a lo lang ang a, chutah chuan
+                            create new tihah a awm tur a ni a. Chumi chhungah chuan Microsoft Office Word Document i select ang a, i ok ang. Microsoft Word-ah a lo lut ang a,
+                            word chungah chuan Insert Tab > Picture-ah i duh thlalak i insert ang a, chumi zawhah Microsoft Word chu i Close ang. I close veleh pagemaker-ah
+                            i thlalak chu a rawn inthun dawn a ni. I edit leh duh a nih chuan i thlalakah khan i double-click ang a, microsoft word-ah a lut ang a, i duh danin
+                            i edit leh ang a, i close leh ang a. Pagemaker-ah bawk a lo kir leh ang. </p>
+                            
+                            <p>Text wrap kan hmanna ber chu thuziak kara thlalak dah luh nan a ni a. Thuziak kan nei phawt ang a, thlalak kan nei bawk ang a, thuziak chungah
+                            kan thlalak neihsa chu kan dah ang a, kan right-click ang a, text wrap ah kan kal ang. Kan duh chuan Element menu > Text wrap a click theih bawk.
+                            Chutah chuan wrap option-ah pathum zinga a lai a awm, wrap around icon kha kan select ang a. Kan ok dawn a ni.</p>
+                            
+                              <figure class="figure">
+  
+                              <img src="/img/textWrap.jpg" class="float-end img-fluid ps-2 pb-2" width="auto" height="auto" alt="textWrap" />
+                                        
+                              <figcaption class="figure-caption ps-2 text-danger"> Text Wrap </figcaption>
+                                      
+                              </figure> 
                       
-
                       </div>
                   
                   </div>
@@ -192,393 +216,85 @@ and Embedding (OLE), Setting Up an OLE Liked Object, Embedding an OLE Object, Te
 
 <p><em>5. IMPORTING GRAPHICS </em></p>
 
-Working with Independent Graphics
-Independent graphics are simply placed on the page. Regardless of what you do around the graphic, the placement will not change unless you move it.
+<p><code>Placing Independent Graphics</code>
+</p><p>
+How you place a graphic is initially determined by your choice of either the Pointer tool or the Text tool. 
+Independent graphics are placed using the Pointer tool. If you have the Text tool selected, 
+you can still place the graphic as an independent graphic by making the appropriate selection in the Place dialog box.
+</p><p>
+1.	From the Toolbox, select the Pointer tool  <br>
+2.	From the File menu, select Place… The Place dialog box appears.<br>
+3.	Select the image file you want to place<br>
+4.	In the Place section of the dialog box, verify that the graphic will be placed as independent graphic
+If that option is not selected, select it now.<br>
+5.	Click OPEN. Your cursor will change to a graphics icon  <br>
+6.	Use the mouse to position the icon’s top left edge where the top left corner of the graphic should appear in the document<br>
+7.	Click to place the graphic<br>
+8.	Select your Text Wrap option<br>
+9.	Click OK
+</p><p>
+<code>Inserting Images from the Microsoft Office Word Document</code>
+</p><p>
+1. From the Edit menu, select Insert Object… The Insert Object dialog box opens.<br>
+2. Create New should be selected.<br>
+3. From the Object Type list, select Microsoft Office Word Document<br>
+4. Click OK. The Microsoft Office Word Document opens.<br>
+5. Insert image from Insert Tab > Picture button. Select the image file you want to place.<br>
+6. Click Close button.<br>
+7. The image appears on your page. You may resize, move, crop, layer or wrap text around it.
+</p><p>
+<code>
+Stretching or Shrinking a Graphic</code>
+</p><p>
+1. Using the Pointer tool, select the graphic you want to alter <br>
+2. To change your image proportionately, click and drag one of the corner selection handles OR <br>
+3. To change your image in height or width, click and drag one of the top, bottom, or side selection handles.<br>
+4. HINT: To modify the object incrementally by .1 inch, hold the [Shift] key while dragging.<br>
+5. Release the mouse button
+</p><p>
+<code>Layering of Graphics and Text</code>
+</p><p>
+PageMaker allows you to order the layers by sending them either to the front or to the back.
+To do this:
+</p><p>
 
-return to topPlacing Independent Graphics
-How you place a graphic is initially determined by your choice of either the Pointer tool or the Text tool. Independent graphics are placed using the Pointer tool. If you have the Text tool selected, you can still place the graphic as an independent graphic by making the appropriate selection in the Place dialog box.
+1. With the Pointer tool, select the desired graphic or text block <br>
 
-From the Toolbox, select the Pointer tool pointer tool
+2. From the Element menu, select Arrange <br>
 
-From the File menu, select Place…
-The Place dialog box appears.
+3. From the Arrange submenu, select Send to Back or Bring to Front<br>
 
-Select the image file you want to place
+4. <em>HINT : To select text or graphics which are not on top : Press [CTRL] and click the object</em>
+</p><p>
+ <code>Using Text Wrap</code>
+ </p><p> 
+1. Select the graphic or drawing with the Pointer tool<br>
 
-In the Place section of the dialog box, verify that the graphic will be placed as independent graphic
-If that option is not selected, select it now.
+2. From the Element menu select Text Wrap… The Text Wrap dialog box appears.<br>
 
-
-Windows: Click OPEN
-Macintosh: Click OK
-Your cursor will change to a graphics icon graphics cursor
-
-Use the mouse to position the icon’s top left edge where the top left corner of the graphic should appear in the document
-
-Click to place the graphic
-
-Select your Text Wrap option
-See Using Text Wrap.
-
-Click OK
-
-Inserting Clip Art from the Microsoft Clip Gallery
-Images from the Clip Gallery are placed as independent graphics regardless of whether you use the Pointer tool or the Text tool when inserting them.
-NOTE: This feature may not be available on all computers.
-
-From the Edit menu, select Insert Object…
-The Insert Object dialog box opens. 
-Windows: Create New should be selected.
-Macintosh: New should be selected.
-
-From the Object Type list, select Microsoft Clip Gallery
-
-Click OK
-The Microsoft Clip Gallery opens.
-
-Select an image
-
-Click INSERT
-The image appears on your page. You may resize, move, crop, layer or wrap text around it.
-
-return to topSizing Independent Graphics
-Once you have placed a graphic in your PageMaker document, you may discover that it is not the right size or it contains extra information that is not relevant to your document. With PageMaker’s ability to resize and crop graphics, you can make adjustments to the graphic so it better meets your needs. If you need to do additional editing, you probably need to use a graphics program such as Adobe Illustrator.
-
-The following instructions cover how to reduce, enlarge, stretch, or crop part of a graphic.
-
-Stretching or Shrinking a Graphic
-Using the Pointer tool, select the graphic you want to alter
-
-To change your image proportionately, click and drag one of the corner selection handles
-OR
-To change your image in height or width, click and drag one of the top, bottom, or side selection handles
-HINT: To modify the object incrementally by .1 inch, hold the [Shift] key while dragging.
-
-Release the mouse button
-
-Cropping Independent Graphics
-Placing graphics often creates unnecessary white space along the sides of the image. You may also find that you only need a portion of a graphic. The Cropping tool functions somewhat like a scissors, cutting off the parts of the graphic you do not need or want.
-
-From the Toolbox, select the Cropping tool  cropping tool
-
-Select the image you want to crop
-
-To crop part of the image, click a handle and drag it inward
-You should be able to see the handle through the center of the Cropping tool when you click on a handle for cropping.
-Cropping example
-
-Release the mouse when the graphic is cropped correctly
-HINT: If you decide later not to change the cropping, you can select the graphic with the Cropping tool and enlarge the frame to show more of the graphic or the entire graphic.
-
-Panning Graphics
-Panning a graphic allows you to adjust the portion of the image that is displayed after it has been cropped.
-
-From the Toolbox, select the Cropping tool
-
-Select the image you want to pan
-
-Position the Cropping tool in the center of the graphic
-
-Click and hold the mouse button
-A small Hand icon will appear in the graphic.
-Panning hand icon
-
-Hold the mouse button down and move the Hand icon within the graphic until the image is where you want it
-
-Release the mouse button
-
-return to topMoving Graphics
-If your graphic is not placed in quite the right spot on the page, it can be moved.
-
-To move an independent graphic:
-
-From the Toolbox, select the Pointer tool
-
-Select the graphic you want to move
-
-Click and hold anywhere on the graphic except on a handle
-WARNING: If a two-sided arrow appears you may have grabbed a handle and accidentally resized the graphic. To undo any resizing, release the mouse button and from the Edit menu, select Undo Stretch.
-
-Still holding the mouse button, drag the element to its new location and release the button
-
-NOTE: If you have selected an in-line graphic, you will not be able to move it more than a few pixels up or down within the text. If you click on an in-line graphic and try to move it, you will see this arrow  in-line graphic cursor.
-
-return to topCutting and Pasting Independent Graphics
-To cut and paste or copy and paste a line, a graphic, or a block of text:
-
-From the Toolbox, select the Pointer tool
-
-Select the graphic elements that you want to Copy or Cut
-
-From the Edit menu, select Copy or Cut
-
-To paste the item(s), from the Edit menu, select Paste
-WARNING: The computer will retain only one cut or copy at a time. If you select Cut and then highlight another item or items and select Cut or Copy, the first item or group of items will be replaced in memory by the second group and can no longer be pasted.
-
-return to topLayering of Graphics and Text
-As you add more graphic elements and text to your document, the order that they appear on the page can make a difference on how the page looks. For example, if you have a shaded box and text in the same area of the page, the text has to be on top of the box in order for you to be able to read the text. So you do not have to create the graphics and text in the order that you want them to appear, PageMaker allows you to order the layers by sending them either to the front or to the back. To do this:
-
-With the Pointer tool, select the desired graphic or text block
-
-From the Element menu, select Arrange
-
-From the Arrange submenu, select Send to Back or Bring to Front
-
-Selecting Text or Graphics behind Another Layer
-To select text or graphics which are not on top
-
-Press [CTRL] and click the object
-
-return to topUsing Text Wrap
-example of text wrap
-
-To use text wrap
-Select the graphic or drawing with the Pointer tool
-
-From the Element menu select Text Wrap…
-The Text Wrap dialog box appears.
-text wrap dialog box
-
-Select the appropriate Wrap option:
-
-no wrap
-wrap around square
-wrap around non-standard shape
-Select the appropriate Text Flow option:
-
-above only
+3. Select the appropriate Wrap option: 
+<em>no wrap, 
+wrap around square, 
+wrap around non-standard shape </em><br>
+4. Select the appropriate Text Flow option: 
+<em>above only
 above and below
-all around
-Type the standoff (the distance from surrounding text) in inches for each side of the graphic
+all around</em> <br>
+5. Type the standoff (the distance from surrounding text) in inches for each side of the graphic<br>
 
-When settings and measurements are correct, click OK
+6. When settings and measurements are correct, click OK
+</p><p>
+    
+<code>To remove text wrapping</code>
+</p><p>
+1. Select the graphic or drawing with the Pointer tool<br>
 
-To remove text wrapping
+2. From the Element menu select Text Wrap… The Text Wrap dialog box appears on the screen.<br>
 
-Select the graphic or drawing with the Pointer tool
+3. Select no wrap icon<br>
 
-From the Element menu select Text Wrap…
-The Text Wrap dialog box appears on the screen.
-
-Select no wrapno wrap icon
-
-Click OK
-
-Placing Independent Graphics
-How you place a graphic is initially determined by your choice of either the Pointer tool or the Text tool. Independent graphics are placed using the Pointer tool. If you have the Text tool selected, you can still place the graphic as an independent graphic by making the appropriate selection in the Place dialog box.
-
-From the Toolbox, select the Pointer tool pointer tool
-
-From the File menu, select Place…
-The Place dialog box appears.
-
-Select the image file you want to place
-
-In the Place section of the dialog box, verify that the graphic will be placed as independent graphic
-If that option is not selected, select it now.
-
-
-Windows: Click OPEN
-Macintosh: Click OK
-Your cursor will change to a graphics icon graphics cursor
-
-Use the mouse to position the icon’s top left edge where the top left corner of the graphic should appear in the document
-
-Click to place the graphic
-
-Select your Text Wrap option
-See Using Text Wrap.
-
-Click OK
-
-Inserting Clip Art from the Microsoft Clip Gallery
-Images from the Clip Gallery are placed as independent graphics regardless of whether you use the Pointer tool or the Text tool when inserting them.
-NOTE: This feature may not be available on all computers.
-
-From the Edit menu, select Insert Object…
-The Insert Object dialog box opens. 
-Windows: Create New should be selected.
-Macintosh: New should be selected.
-
-From the Object Type list, select Microsoft Clip Gallery
-
-Click OK
-The Microsoft Clip Gallery opens.
-
-Select an image
-
-Click INSERT
-The image appears on your page. You may resize, move, crop, layer or wrap text around it.
-
-return to topSizing Independent Graphics
-Once you have placed a graphic in your PageMaker document, you may discover that it is not the right size or it contains extra information that is not relevant to your document. With PageMaker’s ability to resize and crop graphics, you can make adjustments to the graphic so it better meets your needs. If you need to do additional editing, you probably need to use a graphics program such as Adobe Illustrator.
-
-The following instructions cover how to reduce, enlarge, stretch, or crop part of a graphic.
-
-Stretching or Shrinking a Graphic
-Using the Pointer tool, select the graphic you want to alter
-
-To change your image proportionately, click and drag one of the corner selection handles
-OR
-To change your image in height or width, click and drag one of the top, bottom, or side selection handles
-HINT: To modify the object incrementally by .1 inch, hold the [Shift] key while dragging.
-
-Release the mouse button
-
-Cropping Independent Graphics
-Placing graphics often creates unnecessary white space along the sides of the image. You may also find that you only need a portion of a graphic. The Cropping tool functions somewhat like a scissors, cutting off the parts of the graphic you do not need or want.
-
-From the Toolbox, select the Cropping tool  cropping tool
-
-Select the image you want to crop
-
-To crop part of the image, click a handle and drag it inward
-You should be able to see the handle through the center of the Cropping tool when you click on a handle for cropping.
-Cropping example
-
-Release the mouse when the graphic is cropped correctly
-HINT: If you decide later not to change the cropping, you can select the graphic with the Cropping tool and enlarge the frame to show more of the graphic or the entire graphic.
-
-Panning Graphics
-Panning a graphic allows you to adjust the portion of the image that is displayed after it has been cropped.
-
-From the Toolbox, select the Cropping tool
-
-Select the image you want to pan
-
-Position the Cropping tool in the center of the graphic
-
-Click and hold the mouse button
-A small Hand icon will appear in the graphic.
-Panning hand icon
-
-Hold the mouse button down and move the Hand icon within the graphic until the image is where you want it
-
-Release the mouse button
-
-return to topMoving Graphics
-If your graphic is not placed in quite the right spot on the page, it can be moved.
-
-To move an independent graphic:
-
-From the Toolbox, select the Pointer tool
-
-Select the graphic you want to move
-
-Click and hold anywhere on the graphic except on a handle
-WARNING: If a two-sided arrow appears you may have grabbed a handle and accidentally resized the graphic. To undo any resizing, release the mouse button and from the Edit menu, select Undo Stretch.
-
-Still holding the mouse button, drag the element to its new location and release the button
-
-NOTE: If you have selected an in-line graphic, you will not be able to move it more than a few pixels up or down within the text. If you click on an in-line graphic and try to move it, you will see this arrow  in-line graphic cursor.
-
-return to topCutting and Pasting Independent Graphics
-To cut and paste or copy and paste a line, a graphic, or a block of text:
-
-From the Toolbox, select the Pointer tool
-
-Select the graphic elements that you want to Copy or Cut
-
-From the Edit menu, select Copy or Cut
-
-To paste the item(s), from the Edit menu, select Paste
-WARNING: The computer will retain only one cut or copy at a time. If you select Cut and then highlight another item or items and select Cut or Copy, the first item or group of items will be replaced in memory by the second group and can no longer be pasted.
-
-return to topLayering of Graphics and Text
-As you add more graphic elements and text to your document, the order that they appear on the page can make a difference on how the page looks. For example, if you have a shaded box and text in the same area of the page, the text has to be on top of the box in order for you to be able to read the text. So you do not have to create the graphics and text in the order that you want them to appear, PageMaker allows you to order the layers by sending them either to the front or to the back. To do this:
-
-With the Pointer tool, select the desired graphic or text block
-
-From the Element menu, select Arrange
-
-From the Arrange submenu, select Send to Back or Bring to Front
-
-Selecting Text or Graphics behind Another Layer
-To select text or graphics which are not on top
-
-Press [CTRL] and click the object
-
-return to topUsing Text Wrap
-example of text wrap
-
-To use text wrap
-Select the graphic or drawing with the Pointer tool
-
-From the Element menu select Text Wrap…
-The Text Wrap dialog box appears.
-text wrap dialog box
-
-Select the appropriate Wrap option:
-
-no wrap
-wrap around square
-wrap around non-standard shape
-Select the appropriate Text Flow option:
-
-above only
-above and below
-all around
-Type the standoff (the distance from surrounding text) in inches for each side of the graphic
-
-When settings and measurements are correct, click OK
-
-To remove text wrapping
-
-Select the graphic or drawing with the Pointer tool
-
-From the Element menu select Text Wrap…
-The Text Wrap dialog box appears on the screen.
-
-Select no wrapno wrap icon
-
-Click OK
-
-
-Graphics: An Overview
-Graphics can add interest and variety to your publication and are placed in PageMaker in much the same way as text. Graphics can be cropped, sized, and moved in PageMaker, but no changes can be made to the graphic itself; that must be done in a graphics program, such as Adobe Photoshop.
-
-
- 
-This overview discusses the following topics:
-
-return to topGraphics Sources
-Graphics can be obtained from a variety of sources, but pay attention to their format. Not all formats are suitable for use in PageMaker publications. Some can be converted to a compatible format using a graphics program. Some sources for graphics include:
-
-graphics created in programs such as Photoshop, Adobe Illustrator, or similar programs
-images which have been scanned
-images found in clip art collections (e.g., on CD or on the Web)
-images from digital cameras
-images downloaded from the Internet
-return to topGraphics Formats
-PageMaker typically uses a graphics format for images such as:
-
-Windows Bitmap (.BMP)
-Tagged Image File Format (TIFF or .TIF)
-Graphics Interchange Format (.GIF)
-Encapsulated PostScript (.EPS)
-Joint Photographics Expert Group (JPEG or .JPG)
-Macintosh Picture (PICT or .PCT)
-PageMaker suggests using EPS for vector graphics and TIFF for bitmapped graphics. These file formats support precision output for text and high resolution graphics.
-
-Because PageMaker uses the Tagged Image File Format (TIFF), you must change your image to CMYK color mode so that it will be printed correctly in a color publication.
-
-
-Consult your graphics program’s documentation for additional information.
-
-return to topGraphics Placement Types
-When placing graphics (not including PageMaker lines or shapes), you place them as either in-line or independent graphics. The type of document that you are working on and the nature of the graphic will generally determine the kind of placement that you use.
-
-Independent vs. In-line Graphics
-Independent or placed graphics are simply placed on the page. Regardless of what you do around the graphic, the placement will not change unless you move it.
-
-In-line graphics become a part of the text block. As you edit the text, the graphic retains its same relative position to the text but it will change position on the page (or may actually change pages) as you edit the text. Inline graphics are appropriate for documentation and reports, and can be modified just like independent graphics.
-
-NOTE: The important thing to remember is that how you place the graphic is determined by your choice of either the Pointer tool or the Text tool.
-
-
-
-                      </p>
-             
+4. Click OK
+ </p>            
                       </div>
                   
                   </div>

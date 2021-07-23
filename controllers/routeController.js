@@ -12,7 +12,11 @@ const router = express.Router();
 
 const expressSession = require('express-session')
 
-const flash = require('connect-flash')
+const flash = require('connect-flash');
+
+
+
+
 
 //global variable
 global.loggedIn = null;
@@ -753,10 +757,10 @@ router.get('/all/dca106welcomepage', (req, res) => {
 
 //dca101 chapter  1
 
-router.get('/all/dca1semOnlineLessonChapter1', (req, res) => {
+router.get('/all/dca1semOnlineLessonChapter1', async (req, res) => {
     
-
-
+const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca1semOnlineLessonChapter1', {
@@ -781,7 +785,9 @@ router.get('/all/dca1semOnlineLessonChapter1', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -4276,9 +4282,180 @@ await Student.updateOne({_id: req.params.id}, { $pull: { assignmentTheory : { _i
 
 //=================================================
 
+//download syllabus
 
 
+router.get('/all/dca1stSemSyllabus', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca1stSemSyllabus', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+            
+        });
+        
+    }
+        
+        res.redirect('/');
+    
+}); 
 
-router.use((req, res) => res.render('notFoundPage'))
+
+//download guidebook
+
+
+router.get('/all/dca1stSemGuidebook', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca1stSemGuidebook', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+            
+        });
+        
+    }
+        
+        res.redirect('/');
+    
+}); 
+
+//download old question
+
+
+router.get('/all/dca1stSemOldQuestion', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca1stSemOldQuestion', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+            
+        });
+        
+    }
+        
+        res.redirect('/');
+    
+}); 
+
+//old question download end
+
+
+//suggestion note download start
+
+
+router.get('/all/dca1stSemSuggestionNote', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca1stSemSuggestionNote', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+            
+        });
+        
+    }
+        
+        res.redirect('/');
+    
+}); 
+
+//suggestion note download end
+
+//assignment template
+router.get('/all/assignmentTemplate', async (req, res) => {
+    
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+    
+       return res.render('assignmentTemplate', {
+           
+           studentId : req.session.userId,
+           
+           thisStudent
+           
+       });
+       
+    }
+    
+}); 
+
+
+router.use((req, res) => res.render('notFoundPage'));
 
 module.exports = router;
