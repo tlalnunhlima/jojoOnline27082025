@@ -165,14 +165,14 @@ Types of Operating System
 
                     <div class="accordion-body">
             
-                         <p>Kan sawi tak angin Operating System hi computer innghatpui ber pakhat a ni a. A hnathawh dan azirin chi hrang hrangah
+                         <p>Kan sawi tak angin Operating System hi computer innghatnapui ber pakhat a ni a. A hnathawh dan azirin chi hrang hrangah
                          thendarh leh a ni. Mi pakhat chauhin a khawih chi chu single use an ti a, vawi khata thil tam tak tithei chu multi-tasking 
                          operating system an ti a ni. Microsoft Windows siam, tuna desktop Computer te leh Laptop kan hman mek ang chi te hi chu
                          mi pakhat chauhin a hman theih, mahse thil tam tak
                          kan tih theihna a nih avangin single user-multi tasking operating system a ni. </p>
                          
-                         <p>Operating system hian a siamtute dahsa ni lo program tam tak a install theih a. Operating system chungah software danger
-                               kan installed leh thei a ni. Tunlaiah chuan smartphone kan nei vek tawh a, kan duh hun hunah play store atangin
+                         <p>Operating system hian a siamtute dahsa ni lo program tam tak a install theih a. Operating system chungah software dang
+                               kan install leh thei a ni. Tunlaiah chuan smartphone kan nei vek tawh a, kan duh hun hunah play store atangin
                                game leh program (app) dang kan install thei ang hi a ni. Kan zirlaia subject thenkhat Pagemaker te, Photoshop te, Ms-word te 
                                pawh hi operating system a chhawm lo va, install chawp a ngai a ni. Microsoft Windows 7-ah software kan install chuan
                                a awmna bik a awm thin a, start menu > all programs chhungah a awm thin a ni.</p>
@@ -180,7 +180,7 @@ Types of Operating System
                           <p>Computer part hi device an ti a. Operating system hian device kan vuah apiang hi a lo hre vek lo va, device driver te install a ngaih
                           chang a awm thin. Entirnan, printer kan lei thar chuan printer driver kha kan install zet loh chuan document a print thei lo thin a ni.</p>
                       
-                          <p>Operating system hi chhe thei a ni a, a hnathawh tur ang thawk lo palh thei a ni. Virus te a kai thei a, chuvangin anti-virus te install
+                          <p>Operating system hi chhe thei a ni a, a hnathawh tur ang thawk lo thei a ni; virus te a kai thei a, chuvangin anti-virus te install
                           a ngai thin a ni. Hetiang ang operating system tana tangkai tak tak software hi Utility Software an ti a ni. </p>
                       
                       </div>
@@ -322,26 +322,202 @@ the category are as follows.</p>
                       <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
                         
                     <div class="accordion-body">
+
+                   <div class="d-flex justify-content-end">
+
+                      <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       
+                     Click here to answer assignment
                       
-                      <!--Assignment form started-->
-                      
-            <form action="/computerStudents/theoryAssignment" method="POST" autocomplete="off">
+                    </button>
+
+                  
+                  </div>
+                  
+                  <p class="fs-5 fw-light mt-2 mb-2">
+                    
+                    Assignment Table
+                    
+                  </p>
+                  
+                  
+                  <!--scoreboard-->
+                  
+      <div class="table-responsive">
+        
+        <table class="table table-striped table-sm myTable">
+          
+          <thead>
+            
+            <tr class="text-muted border text-center">
+              
+              <th>Sl.</th>
               
               
+              <th>Correct</th>
+              
+              <th>Incorrect</th>
+              
+              <th>Scored</th>
+              
+                            
+              <th>Dated</th>
+              
+              <th>Action</th>
+
+            </tr>
+            
+          </thead>
+          
+          <tbody class="text-center">
+            
+            <%    if( thisStudent.assignmentTheory102 != undefined) {
+                      //serial atan aw
+                      var noOfAttempt = 0;
+                      
+              
+                      for(var i=0; i < thisStudent.assignmentTheory102.length; i++) {
+                        
+                        if(thisStudent.assignmentTheory102[i].chapterName == 'Chapter-2') {
+                          //display serial
+                          noOfAttempt += 1;
+                          
+                          //count of correct and incorrect answered
+                            var correctCount = 0;
+                            var incorrect = 0;
+                            var questionNumber = [];
+                          
+                          //question 1
+                          if(thisStudent.assignmentTheory102[i].mcq1 == 'Real-time Operating System (RTOS)') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q1');
+                          }
+                          //question 2
+                          if(thisStudent.assignmentTheory102[i].mcq2 == 'Single-user, multi-tasking') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q2');
+                          }
+                          //question 3
+                          if(thisStudent.assignmentTheory102[i].mcq3 == 'Start Button') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q3');
+                          }
+                           //question 4
+                          if(thisStudent.assignmentTheory102[i].mcq4 == 'driver') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q4');
+                          }
+                           //question 5
+                          if(thisStudent.assignmentTheory102[i].mcq5 == 'Decryption') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q5');
+                          }
+                          
+                          
+                  %>
+            
+           <tr>
+              
+              <th class="text-center fw-normal"><%= noOfAttempt %></th>
+              
+              <td class="text-center fw-normal text-success"><%= correctCount %></td>
+              
+              <td class="text-center fw-normal text-danger small"><%=  questionNumber %></td>
+              
+              <td class="text-center fw-normal">
+                
+               <%= correctCount %>/5
+
+              </td>
+              
+              <td class="text-center fw-normal"><%= convertDate(thisStudent.assignmentTheory102[i].dateSubmitted) %></td>
+              
+              <td>
+                
+                 <a href="/assignment/delete102/<%= studentId %>/<%= thisStudent.assignmentTheory102[i]._id %>" onclick="return confirm('He record hi i delete duh em ni?');">
+                  
+                  <i class="fas fa-times p-1 text-muted" aria-hidden="true"></i></a>
+              
+              </td>
+  
+            </tr>
+        
+            <% } } } %>
+
+          </tbody>
+          
+        </table>
+        
+      </div>
+                  
+ 
+              </div><!-- end of 4th collapse assignment-->
+                      
+                      </div>
+               
+                  </div>
+                  
+                  
+              
+                </div>
+              
+              </div>
+              
+           <hr>
+            
+ 
+            
+            </div>
+            
+            </div>
+ 
+
+    </main>
+    
+</div> <!--end of container-->
+
+
+
+    <%- include('layouts/scripts') -%>
+    
+    <%- include('layouts/footer') -%>
+    
+    
+    <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">A hnuaia zawhna te hi chhang rawh</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+                                                 
+           <!--Assignment form started-->
+            
+        <form action="/computerStudents/theoryAssignment102" method="POST" autocomplete="off">
+             
               <input type="hidden" name="_id" value="<%= studentId %>" aria-hidden="true">
               
               <input type="hidden" name="subjectName" value="DCA-102 (Theory)" aria-hidden="true">
               
-              <input type="hidden" name="chapterName" value="Chapter-1" aria-hidden="true">
-
-                 
-                 <h6 class="text-center lead">A hnuaia zawhnate hi chhang rawh.</h6>
-
+              <input type="hidden" name="chapterName" value="Chapter-2" aria-hidden="true">
             
-                  <p class="fw-bold mt-3">
+                  <p class="fs-5 fw-light">
                     
-                    Q1. The set of instructions given to a computer to perform a task is called a __________.
+                    Q1. __________ is primarily used to control machinery, scientific instruments and industrial systems. 
                     
                   </p>
                   
@@ -351,11 +527,11 @@ the category are as follows.</p>
       
                             <div class="form-check mb-1 ms-3">
                               
-                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault1" value="Program" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault1" value="Multi-user, multi-tasking" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault1">
                                   
-                                  Program
+                                  Multi-user, multi-tasking
                                   
                                 </label>
                                 
@@ -363,11 +539,11 @@ the category are as follows.</p>
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault2" value="Instruction" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault2" value="Single Use/Single Tasking Operating System" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault2">
                                   
-                                  Instruction
+                                  Single Use/Single Tasking Operating System
                                   
                                 </label>
                                 
@@ -377,11 +553,11 @@ the category are as follows.</p>
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault3" value="Processor" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault3" value="Real-time Operating System (RTOS)" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault3">
                                   
-                                  Processor
+                                  Real-time Operating System (RTOS)
                                   
                                 </label>
                                 
@@ -389,11 +565,11 @@ the category are as follows.</p>
                               
                               <div class="form-check ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault4" value="Scheduling" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault4" value="Single-user, multi-tasking" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault4">
                                   
-                                  Scheduling
+                                  Single-user, multi-tasking
                                   
                                 </label>
                                 
@@ -406,9 +582,9 @@ the category are as follows.</p>
                  
                   </p>
                   
-                  <p class="fw-bold mt-3">
+                  <p class="fs-5 fw-light mt-3">
                     
-                    Q2. ________ is a UNIX like operating system. It is free and open source program originally developed by Linus Torvalds in 1991 for personal computers.
+                    Q2. This is the type of operating system most people use on their desktop and laptop computers today.
                     
                   </p>
                   
@@ -418,11 +594,11 @@ the category are as follows.</p>
       
                             <div class="form-check mb-1 ms-3">
                               
-                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault1Q2" value="Linux" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault1Q2" value="Single-user, multi-tasking" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault1Q2">
                                   
-                                  Linux
+                                  Single-user, multi-tasking
                                   
                                 </label>
                                 
@@ -430,11 +606,11 @@ the category are as follows.</p>
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault2Q2" value="Boss" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault2Q2" value="Real-time Operating System (RTOS)" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault2Q2">
                                   
-                                  Boss
+                                  Real-time Operating System (RTOS)
                                   
                                 </label>
                                 
@@ -442,11 +618,11 @@ the category are as follows.</p>
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault3Q2" value="Android" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault3Q2" value="Single Use/Single Tasking Operating System" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault3Q2">
                                   
-                                  Android
+                                  Single Use/Single Tasking Operating System
                                   
                                 </label>
                                 
@@ -454,11 +630,11 @@ the category are as follows.</p>
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault4Q2" value="Unix" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault4Q2" value="Multi-user, multi-tasking" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault4Q2">
                                   
-                                  UNIX
+                                  Multi-user, multi-tasking
                                   
                                 </label>
                                 
@@ -468,9 +644,9 @@ the category are as follows.</p>
                     
                   </p>
                   
-                  <p class="fw-bold mt-3">
+                  <p class="fs-5 fw-light mt-3">
                     
-                    Q3. Which of the following is function of operating system?
+                    Q3. To start an application or a program, click on the ________ > choose All Programs.
                     
                   </p>
                   
@@ -480,11 +656,11 @@ the category are as follows.</p>
       
                             <div class="form-check mb-1 ms-3">
                               
-                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault1Q3" value="Process Management" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault1Q3" value="Desktop" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault1Q3">
                                   
-                                  Process Management
+                                  Desktop
                                   
                                 </label>
                                 
@@ -492,11 +668,11 @@ the category are as follows.</p>
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault2Q3" value="Device Management" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault2Q3" value="Quick Menu" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault2Q3">
                                   
-                                  Device Management
+                                  Quick Menu
                                   
                                 </label>
                                 
@@ -504,11 +680,11 @@ the category are as follows.</p>
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault3Q3" value="Security Management" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault3Q3" value="Start Button" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault3Q3">
                                   
-                                  Security Management
+                                  Start Button
                                   
                                 </label>
                                 
@@ -516,11 +692,11 @@ the category are as follows.</p>
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault4Q3" value="All of these" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault4Q3" value="My Computer" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault4Q3">
                                   
-                                  All of these
+                                  My Computer
                                   
                                 </label>
                                 
@@ -530,9 +706,9 @@ the category are as follows.</p>
                     
                   </p>
                   
-                  <p class="fw-bold mt-3">
+                  <p class="fs-5 fw-light mt-3">
                     
-                    Q4. The most important program for the computer is ________?
+                    Q4. A device ________ is a software program that controls a particular type of hardware device that is attached to a computer.
                     
                   </p>
                   
@@ -542,11 +718,11 @@ the category are as follows.</p>
       
                             <div class="form-check mb-1 ms-3">
                               
-                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault1Q4" value="Microsoft Windows" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault1Q4" value="program" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault1Q4">
                                   
-                                  Microsoft Windows
+                                  program
                                   
                                 </label>
                                 
@@ -554,11 +730,11 @@ the category are as follows.</p>
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault2Q4" value="CPU" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault2Q4" value="driver" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault2Q4">
                                   
-                                  CPU
+                                  driver
                                   
                                 </label>
                                 
@@ -566,11 +742,11 @@ the category are as follows.</p>
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault3Q4" value="Operating System" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault3Q4" value="software" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault3Q4">
                                   
-                                  Operating System
+                                  software
                                   
                                 </label>
                                 
@@ -578,11 +754,11 @@ the category are as follows.</p>
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault4Q4" value="Application Software" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault4Q4" value="None of the above" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault4Q4">
                                   
-                                  Application Software
+                                  None of the above
                                   
                                 </label>
                                 
@@ -592,9 +768,9 @@ the category are as follows.</p>
                     
                   </p>
                   
-                  <p class="fw-bold mt-3">
+                  <p class="fs-5 fw-light mt-3">
                     
-                   Q5. File management, which includes organizing, naming, protecting, accessing and using files, is one of the key functions of an _________.
+                   Q5. ________ is converting the encrypted data back to its original form.
                    
                   </p>
                   
@@ -604,11 +780,11 @@ the category are as follows.</p>
       
                             <div class="form-check mb-1 ms-3">
                               
-                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault1Q5" value="Application Software" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault1Q5" value="Converter" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault1Q5">
                                   
-                                  Application Software
+                                  Converter
                                   
                                 </label>
                                 
@@ -616,11 +792,11 @@ the category are as follows.</p>
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault2Q5" value="System Software" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault2Q5" value="Encryption" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault2Q5">
                                   
-                                  System Software
+                                  Encryption
                                   
                                 </label>
                                 
@@ -628,11 +804,11 @@ the category are as follows.</p>
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault3Q5" value="Operating System" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault3Q5" value="Decryption" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault3Q5">
                                   
-                                  Operating System
+                                  Decryption
                                   
                                 </label>
                                 
@@ -661,38 +837,12 @@ the category are as follows.</p>
                   </div>
     
                </form>
-                  
- 
-              </div><!-- end of 4th collapse assignment-->
-                      
-                      </div>
-               
-                  </div>
-                  
-                  
-              
-                </div>
-              
-              </div>
-              
-           <hr>
-            
-
-            
-            </div>
-            
-            </div>
- 
-
-    </main>
+      </div>
+    </div>
+  </div>
+</div>
     
-</div> <!--end of container-->
-
-
-
-    <%- include('layouts/scripts') -%>
     
-    <%- include('layouts/footer') -%>
 
   </body>
   

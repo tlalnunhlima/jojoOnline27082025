@@ -14,7 +14,7 @@ function insertAssignmentRecord(req, res) {
     
         Student.findOneAndUpdate({ _id: req.body._id }, 
                
-               {$push: {assignmentTheory : assignmentTheoryArray }}, { new: true },
+               {$push: {assignmentTheory104 : assignmentTheoryArray }}, { new: true },
                
                       function (error, success) {
                           

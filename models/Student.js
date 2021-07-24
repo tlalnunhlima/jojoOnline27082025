@@ -232,6 +232,146 @@ const UserSchema = new Schema({
     }
        
    }],
+   
+   assignmentTheory102: [
+       
+       {
+           
+        subjectName: String,
+        
+        chapterName: String,
+       
+        mcq1: String,
+       
+        mcq2: String,
+       
+        mcq3: String,
+       
+        mcq4: String,
+       
+        mcq5: String,
+       
+        dateSubmitted: {
+        
+        type: Date,
+        
+        default: new Date()
+        
+    }
+       
+   }],
+   
+   assignmentTheory103: [
+       
+       {
+           
+        subjectName: String,
+        
+        chapterName: String,
+       
+        mcq1: String,
+       
+        mcq2: String,
+       
+        mcq3: String,
+       
+        mcq4: String,
+       
+        mcq5: String,
+       
+        dateSubmitted: {
+        
+        type: Date,
+        
+        default: new Date()
+        
+    }
+       
+   }],
+   
+   assignmentTheory104: [
+       
+       {
+           
+        subjectName: String,
+        
+        chapterName: String,
+       
+        mcq1: String,
+       
+        mcq2: String,
+       
+        mcq3: String,
+       
+        mcq4: String,
+       
+        mcq5: String,
+       
+        dateSubmitted: {
+        
+        type: Date,
+        
+        default: new Date()
+        
+    }
+       
+   }],
+   
+   assignmentTheory105: [
+       
+       {
+           
+        subjectName: String,
+        
+        chapterName: String,
+       
+        mcq1: String,
+       
+        mcq2: String,
+       
+        mcq3: String,
+       
+        mcq4: String,
+       
+        mcq5: String,
+       
+        dateSubmitted: {
+        
+        type: Date,
+        
+        default: new Date()
+        
+    }
+       
+   }],
+   
+   assignmentTheory106: [
+       
+       {
+           
+        subjectName: String,
+        
+        chapterName: String,
+       
+        mcq1: String,
+       
+        mcq2: String,
+       
+        mcq3: String,
+       
+        mcq4: String,
+       
+        mcq5: String,
+       
+        dateSubmitted: {
+        
+        type: Date,
+        
+        default: new Date()
+        
+    }
+       
+   }],
     
     
     datePosted: {

@@ -35,13 +35,18 @@
             
             <hr class="text-muted mt-0">
             
-            <p class="fw-normal px-3">DCA I Semester hi <code>thlaruk course</code> a ni a, subject ruk a awm a, subject zawng zawngah 
-            <code>theory</code> leh <code>practical </code>a awm vek a ni. Theory kan tih chu a thu-a zir a ni a, a theory-a zir hi practical-a zir tlukin a pawimawh a; theory a zir han tih chuan
+            <p class="fw-normal px-3">DCA I Semester hi <code>thlaruk</code> course a ni a, subject ruk a awm a, subject zawng zawngah 
+            <code>theory</code> leh <code>practical </code>a awm vek a ni. 
+            <a class="text-secondary" onclick="myFunction()" id="myBtn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                     Read more...
+                    </a>
+            </p>
+                  <div class="collapse" id="collapseExample">
+                    <div> <p class="fw-normal px-3">Theory kan tih chu a thu-a zir a ni a, a theory-a zir hi practical-a zir tlukin a pawimawh a; theory a zir han tih chuan
             a ninawm duh hmel a, amaherawhchu, note
-            by-heart ngai a awm lo va, a dik ber tick <code>(multiple choice)</code> 
+            by-heart ngai a awm lo va, a dik ber tick (multiple choice) 
             vekin question a lo kal thin a, chuvangin zir a awlsam a, a ninawm lutuk dawn lo a ni. </p>
-            
-
+                    
             <p class="fw-normal px-3">Theory hian <code>mark 50</code>, practical hian <code> mark 50 </code>a pu a. 
             
             <em>Theory mark 50 hi thendarh leh a ni a. Theory exam-ah mark 40, internal assessment-ah mark 10 tiin.</em> Tuna kan zir tur hi theory exam (<em>mark 40 pu</em>) atana inbuatsaihna chu a ni a; 
@@ -54,13 +59,17 @@
             chhan vek i tum dawn nia. Assignment question hi a chunga text section-ah a chhanna (answer) a awm zel a, i chhan hmain ngun takin i chhiar
             hmasa zel dawn nia.
             </p>
+  </div>
+</div>
+            
+
+            
             
             <hr class="mx-auto w-25">
-           
-
-            <h5 class="text-dark fw-normal mt-4 px-3">DCA 1st Semester zirlai subject hming te leh a chhunga chapter awm te</h5>
             
-            <p class="fw-normal mb-4 small px-3"> A subject zawnah hian click la, a chhunga chapter awmte a lo lang ang. <em> Note: Subject hming tawpa number hi a subject code a ni. </em>  </p>
+
+
+            <h5 class="text-dark fw-normal mt-4 px-3">DCA 1st Semester subject te</h5>
             
             <!-- DCA I Semester subject te... -->
             
@@ -635,6 +644,13 @@
     <%- include('layouts/scripts') -%>
     
     <%- include('layouts/footer') -%>
+    
+    <script>
+      function myFunction() {
+      var btnText = document.getElementById("myBtn");
+      btnText.style.display = "none";
+    }
+</script>
 
   </body>
   

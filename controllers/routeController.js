@@ -72,6 +72,11 @@ router.post('/authUser/loginStaff', require('../controllers/authLoginStaff'))
 
 //computer student assignment
 router.post('/computerStudents/theoryAssignment', require('../controllers/storeStudentAssignment'));
+router.post('/computerStudents/theoryAssignment102', require('../controllers/storeStudentAssignment102'));
+router.post('/computerStudents/theoryAssignment103', require('../controllers/storeStudentAssignment103'));
+router.post('/computerStudents/theoryAssignment104', require('../controllers/storeStudentAssignment104'));
+router.post('/computerStudents/theoryAssignment105', require('../controllers/storeStudentAssignment105'));
+router.post('/computerStudents/theoryAssignment106', require('../controllers/storeStudentAssignment106'));
 
 
 
@@ -800,7 +805,9 @@ const thisStudent = await Student.findOne({_id: req.session.userId});
 
 //dca101 chapter  2
 
-router.get('/all/dca1semOnlineLessonChapter2', (req, res) => {
+router.get('/all/dca1semOnlineLessonChapter2', async (req, res) => {
+    
+   const thisStudent = await Student.findOne({_id: req.session.userId});
     
     if(req.session.studentIdentity) {
         
@@ -826,7 +833,9 @@ router.get('/all/dca1semOnlineLessonChapter2', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
             
         });
         
@@ -839,7 +848,9 @@ router.get('/all/dca1semOnlineLessonChapter2', (req, res) => {
 
 //dca101 chapter  3
 
-router.get('/all/dca1semOnlineLessonChapter3', (req, res) => {
+router.get('/all/dca1semOnlineLessonChapter3', async (req, res) => {
+    
+    const thisStudent = await Student.findOne({_id: req.session.userId});
     
     if(req.session.studentIdentity) {
         
@@ -865,7 +876,9 @@ router.get('/all/dca1semOnlineLessonChapter3', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
             
         });
         
@@ -879,7 +892,9 @@ router.get('/all/dca1semOnlineLessonChapter3', (req, res) => {
 
 //dca101 chapter  4
 
-router.get('/all/dca1semOnlineLessonChapter4', (req, res) => {
+router.get('/all/dca1semOnlineLessonChapter4', async (req, res) => {
+    
+    const thisStudent = await Student.findOne({_id: req.session.userId});
     
     if(req.session.studentIdentity) {
         
@@ -905,7 +920,9 @@ router.get('/all/dca1semOnlineLessonChapter4', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
             
         });
         
@@ -918,7 +935,9 @@ router.get('/all/dca1semOnlineLessonChapter4', (req, res) => {
 
 //dca101 chapter  5
 
-router.get('/all/dca1semOnlineLessonChapter5', (req, res) => {
+router.get('/all/dca1semOnlineLessonChapter5', async (req, res) => {
+    
+    const thisStudent = await Student.findOne({_id: req.session.userId});
     
     if(req.session.studentIdentity) {
         
@@ -944,7 +963,9 @@ router.get('/all/dca1semOnlineLessonChapter5', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
             
         });
         
@@ -957,7 +978,9 @@ router.get('/all/dca1semOnlineLessonChapter5', (req, res) => {
 
 //dca101 chapter  6
 
-router.get('/all/dca1semOnlineLessonChapter6', (req, res) => {
+router.get('/all/dca1semOnlineLessonChapter6', async (req, res) => {
+    
+    const thisStudent = await Student.findOne({_id: req.session.userId});
     
     if(req.session.studentIdentity) {
         
@@ -983,7 +1006,9 @@ router.get('/all/dca1semOnlineLessonChapter6', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
             
         });
         
@@ -997,7 +1022,9 @@ router.get('/all/dca1semOnlineLessonChapter6', (req, res) => {
 
 //dca101 chapter  7
 
-router.get('/all/dca1semOnlineLessonChapter7', (req, res) => {
+router.get('/all/dca1semOnlineLessonChapter7', async (req, res) => {
+    
+    const thisStudent = await Student.findOne({_id: req.session.userId});
     
     if(req.session.studentIdentity) {
         
@@ -1023,7 +1050,9 @@ router.get('/all/dca1semOnlineLessonChapter7', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
             
         });
         
@@ -1035,7 +1064,9 @@ router.get('/all/dca1semOnlineLessonChapter7', (req, res) => {
 
 //dca101 chapter  8
 
-router.get('/all/dca1semOnlineLessonChapter8', (req, res) => {
+router.get('/all/dca1semOnlineLessonChapter8', async (req, res) => {
+    
+    const thisStudent = await Student.findOne({_id: req.session.userId});
     
     if(req.session.studentIdentity) {
         
@@ -1061,7 +1092,9 @@ router.get('/all/dca1semOnlineLessonChapter8', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
             
         });
         
@@ -1074,7 +1107,9 @@ router.get('/all/dca1semOnlineLessonChapter8', (req, res) => {
 
 //dca101 chapter  9
 
-router.get('/all/dca1semOnlineLessonChapter9', (req, res) => {
+router.get('/all/dca1semOnlineLessonChapter9', async (req, res) => {
+    
+    const thisStudent = await Student.findOne({_id: req.session.userId});
     
     if(req.session.studentIdentity) {
         
@@ -1100,7 +1135,9 @@ router.get('/all/dca1semOnlineLessonChapter9', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
             
         });
         
@@ -1113,7 +1150,9 @@ router.get('/all/dca1semOnlineLessonChapter9', (req, res) => {
 
 //dca101 chapter  10
 
-router.get('/all/dca1semOnlineLessonChapter10', (req, res) => {
+router.get('/all/dca1semOnlineLessonChapter10', async (req, res) => {
+    
+    const thisStudent = await Student.findOne({_id: req.session.userId});
     
     if(req.session.studentIdentity) {
         
@@ -1139,7 +1178,9 @@ router.get('/all/dca1semOnlineLessonChapter10', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
             
         });
         
@@ -1155,8 +1196,10 @@ router.get('/all/dca1semOnlineLessonChapter10', (req, res) => {
 
 //dca102 chapter  1
 
-router.get('/all/dca102onlineclasschapter1', (req, res) => {
+router.get('/all/dca102onlineclasschapter1', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca102onlineclasschapter1', {
@@ -1181,7 +1224,9 @@ router.get('/all/dca102onlineclasschapter1', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -1194,8 +1239,10 @@ router.get('/all/dca102onlineclasschapter1', (req, res) => {
 
 //dca102 chapter  2
 
-router.get('/all/dca102onlineclasschapter2', (req, res) => {
+router.get('/all/dca102onlineclasschapter2', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca102onlineclasschapter2', {
@@ -1220,7 +1267,9 @@ router.get('/all/dca102onlineclasschapter2', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -1234,8 +1283,10 @@ router.get('/all/dca102onlineclasschapter2', (req, res) => {
 
 //dca102 chapter  3
 
-router.get('/all/dca102onlineclasschapter3', (req, res) => {
+router.get('/all/dca102onlineclasschapter3', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca102onlineclasschapter3', {
@@ -1260,7 +1311,9 @@ router.get('/all/dca102onlineclasschapter3', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -1274,8 +1327,10 @@ router.get('/all/dca102onlineclasschapter3', (req, res) => {
 
 //dca102 chapter  4
 
-router.get('/all/dca102onlineclasschapter4', (req, res) => {
+router.get('/all/dca102onlineclasschapter4', async (req, res) => {
 
+   const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca102onlineclasschapter4', {
@@ -1300,7 +1355,9 @@ router.get('/all/dca102onlineclasschapter4', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -1314,8 +1371,10 @@ router.get('/all/dca102onlineclasschapter4', (req, res) => {
 
 //dca102 chapter  5
 
-router.get('/all/dca102onlineclasschapter5', (req, res) => {
+router.get('/all/dca102onlineclasschapter5', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca102onlineclasschapter5', {
@@ -1340,7 +1399,9 @@ router.get('/all/dca102onlineclasschapter5', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -1353,8 +1414,10 @@ router.get('/all/dca102onlineclasschapter5', (req, res) => {
 
 //dca102 chapter  6
 
-router.get('/all/dca102onlineclasschapter6', (req, res) => {
+router.get('/all/dca102onlineclasschapter6', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca102onlineclasschapter6', {
@@ -1379,7 +1442,9 @@ router.get('/all/dca102onlineclasschapter6', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -1393,8 +1458,10 @@ router.get('/all/dca102onlineclasschapter6', (req, res) => {
 
 //dca102 chapter  7
 
-router.get('/all/dca102onlineclasschapter7', (req, res) => {
+router.get('/all/dca102onlineclasschapter7', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca102onlineclasschapter7', {
@@ -1419,7 +1486,9 @@ router.get('/all/dca102onlineclasschapter7', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -1432,8 +1501,10 @@ router.get('/all/dca102onlineclasschapter7', (req, res) => {
 
 //dca102 chapter  8
 
-router.get('/all/dca102onlineclasschapter8', (req, res) => {
+router.get('/all/dca102onlineclasschapter8', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca102onlineclasschapter8', {
@@ -1458,7 +1529,9 @@ router.get('/all/dca102onlineclasschapter8', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -1473,8 +1546,10 @@ router.get('/all/dca102onlineclasschapter8', (req, res) => {
 
 //dca102 chapter  9
 
-router.get('/all/dca102onlineclasschapter9', (req, res) => {
+router.get('/all/dca102onlineclasschapter9', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca102onlineclasschapter9', {
@@ -1499,7 +1574,9 @@ router.get('/all/dca102onlineclasschapter9', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -1513,8 +1590,10 @@ router.get('/all/dca102onlineclasschapter9', (req, res) => {
 
 //dca102 chapter  10
 
-router.get('/all/dca102onlineclasschapter10', (req, res) => {
+router.get('/all/dca102onlineclasschapter10', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca102onlineclasschapter10', {
@@ -1539,7 +1618,9 @@ router.get('/all/dca102onlineclasschapter10', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -1557,8 +1638,10 @@ router.get('/all/dca102onlineclasschapter10', (req, res) => {
 
 //dca103 chapter  1
 
-router.get('/all/dca103onlineclasschapter1', (req, res) => {
+router.get('/all/dca103onlineclasschapter1', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca103onlineclasschapter1', {
@@ -1583,7 +1666,9 @@ router.get('/all/dca103onlineclasschapter1', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -1596,8 +1681,10 @@ router.get('/all/dca103onlineclasschapter1', (req, res) => {
 
 //dca103 chapter  2
 
-router.get('/all/dca103onlineclasschapter2', (req, res) => {
+router.get('/all/dca103onlineclasschapter2', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca103onlineclasschapter2', {
@@ -1622,7 +1709,9 @@ router.get('/all/dca103onlineclasschapter2', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -1635,8 +1724,10 @@ router.get('/all/dca103onlineclasschapter2', (req, res) => {
 
 //dca103 chapter  3
 
-router.get('/all/dca103onlineclasschapter3', (req, res) => {
+router.get('/all/dca103onlineclasschapter3', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca103onlineclasschapter3', {
@@ -1661,7 +1752,9 @@ router.get('/all/dca103onlineclasschapter3', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -1675,8 +1768,10 @@ router.get('/all/dca103onlineclasschapter3', (req, res) => {
 
 //dca103 chapter  4
 
-router.get('/all/dca103onlineclasschapter4', (req, res) => {
+router.get('/all/dca103onlineclasschapter4', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca103onlineclasschapter4', {
@@ -1701,7 +1796,9 @@ router.get('/all/dca103onlineclasschapter4', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -1714,8 +1811,10 @@ router.get('/all/dca103onlineclasschapter4', (req, res) => {
 
 //dca103 chapter  5
 
-router.get('/all/dca103onlineclasschapter5', (req, res) => {
+router.get('/all/dca103onlineclasschapter5', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca103onlineclasschapter5', {
@@ -1740,7 +1839,9 @@ router.get('/all/dca103onlineclasschapter5', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -1754,8 +1855,10 @@ router.get('/all/dca103onlineclasschapter5', (req, res) => {
 
 //dca103 chapter  6
 
-router.get('/all/dca103onlineclasschapter6', (req, res) => {
+router.get('/all/dca103onlineclasschapter6', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca103onlineclasschapter6', {
@@ -1780,7 +1883,9 @@ router.get('/all/dca103onlineclasschapter6', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -1794,8 +1899,10 @@ router.get('/all/dca103onlineclasschapter6', (req, res) => {
 
 //dca103 chapter  7
 
-router.get('/all/dca103onlineclasschapter7', (req, res) => {
+router.get('/all/dca103onlineclasschapter7', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca103onlineclasschapter7', {
@@ -1820,7 +1927,9 @@ router.get('/all/dca103onlineclasschapter7', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -1834,8 +1943,10 @@ router.get('/all/dca103onlineclasschapter7', (req, res) => {
 
 //dca103 chapter  8
 
-router.get('/all/dca103onlineclasschapter8', (req, res) => {
+router.get('/all/dca103onlineclasschapter8', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca103onlineclasschapter8', {
@@ -1860,7 +1971,9 @@ router.get('/all/dca103onlineclasschapter8', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -1873,8 +1986,10 @@ router.get('/all/dca103onlineclasschapter8', (req, res) => {
 
 //dca103 chapter  9
 
-router.get('/all/dca103onlineclasschapter9', (req, res) => {
+router.get('/all/dca103onlineclasschapter9', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca103onlineclasschapter9', {
@@ -1899,7 +2014,9 @@ router.get('/all/dca103onlineclasschapter9', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -1912,8 +2029,10 @@ router.get('/all/dca103onlineclasschapter9', (req, res) => {
 
 //dca103 chapter  10
 
-router.get('/all/dca103onlineclasschapter10', (req, res) => {
+router.get('/all/dca103onlineclasschapter10', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca103onlineclasschapter10', {
@@ -1938,7 +2057,9 @@ router.get('/all/dca103onlineclasschapter10', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -1951,8 +2072,10 @@ router.get('/all/dca103onlineclasschapter10', (req, res) => {
 
 //dca103 chapter  11
 
-router.get('/all/dca103onlineclasschapter11', (req, res) => {
+router.get('/all/dca103onlineclasschapter11', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca103onlineclasschapter11', {
@@ -1977,7 +2100,9 @@ router.get('/all/dca103onlineclasschapter11', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -1990,8 +2115,10 @@ router.get('/all/dca103onlineclasschapter11', (req, res) => {
 
 //dca103 chapter  12
 
-router.get('/all/dca103onlineclasschapter12', (req, res) => {
+router.get('/all/dca103onlineclasschapter12', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca103onlineclasschapter12', {
@@ -2016,7 +2143,9 @@ router.get('/all/dca103onlineclasschapter12', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2029,8 +2158,10 @@ router.get('/all/dca103onlineclasschapter12', (req, res) => {
 
 //dca103 chapter  13
 
-router.get('/all/dca103onlineclasschapter13', (req, res) => {
+router.get('/all/dca103onlineclasschapter13', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca103onlineclasschapter13', {
@@ -2055,7 +2186,9 @@ router.get('/all/dca103onlineclasschapter13', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2067,8 +2200,10 @@ router.get('/all/dca103onlineclasschapter13', (req, res) => {
 
 //dca103 chapter  14
 
-router.get('/all/dca103onlineclasschapter14', (req, res) => {
+router.get('/all/dca103onlineclasschapter14', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca103onlineclasschapter14', {
@@ -2093,7 +2228,9 @@ router.get('/all/dca103onlineclasschapter14', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2106,8 +2243,10 @@ router.get('/all/dca103onlineclasschapter14', (req, res) => {
 
 //dca103 chapter  15
 
-router.get('/all/dca103onlineclasschapter15', (req, res) => {
+router.get('/all/dca103onlineclasschapter15', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca103onlineclasschapter15', {
@@ -2132,7 +2271,9 @@ router.get('/all/dca103onlineclasschapter15', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2145,8 +2286,10 @@ router.get('/all/dca103onlineclasschapter15', (req, res) => {
 
 //dca103 chapter  16
 
-router.get('/all/dca103onlineclasschapter16', (req, res) => {
+router.get('/all/dca103onlineclasschapter16', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca103onlineclasschapter16', {
@@ -2171,7 +2314,9 @@ router.get('/all/dca103onlineclasschapter16', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2184,8 +2329,10 @@ router.get('/all/dca103onlineclasschapter16', (req, res) => {
 
 //dca103 chapter  17
 
-router.get('/all/dca103onlineclasschapter17', (req, res) => {
+router.get('/all/dca103onlineclasschapter17', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca103onlineclasschapter17', {
@@ -2210,7 +2357,9 @@ router.get('/all/dca103onlineclasschapter17', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2223,8 +2372,10 @@ router.get('/all/dca103onlineclasschapter17', (req, res) => {
 
 //dca103 chapter  18
 
-router.get('/all/dca103onlineclasschapter18', (req, res) => {
+router.get('/all/dca103onlineclasschapter18', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca103onlineclasschapter18', {
@@ -2249,7 +2400,9 @@ router.get('/all/dca103onlineclasschapter18', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2262,8 +2415,10 @@ router.get('/all/dca103onlineclasschapter18', (req, res) => {
 
 //dca103 chapter  19
 
-router.get('/all/dca103onlineclasschapter19', (req, res) => {
+router.get('/all/dca103onlineclasschapter19', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca103onlineclasschapter19', {
@@ -2288,7 +2443,9 @@ router.get('/all/dca103onlineclasschapter19', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2300,8 +2457,10 @@ router.get('/all/dca103onlineclasschapter19', (req, res) => {
 
 //dca103 chapter  20
 
-router.get('/all/dca103onlineclasschapter20', (req, res) => {
+router.get('/all/dca103onlineclasschapter20', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca103onlineclasschapter20', {
@@ -2326,7 +2485,9 @@ router.get('/all/dca103onlineclasschapter20', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2346,8 +2507,10 @@ router.get('/all/dca103onlineclasschapter20', (req, res) => {
 
 //dca104 chapter  1
 
-router.get('/all/dca104onlineclasschapter1', (req, res) => {
+router.get('/all/dca104onlineclasschapter1', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca104onlineclasschapter1', {
@@ -2372,7 +2535,9 @@ router.get('/all/dca104onlineclasschapter1', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2385,8 +2550,10 @@ router.get('/all/dca104onlineclasschapter1', (req, res) => {
 
 //dca104 chapter  2
 
-router.get('/all/dca104onlineclasschapter2', (req, res) => {
+router.get('/all/dca104onlineclasschapter2', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca104onlineclasschapter2', {
@@ -2411,7 +2578,9 @@ router.get('/all/dca104onlineclasschapter2', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2424,8 +2593,10 @@ router.get('/all/dca104onlineclasschapter2', (req, res) => {
 
 //dca104 chapter  3
 
-router.get('/all/dca104onlineclasschapter3', (req, res) => {
+router.get('/all/dca104onlineclasschapter3', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca104onlineclasschapter3', {
@@ -2450,7 +2621,9 @@ router.get('/all/dca104onlineclasschapter3', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2464,8 +2637,10 @@ router.get('/all/dca104onlineclasschapter3', (req, res) => {
 
 //dca104 chapter  4
 
-router.get('/all/dca104onlineclasschapter4', (req, res) => {
+router.get('/all/dca104onlineclasschapter4', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca104onlineclasschapter4', {
@@ -2490,7 +2665,9 @@ router.get('/all/dca104onlineclasschapter4', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2504,8 +2681,10 @@ router.get('/all/dca104onlineclasschapter4', (req, res) => {
 
 //dca104 chapter  5
 
-router.get('/all/dca104onlineclasschapter5', (req, res) => {
+router.get('/all/dca104onlineclasschapter5', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca104onlineclasschapter5', {
@@ -2530,7 +2709,9 @@ router.get('/all/dca104onlineclasschapter5', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2543,8 +2724,10 @@ router.get('/all/dca104onlineclasschapter5', (req, res) => {
 
 //dca104 chapter  6
 
-router.get('/all/dca104onlineclasschapter6', (req, res) => {
+router.get('/all/dca104onlineclasschapter6', async (req, res) => {
 
+   const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca104onlineclasschapter6', {
@@ -2569,7 +2752,9 @@ router.get('/all/dca104onlineclasschapter6', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2589,8 +2774,10 @@ router.get('/all/dca104onlineclasschapter6', (req, res) => {
 
 //dca105 chapter  1
 
-router.get('/all/dca105onlineclasschapter1', (req, res) => {
+router.get('/all/dca105onlineclasschapter1', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca105onlineclasschapter1', {
@@ -2615,7 +2802,9 @@ router.get('/all/dca105onlineclasschapter1', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2629,8 +2818,10 @@ router.get('/all/dca105onlineclasschapter1', (req, res) => {
 
 //dca105 chapter  2
 
-router.get('/all/dca105onlineclasschapter2', (req, res) => {
+router.get('/all/dca105onlineclasschapter2', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca105onlineclasschapter2', {
@@ -2655,7 +2846,9 @@ router.get('/all/dca105onlineclasschapter2', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2668,8 +2861,10 @@ router.get('/all/dca105onlineclasschapter2', (req, res) => {
 
 //dca105 chapter  3
 
-router.get('/all/dca105onlineclasschapter3', (req, res) => {
+router.get('/all/dca105onlineclasschapter3', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca105onlineclasschapter3', {
@@ -2694,7 +2889,9 @@ router.get('/all/dca105onlineclasschapter3', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2707,8 +2904,10 @@ router.get('/all/dca105onlineclasschapter3', (req, res) => {
 
 //dca105 chapter  4
 
-router.get('/all/dca105onlineclasschapter4', (req, res) => {
+router.get('/all/dca105onlineclasschapter4', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca105onlineclasschapter4', {
@@ -2733,7 +2932,9 @@ router.get('/all/dca105onlineclasschapter4', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2746,8 +2947,10 @@ router.get('/all/dca105onlineclasschapter4', (req, res) => {
 
 //dca105 chapter  5
 
-router.get('/all/dca105onlineclasschapter5', (req, res) => {
+router.get('/all/dca105onlineclasschapter5', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca105onlineclasschapter5', {
@@ -2772,7 +2975,9 @@ router.get('/all/dca105onlineclasschapter5', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2785,8 +2990,10 @@ router.get('/all/dca105onlineclasschapter5', (req, res) => {
 
 //dca105 chapter  6
 
-router.get('/all/dca105onlineclasschapter6', (req, res) => {
+router.get('/all/dca105onlineclasschapter6', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca105onlineclasschapter6', {
@@ -2811,7 +3018,9 @@ router.get('/all/dca105onlineclasschapter6', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2824,8 +3033,10 @@ router.get('/all/dca105onlineclasschapter6', (req, res) => {
 
 //dca105 chapter  7
 
-router.get('/all/dca105onlineclasschapter7', (req, res) => {
+router.get('/all/dca105onlineclasschapter7', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca105onlineclasschapter7', {
@@ -2850,7 +3061,9 @@ router.get('/all/dca105onlineclasschapter7', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2862,8 +3075,10 @@ router.get('/all/dca105onlineclasschapter7', (req, res) => {
 
 //dca105 chapter  8
 
-router.get('/all/dca105onlineclasschapter8', (req, res) => {
+router.get('/all/dca105onlineclasschapter8', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca105onlineclasschapter8', {
@@ -2888,7 +3103,9 @@ router.get('/all/dca105onlineclasschapter8', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2901,8 +3118,10 @@ router.get('/all/dca105onlineclasschapter8', (req, res) => {
 
 //dca105 chapter  9
 
-router.get('/all/dca105onlineclasschapter9', (req, res) => {
+router.get('/all/dca105onlineclasschapter9', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca105onlineclasschapter9', {
@@ -2927,7 +3146,9 @@ router.get('/all/dca105onlineclasschapter9', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2939,8 +3160,10 @@ router.get('/all/dca105onlineclasschapter9', (req, res) => {
 
 //dca105 chapter  10
 
-router.get('/all/dca105onlineclasschapter10', (req, res) => {
+router.get('/all/dca105onlineclasschapter10', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca105onlineclasschapter10', {
@@ -2965,7 +3188,9 @@ router.get('/all/dca105onlineclasschapter10', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -2977,8 +3202,10 @@ router.get('/all/dca105onlineclasschapter10', (req, res) => {
 
 //dca105 chapter  11
 
-router.get('/all/dca105onlineclasschapter11', (req, res) => {
+router.get('/all/dca105onlineclasschapter11', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca105onlineclasschapter11', {
@@ -3003,7 +3230,9 @@ router.get('/all/dca105onlineclasschapter11', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -3015,8 +3244,10 @@ router.get('/all/dca105onlineclasschapter11', (req, res) => {
 
 //dca105 chapter  12
 
-router.get('/all/dca105onlineclasschapter12', (req, res) => {
+router.get('/all/dca105onlineclasschapter12', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca105onlineclasschapter12', {
@@ -3041,7 +3272,9 @@ router.get('/all/dca105onlineclasschapter12', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -3054,8 +3287,10 @@ router.get('/all/dca105onlineclasschapter12', (req, res) => {
 
 //dca105 chapter  13
 
-router.get('/all/dca105onlineclasschapter13', (req, res) => {
+router.get('/all/dca105onlineclasschapter13', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca105onlineclasschapter13', {
@@ -3080,7 +3315,9 @@ router.get('/all/dca105onlineclasschapter13', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -3099,8 +3336,10 @@ router.get('/all/dca105onlineclasschapter13', (req, res) => {
 
 //dca106 chapter  1
 
-router.get('/all/dca106onlineclasschapter1', (req, res) => {
+router.get('/all/dca106onlineclasschapter1', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca106onlineclasschapter1', {
@@ -3125,7 +3364,9 @@ router.get('/all/dca106onlineclasschapter1', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -3139,8 +3380,10 @@ router.get('/all/dca106onlineclasschapter1', (req, res) => {
 
 //dca106 chapter  2
 
-router.get('/all/dca106onlineclasschapter2', (req, res) => {
+router.get('/all/dca106onlineclasschapter2', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca106onlineclasschapter2', {
@@ -3165,7 +3408,9 @@ router.get('/all/dca106onlineclasschapter2', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -3179,8 +3424,10 @@ router.get('/all/dca106onlineclasschapter2', (req, res) => {
 
 //dca106 chapter  3
 
-router.get('/all/dca106onlineclasschapter3', (req, res) => {
+router.get('/all/dca106onlineclasschapter3', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca106onlineclasschapter3', {
@@ -3205,7 +3452,9 @@ router.get('/all/dca106onlineclasschapter3', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -3218,8 +3467,10 @@ router.get('/all/dca106onlineclasschapter3', (req, res) => {
 
 //dca106 chapter  4
 
-router.get('/all/dca106onlineclasschapter4', (req, res) => {
+router.get('/all/dca106onlineclasschapter4', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca106onlineclasschapter4', {
@@ -3244,7 +3495,9 @@ router.get('/all/dca106onlineclasschapter4', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -3258,8 +3511,10 @@ router.get('/all/dca106onlineclasschapter4', (req, res) => {
 
 //dca106 chapter  5
 
-router.get('/all/dca106onlineclasschapter5', (req, res) => {
+router.get('/all/dca106onlineclasschapter5', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca106onlineclasschapter5', {
@@ -3284,7 +3539,9 @@ router.get('/all/dca106onlineclasschapter5', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -3297,8 +3554,10 @@ router.get('/all/dca106onlineclasschapter5', (req, res) => {
 
 //dca106 chapter  6
 
-router.get('/all/dca106onlineclasschapter6', (req, res) => {
+router.get('/all/dca106onlineclasschapter6', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca106onlineclasschapter6', {
@@ -3323,7 +3582,9 @@ router.get('/all/dca106onlineclasschapter6', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -3336,8 +3597,10 @@ router.get('/all/dca106onlineclasschapter6', (req, res) => {
 
 //dca106 chapter  7
 
-router.get('/all/dca106onlineclasschapter7', (req, res) => {
+router.get('/all/dca106onlineclasschapter7', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca106onlineclasschapter7', {
@@ -3362,7 +3625,9 @@ router.get('/all/dca106onlineclasschapter7', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -3377,8 +3642,10 @@ router.get('/all/dca106onlineclasschapter7', (req, res) => {
 
 //dca106 chapter  8
 
-router.get('/all/dca106onlineclasschapter8', (req, res) => {
+router.get('/all/dca106onlineclasschapter8', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca106onlineclasschapter8', {
@@ -3403,7 +3670,9 @@ router.get('/all/dca106onlineclasschapter8', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -3416,8 +3685,10 @@ router.get('/all/dca106onlineclasschapter8', (req, res) => {
 
 //dca106 chapter  9
 
-router.get('/all/dca106onlineclasschapter9', (req, res) => {
+router.get('/all/dca106onlineclasschapter9', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca106onlineclasschapter9', {
@@ -3442,7 +3713,9 @@ router.get('/all/dca106onlineclasschapter9', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -3455,8 +3728,10 @@ router.get('/all/dca106onlineclasschapter9', (req, res) => {
 
 //dca106 chapter  10
 
-router.get('/all/dca106onlineclasschapter10', (req, res) => {
+router.get('/all/dca106onlineclasschapter10', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca106onlineclasschapter10', {
@@ -3481,7 +3756,9 @@ router.get('/all/dca106onlineclasschapter10', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -3494,8 +3771,10 @@ router.get('/all/dca106onlineclasschapter10', (req, res) => {
 
 //dca106 chapter  11
 
-router.get('/all/dca106onlineclasschapter11', (req, res) => {
+router.get('/all/dca106onlineclasschapter11', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca106onlineclasschapter11', {
@@ -3520,7 +3799,9 @@ router.get('/all/dca106onlineclasschapter11', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -3533,8 +3814,10 @@ router.get('/all/dca106onlineclasschapter11', (req, res) => {
 
 //dca106 chapter  12
 
-router.get('/all/dca106onlineclasschapter12', (req, res) => {
+router.get('/all/dca106onlineclasschapter12', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca106onlineclasschapter12', {
@@ -3559,7 +3842,9 @@ router.get('/all/dca106onlineclasschapter12', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -3572,8 +3857,10 @@ router.get('/all/dca106onlineclasschapter12', (req, res) => {
 
 //dca106 chapter  13
 
-router.get('/all/dca106onlineclasschapter13', (req, res) => {
+router.get('/all/dca106onlineclasschapter13', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca106onlineclasschapter13', {
@@ -3598,7 +3885,9 @@ router.get('/all/dca106onlineclasschapter13', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -3612,8 +3901,10 @@ router.get('/all/dca106onlineclasschapter13', (req, res) => {
 
 //dca106 chapter  14
 
-router.get('/all/dca106onlineclasschapter14', (req, res) => {
+router.get('/all/dca106onlineclasschapter14', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
     if(req.session.studentIdentity) {
         
        return res.render('dca106onlineclasschapter14', {
@@ -3638,7 +3929,9 @@ router.get('/all/dca106onlineclasschapter14', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            thisStudent
 
         });
         
@@ -4260,24 +4553,152 @@ router.get('/auth/logout', (req, res) => {
 
 //delete assignment record
  
-router.get('/assignment/delete/:id/:theoryId', async (req, res) => {
+router.get('/assignment/delete101/:id/:theoryId', async (req, res) => {
     
 
 await Student.updateOne({_id: req.params.id}, { $pull: { assignmentTheory : { _id : req.params.theoryId } } }, { multi: true }, (err, doc) => {
         
         if (!err) {
             
-            console.log('One assignment data deleted successfully');
+            console.log('One 101 assignment data deleted successfully');
             
-            res.redirect('/all/stdDashboard');
+            res.redirect(req.get('referer'));
             
         }
         
-        else { console.log('Error in assignment delete :' + err); }
+        else { 
+            
+            console.log('Error in assignment delete :' + err);
+        
+            res.redirect(req.get('referer'));
+        }
         
     });
     
 });
+
+
+router.get('/assignment/delete102/:id/:theoryId', async (req, res) => {
+    
+
+await Student.updateOne({_id: req.params.id}, { $pull: { assignmentTheory102 : { _id : req.params.theoryId } } }, { multi: true }, (err, doc) => {
+        
+        if (!err) {
+            
+            console.log('One 102  assignment data deleted successfully');
+            
+            res.redirect(req.get('referer'));
+            
+        }
+        
+        else { 
+            
+            console.log('Error in assignment delete :' + err);
+        
+            res.redirect(req.get('referer'));
+        }
+        
+    });
+    
+});
+
+router.get('/assignment/delete103/:id/:theoryId', async (req, res) => {
+    
+
+await Student.updateOne({_id: req.params.id}, { $pull: { assignmentTheory103 : { _id : req.params.theoryId } } }, { multi: true }, (err, doc) => {
+        
+        if (!err) {
+            
+            console.log('One 103 assignment data deleted successfully');
+            
+            res.redirect(req.get('referer'));
+            
+        }
+        
+        else { 
+            
+            console.log('Error in assignment delete :' + err);
+        
+            res.redirect(req.get('referer'));
+        }
+        
+    });
+    
+});
+
+router.get('/assignment/delete104/:id/:theoryId', async (req, res) => {
+    
+
+await Student.updateOne({_id: req.params.id}, { $pull: { assignmentTheory103 : { _id : req.params.theoryId } } }, { multi: true }, (err, doc) => {
+        
+        if (!err) {
+            
+            console.log('One 104 assignment data deleted successfully');
+            
+            res.redirect(req.get('referer'));
+            
+        }
+        
+        else { 
+            
+            console.log('Error in assignment delete :' + err);
+        
+            res.redirect(req.get('referer'));
+        }
+        
+    });
+    
+});
+
+router.get('/assignment/delete105/:id/:theoryId', async (req, res) => {
+    
+
+await Student.updateOne({_id: req.params.id}, { $pull: { assignmentTheory103 : { _id : req.params.theoryId } } }, { multi: true }, (err, doc) => {
+        
+        if (!err) {
+            
+            console.log('One 105 assignment data deleted successfully');
+            
+            res.redirect(req.get('referer'));
+            
+        }
+        
+        else { 
+            
+            console.log('Error in assignment delete :' + err);
+        
+            res.redirect(req.get('referer'));
+        }
+        
+    });
+    
+});
+
+router.get('/assignment/delete106/:id/:theoryId', async (req, res) => {
+    
+
+await Student.updateOne({_id: req.params.id}, { $pull: { assignmentTheory103 : { _id : req.params.theoryId } } }, { multi: true }, (err, doc) => {
+        
+        if (!err) {
+            
+            console.log('One 106 assignment data deleted successfully');
+            
+            res.redirect(req.get('referer'));
+            
+        }
+        
+        else { 
+            
+            console.log('Error in assignment delete :' + err);
+        
+            res.redirect(req.get('referer'));
+        }
+        
+    });
+    
+});
+
+
 
 
 //=================================================

@@ -48,7 +48,7 @@
                         
                           <div class="d-flex justify-content-between m-1">
                             
-                            <a href="dca1semOnlineLessonChapter1"><button type="button" class="btn btn-sm btn-outline-secondary"> Chapter-1</button></a>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"> Chapter-1</button>
                             
                               <div class="dropdown">
                 
@@ -127,11 +127,6 @@
                             
                             (1989-Present)]. 
                             
-                            
-
-                            
-                  
-                  
                         </em> 
             
            
@@ -299,17 +294,21 @@
                         
                     <div class="accordion-body">
 
+                    <div class="d-flex justify-content-end">
+
                       <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-outline-primary float-end" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       
                      Click here to answer assignment
                       
                     </button>
 
-                      
-              <p class="fs-4 fw-light mt-3">
+                  
+                  </div>
+                  
+                  <p class="fs-5 fw-light mt-2 mb-2">
                     
-                    Scoreboard 
+                    Assignment Table
                     
                   </p>
                   
@@ -334,9 +333,7 @@
               <th>Scored</th>
               
                             
-              <th>Submitted on</th>
-              
-
+              <th>Dated</th>
               
               <th>Action</th>
 
@@ -347,14 +344,57 @@
           <tbody class="text-center">
             
             <%    if( thisStudent.assignmentTheory != undefined) {
-              
+                      //serial atan aw
                       var noOfAttempt = 0;
+                      
               
                       for(var i=0; i < thisStudent.assignmentTheory.length; i++) {
                         
                         if(thisStudent.assignmentTheory[i].chapterName == 'Chapter-1') {
-                          
+                          //display serial
                           noOfAttempt += 1;
+                          
+                          //count of correct and incorrect answered
+                            var correctCount = 0;
+                            var incorrect = 0;
+                            var questionNumber = [];
+                          
+                          //question 1
+                          if(thisStudent.assignmentTheory[i].mcq1 == 'Charles Babbage') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q1');
+                          }
+                          //question 2
+                          if(thisStudent.assignmentTheory[i].mcq2 == 'High IQ') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q2');
+                          }
+                          //question 3
+                          if(thisStudent.assignmentTheory[i].mcq3 == '0 or 1') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q3');
+                          }
+                           //question 4
+                          if(thisStudent.assignmentTheory[i].mcq4 == 'Computer') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q4');
+                          }
+                           //question 5
+                          if(thisStudent.assignmentTheory[i].mcq5 == '5th Generation') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q5');
+                          }
+                          
                           
                   %>
             
@@ -362,25 +402,21 @@
               
               <th class="text-center fw-normal"><%= noOfAttempt %></th>
               
-              <td class="text-center fw-normal">3</td>
+              <td class="text-center fw-normal text-success"><%= correctCount %></td>
               
-              <td class="text-center fw-normal">2</td>
+              <td class="text-center fw-normal text-danger small"><%=  questionNumber %></td>
               
               <td class="text-center fw-normal">
                 
-                5/5
+               <%= correctCount %>/5
 
               </td>
               
-                            
-              
               <td class="text-center fw-normal"><%= convertDate(thisStudent.assignmentTheory[i].dateSubmitted) %></td>
-              
-              
               
               <td>
                 
-                 <a href="/assignment/delete/<%= studentId %>/<%= thisStudent.assignmentTheory[i]._id %>" onclick="return confirm('Are you sure to delete this assignment record?');">
+                 <a href="/assignment/delete101/<%= studentId %>/<%= thisStudent.assignmentTheory[i]._id %>" onclick="return confirm('He record hi i delete duh em ni?');">
                   
                   <i class="fas fa-times p-1 text-muted" aria-hidden="true"></i></a>
               
@@ -445,8 +481,6 @@
               
               <input type="hidden" name="_id" value="<%= studentId %>" aria-hidden="true">
 
-              <input type="hidden" name="_id" value="" aria-hidden="true">
-              
               <input type="hidden" name="subjectName" value="DCA-101 (Theory)" aria-hidden="true">
               
               <input type="hidden" name="chapterName" value="Chapter-1" aria-hidden="true">
@@ -644,7 +678,7 @@
                   
                   <p class="fs-5 fw-light mt-3">
                     
-                    Q4. ________ is a device that transforms data into a meaningful information?
+                    Q4. ________ is a device that transforms data into a meaningful information.
                     
                   </p>
                   
@@ -774,13 +808,11 @@
     
                </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
     </div>
   </div>
 </div>
-  </body>
+
+</body>
   
   
 </html>

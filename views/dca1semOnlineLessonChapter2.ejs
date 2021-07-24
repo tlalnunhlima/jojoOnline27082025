@@ -44,7 +44,7 @@
                         
                           <div class="d-flex justify-content-between m-1">
                             
-                            <a href="dca1semOnlineLessonChapter2"><button type="button" class="btn btn-sm btn-outline-secondary"> Chapter-2</button></a>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"> Chapter-2</button>
                             
                               <div class="dropdown">
                 
@@ -262,9 +262,188 @@ the computer users. Examples are the Computer monitor and the computer printer.
                       <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
                         
                     <div class="accordion-body">
+
+                     <div class="d-flex justify-content-end">
+
+                      <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       
+                     Click here to answer assignment
                       
-                      <!--Assignment form started-->
+                    </button>
+
+                  
+                  </div>
+                  
+                  <p class="fs-5 fw-light mt-2 mb-2">
+                    
+                    Assignment Table
+                    
+                  </p>
+                  
+                  
+                  <!--scoreboard-->
+                  
+      <div class="table-responsive">
+        
+        <table class="table table-striped table-sm myTable">
+          
+          <thead>
+            
+            <tr class="text-muted border text-center">
+              
+              <th>Sl.</th>
+              
+              
+              <th>Correct</th>
+              
+              <th>Incorrect</th>
+              
+              <th>Scored</th>
+              
+                            
+              <th>Dated</th>
+              
+              <th>Action</th>
+
+            </tr>
+            
+          </thead>
+          
+          <tbody class="text-center">
+            
+            <%    if( thisStudent.assignmentTheory != undefined) {
+                      //serial atan aw
+                      var noOfAttempt = 0;
+                      
+              
+                      for(var i=0; i < thisStudent.assignmentTheory.length; i++) {
+                        
+                        if(thisStudent.assignmentTheory[i].chapterName == 'Chapter-2') {
+                          //display serial
+                          noOfAttempt += 1;
+                          
+                          //count of correct and incorrect answered
+                            var correctCount = 0;
+                            var incorrect = 0;
+                            var questionNumber = [];
+                          
+                          //question 1
+                          if(thisStudent.assignmentTheory[i].mcq1 == 'Control Unit and Arithmetic Logic Unit') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q1');
+                          }
+                          //question 2
+                          if(thisStudent.assignmentTheory[i].mcq2 == 'Central Processing Unit') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q2');
+                          }
+                          //question 3
+                          if(thisStudent.assignmentTheory[i].mcq3 == 'Flows of instruction and data') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q3');
+                          }
+                           //question 4
+                          if(thisStudent.assignmentTheory[i].mcq4 == '5') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q4');
+                          }
+                           //question 5
+                          if(thisStudent.assignmentTheory[i].mcq5 == '1024') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q5');
+                          }
+                          
+                          
+                  %>
+            
+           <tr>
+              
+              <th class="text-center fw-normal"><%= noOfAttempt %></th>
+              
+              <td class="text-center fw-normal text-success"><%= correctCount %></td>
+              
+              <td class="text-center fw-normal text-danger small"><%=  questionNumber %></td>
+              
+              <td class="text-center fw-normal">
+                
+               <%= correctCount %>/5
+
+              </td>
+              
+              <td class="text-center fw-normal"><%= convertDate(thisStudent.assignmentTheory[i].dateSubmitted) %></td>
+              
+              <td>
+                
+                 <a href="/assignment/delete101/<%= studentId %>/<%= thisStudent.assignmentTheory[i]._id %>" onclick="return confirm('He record hi i delete duh em ni?');">
+                  
+                  <i class="fas fa-times p-1 text-muted" aria-hidden="true"></i></a>
+              
+              </td>
+  
+            </tr>
+        
+            <% } } } %>
+
+          </tbody>
+          
+        </table>
+        
+      </div>
+                  
+ 
+              </div><!-- end of 4th collapse assignment-->
+                      
+                      </div>
+               
+                  </div>
+                  
+                  
+              
+                </div>
+              
+              </div>
+              
+           <hr>
+            
+ 
+            
+            </div>
+            
+            </div>
+ 
+
+    </main>
+    
+</div> <!--end of container-->
+
+
+
+    <%- include('layouts/scripts') -%>
+    
+    <%- include('layouts/footer') -%>
+    
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">A hnuaia zawhna te hi chhang rawh</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+                           <!--Assignment form started-->
                       
           <form action="/computerStudents/theoryAssignment" method="POST" autocomplete="off">
               
@@ -275,10 +454,7 @@ the computer users. Examples are the Computer monitor and the computer printer.
               
               <input type="hidden" name="chapterName" value="Chapter-2" aria-hidden="true">
                       
-                      <h6 class="text-center">A hnuaia zawhnate hi chhang rawh.</h6>
-
-            
-                 <p class="fw-bold mt-3">
+                 <p class="fs-5 fw-light">
                     
                     Q1. CPU is made up of ________?
                     
@@ -345,7 +521,7 @@ the computer users. Examples are the Computer monitor and the computer printer.
                  
                   </p>
                   
-                  <p class="fw-bold mt-3">
+                  <p class="fs-5 fw-light mt-3">
                     
                     Q2. ALU and CU are part of _____?
                     
@@ -407,7 +583,7 @@ the computer users. Examples are the Computer monitor and the computer printer.
                     
                   </p>
                   
-                  <p class="fw-bold mt-3">
+                  <p class="fs-5 fw-light mt-3">
                     
                     Q3. In the above BCO figure, right arrow symbol ( <i class="fas fa-arrow-right text-muted"></i>) indicates ________
                     
@@ -469,7 +645,7 @@ the computer users. Examples are the Computer monitor and the computer printer.
                     
                   </p>
                   
-                  <p class="fw-bold mt-3">
+                  <p class="fs-5 fw-light mt-3">
                     
                     Q4. Computer has ________ functional independent units.
                     
@@ -531,7 +707,7 @@ the computer users. Examples are the Computer monitor and the computer printer.
                     
                   </p>
                   
-                  <p class="fw-bold mt-3">
+                  <p class="fs-5 fw-light mt-3">
                     
                    Q5. 1MB is equal to ________ kb.
                    
@@ -605,51 +781,14 @@ the computer users. Examples are the Computer monitor and the computer printer.
                   
                       
                     </form>
-
-
-                    </div><!-- end of 4th collapse assignment-->
-                    
-                    
-                    
-                      
-                      </div>
-               
-                  </div>
-                  
-                  
-              
-                </div>
-              
-              </div>
-              
-              </div>
-              
-              <hr>
-              
-
-              
-              
-              
-              </div>
-              
-              
-              
-              </div>
-              
-            
+      </div>
+    </div>
+  </div>
+</div>    
     
-            
- 
-
-    </main>
     
-</div> <!--end of container-->
-
-
-
-    <%- include('layouts/scripts') -%>
     
-    <%- include('layouts/footer') -%>
+    
 
   </body>
   

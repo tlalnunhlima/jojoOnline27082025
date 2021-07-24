@@ -40,7 +40,7 @@
                         
                           <div class="d-flex justify-content-between m-1">
                             
-                            <a href="dca1semOnlineLessonChapter7"><button type="button" class="btn btn-sm btn-outline-secondary"> Chapter-7 </button></a>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"> Chapter-7 </button>
                             
                               <div class="dropdown">
                 
@@ -229,7 +229,7 @@ SNOBOL).</p>
 
 <p>
 <code>Compiler </code> - It is a program that
-translates the instructions of higherlevel languages to machine
+translates the instructions of higher level languages to machine
 language. It is called compiler
 because it compiles every program
 instruction given in higher-level
@@ -241,7 +241,7 @@ it is called object program. A compiler, however, cannot detect logic errors. </
 
 <p>
 <code>Interpreter </code> - An interpreter is another type of
-program translator used for translating higherlevel language instructions into machine
+program translator used for translating higher level language instructions into machine
 language instructions. It takes one statement of
 higher-level language at a time, translates it into
 machine language and executes it immediately. </p>
@@ -265,7 +265,7 @@ function. </p>
                 
    
                 
-                <div class="accordion-item">
+                 <div class="accordion-item">
                  
                   <h2 class="accordion-header" id="panelsStayOpen-headingFour">
                     
@@ -280,12 +280,192 @@ function. </p>
                       <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
                         
                     <div class="accordion-body">
+
+                   <div class="d-flex justify-content-end">
+
+                      <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       
+                     Click here to answer assignment
                       
-                      <!--Assignment form started-->
+                    </button>
+
+                  
+                  </div>
+                  
+                  <p class="fs-5 fw-light mt-2 mb-2">
+                    
+                    Assignment Table
+                    
+                  </p>
+                  
+                  
+                  <!--scoreboard-->
+                  
+      <div class="table-responsive">
+        
+        <table class="table table-striped table-sm myTable">
+          
+          <thead>
+            
+            <tr class="text-muted border text-center">
+              
+              <th>Sl.</th>
+              
+              
+              <th>Correct</th>
+              
+              <th>Incorrect</th>
+              
+              <th>Scored</th>
+              
+                            
+              <th>Dated</th>
+              
+              <th>Action</th>
+
+            </tr>
+            
+          </thead>
+          
+          <tbody class="text-center">
+            
+            <%    if( thisStudent.assignmentTheory != undefined) {
+                      //serial atan aw
+                      var noOfAttempt = 0;
                       
+              
+                      for(var i=0; i < thisStudent.assignmentTheory.length; i++) {
+                        
+                        if(thisStudent.assignmentTheory[i].chapterName == 'Chapter-7') {
+                          //display serial
+                          noOfAttempt += 1;
+                          
+                          //count of correct and incorrect answered
+                            var correctCount = 0;
+                            var incorrect = 0;
+                            var questionNumber = [];
+                          
+                          //question 1
+                          if(thisStudent.assignmentTheory[i].mcq1 == '2') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q1');
+                          }
+                          //question 2
+                          if(thisStudent.assignmentTheory[i].mcq2 == 'Machine') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q2');
+                          }
+                          //question 3
+                          if(thisStudent.assignmentTheory[i].mcq3 == 'Assembler') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q3');
+                          }
+                           //question 4
+                          if(thisStudent.assignmentTheory[i].mcq4 == 'High Level') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q4');
+                          }
+                           //question 5
+                          if(thisStudent.assignmentTheory[i].mcq5 == 'High Level Language') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q5');
+                          }
+                          
+                          
+                  %>
+            
+           <tr>
+              
+              <th class="text-center fw-normal"><%= noOfAttempt %></th>
+              
+              <td class="text-center fw-normal text-success"><%= correctCount %></td>
+              
+              <td class="text-center fw-normal text-danger small"><%=  questionNumber %></td>
+              
+              <td class="text-center fw-normal">
+                
+               <%= correctCount %>/5
+
+              </td>
+              
+              <td class="text-center fw-normal"><%= convertDate(thisStudent.assignmentTheory[i].dateSubmitted) %></td>
+              
+              <td>
+                
+                 <a href="/assignment/delete101/<%= studentId %>/<%= thisStudent.assignmentTheory[i]._id %>" onclick="return confirm('He record hi i delete duh em ni?');">
+                  
+                  <i class="fas fa-times p-1 text-muted" aria-hidden="true"></i></a>
+              
+              </td>
+  
+            </tr>
+        
+            <% } } } %>
+
+          </tbody>
+          
+        </table>
+        
+      </div>
+                  
+ 
+              </div><!-- end of 4th collapse assignment-->
                       
-                     <form action="/computerStudents/theoryAssignment" method="POST" autocomplete="off">
+                      </div>
+               
+                  </div>
+                  
+                  
+              
+                </div>
+              
+              </div>
+              
+           <hr>
+            
+ 
+            
+            </div>
+            
+            </div>
+ 
+
+    </main>
+    
+</div> <!--end of container-->
+
+
+
+    <%- include('layouts/scripts') -%>
+    
+    <%- include('layouts/footer') -%>
+    
+    
+   <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">A hnuaia zawhna te hi chhang rawh</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+                                                 
+           <!--Assignment form started-->
+            
+         <form action="/computerStudents/theoryAssignment" method="POST" autocomplete="off">
               
               
               <input type="hidden" name="_id" value="<%= studentId %>" aria-hidden="true">
@@ -293,14 +473,10 @@ function. </p>
               <input type="hidden" name="subjectName" value="DCA-101 (Theory)" aria-hidden="true">
               
               <input type="hidden" name="chapterName" value="Chapter-7" aria-hidden="true">
-              
-                      
-                      <h6 class="text-center">A hnuaia zawhnate hi chhang rawh.</h6>
-
-            
-                 <p class="fw-bold mt-3">
+                 
+                 <p class="fs-5 fw-light">
                     
-                    Q1. There are ________ types of programming languages.
+                    Q1. There are ________ major types of programming languages.
                     
                   </p>
                   
@@ -365,7 +541,7 @@ function. </p>
                  
                   </p>
                   
-                  <p class="fw-bold mt-3">
+                  <p class="fs-5 fw-light mt-3">
                     
                     Q2. Low Level languages are further divided into _________ language and Assembly language.
                     
@@ -427,7 +603,7 @@ function. </p>
                     
                   </p>
                   
-                  <p class="fw-bold mt-3">
+                  <p class="fs-5 fw-light mt-3">
                     
                     Q3. ________ is required to translate the programs written in assembly language into machine language for execution by the computer.
                     
@@ -489,7 +665,7 @@ function. </p>
                     
                   </p>
                   
-                  <p class="fw-bold mt-3">
+                  <p class="fs-5 fw-light mt-3">
                     
                     Q4. ________ languages are simple language that use English and mathematical symbols like +, -, %, /, etc. for its program construction.
                     
@@ -551,7 +727,7 @@ function. </p>
                     
                   </p>
                   
-                  <p class="fw-bold mt-3">
+                  <p class="fs-5 fw-light mt-3">
                     
                    Q5. C# is a ________
                    
@@ -625,48 +801,13 @@ function. </p>
                   
                       
                     </form>
-                      
-
-                    </div><!-- end of 4th collapse assignment-->
-                      
-                      </div>
-               
-                  </div>
-                  
-                  
-              
-                </div>
-              
-              </div>
-              
-              </div>
-              
-              <hr>
-              
-
-              
-              
-              
-              </div>
-              
-              
-              
-              </div>
-              
-            
+      </div>
+    </div>
+  </div>
+</div> 
     
-            
- 
-
-    </main>
     
-</div> <!--end of container-->
-
-
-
-    <%- include('layouts/scripts') -%>
     
-    <%- include('layouts/footer') -%>
 
   </body>
   
