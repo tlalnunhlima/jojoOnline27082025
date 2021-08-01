@@ -4629,7 +4629,7 @@ await Student.updateOne({_id: req.params.id}, { $pull: { assignmentTheory103 : {
 router.get('/assignment/delete104/:id/:theoryId', async (req, res) => {
     
 
-await Student.updateOne({_id: req.params.id}, { $pull: { assignmentTheory103 : { _id : req.params.theoryId } } }, { multi: true }, (err, doc) => {
+await Student.updateOne({_id: req.params.id}, { $pull: { assignmentTheory104 : { _id : req.params.theoryId } } }, { multi: true }, (err, doc) => {
         
         if (!err) {
             
@@ -4653,7 +4653,7 @@ await Student.updateOne({_id: req.params.id}, { $pull: { assignmentTheory103 : {
 router.get('/assignment/delete105/:id/:theoryId', async (req, res) => {
     
 
-await Student.updateOne({_id: req.params.id}, { $pull: { assignmentTheory103 : { _id : req.params.theoryId } } }, { multi: true }, (err, doc) => {
+await Student.updateOne({_id: req.params.id}, { $pull: { assignmentTheory105 : { _id : req.params.theoryId } } }, { multi: true }, (err, doc) => {
         
         if (!err) {
             
@@ -4677,7 +4677,7 @@ await Student.updateOne({_id: req.params.id}, { $pull: { assignmentTheory103 : {
 router.get('/assignment/delete106/:id/:theoryId', async (req, res) => {
     
 
-await Student.updateOne({_id: req.params.id}, { $pull: { assignmentTheory103 : { _id : req.params.theoryId } } }, { multi: true }, (err, doc) => {
+await Student.updateOne({_id: req.params.id}, { $pull: { assignmentTheory106 : { _id : req.params.theoryId } } }, { multi: true }, (err, doc) => {
         
         if (!err) {
             

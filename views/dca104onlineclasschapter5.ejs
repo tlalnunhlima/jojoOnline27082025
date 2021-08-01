@@ -211,7 +211,7 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
 </p><p>
 7)	<code>In copyright,</code> only expression is protected, not facts or ideas.
 </p><p>
-8)	<code>Firewall</code> is hardware or software designed to protect against network hackers.
+8)	Firewall are used to protect against unauthorized attack.
 </p><p>
 9)	<code>Firewalls </code>cannot protect computer against viruses.
 </p><p>
@@ -219,7 +219,7 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
 </p><p>
 11)	A good firewall system should be flexible. 
 </p><p>
-12) <code>Stageful Inspection</code> is one type of Firewall. 
+12) Stageful Inspection is one type of Firewall. 
 </p><p>
 13) <code>Callback</code> is a security feature.
 </p><p>
@@ -238,7 +238,14 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
 20) The Information Technology Act (ITA), 2000 consists of <code>94 sections.</code>
 </p><p>
 21) <code>Intellectual Property Right</code> deals with trademark, patent and design rights.
+</p><p>
+22) Unlawful acts wherein the computer is either a tool or target or both means Cyber crime.
+</p><p>
+23) The right to copy or duplicate material can be granted only by the owner of the information is called copyright
+</p><p>
+24) IMAP4 stands for Internet Mail Access Protocol version 4, is an Internet standard protocol for storing and retrieving messages from Simple Mail Transfer Protocol (SMTP) hosts.
 </p>
+
 
                         
 
@@ -253,7 +260,7 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
                 
    
                 
-                <div class="accordion-item">
+                  <div class="accordion-item">
                  
                   <h2 class="accordion-header" id="panelsStayOpen-headingFour">
                     
@@ -269,25 +276,200 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
                         
                     <div class="accordion-body">
                       
+                      <div class="d-flex justify-content-end">
+
+                      <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       
-                      <!--Assignment form started-->
+                     Click here to answer assignment
                       
-            <form action="/computerStudents/theoryAssignment" method="POST" autocomplete="off">
+                    </button>
+
+                  
+                  </div>
+                  
+                  <p class="fs-5 fw-light mt-2 mb-2">
+                    
+                    Assignment Table
+                    
+                  </p>
+                  
+                  <!--scoreboard-->
+                  
+      <div class="table-responsive">
+        
+        <table class="table table-striped table-sm myTable">
+          
+          <thead>
+            
+            <tr class="text-muted border text-center">
+              
+              <th>Sl.</th>
               
               
+              <th>Correct</th>
+              
+              <th>Incorrect</th>
+              
+              <th>Scored</th>
+              
+                            
+              <th>Dated</th>
+              
+              <th>Action</th>
+
+            </tr>
+            
+          </thead>
+          
+          <tbody class="text-center">
+            
+            <%    if( thisStudent.assignmentTheory104 != undefined) {
+                      //serial atan aw
+                      var noOfAttempt = 0;
+                      
+              
+                      for(var i=0; i < thisStudent.assignmentTheory104.length; i++) {
+                        
+                        if(thisStudent.assignmentTheory104[i].chapterName == 'Chapter-5') {
+                          //display serial
+                          noOfAttempt += 1;
+                          
+                          //count of correct and incorrect answered
+                            var correctCount = 0;
+                            var incorrect = 0;
+                            var questionNumber = [];
+                            //question 1
+                          if(thisStudent.assignmentTheory104[i].mcq1 == 'Auditing') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q1');
+                          }
+                          //question 2
+                          if(thisStudent.assignmentTheory104[i].mcq2 == 'Cryptography') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q2');
+                          }
+                          //question 3
+                          if(thisStudent.assignmentTheory104[i].mcq3 == 'Cyber crime') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q3');
+                          }
+                           //question 4
+                          if(thisStudent.assignmentTheory104[i].mcq4 == 'unauthorized attack') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q4');
+                          }
+                           //question 5
+                          if(thisStudent.assignmentTheory104[i].mcq5 == 'Packet') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q5');
+                          }
+                          
+                          
+                          
+                  %>
+            
+           <tr>
+              
+              <th class="text-center fw-normal"><%= noOfAttempt %></th>
+              
+              <td class="text-center fw-bold text-success"><%= correctCount %></td>
+              
+              <td class="text-center fw-normal text-danger small"><%=  questionNumber %></td>
+              
+              <td class="text-center fw-normal">
+                
+               <%= correctCount %>/5
+
+              </td>
+              
+              <td class="text-center fw-normal"><%= convertDate(thisStudent.assignmentTheory104[i].dateSubmitted) %></td>
+              
+              <td>
+                
+                 <a href="/assignment/delete104/<%= studentId %>/<%= thisStudent.assignmentTheory104[i]._id %>" onclick="return confirm('He record hi i delete duh em ni?');">
+                  
+                  <i class="fas fa-times p-1 text-muted" aria-hidden="true"></i></a>
+              
+              </td>
+  
+            </tr>
+        
+            <% } } } %>
+
+          </tbody>
+          
+        </table>
+        
+      </div>
+                  
+ 
+              </div><!-- end of 4th collapse assignment-->
+                      
+                      </div>
+               
+                  </div>
+                  
+                  
+              
+                </div>
+              
+              </div>
+              
+           <hr>
+            
+ 
+            
+            </div>
+            
+            </div>
+ 
+
+    </main>
+    
+</div> <!--end of container-->
+
+
+
+    <%- include('layouts/scripts') -%>
+    
+    <%- include('layouts/footer') -%>
+    
+    
+ <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">A hnuaia zawhna te hi chhang rawh</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+                                                 
+           <!--Assignment form started-->
+            
+        <form action="/computerStudents/theoryAssignment104" method="POST" autocomplete="off">
+             
               <input type="hidden" name="_id" value="<%= studentId %>" aria-hidden="true">
               
-              <input type="hidden" name="subjectName" value="DCA-102 (Theory)" aria-hidden="true">
+              <input type="hidden" name="subjectName" value="DCA-104 (Theory)" aria-hidden="true">
               
-              <input type="hidden" name="chapterName" value="Chapter-1" aria-hidden="true">
-
-                 
-                 <h6 class="text-center lead">A hnuaia zawhnate hi chhang rawh.</h6>
-
+              <input type="hidden" name="chapterName" value="Chapter-5" aria-hidden="true">
             
-                  <p class="fw-bold mt-3">
+                  <p class="fs-5 fw-light">
                     
-                    Q1. The set of instructions given to a computer to perform a task is called a __________.
+                    Q1.  Collection and analysis of data is called ________.
                     
                   </p>
                   
@@ -297,11 +479,11 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
       
                             <div class="form-check mb-1 ms-3">
                               
-                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault1" value="Program" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault1" value="Auditing" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault1">
                                   
-                                  Program
+                                  Auditing
                                   
                                 </label>
                                 
@@ -309,11 +491,11 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault2" value="Instruction" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault2" value="Data analyser" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault2">
                                   
-                                  Instruction
+                                  Data analyser
                                   
                                 </label>
                                 
@@ -323,11 +505,11 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault3" value="Processor" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault3" value="Garbage collection" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault3">
                                   
-                                  Processor
+                                  Garbage collection
                                   
                                 </label>
                                 
@@ -335,11 +517,11 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
                               
                               <div class="form-check ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault4" value="Scheduling" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault4" value="Monitoring" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault4">
                                   
-                                  Scheduling
+                                  Monitoring
                                   
                                 </label>
                                 
@@ -352,9 +534,9 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
                  
                   </p>
                   
-                  <p class="fw-bold mt-3">
+                  <p class="fs-5 fw-light mt-3">
                     
-                    Q2. ________ is a UNIX like operating system. It is free and open source program originally developed by Linus Torvalds in 1991 for personal computers.
+                    Q2. ________ involves two processes, namely, encryption and decryption.
                     
                   </p>
                   
@@ -364,11 +546,11 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
       
                             <div class="form-check mb-1 ms-3">
                               
-                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault1Q2" value="Linux" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault1Q2" value="Archiving" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault1Q2">
                                   
-                                  Linux
+                                  Archiving
                                   
                                 </label>
                                 
@@ -376,11 +558,11 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault2Q2" value="Boss" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault2Q2" value="Cryptocurrency" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault2Q2">
                                   
-                                  Boss
+                                  Cryptocurrency
                                   
                                 </label>
                                 
@@ -388,11 +570,11 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault3Q2" value="Android" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault3Q2" value="Cryptography" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault3Q2">
                                   
-                                  Android
+                                 Cryptography
                                   
                                 </label>
                                 
@@ -400,11 +582,11 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault4Q2" value="Unix" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault4Q2" value="None of the above" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault4Q2">
                                   
-                                  UNIX
+                                 None of the above
                                   
                                 </label>
                                 
@@ -414,9 +596,9 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
                     
                   </p>
                   
-                  <p class="fw-bold mt-3">
+                  <p class="fs-5 fw-light mt-3">
                     
-                    Q3. Which of the following is function of operating system?
+                    Q3. Unlawful acts wherein the computer is either a tool or target or both means ________.
                     
                   </p>
                   
@@ -426,11 +608,11 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
       
                             <div class="form-check mb-1 ms-3">
                               
-                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault1Q3" value="Process Management" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault1Q3" value="Criminal" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault1Q3">
                                   
-                                  Process Management
+                                  Criminal
                                   
                                 </label>
                                 
@@ -438,11 +620,11 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault2Q3" value="Device Management" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault2Q3" value="Intruder" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault2Q3">
                                   
-                                  Device Management
+                                  Intruder
                                   
                                 </label>
                                 
@@ -450,11 +632,11 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault3Q3" value="Security Management" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault3Q3" value="Hacking" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault3Q3">
                                   
-                                  Security Management
+                                  Hacking
                                   
                                 </label>
                                 
@@ -462,11 +644,11 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault4Q3" value="All of these" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault4Q3" value="Cyber crime" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault4Q3">
                                   
-                                  All of these
+                                  Cyber crime
                                   
                                 </label>
                                 
@@ -476,9 +658,9 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
                     
                   </p>
                   
-                  <p class="fw-bold mt-3">
+                  <p class="fs-5 fw-light mt-3">
                     
-                    Q4. The most important program for the computer is ________?
+                    Q4.  Firewall are used to protect against  ________.
                     
                   </p>
                   
@@ -488,23 +670,23 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
       
                             <div class="form-check mb-1 ms-3">
                               
-                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault1Q4" value="Microsoft Windows" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault1Q4" value="unauthorized attack" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault1Q4">
                                   
-                                  Microsoft Windows
-                                  
+                                  unauthorized attack 
+
                                 </label>
                                 
                               </div>
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault2Q4" value="CPU" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault2Q4" value="data driven attacks" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault2Q4">
                                   
-                                  CPU
+                                   data driven attacks
                                   
                                 </label>
                                 
@@ -512,11 +694,11 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault3Q4" value="Operating System" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault3Q4" value="virus attacks" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault3Q4">
                                   
-                                  Operating System
+                                 virus attacks
                                   
                                 </label>
                                 
@@ -524,11 +706,11 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault4Q4" value="Application Software" required>
+                              <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault4Q4" value="None of the above" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault4Q4">
                                   
-                                  Application Software
+                                  None of the above
                                   
                                 </label>
                                 
@@ -538,9 +720,9 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
                     
                   </p>
                   
-                  <p class="fw-bold mt-3">
+                  <p class="fs-5 fw-light mt-3">
                     
-                   Q5. File management, which includes organizing, naming, protecting, accessing and using files, is one of the key functions of an _________.
+                   Q5. ________ Filters allows network administrators to limit a user’s access to specific services on the network.
                    
                   </p>
                   
@@ -550,11 +732,11 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
       
                             <div class="form-check mb-1 ms-3">
                               
-                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault1Q5" value="Application Software" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault1Q5" value="Water" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault1Q5">
                                   
-                                  Application Software
+                                  Water
                                   
                                 </label>
                                 
@@ -562,11 +744,11 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault2Q5" value="System Software" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault2Q5" value="Packet" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault2Q5">
                                   
-                                  System Software
+                                  Packet
                                   
                                 </label>
                                 
@@ -574,11 +756,11 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault3Q5" value="Operating System" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault3Q5" value="Password" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault3Q5">
                                   
-                                  Operating System
+                                  Password
                                   
                                 </label>
                                 
@@ -586,11 +768,11 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault4Q5" value="None of the above" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault4Q5" value="Firewall" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault4Q5">
                                   
-                                  None of the above
+                                  Firewall
                                   
                                 </label>
                                 
@@ -607,37 +789,10 @@ Information Privacy, Copyright Issues, Basics of Asymmetric Cryptosystems.
                   </div>
     
                </form>
-                  
- 
-              </div><!-- end of 4th collapse assignment-->
-                      
-                      </div>
-               
-                  </div>
-                  
-                  
-              
-                </div>
-              
-              </div>
-              
-           <hr>
-
-            
-            </div>
-            
-            </div>
- 
-
-    </main>
-    
-</div> <!--end of container-->
-
-
-
-    <%- include('layouts/scripts') -%>
-    
-    <%- include('layouts/footer') -%>
+      </div>
+    </div>
+  </div>
+</div>
 
   </body>
   
