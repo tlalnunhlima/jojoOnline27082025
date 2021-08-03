@@ -289,6 +289,28 @@ placed in a new publication for printing.
    5. In a document setup if you type 10 in a start page option the numbering of document will start from => 10
    </p><p>
      6. TOC stand for => Table of Content
+     </p><p>
+     7. Make each occurrence of the individual words and phrases to include in the index using the => Index entry
+     </p><p>
+     8. The short cut for zooming in is =>  Ctrl + Plus
+     </p><p>
+     9. To bring text from back to front, press => Ctrl + Shift + }
+      </p><p>
+     10. The shortcut key for current page is => Alt + Ctrl + G
+      </p><p>
+     11. To sent text from front to back, press => Shift + Ctrl + {
+      </p><p>
+     12. To cycle the units of measure through inches, mm, Cicero and Picas, use => Ctrl + Alt + M
+      </p><p>
+     13. The full form of RIP is => Raster Image Processor
+     </p><p>
+     14. The shortcut to shrinks the page to a postage-stamp size, and show the entire width of the paste board is => Shift + Ctrl + 0
+     </p><p>
+     15. What type of printing is done when using CMYK? => Process color
+     </p><p>
+     16. Red, yellow, and blue are what type of colors? => Primary <br>
+     
+     <em>Red, blue and yellow would be the primary colors if we are talking about colors in terms of paint, dyes and pigments. Red, green and blue are the primary colors if talking about additive color mixing.</em>
 </p>
 
     
@@ -381,42 +403,26 @@ placed in a new publication for printing.
                             var incorrect = 0;
                             var questionNumber = [];
                             //question 1
-                          if(thisStudent.assignmentTheory106[i].mcq1 == 'Charles Babbage') {
+                          if(thisStudent.assignmentTheory106[i].mcq1 == 'Table of Content') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q1');
                           }
                           //question 2
-                          if(thisStudent.assignmentTheory106[i].mcq2 == 'High IQ') {
+                          if(thisStudent.assignmentTheory106[i].mcq2 == 'TINT') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q2');
                           }
                           //question 3
-                          if(thisStudent.assignmentTheory106[i].mcq3 == '0 or 1') {
+                          if(thisStudent.assignmentTheory106[i].mcq3 == 'Primary') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q3');
                           }
-                           //question 4
-                          if(thisStudent.assignmentTheory106[i].mcq4 == 'Computer') {
-                            correctCount++;
-                          } else {
-                            incorrect++;
-                            questionNumber.push('Q4');
-                          }
-                           //question 5
-                          if(thisStudent.assignmentTheory106[i].mcq5 == '5th Generation') {
-                            correctCount++;
-                          } else {
-                            incorrect++;
-                            questionNumber.push('Q5');
-                          }
-                          
-                          
                           
                   %>
             
@@ -430,7 +436,7 @@ placed in a new publication for printing.
               
               <td class="text-center fw-normal">
                 
-               <%= correctCount %>/5
+               <%= correctCount %>/3
 
               </td>
               
@@ -486,7 +492,7 @@ placed in a new publication for printing.
     
     <%- include('layouts/footer') -%>
     
-     <!-- Modal -->
+<!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
@@ -509,7 +515,7 @@ placed in a new publication for printing.
             
                   <p class="fs-5 fw-light">
                     
-                    Q1.  We are learning Microsoft Office Word Version ________.
+                    Q1. The full form of TOC is ________.
                     
                   </p>
                   
@@ -519,11 +525,11 @@ placed in a new publication for printing.
       
                             <div class="form-check mb-1 ms-3">
                               
-                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault1" value="2010" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault1" value="Table of Content" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault1">
                                   
-                                  2010
+                                  Table of Content
                                   
                                 </label>
                                 
@@ -531,11 +537,11 @@ placed in a new publication for printing.
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault2" value="2009" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault2" value="Table of Credit" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault2">
                                   
-                                  2009
+                                 Table of Credit
                                   
                                 </label>
                                 
@@ -545,23 +551,23 @@ placed in a new publication for printing.
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault3" value="2008" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault3" value="Transfer of Credit" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault3">
                                   
-                                  2008
-                                  
+                                  Transfer of Credit
+
                                 </label>
                                 
                               </div>
                               
                               <div class="form-check ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault4" value="2007" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault4" value="Transfer of Content" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault4">
                                   
-                                  2007
+                                Transfer of Content
                                   
                                 </label>
                                 
@@ -576,7 +582,7 @@ placed in a new publication for printing.
                   
                   <p class="fs-5 fw-light mt-3">
                     
-                    Q2. ________ helps to open, save or print document.
+                    Q2. ________ is a shade of color, usually expressed as a percentage of a solid color.
                     
                   </p>
                   
@@ -586,11 +592,11 @@ placed in a new publication for printing.
       
                             <div class="form-check mb-1 ms-3">
                               
-                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault1Q2" value="Print preview" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault1Q2" value="Shading" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault1Q2">
                                   
-                                  Print preview
+                                  Shading
                                   
                                 </label>
                                 
@@ -598,11 +604,11 @@ placed in a new publication for printing.
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault2Q2" value="File Menu" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault2Q2" value="Dropcap" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault2Q2">
                                   
-                                  File Menu
+                                  Dropcap
                                   
                                 </label>
                                 
@@ -610,11 +616,11 @@ placed in a new publication for printing.
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault3Q2" value="Office button" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault3Q2" value="Build Booklet" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault3Q2">
                                   
-                                 Office button
+                                 Build Booklet
                                   
                                 </label>
                                 
@@ -622,11 +628,11 @@ placed in a new publication for printing.
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault4Q2" value="None of the above" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault4Q2" value="TINT" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault4Q2">
                                   
-                                 None of the above
+                                 TINT
                                   
                                 </label>
                                 
@@ -635,10 +641,10 @@ placed in a new publication for printing.
                           </div>
                     
                   </p>
-                  
+
                   <p class="fs-5 fw-light mt-3">
                     
-                    Q3. ________ on the lower-most bar provides information about current page number, total pages in the document, documents views and a zoom button.
+                    Q3. Red, yellow, and blue are what type of colors?
                     
                   </p>
                   
@@ -648,11 +654,11 @@ placed in a new publication for printing.
       
                             <div class="form-check mb-1 ms-3">
                               
-                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault1Q3" value="Scrollbar" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault1Q3" value="Primary" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault1Q3">
                                   
-                                  Scrollbar
+                                  Primary
                                   
                                 </label>
                                 
@@ -660,11 +666,11 @@ placed in a new publication for printing.
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault2Q3" value="Taskbar" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault2Q3" value="Secondary" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault2Q3">
                                   
-                                  Taskbar
+                                 Secondary
                                   
                                 </label>
                                 
@@ -672,11 +678,11 @@ placed in a new publication for printing.
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault3Q3" value="Status bar" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault3Q3" value="CMYK color" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault3Q3">
                                   
-                                  Status bar
+                                  CMYK color
                                   
                                 </label>
                                 
@@ -684,71 +690,9 @@ placed in a new publication for printing.
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault4Q3" value="Zoom" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault4Q3" value="None of the above" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault4Q3">
-                                  
-                                  Zoom
-                                  
-                                </label>
-                                
-                              </div>
-                            
-                          </div>
-                    
-                  </p>
-                  
-                  <p class="fs-5 fw-light mt-3">
-                    
-                    Q4.  When the insertion point reaches the right margin, it automatically moves to the next line as you continue typing. This feature is known as ________.
-                    
-                  </p>
-                  
-                  <p class="fw-normal mt-3">
-                    
-                    <div class="form-floating align-items-center mb-2">
-      
-                            <div class="form-check mb-1 ms-3">
-                              
-                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault1Q4" value="Word wrapping" required>
-                                
-                                <label class="form-check-label" for="flexRadioDefault1Q4">
-                                  
-                                  Word wrapping
-                                  
-                                </label>
-                                
-                              </div>
-                              
-                              <div class="form-check mb-1 ms-3">
-                                
-                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault2Q4" value="Text wrapping" required>
-                                
-                                <label class="form-check-label" for="flexRadioDefault2Q4">
-                                  
-                                   Text wrapping
-                                  
-                                </label>
-                                
-                              </div>
-                              
-                              <div class="form-check mb-1 ms-3">
-                                
-                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault3Q4" value="New line" required>
-                                
-                                <label class="form-check-label" for="flexRadioDefault3Q4">
-                                  
-                                  New line
-                                  
-                                </label>
-                                
-                              </div>
-                              
-                              <div class="form-check mb-1 ms-3">
-                                
-                              <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault4Q4" value="None of the above" required>
-                                
-                                <label class="form-check-label" for="flexRadioDefault4Q4">
                                   
                                   None of the above
                                   
@@ -760,67 +704,7 @@ placed in a new publication for printing.
                     
                   </p>
                   
-                  <p class="fs-5 fw-light mt-3">
-                    
-                   Q5.   To print the document, you can press ________ from the keyboard or go to Office button > click print.
-                   
-                  </p>
                   
-                  <p class="fw-normal mt-3">
-                    
-                    <div class="form-floating align-items-center mb-2">
-      
-                            <div class="form-check mb-1 ms-3">
-                              
-                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault1Q5" value="Ctrl + Alt + P" required>
-                                
-                                <label class="form-check-label" for="flexRadioDefault1Q5">
-                                  
-                                  Ctrl + Alt + P
-                                  
-                                </label>
-                                
-                              </div>
-                              
-                              <div class="form-check mb-1 ms-3">
-                                
-                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault2Q5" value="Ctrl + Shift + P" required>
-                                
-                                <label class="form-check-label" for="flexRadioDefault2Q5">
-                                  
-                                  Ctrl + Shift + P
-                                  
-                                </label>
-                                
-                              </div>
-                              
-                              <div class="form-check mb-1 ms-3">
-                                
-                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault3Q5" value="Ctrl + Print" required>
-                                
-                                <label class="form-check-label" for="flexRadioDefault3Q5">
-                                  
-                                  Ctrl + Print
-                                  
-                                </label>
-                                
-                              </div>
-                              
-                              <div class="form-check mb-1 ms-3">
-                                
-                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault4Q5" value="Ctrl + P" required>
-                                
-                                <label class="form-check-label" for="flexRadioDefault4Q5">
-                                  
-                                  Ctrl + P
-                                  
-                                </label>
-                                
-                              </div>
-                            
-                          </div>
-                  
-                    </p>
                   
                   <div class="text-center">
                     
@@ -833,8 +717,6 @@ placed in a new publication for printing.
     </div>
   </div>
 </div>
-    
-    
 
   </body>
   

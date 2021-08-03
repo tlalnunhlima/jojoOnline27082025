@@ -291,7 +291,7 @@ attached text, the most common choice is => Rectangle
 </p><p>
   7. By double clicking rectangle tool the following box appear => Rounded Corners
   </p><p>
-    8. ________ . tool is used to draw star shaped objects => Polygon
+    8. ________ tool is used to draw star shaped objects => Polygon
     </p><p>
       9. While drawing polygon a value 0% represent => No Star
       </p><p>
@@ -322,6 +322,11 @@ attached text, the most common choice is => Rectangle
       22. ________is use to select, move and size text objects and graphics => Pointer tool
     </p><p>
       23. To delete unwanted parts of an image => Cropping
+      </p><p>
+      24. To quickly paste copies of an object at a specific offset, that is at a
+specific distance from the original copy, press => Ctrl + Alt + V
+</p><p>
+25. ________ is the fastest way to place a text on a page => Autoflow text
     </p>
 
                     </div>
@@ -413,35 +418,35 @@ attached text, the most common choice is => Rectangle
                             var incorrect = 0;
                             var questionNumber = [];
                             //question 1
-                          if(thisStudent.assignmentTheory106[i].mcq1 == 'Charles Babbage') {
+                          if(thisStudent.assignmentTheory106[i].mcq1 == 'Pointer tool') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q1');
                           }
                           //question 2
-                          if(thisStudent.assignmentTheory106[i].mcq2 == 'High IQ') {
+                          if(thisStudent.assignmentTheory106[i].mcq2 == 'Object') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q2');
                           }
                           //question 3
-                          if(thisStudent.assignmentTheory106[i].mcq3 == '0 or 1') {
+                          if(thisStudent.assignmentTheory106[i].mcq3 == 'Rounded Corners') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q3');
                           }
                            //question 4
-                          if(thisStudent.assignmentTheory106[i].mcq4 == 'Computer') {
+                          if(thisStudent.assignmentTheory106[i].mcq4 == 'Autoflow') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q4');
                           }
                            //question 5
-                          if(thisStudent.assignmentTheory106[i].mcq5 == '5th Generation') {
+                          if(thisStudent.assignmentTheory106[i].mcq5 == '100') {
                             correctCount++;
                           } else {
                             incorrect++;
@@ -518,7 +523,7 @@ attached text, the most common choice is => Rectangle
     
     <%- include('layouts/footer') -%>
     
-     <!-- Modal -->
+ <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
@@ -540,8 +545,9 @@ attached text, the most common choice is => Rectangle
               <input type="hidden" name="chapterName" value="Chapter-3" aria-hidden="true">
             
                   <p class="fs-5 fw-light">
-                    
-                    Q1.  We are learning Microsoft Office Word Version ________.
+
+                  
+                    Q1. ________ is use to select, move and size text objects and graphics
                     
                   </p>
                   
@@ -551,11 +557,11 @@ attached text, the most common choice is => Rectangle
       
                             <div class="form-check mb-1 ms-3">
                               
-                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault1" value="2010" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault1" value="Text tool" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault1">
                                   
-                                  2010
+                                  Text tool
                                   
                                 </label>
                                 
@@ -563,11 +569,11 @@ attached text, the most common choice is => Rectangle
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault2" value="2009" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault2" value="Pointer tool" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault2">
                                   
-                                  2009
+                                  Pointer tool
                                   
                                 </label>
                                 
@@ -577,11 +583,11 @@ attached text, the most common choice is => Rectangle
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault3" value="2008" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault3" value="Auto flow" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault3">
                                   
-                                  2008
+                                  Auto flow
                                   
                                 </label>
                                 
@@ -589,26 +595,23 @@ attached text, the most common choice is => Rectangle
                               
                               <div class="form-check ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault4" value="2007" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ1" id="flexRadioDefault4" value="Utility tool" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault4">
                                   
-                                  2007
+                                  Utility tool 
                                   
                                 </label>
                                 
                               </div>
                             
-                          </div>
-                          
-   
-                    
+                          </div>     
                  
                   </p>
                   
                   <p class="fs-5 fw-light mt-3">
                     
-                    Q2. ________ helps to open, save or print document.
+                    Q2. PageMaker consider a block of text as an ________.
                     
                   </p>
                   
@@ -618,11 +621,11 @@ attached text, the most common choice is => Rectangle
       
                             <div class="form-check mb-1 ms-3">
                               
-                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault1Q2" value="Print preview" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault1Q2" value="Text line" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault1Q2">
                                   
-                                  Print preview
+                                  Text line
                                   
                                 </label>
                                 
@@ -630,11 +633,11 @@ attached text, the most common choice is => Rectangle
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault2Q2" value="File Menu" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault2Q2" value="Original text" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault2Q2">
                                   
-                                  File Menu
+                                  Original text
                                   
                                 </label>
                                 
@@ -642,11 +645,11 @@ attached text, the most common choice is => Rectangle
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault3Q2" value="Office button" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault3Q2" value="Object" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault3Q2">
                                   
-                                 Office button
+                                 Object
                                   
                                 </label>
                                 
@@ -670,9 +673,9 @@ attached text, the most common choice is => Rectangle
                   
                   <p class="fs-5 fw-light mt-3">
                     
-                    Q3. ________ on the lower-most bar provides information about current page number, total pages in the document, documents views and a zoom button.
-                    
-                  </p>
+                    Q3. By double clicking rectangle tool the following box appear ________.
+
+                   </p>
                   
                   <p class="fw-normal mt-3">
                     
@@ -680,11 +683,11 @@ attached text, the most common choice is => Rectangle
       
                             <div class="form-check mb-1 ms-3">
                               
-                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault1Q3" value="Scrollbar" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault1Q3" value="Fill and Stroke" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault1Q3">
                                   
-                                  Scrollbar
+                                  Fill and Stroke
                                   
                                 </label>
                                 
@@ -692,11 +695,11 @@ attached text, the most common choice is => Rectangle
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault2Q3" value="Taskbar" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault2Q3" value="Polygon settings" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault2Q3">
                                   
-                                  Taskbar
+                                  Polygon settings
                                   
                                 </label>
                                 
@@ -704,11 +707,11 @@ attached text, the most common choice is => Rectangle
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault3Q3" value="Status bar" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault3Q3" value="Rounded Corners" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault3Q3">
                                   
-                                  Status bar
+                                  Rounded Corners
                                   
                                 </label>
                                 
@@ -716,71 +719,9 @@ attached text, the most common choice is => Rectangle
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault4Q3" value="Zoom" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault4Q3" value="None of the above" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault4Q3">
-                                  
-                                  Zoom
-                                  
-                                </label>
-                                
-                              </div>
-                            
-                          </div>
-                    
-                  </p>
-                  
-                  <p class="fs-5 fw-light mt-3">
-                    
-                    Q4.  When the insertion point reaches the right margin, it automatically moves to the next line as you continue typing. This feature is known as ________.
-                    
-                  </p>
-                  
-                  <p class="fw-normal mt-3">
-                    
-                    <div class="form-floating align-items-center mb-2">
-      
-                            <div class="form-check mb-1 ms-3">
-                              
-                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault1Q4" value="Word wrapping" required>
-                                
-                                <label class="form-check-label" for="flexRadioDefault1Q4">
-                                  
-                                  Word wrapping
-                                  
-                                </label>
-                                
-                              </div>
-                              
-                              <div class="form-check mb-1 ms-3">
-                                
-                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault2Q4" value="Text wrapping" required>
-                                
-                                <label class="form-check-label" for="flexRadioDefault2Q4">
-                                  
-                                   Text wrapping
-                                  
-                                </label>
-                                
-                              </div>
-                              
-                              <div class="form-check mb-1 ms-3">
-                                
-                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault3Q4" value="New line" required>
-                                
-                                <label class="form-check-label" for="flexRadioDefault3Q4">
-                                  
-                                  New line
-                                  
-                                </label>
-                                
-                              </div>
-                              
-                              <div class="form-check mb-1 ms-3">
-                                
-                              <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault4Q4" value="None of the above" required>
-                                
-                                <label class="form-check-label" for="flexRadioDefault4Q4">
                                   
                                   None of the above
                                   
@@ -794,8 +735,8 @@ attached text, the most common choice is => Rectangle
                   
                   <p class="fs-5 fw-light mt-3">
                     
-                   Q5.   To print the document, you can press ________ from the keyboard or go to Office button > click print.
-                   
+                    Q4. ________ is the fastest way to place a text on a page.
+
                   </p>
                   
                   <p class="fw-normal mt-3">
@@ -804,11 +745,73 @@ attached text, the most common choice is => Rectangle
       
                             <div class="form-check mb-1 ms-3">
                               
-                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault1Q5" value="Ctrl + Alt + P" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault1Q4" value="Copy paste" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q4">
+                                  
+                                  Copy paste
+
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault2Q4" value="Paste special" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q4">
+                                  
+                                  Paste special
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault3Q4" value="Copy" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q4">
+                                  
+                                 Copy
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                              <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault4Q4" value="Autoflow" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q4">
+                                  
+                                  Autoflow
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                    
+                  </p>
+                  
+                  <p class="fs-5 fw-light mt-3">
+                    
+                   Q5. We can draw maximum ________ sided Polygon with the help of Polygon tool in PageMaker.
+       
+                  </p>
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault1Q5" value="10" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault1Q5">
                                   
-                                  Ctrl + Alt + P
+                                  10
                                   
                                 </label>
                                 
@@ -816,11 +819,11 @@ attached text, the most common choice is => Rectangle
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault2Q5" value="Ctrl + Shift + P" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault2Q5" value="40" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault2Q5">
                                   
-                                  Ctrl + Shift + P
+                                  40
                                   
                                 </label>
                                 
@@ -828,11 +831,11 @@ attached text, the most common choice is => Rectangle
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault3Q5" value="Ctrl + Print" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault3Q5" value="50" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault3Q5">
                                   
-                                  Ctrl + Print
+                                  50
                                   
                                 </label>
                                 
@@ -840,11 +843,11 @@ attached text, the most common choice is => Rectangle
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault4Q5" value="Ctrl + P" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault4Q5" value="100" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault4Q5">
                                   
-                                  Ctrl + P
+                                  100
                                   
                                 </label>
                                 
@@ -865,7 +868,6 @@ attached text, the most common choice is => Rectangle
     </div>
   </div>
 </div>
-    
 
   </body>
   
