@@ -333,11 +333,35 @@ Menu bar
                             questionNumber.push('Q1');
                           }
                           //question 2
-                          if(thisStudent.assignmentTheory103[i].mcq2 == 'Status bar') {
+                          if(thisStudent.assignmentTheory103[i].mcq2 == 'F7') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q2');
+                          }
+                         
+                          //question 3
+                          if(thisStudent.assignmentTheory103[i].mcq3 == 'Ctrl + W') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q3');
+                          }
+                         
+                          //question 4
+                          if(thisStudent.assignmentTheory103[i].mcq4 == 'All of the above') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q4');
+                          }
+                         
+                          //question 5
+                          if(thisStudent.assignmentTheory103[i].mcq5 == 'Ctrl + K') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q5');
                           }
                          
                           
@@ -354,7 +378,7 @@ Menu bar
               
               <td class="text-center fw-normal">
                 
-               <%= correctCount %>/2
+               <%= correctCount %>/5
 
               </td>
               
@@ -424,7 +448,7 @@ Menu bar
                                                  
            <!--Assignment form started-->
             
-        <form action="/computerStudents/theoryAssignment103" method="POST" autocomplete="off">
+         <form action="/computerStudents/theoryAssignment103" method="POST" autocomplete="off">
              
               <input type="hidden" name="_id" value="<%= studentId %>" aria-hidden="true">
               
@@ -501,7 +525,7 @@ Menu bar
                   
                   <p class="fs-5 fw-light mt-3">
                     
-                    Q2. Word Count easily counts the number of words present in a document. Just look at the ________.
+                    Q2. Shortcut key for Spelling and Grammar is ________.
                     
                   </p>
                   
@@ -511,11 +535,11 @@ Menu bar
       
                             <div class="form-check mb-1 ms-3">
                               
-                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault1Q2" value="Scrollbar" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault1Q2" value="F7" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault1Q2">
                                   
-                                  Scrollbar
+                                  F7
                                   
                                 </label>
                                 
@@ -523,11 +547,11 @@ Menu bar
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault2Q2" value="Tabs" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault2Q2" value="F2" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault2Q2">
                                   
-                                  Tabs
+                                  F2
                                   
                                 </label>
                                 
@@ -535,11 +559,11 @@ Menu bar
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault3Q2" value="Taskbar" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault3Q2" value="F5" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault3Q2">
                                   
-                                 Taskbar
+                                  F5
                                   
                                 </label>
                                 
@@ -547,11 +571,11 @@ Menu bar
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault4Q2" value="Status bar" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault4Q2" value="F11" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault4Q2">
                                   
-                                 Status bar
+                                 F11
                                   
                                 </label>
                                 
@@ -561,7 +585,191 @@ Menu bar
                     
                   </p>
                   
+                  <p class="fs-5 fw-light mt-3">
+                    
+                    Q3. Save and close document shortcut key is ________.
+                    
+                  </p>
                   
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault1Q3" value="Ctrl + W" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q3">
+                                  
+                                  Ctrl + W
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault2Q3" value="Ctrl + Z" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q3">
+                                  
+                                  Ctrl + Z
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault3Q3" value="Ctrl + Y" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q3">
+                                  
+                                  Ctrl + Y
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault4Q3" value="Ctrl + X" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q3">
+                                  
+                                  Ctrl + X
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                    
+                  </p>
+                  
+                  <p class="fs-5 fw-light mt-3">
+                    
+                    Q4. The grammar checker mostly suggests ways to correct the ________.
+                    
+                  </p>
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault1Q4" value="Paragraph construction" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q4">
+                                  
+                                  Paragraph construction
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault2Q4" value="Words" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q4">
+                                  
+                                  Words
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault3Q4" value="Sentence construction" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q4">
+                                  
+                                  Sentence construction
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault4Q4" value="All of the above" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q4">
+                                  
+                                  All of the above
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                    
+                  </p>
+                  
+                  <p class="fs-5 fw-light mt-3">
+                    
+                   Q5. To insert hyperlink, press ________.
+                   
+                  </p>
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault1Q5" value="Ctrl + S" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q5">
+                                  
+                                  Ctrl + S
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault2Q5" value="Ctrl + M" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q5">
+                                  
+                                  Ctrl + M
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault3Q5" value="Ctrl + K" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q5">
+                                  
+                                  Ctrl + K
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault4Q5" value="None of the above" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q5">
+                                  
+                                  None of the above
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                  
+                    </p>
                   
                   <div class="text-center">
                     

@@ -328,7 +328,7 @@ worksheet is link => True
                             questionNumber.push('Q1');
                           }
                           //question 2
-                          if(thisStudent.assignmentTheory103[i].mcq2 == 'Layout') {
+                          if(thisStudent.assignmentTheory103[i].mcq2 == 'Ctrl + M') {
                             correctCount++;
                           } else {
                             incorrect++;
@@ -340,6 +340,14 @@ worksheet is link => True
                           } else {
                             incorrect++;
                             questionNumber.push('Q3');
+                          }
+                         
+                           //question 4
+                          if(thisStudent.assignmentTheory103[i].mcq4 == 'arrange') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q4');
                           }
                          
                           
@@ -356,7 +364,7 @@ worksheet is link => True
               
               <td class="text-center fw-normal">
                 
-               <%= correctCount %>/3
+               <%= correctCount %>/4
 
               </td>
               
@@ -435,7 +443,7 @@ worksheet is link => True
             
                   <p class="fs-5 fw-light">
                     
-                    Q1. ________ refers to communicating with an audience using slides with text and graphics displayed on a screen.
+                    Q1. Microsoft Powerpoint is ________ program.
                     
                   </p>
                   
@@ -502,7 +510,7 @@ worksheet is link => True
                   
                   <p class="fs-5 fw-light mt-3">
                     
-                    Q2. ________ is an arrangement of different elements such as text and graphics on a slide.
+                    Q2. To insert new slide; which of the following key is used?
                     
                   </p>
                   
@@ -512,11 +520,11 @@ worksheet is link => True
       
                             <div class="form-check mb-1 ms-3">
                               
-                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault1Q2" value="Slide" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault1Q2" value="Ctrl + N" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault1Q2">
                                   
-                                  Slide
+                                  Ctrl + N
                                   
                                 </label>
                                 
@@ -524,11 +532,11 @@ worksheet is link => True
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault2Q2" value="Layout" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault2Q2" value="Ctrl + M" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault2Q2">
                                   
-                                  Layout
+                                  Ctrl + M
                                   
                                 </label>
                                 
@@ -536,11 +544,11 @@ worksheet is link => True
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault3Q2" value="Theme" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault3Q2" value="Ctrl + K" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault3Q2">
                                   
-                                 Theme
+                                 Ctrl + K
                                   
                                 </label>
                                 
@@ -548,11 +556,11 @@ worksheet is link => True
                               
                               <div class="form-check mb-1 ms-3">
                                 
-                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault4Q2" value="Style" required>
+                                <input class="form-check-input" type="radio" name="dcaMCQ2" id="flexRadioDefault4Q2" value="Ctrl + New Slide" required>
                                 
                                 <label class="form-check-label" for="flexRadioDefault4Q2">
                                   
-                                 Style
+                                 Ctrl + New Slide
                                   
                                 </label>
                                 
@@ -623,7 +631,67 @@ worksheet is link => True
                           </div>
                     
                   </p>
+                  <p class="fs-5 fw-light mt-3">
+                    
+                    Q4. <img src="/img/arrangePowerpoint.jpg"> represents ________ button.
+                    
+                  </p>
                   
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault1Q4" value="slide" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q4">
+                                  
+                                  slide
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault2Q4" value="layers" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q4">
+                                  
+                                  layers
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault3Q4" value="arrange" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q4">
+                                  
+                                  arrange
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault4Q4" value="None of the above" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q4">
+                                  
+                                  None of the above
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                    
+                  </p>
                   
                   
                   <div class="text-center">

@@ -215,6 +215,8 @@ sound effects, Setting slide timings, Rehearse timings, Grouping and ungrouping 
 </p><p>
 9. Which option in powerpoint allows you to create a package of your presentation for showing to another
 computer? => Pack and Go
+</p><p>
+10. In cell C5 you want to display the current date and time, what is the formula? => =NOW()
 </p>
 
              
@@ -326,6 +328,20 @@ computer? => Pack and Go
                             incorrect++;
                             questionNumber.push('Q3');
                           }
+                           //question 4
+                          if(thisStudent.assignmentTheory103[i].mcq4 == '=Now()') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q4');
+                          }
+                           //question 5
+                          if(thisStudent.assignmentTheory103[i].mcq5 == 'Transition') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q5');
+                          }
                           
                           
                   %>
@@ -340,7 +356,7 @@ computer? => Pack and Go
               
               <td class="text-center fw-normal">
                 
-               <%= correctCount %>/3
+               <%= correctCount %>/5
 
               </td>
               
@@ -608,7 +624,129 @@ computer? => Pack and Go
                           </div>
                     
                   </p>
+                  <p class="fs-5 fw-light mt-3">
+                    
+                    Q4. If you want to display the current date and time, what is the formula?
+
+                  </p>
                   
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault1Q4" value="=Date()" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q4">
+                                  
+                                  =Date()
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault2Q4" value="=Now()" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q4">
+                                  
+                                  =Now()
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault3Q4" value="=Time()" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q4">
+                                  
+                                  =Time()
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault4Q4" value="None of the above" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q4">
+                                  
+                                  None of the above
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                    
+                  </p>
+                  
+                  <p class="fs-5 fw-light mt-3">
+                    
+                   Q5. In powerpoint, animation is also known as ________.
+                   
+                  </p>
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault1Q5" value="Cartoon" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q5">
+                                  
+                                 Cartoon
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault2Q5" value="Effects" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q5">
+                                  
+                                  Effects
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault3Q5" value="Transition" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q5">
+                                  
+                                 Transition
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault4Q5" value="None of the above" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q5">
+                                  
+                                  None of the above
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                  
+                    </p>
                   
                   
                   <div class="text-center">

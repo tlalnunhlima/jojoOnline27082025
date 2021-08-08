@@ -377,6 +377,21 @@ On the office button, click print, and then click selection under print what.
                             questionNumber.push('Q3');
                           }
                          
+                           //question 4
+                          if(thisStudent.assignmentTheory103[i].mcq4 == 'All of the above') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q4');
+                          }
+                           //question 5
+                          if(thisStudent.assignmentTheory103[i].mcq5 == '5,436.80') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q5');
+                          }
+                         
                           
                           
                   %>
@@ -391,7 +406,7 @@ On the office button, click print, and then click selection under print what.
               
               <td class="text-center fw-normal">
                 
-               <%= correctCount %>/3
+               <%= correctCount %>/5
 
               </td>
               
@@ -471,7 +486,7 @@ On the office button, click print, and then click selection under print what.
             
                   <p class="fs-5 fw-light">
                     
-                    Q1. You can double-click on the cell requiring editing and alter its contents; or press ________ after selecting the cell.
+                    Q1. Function key for editing cell to alter its content, we press ________.
                     
                   </p>
                   
@@ -538,7 +553,7 @@ On the office button, click print, and then click selection under print what.
                   
                   <p class="fs-5 fw-light mt-3">
                     
-                    Q2. ________ refers to a group of adjacent cells.
+                    Q2. In excel, ________ refers to a group of adjacent cells.
                     
                   </p>
                   
@@ -659,7 +674,129 @@ On the office button, click print, and then click selection under print what.
                           </div>
                     
                   </p>
+                  <p class="fs-5 fw-light mt-3">
+                    
+                    Q4. In excel sheet addition/ summation is done using ________ expression. 
+                    
+                  </p>
                   
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault1Q4" value="=A1+A2+A3+A4" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q4">
+                                  
+                                  =A1+A2+A3+A4
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault2Q4" value="+A1+A2+A3+A4" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q4">
+                                  
+                                  +A1+A2+A3+A4
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault3Q4" value="=Sum(A1:A4)" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q4">
+                                  
+                                  =Sum(A1:A4)
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault4Q4" value="All of the above" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q4">
+                                  
+                                  All of the above
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                    
+                  </p>
+                  
+                  <p class="fs-5 fw-light mt-3">
+                    
+                   Q5. What will be the output if you format the cell containing 5436.8 as '#,##0.00'?
+                   
+                  </p>
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault1Q5" value="5,4360.8" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q5">
+                                  
+                                  5,4360.8
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault2Q5" value="5,436.80" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q5">
+                                  
+                                  5,436.80
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault3Q5" value="5,436.8" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q5">
+                                  
+                                 5,436.8
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault4Q5" value="None of the above" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q5">
+                                  
+                                  None of the above
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                  
+                    </p>
                   
                   
                   <div class="text-center">

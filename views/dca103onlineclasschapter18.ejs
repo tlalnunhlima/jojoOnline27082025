@@ -225,6 +225,8 @@ your presentation => Slide sorter view
 15. ________ is used to end slide show => Esc
 </p><p>
 18. What is Custom shows in powerpoint? => Creating Presentations within a Presentation
+</p><p>
+19. To select one hyperlink after another during a slide presentation, what do you press? => Tab
 </p>
 
              
@@ -337,6 +339,13 @@ your presentation => Slide sorter view
                             incorrect++;
                             questionNumber.push('Q3');
                           }
+                           //question 4
+                          if(thisStudent.assignmentTheory103[i].mcq4 == 'From beginning') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q4');
+                          }
                          
                           
                           
@@ -352,7 +361,7 @@ your presentation => Slide sorter view
               
               <td class="text-center fw-normal">
                 
-               <%= correctCount %>/3
+               <%= correctCount %>/4
 
               </td>
               
@@ -500,7 +509,7 @@ your presentation => Slide sorter view
                   
                   <p class="fs-5 fw-light mt-3">
                     
-                    Q2. ________ is the shortcut key for playing slide show from the beginning.
+                    Q2. Slide show is activated by ________ key.
                     
                   </p>
                   
@@ -562,7 +571,7 @@ your presentation => Slide sorter view
 
                   <p class="fs-5 fw-light mt-3">
                     
-                    Q3. To terminate a slide show in between, press ________ key.
+                    Q3. ________ is used to end slide show.
                     
                   </p>
                   
@@ -621,7 +630,67 @@ your presentation => Slide sorter view
                           </div>
                     
                   </p>
+                  <p class="fs-5 fw-light mt-3">
+                    
+                    Q4. <img src="/img/slideShowFromBeginning.jpg"> represent start slide show ________
+                    
+                  </p>
                   
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault1Q4" value="From beginning" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q4">
+                                  
+                                   From beginning
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault2Q4" value="From current slide" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q4">
+                                  
+                                  From current slide
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault3Q4" value="Custom slide show" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q4">
+                                  
+                                  Custom slide show
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault4Q4" value="None of the above" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q4">
+                                  
+                                  None of the above
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                    
+                  </p>
                   
                   
                   <div class="text-center">

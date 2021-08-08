@@ -350,6 +350,13 @@ a) Chart b) Clipart c) WordArt e) Graph
                             incorrect++;
                             questionNumber.push('Q3');
                           }
+                           //question 4
+                          if(thisStudent.assignmentTheory103[i].mcq4 == 'paragraph') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q4');
+                          }
                          
                           
                           
@@ -365,7 +372,7 @@ a) Chart b) Clipart c) WordArt e) Graph
               
               <td class="text-center fw-normal">
                 
-               <%= correctCount %>/3
+               <%= correctCount %>/4
 
               </td>
               
@@ -625,6 +632,68 @@ a) Chart b) Clipart c) WordArt e) Graph
                                 <label class="form-check-label" for="flexRadioDefault4Q3">
                                   
                                   .accdb
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                    
+                  </p>
+                  
+                   <p class="fs-5 fw-light mt-3">
+                    
+                    Q4. Pressing F8 key for three times select ________.
+                    
+                  </p>
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault1Q4" value="Word" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q4">
+                                  
+                                  Word
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault2Q4" value="Line" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q4">
+                                  
+                                  Line
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault3Q4" value="paragraph" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q4">
+                                  
+                                  paragraph
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault4Q4" value="None of the above" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q4">
+                                  
+                                  None of the above
                                   
                                 </label>
                                 

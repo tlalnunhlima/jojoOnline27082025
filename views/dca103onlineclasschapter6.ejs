@@ -226,34 +226,32 @@ for >, <=> for #, etc.
 </p><p>
 1. Word has ________ predefined bullet types => 6
 </p><p>
-2. ________ refers to the setting the page size, page orientation and page margin.
-</p><p>
-3. Copying a format applied to one section of a document to
+2. Copying a format applied to one section of a document to
 another portion of the document is => Format painter
 </p><p>
-4. When you want to copy formatting from one item to another we use =>  Format Painter
+3. When you want to copy formatting from one item to another we use =>  Format Painter
 </p><p>
-5. Symbols and special characters can retrieve from => Insert
+4. Symbols and special characters can retrieve from => Insert
 </p><p>
-6. <img src="/img/subscriptSuperscript.jpg"> represent => subscript and superscript
+5. <img src="/img/subscriptSuperscript.jpg"> represent => subscript and superscript
 </p><p>
-7. ________ shows margin and tab setting => Ruler
+6. ________ shows margin and tab setting => Ruler
 </p><p>
-8. <img src="/img/centerTab.jpg"> represent => Center tab
+7. <img src="/img/centerTab.jpg"> represent => Center tab
 </p><p>
-9. Tab positions are arranged in the ________ => Ruler
+8. Tab positions are arranged in the ________ => Ruler
 </p><p>
-10. Horizontal page orientation is also called => Landscape
+9. Horizontal page orientation is also called => Landscape
 </p><p>
-  11. Portrait and landscape are => page orientation
+  10. Portrait and landscape are => page orientation
   </p><p>
-    12. Vertical page orientation is called => Portrait
+    11. Vertical page orientation is called => Portrait
     </p><p>
-      13. Page orientation is of ________ types => Two
+      12. Page orientation is of ________ types => Two
       </p><p>
-        14. There are two type of page orientation.
+        13. There are two type of page orientation.
          </p><p>
-        15. How many different positions can you set for dropcap? => 2
+        14. How many different positions can you set for dropcap? => 2
         
 </p>
 
@@ -347,7 +345,7 @@ another portion of the document is => Format painter
                             var questionNumber = [];
                           
                           //question 1
-                          if(thisStudent.assignmentTheory103[i].mcq1 == 'Landscape') {
+                          if(thisStudent.assignmentTheory103[i].mcq1 == 'Portrait') {
                             correctCount++;
                           } else {
                             incorrect++;
@@ -359,6 +357,27 @@ another portion of the document is => Format painter
                           } else {
                             incorrect++;
                             questionNumber.push('Q2');
+                          }
+                          //question 3
+                          if(thisStudent.assignmentTheory103[i].mcq3 == 'subscript and superscript') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q3');
+                          }
+                          //question 4
+                          if(thisStudent.assignmentTheory103[i].mcq4 == '2') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q4');
+                          }
+                          //question 5
+                          if(thisStudent.assignmentTheory103[i].mcq5 == 'Ruler') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q5');
                           }
                          
                           
@@ -375,7 +394,7 @@ another portion of the document is => Format painter
               
               <td class="text-center fw-normal">
                 
-               <%= correctCount %>/2
+               <%= correctCount %>/5
 
               </td>
               
@@ -445,7 +464,7 @@ another portion of the document is => Format painter
                                                  
            <!--Assignment form started-->
             
-        <form action="/computerStudents/theoryAssignment103" method="POST" autocomplete="off">
+          <form action="/computerStudents/theoryAssignment103" method="POST" autocomplete="off">
              
               <input type="hidden" name="_id" value="<%= studentId %>" aria-hidden="true">
               
@@ -455,7 +474,7 @@ another portion of the document is => Format painter
             
                   <p class="fs-5 fw-light">
                     
-                    Q1. ________ Orientation : The paper is wider than it is taller.
+                    Q1. Vertical page orientation is called ________.
                     
                   </p>
                   
@@ -522,7 +541,7 @@ another portion of the document is => Format painter
                   
                   <p class="fs-5 fw-light mt-3">
                     
-                    Q2. The ________ (<img src="/img/formatPainter.jpg">) lets you copy format applied in one section of the document on to another portion of the document.
+                    Q2. Name this sign (<img src="/img/formatPainter.jpg">) ________.
                     
                   </p>
                   
@@ -582,7 +601,191 @@ another portion of the document is => Format painter
                     
                   </p>
                   
+                  <p class="fs-5 fw-light mt-3">
+                    
+                    Q3. <img src="/img/subscriptSuperscript.jpg"> represent ________.
+                    
+                  </p>
                   
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault1Q3" value="Subnumber and power" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q3">
+                                  
+                                  Subnumber and power
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault2Q3" value="mathematical symbol" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q3">
+                                  
+                                  mathematical symbol
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault3Q3" value="two variable" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q3">
+                                  
+                                  two variable
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ3" id="flexRadioDefault4Q3" value="subscript and superscript" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q3">
+                                  
+                                  subscript and superscript
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                    
+                  </p>
+                  
+                  <p class="fs-5 fw-light mt-3">
+                    
+                    Q4. How many different positions can you set for dropcap?
+                    
+                  </p>
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault1Q4" value="2" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q4">
+                                  
+                                  2
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault2Q4" value="3" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q4">
+                                  
+                                  3
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault3Q4" value="4" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q4">
+                                  
+                                  4
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault4Q4" value="None of the above" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q4">
+                                  
+                                  None of the above
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                    
+                  </p>
+                  
+                  <p class="fs-5 fw-light mt-3">
+                    
+                   Q5. Tab positions are arranged in the ________.
+                   
+                  </p>
+                  
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault1Q5" value="Gutter" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q5">
+                                  
+                                  Gutter
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault2Q5" value="Ruler" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q5">
+                                  
+                                  Ruler
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault3Q5" value="Margin" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q5">
+                                  
+                                 Margin
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ5" id="flexRadioDefault4Q5" value="None of the above" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q5">
+                                  
+                                  None of the above
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                  
+                    </p>
                   
                   <div class="text-center">
                     

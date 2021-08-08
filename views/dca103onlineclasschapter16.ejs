@@ -240,8 +240,6 @@ charts, Updating charts, changing the chart type, previewing and printing charts
 12. Multiple drawing objects are ________ to form one object => Group
 </p><p>
 13. Underlined letter in the menu bar is activated by ________ key => Alt or F10
-</p><p>
-14. To select one hyperlink after another during a slide presentation, what do you press? => Tab
 </p>
 
              
@@ -354,6 +352,13 @@ charts, Updating charts, changing the chart type, previewing and printing charts
                             incorrect++;
                             questionNumber.push('Q3');
                           }
+                           //question 4
+                          if(thisStudent.assignmentTheory103[i].mcq4 == 'Both of the above') {
+                            correctCount++;
+                          } else {
+                            incorrect++;
+                            questionNumber.push('Q4');
+                          }
                          
                           
                           
@@ -369,7 +374,7 @@ charts, Updating charts, changing the chart type, previewing and printing charts
               
               <td class="text-center fw-normal">
                 
-               <%= correctCount %>/3
+               <%= correctCount %>/4
 
               </td>
               
@@ -517,7 +522,7 @@ charts, Updating charts, changing the chart type, previewing and printing charts
                   
                   <p class="fs-5 fw-light mt-3">
                     
-                    Q2. ________ charts are limited to one data series.
+                    Q2. <img src="/img/pieChart.jpg"> represents ________ chart.
                     
                   </p>
                   
@@ -579,7 +584,7 @@ charts, Updating charts, changing the chart type, previewing and printing charts
 
                   <p class="fs-5 fw-light mt-3">
                     
-                    Q3. Charts can be produced in a separate chart sheet.
+                    Q3. You can change a chart type to any other type and embed that into your workbook.
                     
                   </p>
                   
@@ -638,7 +643,67 @@ charts, Updating charts, changing the chart type, previewing and printing charts
                           </div>
                     
                   </p>
+                  <p class="fs-5 fw-light mt-3">
+                    
+                    Q4. MS Excel chart sheet is also use in ________.
+                    
+                  </p>
                   
+                  <p class="fw-normal mt-3">
+                    
+                    <div class="form-floating align-items-center mb-2">
+      
+                            <div class="form-check mb-1 ms-3">
+                              
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault1Q4" value="Ms Word" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault1Q4">
+                                  
+                                  Ms Word
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault2Q4" value="Ms Powerpoint" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault2Q4">
+                                  
+                                  Ms Powerpoint
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault3Q4" value="Both of the above" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault3Q4">
+                                  
+                                  Both of the above
+                                  
+                                </label>
+                                
+                              </div>
+                              
+                              <div class="form-check mb-1 ms-3">
+                                
+                                <input class="form-check-input" type="radio" name="dcaMCQ4" id="flexRadioDefault4Q4" value="None of the above" required>
+                                
+                                <label class="form-check-label" for="flexRadioDefault4Q4">
+                                  
+                                  None of the above
+                                  
+                                </label>
+                                
+                              </div>
+                            
+                          </div>
+                    
+                  </p>
                   
                   
                   <div class="text-center">
