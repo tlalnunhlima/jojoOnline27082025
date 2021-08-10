@@ -1,13 +1,122 @@
+
 <!DOCTYPE html>
 
 <html lang="en">
   
-<%- include('layouts/headers') -%>
+<head>
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    
+    <meta name="description" content="Official Website of Jojo Computer Institute, Aizawl & Kolasib">
+    
+    <title>Jojo Computer Institute </title>
 
+    <!-- Bootstrap core CSS -->
+  
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+    
+
+<!-- Custom styles for this template -->
+
+<link href="/css/login.css" rel="stylesheet" />
+
+<link href="/css/footer.css" rel="stylesheet" />
+
+<link href="/css/style.css" rel="stylesheet" />
+
+<link rel = "icon" type = "image/png" href = "/img/icon.png" />
+
+</head>
 <body class="bg-light">
     
-    <%- include('layouts/navbar') -%>
     
+ <!--function javascript ejs-->
+
+
+<!------------------------- navigation bar section ------------------->
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  
+  <div class="container-fluid">
+      
+    <a class="navbar-brand fw-bold pt-0 pb-0" href="/">
+        
+      <img src="/img/icon.png" alt="" width="40" height="32" /> Jojo Computer Institute
+      
+    </a>
+    
+    <button class="navbar-toggler threeLine" type="button" data-bs-toggle="collapse" 
+    
+    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      
+      <span class="navbar-toggler-icon"></span>
+      
+    </button>
+    
+    <div class="collapse navbar-adjust navbar-collapse" id="navbarNavDropdown">
+        
+      <ul class="navbar-nav">
+          
+        <li class="nav-item">
+            
+          <a class="nav-link active" aria-current="page" href="/"> Home </a>
+          
+        </li>
+        
+        <li class="nav-item">
+            
+          <a class="nav-link active" aria-current="page" href="/">Photos</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link active" aria-current="page" href="/">FAQ</a>
+          
+        </li>
+        
+        
+          
+          
+          
+          <li class="nav-item dropdown ms-2">
+          
+          <a class="nav-link dropdown-toggle text-primary" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              
+           <i class="fas fa-user-circle"></i> </b>
+            
+          </a>
+         
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+              
+            <li><a class="dropdown-item" href="#"><i class="far fa-user-circle text-primary"></i> Hi, Lawmchhungi</a></li>
+            
+            <li><a class="dropdown-item" href="/all/stdDashboard"><i class="far fa-list-alt text-info"></i> My Dashboard</a></li>
+            
+            <li><a class="dropdown-item" href="/all/testResult"><i class="far fa-list-alt text-info"></i> My Scoreboard</a></li>
+            
+            <li><a class="dropdown-item" href="/feeDetails"><i class="fas fa-rupee-sign text-warning"></i> My Fee Details</a></li>
+            
+            <li><a class="dropdown-item" href="/auth/logout"><i class="fas fa-sign-out-alt text-danger"></i> Logout</a></li>
+            
+          </ul>
+          
+        </li>
+        
+         
+        
+      </ul>
+      
+    </div>
+    
+  </div>
+  
+</nav>    
 
 
 <!-- --------------main container section------------------ -->
@@ -34,7 +143,37 @@
             
             <a href="stdDashboard" class="small text-secondary"> <i class="fas fa-home text-primary"></i> Dashboard</i> </a>
             
-            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            <span class="float-end"> <!--thoery assignment section start-->
+          
+          <div class="dropdown  me-2">
+                
+                <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  
+                  Subjects
+                
+                </button>
+                
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                  
+                  <li><a class="dropdown-item" href="dcatheorywelcomepage"> Theory Intro </a></li>
+                  
+                  <li><a class="dropdown-item" href="dca101welcomepage">DCA-101</a></li>
+                  
+                  <li><a class="dropdown-item" href="dca102welcomepage">DCA-102</a></li>
+                  
+                  <li><a class="dropdown-item" href="dca103welcomepage">DCA-103</a></li>
+                  
+                  <li><a class="dropdown-item" href="dca104welcomepage">DCA-104</a></li>
+                  
+                  <li><a class="dropdown-item" href="dca105welcomepage">DCA-105</a></li>
+                  
+                  <li><a class="dropdown-item" href="dca106welcomepage">DCA-106</a></li>
+                
+                </ul>
+              
+              </div>
+              
+              <!--theory assignment section end--> </span>
             
             </div>
             
@@ -42,7 +181,7 @@
             
             <p class="text-muted fw-light text-center mb-0"> You are Learning : (DCA-103) </p>
             
-            <p class="text-dark text-center fw-light fs-1 mt-1"> <%= chapterTitle  %></p>
+            <p class="text-dark text-center fw-light fs-1 mt-1"> Office Automation Software</p>
             
             <hr>
                         
@@ -52,8 +191,91 @@
                             
                               <!--include word excel powerpoint menu-->
                               
-                              <%- include('layouts/officeAutomationSoftwareMenu') -%>
-                            
+                              <div class="dropdown">
+                
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                      
+                                      Word
+                                    
+                                    </button>
+                                    
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                                      
+                                      <li><a class="dropdown-item" href="dca103welcomepage">Intro</a></li>
+                                      
+                                      <li><a class="dropdown-item" href="dca103onlineclasschapter1">Chapter-1 (word)</a></li>
+                                      
+                                      <li><a class="dropdown-item" href="dca103onlineclasschapter2"> Chapter-2 (word)</a></li>
+                                      
+                                      <li><a class="dropdown-item" href="dca103onlineclasschapter3"> Chapter-3 (word)</a></li>
+                                      
+                                      <li><a class="dropdown-item" href="dca103onlineclasschapter4"> Chapter-4 (word)</a></li>
+                                      
+                                      <li><a class="dropdown-item" href="dca103onlineclasschapter5"> Chapter-5 (word)</a></li>
+                                      
+                                      <li><a class="dropdown-item" href="dca103onlineclasschapter6"> Chapter-6 (word)</a></li>
+                                      
+                                      <li><a class="dropdown-item" href="dca103onlineclasschapter7"> Chapter-7 (word)</a></li>
+                                      
+                                      <li><a class="dropdown-item" href="dca103onlineclasschapter8"> Chapter-8 (word)</a></li>
+                                      
+                                      <li><a class="dropdown-item" href="dca103onlineclasschapter9"> Chapter-9 (word)</a></li>
+                                     
+                                      
+                                    </ul>
+                                  
+                                  </div>
+                                  
+                                  <div class="dropdown">
+                
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                      
+                                      Excel
+                                    
+                                    </button>
+                                    
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                                      
+                                      <li><a class="dropdown-item" href="dca103onlineclasschapter10"> Chapter-10 (excel)</a></li>
+                                      
+                                      <li><a class="dropdown-item" href="dca103onlineclasschapter11"> Chapter-11 (excel)</a></li>
+                                      
+                                      <li><a class="dropdown-item" href="dca103onlineclasschapter12"> Chapter-12 (excel)</a></li>
+                                      
+                                      <li><a class="dropdown-item" href="dca103onlineclasschapter13"> Chapter-13 (excel)</a></li>
+                                      
+                                      <li><a class="dropdown-item" href="dca103onlineclasschapter14"> Chapter-14 (excel)</a></li>
+                                      
+                                      <li><a class="dropdown-item" href="dca103onlineclasschapter15"> Chapter-15 (excel)</a></li>
+                                      
+                                      <li><a class="dropdown-item" href="dca103onlineclasschapter16"> Chapter-16 (excel)</a></li>
+                                     
+                                      
+                                    </ul>
+                                  
+                                  </div>
+                                  
+                                  <div class="dropdown">
+                
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                      
+                                      Powerpoint
+                                    
+                                    </button>
+                                    
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                                      
+                                      <li><a class="dropdown-item" href="dca103onlineclasschapter17"> Chapter-17 (powerpoint)</a></li>
+                                      
+                                      <li><a class="dropdown-item" href="dca103onlineclasschapter18"> Chapter-18 (powerpoint)</a></li>
+                                      
+                                      <li><a class="dropdown-item" href="dca103onlineclasschapter19"> Chapter-19 (powerpoint)</a></li>
+                                      
+                                      <li><a class="dropdown-item" href="dca103onlineclasschapter20"> Chapter-20 (powerpoint)</a></li>
+                                      
+                                    </ul>
+                                  
+                                  </div>                            
                           </div>
 
             <p class="fw-normal mx-auto mt-3">Chapter 1-ah hian <code> MICROSOFT WORD INTRODUCTION </code> kan en ho dawn a ni. </p>
@@ -223,60 +445,61 @@ it automatically moves to the next line as you continue typing. This feature is 
 </p><p>
 18. <code>In order to  quit Word, </code>click office button > click Exit Word button.
 </p>
+<hr>
 <p>
   <b>OLD QUESTION:</b>
 </p><p>
-1. Status bar is a bar at the ________ of the screen => bottom
+1. Status bar is a bar at the ________ of the screen <br><b>Ans... </b> bottom
 </p><p>
-2. Cursor position is the => Type head
+2. Cursor position is the <br><b>Ans... </b> Type head
 </p><p>
-3. The valid Minimum and maximum zoom size in MS Office is => 10, 500 <br>
+3. The valid Minimum and maximum zoom size in MS Office is <br><b>Ans... </b> 10, 500 <br>
 Note: <em>Microsoft Office word zoom size hi 10%-500%  a ni a, excel leh powerpoint hi 10%-400% a ni thung. </em>
 </p><p>
-4. MS Office was developed by => Microsoft
+4. MS Office was developed by <br><b>Ans... </b> Microsoft
 </p><p>
-5. In MS Office, enter key is used to go to => Start new paragraph
+5. In MS Office, enter key is used to go to <br><b>Ans... </b> Start new paragraph
 </p><p>
-6. Microsoft developed MS Office in the year => 1st Aug 1988
+6. Microsoft developed MS Office in the year <br><b>Ans... </b> 1st Aug 1988
 </p><p>
-7. Status bar shows the page number on which you are working at.
+7. ________ shows the page number on which you are working at <br><b>Ans... </b> Status bar
 </p><p>
-8. ________ shows margin and tab setting => Ruler
+8. ________ shows margin and tab setting <br><b>Ans... </b> Ruler
 </p><p>
-9. ________ refers to the setting the page size, page orientation and page margin => Page setting
+9. ________ refers to the setting the page size, page orientation and page margin <br><b>Ans... </b> Page setting
 </p><p>
-10. Tab positions are arranged in the ________ => Ruler
+10. Tab positions are arranged in the ________ <br><b>Ans... </b> Ruler
 </p><p>
-11. Symbols and special characters can retrieve from ________ menu => Insert
+11. Symbols and special characters can retrieve from ________ menu <br><b>Ans... </b> Insert
 </p><p>
 12. The dialog box displays the number of pages, characters,
-paragraphs and lines included in the word document => Word count option
+paragraphs and lines included in the word document <br><b>Ans... </b> Word count option
 </p><p>
-13. The process of adjusting the spacing between characters in a proportional font is also called ________ => Kerning
+13. The process of adjusting the spacing between characters in a proportional font is also called ________ <br><b>Ans... </b> Kerning
 </p><p>
-14. Format menu change the character and paragraph settings.
+14. ________ change the character and paragraph settings <br><b>Ans... </b> Format menu
 </p><p>
-15. The character and paragraph settings are manipulated from ________ => Format menu
+15. The character and paragraph settings are manipulated from ________ <br><b>Ans... </b> Format menu
 </p><p>
-16. Existing file can be retrieved from ________ => File menu
+16. Existing file can be retrieved from ________ <br><b>Ans... </b> File menu
 </p><p>
-17. Name this sign <img src="/img/clearFormatting.jpg"> => Clear Formatting
+17. Name this sign <img src="/img/clearFormatting.jpg"> <br><b>Ans... </b> Clear Formatting
 </p><p>
-18. <img src="/img/optionButton.jpg"> represent => Option buttons
+18. <img src="/img/optionButton.jpg"> represent <br><b>Ans... </b> Option buttons
 </p><p>
-19. Save as box points to the location where you save the document/sheet.
+19. ________ box points to the location where you save the document/sheet <br><b>Ans... </b> Save as
 </p><p>
-20. To save your work, press ________ => Ctrl + S
+20. To save your work, press ________ <br><b>Ans... </b> Ctrl + S
 </p><p>
-21. To change the file name and or location of the file of saved filed after editing we use => Save as
+21. To change the file name and or location of the file of saved filed after editing we use <br><b>Ans... </b> Save as
 </p><p>
-22. F12 is used to open ________ dialogue box => Save as
+22. F12 is used to open ________ dialogue box <br><b>Ans... </b> Save as
 </p><p>
-23. Print shortcut key is => Ctrl + P
+23. Print shortcut key is <br><b>Ans... </b> Ctrl + P
 </p><p>
-24. <img src="/img/printPreviewButton.jpg"> represent => Print preview
+24. <img src="/img/printPreviewButton.jpg"> represent <br><b>Ans... </b> Print preview
 </p><p>
-25. <img src="/img/changeCase.jpg"> represent => Change Case
+25. <img src="/img/changeCase.jpg"> represent <br><b>Ans... </b> Change Case
 </p>
 
              
@@ -352,80 +575,27 @@ paragraphs and lines included in the word document => Word count option
           
           <tbody class="text-center">
             
-            <%    if( thisStudent.assignmentTheory103 != undefined) {
-                      //serial atan aw
-                      var noOfAttempt = 0;
-                      
-              
-                      for(var i=0; i < thisStudent.assignmentTheory103.length; i++) {
-                        
-                        if(thisStudent.assignmentTheory103[i].chapterName == 'Chapter-1') {
-                          //display serial
-                          noOfAttempt += 1;
-                          
-                          //count of correct and incorrect answered
-                            var correctCount = 0;
-                            var incorrect = 0;
-                            var questionNumber = [];
-                          
-                          //question 1
-                          if(thisStudent.assignmentTheory103[i].mcq1 == '2007') {
-                            correctCount++;
-                          } else {
-                            incorrect++;
-                            questionNumber.push('Q1');
-                          }
-                          //question 2
-                          if(thisStudent.assignmentTheory103[i].mcq2 == '10,500') {
-                            correctCount++;
-                          } else {
-                            incorrect++;
-                            questionNumber.push('Q2');
-                          }
-                          //question 3
-                          if(thisStudent.assignmentTheory103[i].mcq3 == 'Option buttons') {
-                            correctCount++;
-                          } else {
-                            incorrect++;
-                            questionNumber.push('Q3');
-                          }
-                           //question 4
-                          if(thisStudent.assignmentTheory103[i].mcq4 == 'Save as') {
-                            correctCount++;
-                          } else {
-                            incorrect++;
-                            questionNumber.push('Q4');
-                          }
-                           //question 5
-                          if(thisStudent.assignmentTheory103[i].mcq5 == 'Ctrl + P') {
-                            correctCount++;
-                          } else {
-                            incorrect++;
-                            questionNumber.push('Q5');
-                          }
-                          
-                          
-                  %>
+            
             
            <tr>
               
-              <th class="text-center fw-normal"><%= noOfAttempt %></th>
+              <th class="text-center fw-normal">1</th>
               
-              <td class="text-center fw-bold text-success"><%= correctCount %></td>
+              <td class="text-center fw-bold text-success">2</td>
               
-              <td class="text-center fw-normal text-danger small"><%=  questionNumber %></td>
+              <td class="text-center fw-normal text-danger small">Q2,Q3,Q4</td>
               
               <td class="text-center fw-normal">
                 
-               <%= correctCount %>/5
+               2/5
 
               </td>
               
-              <td class="text-center fw-normal"><%= convertDate(thisStudent.assignmentTheory103[i].dateSubmitted) %></td>
+              <td class="text-center fw-normal">24/07/2021</td>
               
               <td>
                 
-                 <a href="/assignment/delete103/<%= studentId %>/<%= thisStudent.assignmentTheory103[i]._id %>" onclick="return confirm('He record hi i delete duh em ni?');">
+                 <a href="/assignment/delete103/60db35921371ab2066d0e237/60fbdb6f7ae54b1b17bd1324" onclick="return confirm('He record hi i delete duh em ni?');">
                   
                   <i class="fas fa-times p-1 text-muted" aria-hidden="true"></i></a>
               
@@ -433,7 +603,35 @@ paragraphs and lines included in the word document => Word count option
   
             </tr>
         
-            <% } } } %>
+            
+            
+           <tr>
+              
+              <th class="text-center fw-normal">2</th>
+              
+              <td class="text-center fw-bold text-success">5</td>
+              
+              <td class="text-center fw-normal text-danger small"></td>
+              
+              <td class="text-center fw-normal">
+                
+               5/5
+
+              </td>
+              
+              <td class="text-center fw-normal">08/08/2021</td>
+              
+              <td>
+                
+                 <a href="/assignment/delete103/60db35921371ab2066d0e237/610fecc0c2dad318d859aaca" onclick="return confirm('He record hi i delete duh em ni?');">
+                  
+                  <i class="fas fa-times p-1 text-muted" aria-hidden="true"></i></a>
+              
+              </td>
+  
+            </tr>
+        
+            
 
           </tbody>
           
@@ -454,10 +652,7 @@ paragraphs and lines included in the word document => Word count option
               
               </div>
               
-           <hr>
-            
- 
-            
+      
             </div>
             
             </div>
@@ -469,10 +664,27 @@ paragraphs and lines included in the word document => Word count option
 
 
 
-    <%- include('layouts/scripts') -%>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+<!--google cdn for jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     
-    <%- include('layouts/footer') -%>
+    <!-- -----------------footer section-------------------------- -->
+
+<footer class="footer border-top shadow d-flex justify-content-center bg-light p-3">
+  
+    <div class="text-muted small">&copy; 2018 
     
+    <script>
+        new Date().getFullYear()>2018 && document.write("-"+new Date().getFullYear());
+    </script>, 
+    
+    Jojo Computer Institute.
+    
+    </div>
+    
+</footer>    
     
     <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -489,7 +701,7 @@ paragraphs and lines included in the word document => Word count option
             
         <form action="/computerStudents/theoryAssignment103" method="POST" autocomplete="off">
              
-              <input type="hidden" name="_id" value="<%= studentId %>" aria-hidden="true">
+              <input type="hidden" name="_id" value="60db35921371ab2066d0e237" aria-hidden="true">
               
               <input type="hidden" name="subjectName" value="DCA-103 (Theory)" aria-hidden="true">
               
