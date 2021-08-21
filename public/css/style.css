@@ -18,7 +18,7 @@ body {
   
 }
 
-.nav-item:hover {
+.nav-item:hover, .homeLinkButton:hover {
   
   background-color: #d3d3d3;
   
@@ -97,7 +97,7 @@ body {
 
 .greenColor {
   
-  color: #0585D4;
+  color: #31A24C;
   
   background-color: white;
   
@@ -155,7 +155,7 @@ background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
 .bgGradientBlue {
   
   background-color: #045de9;
-background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+  background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
   border-radius: 50%;
   
 }

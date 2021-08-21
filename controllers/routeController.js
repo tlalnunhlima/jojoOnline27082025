@@ -135,6 +135,138 @@ router.get('/faq', (req, res) => {
         
 });
 
+//message page
+router.get('/message', (req, res) => {
+    
+            res.render('message', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3
+            
+        });
+        
+        
+});
+
+//contact us page
+router.get('/contactus', (req, res) => {
+    
+            res.render('contactus', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3
+            
+        });
+        
+        
+});
+
+//privacy policy page
+router.get('/privacy', (req, res) => {
+    
+            res.render('privacy', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3
+            
+        });
+        
+        
+});
+
+
+//term of use page
+router.get('/terms', (req, res) => {
+    
+            res.render('terms', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3
+            
+        });
+        
+        
+});
+
+//photo gallery page
+router.get('/photoGallery', (req, res) => {
+    
+            res.render('photoGallery', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3
+            
+        });
+        
+        
+});
+
+
 
 
 
@@ -183,7 +315,7 @@ router.get('/stdList', async (req, res) => {
 
 router.get('/register', (req, res) => {
     
-    if(req.session.adminIdentity){
+   if(req.session.adminIdentity){
         
           return res.render('register', {
 
