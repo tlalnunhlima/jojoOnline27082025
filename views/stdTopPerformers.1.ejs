@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  
+<%- include('layouts/headers') -%>
+
+
+<body class="bg-light">
+    
+    <%- include('layouts/navbar') -%>
+    
+    <%- include ('ejsFunction') %> <!--function javascript ejs-->
+    
+
+
+    <!-- --------------main container section------------------ -->
+
+<div class="container">
+  
+  <main class="ms-sm-auto px-md-4">
+
+ <div class="row">
+          
+           <div class="mx-auto px-4 mt-3">
+            
+            <div class="d-flex justify-content-between">
+            
+            <a href="stdDashboard" class="small text-secondary"> <i class="fas fa-home bgGradientRed text-white border p-1"></i> Dashboard</i> </a>
+            
+            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            
+            </div>
+            
+            </div>
+  </div>
+      
+
+      
+      <!--second lane-->
+     
+      <!-- --------------assignment record table------------------ -->
+    
+      <div class="shadow-sm mx-auto fs-5 fw-normal mb-0 text-center border p-2 mt-3 mb-3" style="max-width: 450px"> 
+      
+      <i class="far fa-laugh-beam bgGradientBlue text-white border p-1"></i> Assignment finish tawhte </div>
+            
+      
+      
+      <div class="table-responsive">
+        
+        <table class="table table-sm shadow-sm">
+          
+          <thead>
+            
+            <tr>
+              
+              <td colspan="6" class="fw-bold border text-center mb-2"> 
+              
+              <i class="far fa-stop-circle bgGradientBlue text-white border p-1"></i> DCA-101 : Fundamentals of Computer </td>
+              
+            </tr>
+            
+            <tr class="text-center border bg-white orangeColor">
+              
+              <th class="fw-normal  border small"> Sl Nos.</th>
+              
+              <th class="fw-normal  border small"> Name of Student</th>
+              
+              <th class="fw-normal  border small"> Father's Name</th>
+              
+              <th class="fw-normal  border small"> Address</th>
+              
+              <th class="fw-normal  border small"> Last recorded </th>
+              
+              
+          </thead>
+          
+          <tbody class="text-center border bg-white">
+            
+            <% 
+
+              var serialNo = 0;
+              
+              var dateArray = [];
+              
+              var chapterZat = [];
+
+          for (var i=0; i < Students.length; i++) {
+            
+                  if( Students[i].assignmentTheory != undefined &&  Students[i].assignmentTheory.length >= 10 ) {
+                    
+                    chapter1();
+                    
+                    function chapter1() {
+                    
+                  for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-1' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted));
+                                 
+                                 chapterZat.push('Ch-1');
+                                 
+                                chapter2();
+                            } 
+                          
+                        }
+                        
+                    }
+                        
+                  function chapter2(){     
+                  for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-2' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-2');
+                                 
+                                 chapter3();
+                            } 
+                            
+                        }
+                        
+                  }
+                        function chapter3(){
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-3' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-3');
+                                 
+                                 chapter4();
+                            } 
+                            
+                        }
+                        }
+                        
+                        function chapter4(){
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-4' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted));
+                                 
+                                 chapterZat.push('Ch-4');
+                                 
+                                 chapter5();
+                            } 
+                        }
+                        }
+                        
+                        function  chapter5(){
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-5' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-5');
+                                 
+                                 chapter6();
+                            } 
+                        }
+                  }
+                        
+                        function chapter6(){
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-6' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-6');
+                                 
+                                 chapter7();
+                            } 
+                          
+                        }
+                        
+                  }
+                        function chapter7() {
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-7' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-7');
+                                 
+                                 chapter8();
+                            } 
+                            
+                        }
+                  }
+                       function chapter8() {
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-8' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted));
+                                 
+                                 chapterZat.push('Ch-8');
+                                 
+                                 chapter9();
+                            } 
+                            
+                        }
+                       }
+                       function chapter9() {
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-9' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-9');
+                                 
+                                 chapter10();
+                            } 
+                            
+                        }
+                        
+                       }
+                        
+                        function chapter10() {
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-10' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-10');
+                                 
+                                 break;
+                              
+                            } 
+                          
+                        }
+                        
+                      }
+                      
+                  
+                  }
+              
+              const arr1 = ['Ch-1', 'Ch-2', 'Ch-3', 'Ch-4', 'Ch-5', 'Ch-6', 'Ch-7', 'Ch-8', 'Ch-9', 'Ch-10'];
+              
+              const arr2 = chapterZat;
+              
+              const contains = (first, second) => {
+                
+             const indexArray = first.map(el => {
+               
+                return second.indexOf(el);
+                
+             });
+             
+             return indexArray.indexOf(-1) === -1;
+             
+          }
+          
+              if (contains(arr1, arr2) === true) {
+                
+                  serialNo++;
+                        
+                      %>
+            
+             <tr>
+               
+                        <td class="border ps-3"> <%= serialNo %> </td>
+                          
+                          
+                          <td class="border ps-3" >
+          
+                                <%= capitalizeFirstLetter(Students[i].username) %>
+                            
+                          </td>
+                          
+                          <td class="border ps-3"> <%= Students[i].fname %> </td>
+                          
+                          <td class="border ps-3"> <%= Students[i].address %> </td>
+                          
+                          <td class="border ps-3"> <%= findMaxInArray(dateArray) %> </td>
+                          
+                        </tr>
+        
+            <% } } %>
+            
+            
+             
+          </tbody>
+          
+        </table>
+        
+      </div>
+      
+      <!--table-2-->
+      
+      <div class="table-responsive">
+        
+        <table class="table table-sm shadow-sm">
+          
+          <thead>
+            
+            <tr>
+              
+              <td colspan="6" class="fw-bold border text-center mb-2"> 
+              
+              <i class="far fa-stop-circle bgGradientBlue text-white border p-1"></i> DCA-102 : Operating System </td>
+              
+            </tr>
+            
+            <tr class="text-center border bg-white orangeColor">
+              
+              <th class="fw-normal  border small"> Sl Nos.</th>
+              
+              <th class="fw-normal  border small"> Name of Student</th>
+              
+              <th class="fw-normal  border small"> Father's Name</th>
+              
+              <th class="fw-normal  border small"> Address</th>
+              
+              <th class="fw-normal  border small"> Last recorded </th>
+              
+              
+          </thead>
+          
+          <tbody class="text-center border bg-white">
+            
+            <% 
+
+              var serialNo = 0;
+              
+              var dateArray = [];
+              
+              var chapterZat = [];
+
+          for (var i=0; i < Students.length; i++) {
+            
+                  if( Students[i].assignmentTheory102 != undefined &&  Students[i].assignmentTheory102.length >= 10 ) {
+                    
+                    chapter1();
+                    
+                    function chapter1() {
+                    
+                  for (var k=0; k < Students[i].assignmentTheory102.length; k++) {
+                            
+                            if(Students[i].assignmentTheory102[k].chapterName ==  'Chapter-1' && 
+                            
+                            Students[i].assignmentTheory102[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory102[k].dateSubmitted));
+                                 
+                                 chapterZat.push('Ch-1');
+                                 
+                                chapter2();
+                            } 
+                          
+                        }
+                        
+                    }
+                        
+                  function chapter2(){     
+                  for (var k=0; k < Students[i].assignmentTheory102.length; k++) {
+                            
+                            if(Students[i].assignmentTheory102[k].chapterName ==  'Chapter-2' && 
+                            
+                            Students[i].assignmentTheory102[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory102[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-2');
+                                 
+                                 chapter3();
+                            } 
+                            
+                        }
+                        
+                  }
+                        function chapter3(){
+                        for (var k=0; k < Students[i].assignmentTheory102.length; k++) {
+                            
+                            if(Students[i].assignmentTheory102[k].chapterName ==  'Chapter-3' && 
+                            
+                            Students[i].assignmentTheory102[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory102[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-3');
+                                 
+                                 chapter4();
+                            } 
+                            
+                        }
+                        }
+                        
+                        function chapter4(){
+                        for (var k=0; k < Students[i].assignmentTheory102.length; k++) {
+                            
+                            if(Students[i].assignmentTheory102[k].chapterName ==  'Chapter-4' && 
+                            
+                            Students[i].assignmentTheory102[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory102[k].dateSubmitted));
+                                 
+                                 chapterZat.push('Ch-4');
+                                 
+                                 chapter5();
+                            } 
+                        }
+                        }
+                        
+                        function  chapter5(){
+                        for (var k=0; k < Students[i].assignmentTheory102.length; k++) {
+                            
+                            if(Students[i].assignmentTheory102[k].chapterName ==  'Chapter-5' && 
+                            
+                            Students[i].assignmentTheory102[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory102[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-5');
+                                 
+                                 chapter6();
+                            } 
+                        }
+                  }
+                        
+                        function chapter6(){
+                        for (var k=0; k < Students[i].assignmentTheory102.length; k++) {
+                            
+                            if(Students[i].assignmentTheory102[k].chapterName ==  'Chapter-6' && 
+                            
+                            Students[i].assignmentTheory102[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory102[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-6');
+                                 
+                                 chapter7();
+                            } 
+                          
+                        }
+                        
+                  }
+                        function chapter7() {
+                        for (var k=0; k < Students[i].assignmentTheory102.length; k++) {
+                            
+                            if(Students[i].assignmentTheory102[k].chapterName ==  'Chapter-7' && 
+                            
+                            Students[i].assignmentTheory102[k].Scored ==  '3' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory102[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-7');
+                                 
+                                 chapter8();
+                            } 
+                            
+                        }
+                  }
+                       function chapter8() {
+                        for (var k=0; k < Students[i].assignmentTheory102.length; k++) {
+                            
+                            if(Students[i].assignmentTheory102[k].chapterName ==  'Chapter-8' && 
+                            
+                            Students[i].assignmentTheory102[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory102[k].dateSubmitted));
+                                 
+                                 chapterZat.push('Ch-8');
+                                 
+                                 chapter9();
+                            } 
+                            
+                        }
+                       }
+                       function chapter9() {
+                        for (var k=0; k < Students[i].assignmentTheory102.length; k++) {
+                            
+                            if(Students[i].assignmentTheory102[k].chapterName ==  'Chapter-9' && 
+                            
+                            Students[i].assignmentTheory102[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory102[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-9');
+                                 
+                                 chapter10();
+                            } 
+                            
+                        }
+                        
+                       }
+                        
+                        function chapter10() {
+                        for (var k=0; k < Students[i].assignmentTheory102.length; k++) {
+                            
+                            if(Students[i].assignmentTheory102[k].chapterName ==  'Chapter-10' && 
+                            
+                            Students[i].assignmentTheory102[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory102[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-10');
+                                 
+                                 break;
+                              
+                            } 
+                          
+                        }
+                        
+                      }
+                      
+                  
+                  }
+              
+              const arr1 = ['Ch-1', 'Ch-2', 'Ch-3', 'Ch-4', 'Ch-5', 'Ch-6', 'Ch-7', 'Ch-8', 'Ch-9', 'Ch-10'];
+              
+              const arr2 = chapterZat;
+              
+              const contains = (first, second) => {
+                
+             const indexArray = first.map(el => {
+               
+                return second.indexOf(el);
+                
+             });
+             
+             return indexArray.indexOf(-1) === -1;
+             
+          }
+          
+              if (contains(arr1, arr2) === true) {
+                
+                  serialNo++;
+                        
+                      %>
+            
+             <tr>
+               
+                        <td class="border ps-3"> <%= serialNo %> </td>
+                          
+                          
+                          <td class="border ps-3" >
+          
+                                <%= capitalizeFirstLetter(Students[i].username) %>
+                            
+                          </td>
+                          
+                          <td class="border ps-3"> <%= Students[i].fname %> </td>
+                          
+                          <td class="border ps-3"> <%= Students[i].address %> </td>
+                          
+                          <td class="border ps-3"> <%= findMaxInArray(dateArray) %> </td>
+                          
+                        </tr>
+        
+            <% } } %>
+      
+    
+          </tbody>
+          
+        </table>
+        
+      </div>
+      
+
+      
+      <!--2nd row start-->
+      
+      <div class="table-responsive">
+        
+        <table class="table table-sm shadow-sm">
+          
+          <thead>
+            
+            <tr>
+              
+              <td colspan="6" class="fw-bold border text-center mb-2"> 
+              
+              <i class="far fa-stop-circle bgGradientBlue text-white border p-1"></i> DCA-103 : Office Automation Software </td>
+              
+            </tr>
+            
+            <tr class="text-center border bg-white orangeColor">
+              
+              <th class="fw-normal  border small"> Sl Nos.</th>
+              
+              <th class="fw-normal  border small"> Name of Student</th>
+              
+              <th class="fw-normal  border small"> Father's Name</th>
+              
+              <th class="fw-normal  border small"> Address</th>
+              
+              <th class="fw-normal  border small"> Last recorded </th>
+              
+              
+          </thead>
+          
+          <tbody class="text-center border bg-white">
+            
+            <% 
+
+              var serialNo = 0;
+              
+              var dateArray = [];
+              
+              var chapterZat = [];
+
+          for (var i=0; i < Students.length; i++) {
+            
+                  if( Students[i].assignmentTheory103 != undefined &&  Students[i].assignmentTheory103.length >= 10 ) {
+                    
+                    chapter1();
+                    
+                    function chapter1() {
+                    
+                  for (var k=0; k < Students[i].assignmentTheory103.length; k++) {
+                            
+                            if(Students[i].assignmentTheory103[k].chapterName ==  'Chapter-1' && 
+                            
+                            Students[i].assignmentTheory103[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory103[k].dateSubmitted));
+                                 
+                                 chapterZat.push('Ch-1');
+                                 
+                                chapter2();
+                            } 
+                          
+                        }
+                        
+                    }
+                        
+                  function chapter2(){     
+                  for (var k=0; k < Students[i].assignmentTheory103.length; k++) {
+                            
+                            if(Students[i].assignmentTheory103[k].chapterName ==  'Chapter-2' && 
+                            
+                            Students[i].assignmentTheory103[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory103[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-2');
+                                 
+                                 chapter3();
+                            } 
+                            
+                        }
+                        
+                  }
+                        function chapter3(){
+                        for (var k=0; k < Students[i].assignmentTheory103.length; k++) {
+                            
+                            if(Students[i].assignmentTheory103[k].chapterName ==  'Chapter-3' && 
+                            
+                            Students[i].assignmentTheory103[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory103[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-3');
+                                 
+                                 chapter4();
+                            } 
+                            
+                        }
+                        }
+                        
+                        function chapter4(){
+                        for (var k=0; k < Students[i].assignmentTheory103.length; k++) {
+                            
+                            if(Students[i].assignmentTheory103[k].chapterName ==  'Chapter-4' && 
+                            
+                            Students[i].assignmentTheory103[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory103[k].dateSubmitted));
+                                 
+                                 chapterZat.push('Ch-4');
+                                 
+                                 chapter5();
+                            } 
+                        }
+                        }
+                        
+                        function  chapter5(){
+                        for (var k=0; k < Students[i].assignmentTheory103.length; k++) {
+                            
+                            if(Students[i].assignmentTheory103[k].chapterName ==  'Chapter-5' && 
+                            
+                            Students[i].assignmentTheory103[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory103[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-5');
+                                 
+                                 chapter6();
+                            } 
+                        }
+                  }
+                        
+                        function chapter6(){
+                        for (var k=0; k < Students[i].assignmentTheory103.length; k++) {
+                            
+                            if(Students[i].assignmentTheory103[k].chapterName ==  'Chapter-6' && 
+                            
+                            Students[i].assignmentTheory103[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory103[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-6');
+                                 
+                                 chapter7();
+                            } 
+                          
+                        }
+                        
+                  }
+                        function chapter7() {
+                        for (var k=0; k < Students[i].assignmentTheory103.length; k++) {
+                            
+                            if(Students[i].assignmentTheory103[k].chapterName ==  'Chapter-7' && 
+                            
+                            Students[i].assignmentTheory103[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory103[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-7');
+                                 
+                                 chapter8();
+                            } 
+                            
+                        }
+                  }
+                       function chapter8() {
+                        for (var k=0; k < Students[i].assignmentTheory103.length; k++) {
+                            
+                            if(Students[i].assignmentTheory103[k].chapterName ==  'Chapter-8' && 
+                            
+                            Students[i].assignmentTheory103[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory103[k].dateSubmitted));
+                                 
+                                 chapterZat.push('Ch-8');
+                                 
+                                 chapter9();
+                            } 
+                            
+                        }
+                       }
+                       function chapter9() {
+                        for (var k=0; k < Students[i].assignmentTheory103.length; k++) {
+                            
+                            if(Students[i].assignmentTheory103[k].chapterName ==  'Chapter-9' && 
+                            
+                            Students[i].assignmentTheory103[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory103[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-9');
+                                 
+                                 chapter10();
+                            } 
+                            
+                        }
+                        
+                       }
+                        
+                        function chapter10() {
+                        for (var k=0; k < Students[i].assignmentTheory103.length; k++) {
+                            
+                            if(Students[i].assignmentTheory103[k].chapterName ==  'Chapter-10' && 
+                            
+                            Students[i].assignmentTheory103[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory103[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-10');
+                                 
+                                 break;
+                              
+                            } 
+                          
+                        }
+                        
+                      }
+                      
+                  
+                  }
+              
+              const arr1 = ['Ch-1', 'Ch-2', 'Ch-3', 'Ch-4', 'Ch-5', 'Ch-6', 'Ch-7', 'Ch-8', 'Ch-9', 'Ch-10'];
+              
+              const arr2 = chapterZat;
+              
+              const contains = (first, second) => {
+                
+             const indexArray = first.map(el => {
+               
+                return second.indexOf(el);
+                
+             });
+             
+             return indexArray.indexOf(-1) === -1;
+             
+          }
+          
+              if (contains(arr1, arr2) === true) {
+                
+                  serialNo++;
+                        
+                      %>
+            
+             <tr>
+               
+                        <td class="border ps-3"> <%= serialNo %> </td>
+                          
+                          
+                          <td class="border ps-3" >
+          
+                                <%= capitalizeFirstLetter(Students[i].username) %>
+                            
+                          </td>
+                          
+                          <td class="border ps-3"> <%= Students[i].fname %> </td>
+                          
+                          <td class="border ps-3"> <%= Students[i].address %> </td>
+                          
+                          <td class="border ps-3"> <%= findMaxInArray(dateArray) %> </td>
+                          
+                        </tr>
+        
+            <% } } %>
+              
+      
+    
+          </tbody>
+          
+        </table>
+        
+      </div>
+      
+      <!--table-2-->
+      
+      <div class="table-responsive">
+        
+        <table class="table table-sm shadow-sm">
+          
+          <thead>
+            
+            <tr>
+              
+              <td colspan="6" class="fw-bold border text-center mb-2"> 
+              
+              <i class="far fa-stop-circle bgGradientBlue text-white border p-1"></i> DCA-104 : Internet Technology </td>
+              
+            </tr>
+            
+            <tr class="text-center border bg-white orangeColor">
+              
+              <th class="fw-normal  border small"> Sl Nos.</th>
+              
+              <th class="fw-normal  border small"> Name of Student</th>
+              
+              <th class="fw-normal  border small"> Father's Name</th>
+              
+              <th class="fw-normal  border small"> Address</th>
+              
+              <th class="fw-normal  border small"> Last recorded </th>
+              
+              
+          </thead>
+          
+          <tbody class="text-center border bg-white">
+            
+            <% 
+
+              var serialNo = 0;
+              
+              var dateArray = [];
+              
+              var chapterZat = [];
+
+          for (var i=0; i < Students.length; i++) {
+            
+                  if( Students[i].assignmentTheory != undefined &&  Students[i].assignmentTheory.length >= 10 ) {
+                    
+                    chapter1();
+                    
+                    function chapter1() {
+                    
+                  for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-1' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted));
+                                 
+                                 chapterZat.push('Ch-1');
+                                 
+                                chapter2();
+                            } 
+                          
+                        }
+                        
+                    }
+                        
+                  function chapter2(){     
+                  for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-2' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-2');
+                                 
+                                 chapter3();
+                            } 
+                            
+                        }
+                        
+                  }
+                        function chapter3(){
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-3' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-3');
+                                 
+                                 chapter4();
+                            } 
+                            
+                        }
+                        }
+                        
+                        function chapter4(){
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-4' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted));
+                                 
+                                 chapterZat.push('Ch-4');
+                                 
+                                 chapter5();
+                            } 
+                        }
+                        }
+                        
+                        function  chapter5(){
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-5' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-5');
+                                 
+                                 chapter6();
+                            } 
+                        }
+                  }
+                        
+                        function chapter6(){
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-6' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-6');
+                                 
+                                 chapter7();
+                            } 
+                          
+                        }
+                        
+                  }
+                        function chapter7() {
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-7' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-7');
+                                 
+                                 chapter8();
+                            } 
+                            
+                        }
+                  }
+                       function chapter8() {
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-8' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted));
+                                 
+                                 chapterZat.push('Ch-8');
+                                 
+                                 chapter9();
+                            } 
+                            
+                        }
+                       }
+                       function chapter9() {
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-9' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-9');
+                                 
+                                 chapter10();
+                            } 
+                            
+                        }
+                        
+                       }
+                        
+                        function chapter10() {
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-10' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-10');
+                                 
+                                 break;
+                              
+                            } 
+                          
+                        }
+                        
+                      }
+                      
+                  
+                  }
+              
+              const arr1 = ['Ch-1', 'Ch-2', 'Ch-3', 'Ch-4', 'Ch-5', 'Ch-6', 'Ch-7', 'Ch-8', 'Ch-9', 'Ch-10'];
+              
+              const arr2 = chapterZat;
+              
+              const contains = (first, second) => {
+                
+             const indexArray = first.map(el => {
+               
+                return second.indexOf(el);
+                
+             });
+             
+             return indexArray.indexOf(-1) === -1;
+             
+          }
+          
+              if (contains(arr1, arr2) === true) {
+                
+                  serialNo++;
+                        
+                      %>
+            
+             <tr>
+               
+                        <td class="border ps-3"> <%= serialNo %> </td>
+                          
+                          
+                          <td class="border ps-3" >
+          
+                                <%= capitalizeFirstLetter(Students[i].username) %>
+                            
+                          </td>
+                          
+                          <td class="border ps-3"> <%= Students[i].fname %> </td>
+                          
+                          <td class="border ps-3"> <%= Students[i].address %> </td>
+                          
+                          <td class="border ps-3"> <%= findMaxInArray(dateArray) %> </td>
+                          
+                        </tr>
+        
+            <% } } %>
+              
+          </tbody>
+          
+        </table>
+        
+      </div>
+      
+     
+   
+      <div class="table-responsive">
+        
+        <table class="table table-sm shadow-sm">
+          
+          <thead>
+            
+            <tr>
+              
+             <td colspan="6" class="fw-bold border text-center mb-2"> 
+              
+              <i class="far fa-stop-circle bgGradientBlue text-white border p-1"></i> DCA-105 : Computer Graphics </td>
+              
+            </tr>
+            
+            <tr class="text-center border bg-white orangeColor">
+              
+              <th class="fw-normal  border small"> Sl Nos.</th>
+              
+              <th class="fw-normal  border small"> Name of Student</th>
+              
+              <th class="fw-normal  border small"> Father's Name</th>
+              
+              <th class="fw-normal  border small"> Address</th>
+              
+              <th class="fw-normal  border small"> Last recorded </th>
+              
+              
+          </thead>
+          
+          <tbody class="text-center border bg-white">
+            
+            <% 
+
+              var serialNo = 0;
+              
+              var dateArray = [];
+              
+              var chapterZat = [];
+
+          for (var i=0; i < Students.length; i++) {
+            
+                  if( Students[i].assignmentTheory != undefined &&  Students[i].assignmentTheory.length >= 10 ) {
+                    
+                    chapter1();
+                    
+                    function chapter1() {
+                    
+                  for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-1' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted));
+                                 
+                                 chapterZat.push('Ch-1');
+                                 
+                                chapter2();
+                            } 
+                          
+                        }
+                        
+                    }
+                        
+                  function chapter2(){     
+                  for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-2' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-2');
+                                 
+                                 chapter3();
+                            } 
+                            
+                        }
+                        
+                  }
+                        function chapter3(){
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-3' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-3');
+                                 
+                                 chapter4();
+                            } 
+                            
+                        }
+                        }
+                        
+                        function chapter4(){
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-4' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted));
+                                 
+                                 chapterZat.push('Ch-4');
+                                 
+                                 chapter5();
+                            } 
+                        }
+                        }
+                        
+                        function  chapter5(){
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-5' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-5');
+                                 
+                                 chapter6();
+                            } 
+                        }
+                  }
+                        
+                        function chapter6(){
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-6' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-6');
+                                 
+                                 chapter7();
+                            } 
+                          
+                        }
+                        
+                  }
+                        function chapter7() {
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-7' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-7');
+                                 
+                                 chapter8();
+                            } 
+                            
+                        }
+                  }
+                       function chapter8() {
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-8' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted));
+                                 
+                                 chapterZat.push('Ch-8');
+                                 
+                                 chapter9();
+                            } 
+                            
+                        }
+                       }
+                       function chapter9() {
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-9' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-9');
+                                 
+                                 chapter10();
+                            } 
+                            
+                        }
+                        
+                       }
+                        
+                        function chapter10() {
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-10' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-10');
+                                 
+                                 break;
+                              
+                            } 
+                          
+                        }
+                        
+                      }
+                      
+                  
+                  }
+              
+              const arr1 = ['Ch-1', 'Ch-2', 'Ch-3', 'Ch-4', 'Ch-5', 'Ch-6', 'Ch-7', 'Ch-8', 'Ch-9', 'Ch-10'];
+              
+              const arr2 = chapterZat;
+              
+              const contains = (first, second) => {
+                
+             const indexArray = first.map(el => {
+               
+                return second.indexOf(el);
+                
+             });
+             
+             return indexArray.indexOf(-1) === -1;
+             
+          }
+          
+              if (contains(arr1, arr2) === true) {
+                
+                  serialNo++;
+                        
+                      %>
+            
+             <tr>
+               
+                        <td class="border ps-3"> <%= serialNo %> </td>
+                          
+                          
+                          <td class="border ps-3" >
+          
+                                <%= capitalizeFirstLetter(Students[i].username) %>
+                            
+                          </td>
+                          
+                          <td class="border ps-3"> <%= Students[i].fname %> </td>
+                          
+                          <td class="border ps-3"> <%= Students[i].address %> </td>
+                          
+                          <td class="border ps-3"> <%= findMaxInArray(dateArray) %> </td>
+                          
+                        </tr>
+        
+            <% } } %>
+      
+    
+          </tbody>
+          
+        </table>
+        
+      </div>
+      
+      <!--table-2-->
+      
+      <div class="table-responsive">
+        
+        <table class="table table-sm shadow-sm">
+          
+          <thead>
+            
+            <tr>
+              
+              <td colspan="6" class="fw-bold border text-center mb-2"> 
+              
+              <i class="far fa-stop-circle bgGradientBlue text-white border p-1"></i> DCA-106 : Desktop Publishing </td>
+              
+            </tr>
+            
+            <tr class="text-center border bg-white orangeColor">
+              
+              <th class="fw-normal  border small"> Sl Nos.</th>
+              
+              <th class="fw-normal  border small"> Name of Student</th>
+              
+              <th class="fw-normal  border small"> Father's Name</th>
+              
+              <th class="fw-normal  border small"> Address</th>
+              
+              <th class="fw-normal  border small"> Last recorded </th>
+              
+              
+          </thead>
+          
+          <tbody class="text-center border bg-white">
+            
+            <% 
+
+              var serialNo = 0;
+              
+              var dateArray = [];
+              
+              var chapterZat = [];
+
+          for (var i=0; i < Students.length; i++) {
+            
+                  if( Students[i].assignmentTheory != undefined &&  Students[i].assignmentTheory.length >= 10 ) {
+                    
+                    chapter1();
+                    
+                    function chapter1() {
+                    
+                  for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-1' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted));
+                                 
+                                 chapterZat.push('Ch-1');
+                                 
+                                chapter2();
+                            } 
+                          
+                        }
+                        
+                    }
+                        
+                  function chapter2(){     
+                  for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-2' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-2');
+                                 
+                                 chapter3();
+                            } 
+                            
+                        }
+                        
+                  }
+                        function chapter3(){
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-3' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-3');
+                                 
+                                 chapter4();
+                            } 
+                            
+                        }
+                        }
+                        
+                        function chapter4(){
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-4' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted));
+                                 
+                                 chapterZat.push('Ch-4');
+                                 
+                                 chapter5();
+                            } 
+                        }
+                        }
+                        
+                        function  chapter5(){
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-5' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-5');
+                                 
+                                 chapter6();
+                            } 
+                        }
+                  }
+                        
+                        function chapter6(){
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-6' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-6');
+                                 
+                                 chapter7();
+                            } 
+                          
+                        }
+                        
+                  }
+                        function chapter7() {
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-7' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-7');
+                                 
+                                 chapter8();
+                            } 
+                            
+                        }
+                  }
+                       function chapter8() {
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-8' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted));
+                                 
+                                 chapterZat.push('Ch-8');
+                                 
+                                 chapter9();
+                            } 
+                            
+                        }
+                       }
+                       function chapter9() {
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-9' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-9');
+                                 
+                                 chapter10();
+                            } 
+                            
+                        }
+                        
+                       }
+                        
+                        function chapter10() {
+                        for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                            
+                            if(Students[i].assignmentTheory[k].chapterName ==  'Chapter-10' && 
+                            
+                            Students[i].assignmentTheory[k].Scored ==  '5' ) {
+                            
+                                 dateArray.push(convertDate(Students[i].assignmentTheory[k].dateSubmitted)); 
+                                 
+                                 chapterZat.push('Ch-10');
+                                 
+                                 break;
+                              
+                            } 
+                          
+                        }
+                        
+                      }
+                      
+                  
+                  }
+              
+              const arr1 = ['Ch-1', 'Ch-2', 'Ch-3', 'Ch-4', 'Ch-5', 'Ch-6', 'Ch-7', 'Ch-8', 'Ch-9', 'Ch-10'];
+              
+              const arr2 = chapterZat;
+              
+              const contains = (first, second) => {
+                
+             const indexArray = first.map(el => {
+               
+                return second.indexOf(el);
+                
+             });
+             
+             return indexArray.indexOf(-1) === -1;
+             
+          }
+          
+              if (contains(arr1, arr2) === true) {
+                
+                  serialNo++;
+                        
+                      %>
+            
+             <tr>
+               
+                        <td class="border ps-3"> <%= serialNo %> </td>
+                          
+                          
+                          <td class="border ps-3" >
+          
+                                <%= capitalizeFirstLetter(Students[i].username) %>
+                            
+                          </td>
+                          
+                          <td class="border ps-3"> <%= Students[i].fname %> </td>
+                          
+                          <td class="border ps-3"> <%= Students[i].address %> </td>
+                          
+                          <td class="border ps-3"> <%= findMaxInArray(dateArray) %> </td>
+                          
+                        </tr>
+        
+            <% } } %>
+              
+      
+    
+          </tbody>
+          
+        </table>
+        
+      </div>
+
+    </main>
+    
+</div>
+
+    <%- include('layouts/scripts') -%>
+    
+    <%- include('layouts/footer') -%>
+    
+    
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">DCA 1st Semester Lesson</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body lead">
+        <p><a href="dcatheorywelcomepage" class="text-secondary">Learn Theory Lessons</a></p>
+        <p><a href="dcapracticalwelcomepage" class="text-secondary">Learn Practical Lessons</a></p>
+        <p><a href="dcaDownloadMaterialPage" class="text-secondary">Download Study Materials</a></p>
+        <p><a href="#" class="text-secondary">Scoreboard : Assignment</a></p>
+      </div>
+      <div class="modal-footer mx-auto">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+    
+    
+
+  </body>
+  
+</html>

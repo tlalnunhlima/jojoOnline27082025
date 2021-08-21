@@ -96,7 +96,7 @@
                       
                       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                         
-                        Syllabus
+                        <i class="fas fa-paste pe-2 text-muted"></i> Syllabus
                       
                       </button>
                     
@@ -134,7 +134,7 @@
                     
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                       
-                      Video
+                      <i class="fas fa-video pe-2 text-muted"></i>  Video
                    
                     </button>
                   
@@ -171,7 +171,7 @@
                     
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
                           
-                          Text
+                          <i class="fas fa-file-alt pe-2 text-muted"></i> Text
                         
                         </button>
                         
@@ -350,7 +350,7 @@ temporary basis is known as <br><b>Ans... </b> Register
                     
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
                           
-                          Assignment
+                          <i class="fas fa-pen-alt pe-2 text-muted"></i> Assignment
                         
                         </button>
                         
@@ -542,12 +542,13 @@ temporary basis is known as <br><b>Ans... </b> Register
             
             <form action="/computerStudents/theoryAssignment" method="POST" autocomplete="off">
               
-              
               <input type="hidden" name="_id" value="<%= studentId %>" aria-hidden="true">
               
               <input type="hidden" name="subjectName" value="DCA-101 (Theory)" aria-hidden="true">
               
               <input type="hidden" name="chapterName" value="Chapter-3" aria-hidden="true">
+              
+               <input type="hidden" name="totalMark" value="5" aria-hidden="true">
 
             
                  <p class="fs-5 fw-light">

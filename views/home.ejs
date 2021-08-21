@@ -5,196 +5,130 @@
 <%- include('layouts/headers') -%>
 
 
-<body class="bg-light">
-    
+<body class="bg-white">
+       
     <%- include('layouts/navbar') -%>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check" viewBox="0 0 16 16">
+    <title>Check</title>
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+  </symbol>
+</svg>
     
 
 
     <!-- --------------main container section------------------ -->
 
-    <main role="main" class="container mb-2">
+    <main role="main" class="container">
         
-       <div class="pt-4 text-center">
-        
-          <h5 class="fw-bold text-info mb-0">Welcome to Jojo Computer Institute</h5>
-          
-        <p class="fw-normal text-info m-0">Govt. Approved Computer Institute. <br> Chanmari, Aizawl & Diakkawn, Kolasib</p>
-        
-        <div class="d-flex justify-content-center">
-          
-        <hr class="text-info mt-0 w-25">
-        
-        </div>
-        
-        <!--<div class="text-start bg-light p-3 border rounded shadow-sm">
-            
-            <h2 class="fw-normal text-primary mb-3">Online Class</h2>
-            
-            <p class="fw-normal text-dark lead">Computer zirlaiah hian theory leh practical a awm zel a. Theory hi online-in kan zir dawn a, nuam ti taka zir theuh kan tum dawn nia.</p>
-
-            <a class="btn btn-lg btn-outline-primary mt-2" href="dcatheorywelcomepage.html" role="button">Learn Theory &raquo;</a> 
-
-          </div>-->
-          
-        </div>
+        <div class="mission-header mt-4 p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-6 fw-light pb-2">Objective</h1>
+      <p class="fs-5 text-muted">Khawiah pawh, internet signal awmna apiangah mi'n computer a zir theihna tur leh phone atanga pawha thiam taka an lo inzir theihna tura duan a ni.</p>
+    </div>
       
     </main>
+    
+     
 
 
 
 <!-- --------------four box box section------------------ -->
     <div class="container">
         
-        <div class="row bg-white p-2">
+    <div class="row">
             
-            <div class="h4 text-center pt-3"> A Smarter Way To Learn Computer Courses </div>
+            <div class="fs-2 text-secondary fw-light text-center pb-2"> A smarter way to learn computer courses </div>
           
-          <div class="mx-auto m-3 col-lg-3 col-md-6 col-xs-12"> 
+          <div class="mx-auto m-3 col-lg-4 col-md-6 col-xs-12"> 
             
-            <div class="card rounded p-3 border fw-normal text-dark" >
-            
-            <a class="" href="selectcoursesyllabus.html">
+            <div class="card rounded fw-normal text-dark borderTop shadow-sm">
+              
+            <div class="card-header py-3">
+            <h4 class="my-0 fw-normal text-center bgColor">Theory</h4>
+            </div>
           
-            <h6 class="card-title fw-bold  text-center mt-2 mb-2 text-muted">GuideBook Etc,</h6>
+            <p class="card-text text-justify fw-normal text-dark px-3 pt-2"> Question hlui behchhana siam a ni. Online assignment a awm zel bawk... </p>
             
-            <p class="card-text text-justify fw-normal text-dark">Guidebook, suggestion note leh detailed syllabus pdf-a siam dahkhawm a ni.. </p>
+            <img src="img/syllabus.png" class="card-img-top mx-auto" alt="syllabus" style="height:150px; width:200px">
             
-            <img src="img/questionBank.png" class="card-img-top" alt="question bank">
-             
-             <p class="text-center text-info">Look Around <i class="fas fa-angle-right text-info"></i></p></a>
+             <div class="mx-auto mb-2"><a href="std/loginStudent"><button class="btn text-center text-info border"> Login to Explore <i class="fas fa-arrow-right"></i></button></a></div>
           
             </div>
 
         
         </div>
 
-          <div class="mx-auto m-3 col-lg-3 col-md-6 col-xs-12">
+          <div class="mx-auto m-3 col-lg-4 col-md-6 col-xs-12">
                       
-            <div class="card rounded p-3 fw-normal text-dark" >
+            <div class="card rounded fw-normal text-dark borderTop shadow-sm">
+              
+          <div class="card-header py-3">
+          <h4 class="my-0 fw-normal text-center bgColor">Practical</h4>
+          </div>
                 
-            <a href="selectcourseQuestionBank.html">
-                
-            <h6 class="card-title fw-bold text-center mt-2 mb-2 text-muted">Old Question</h6>
+            <p class="card-text text-wrap fw-normal text-dark px-3 pt-2">Syllabus milin practical video dah a ni. En chunga tih ve zel theih a ni...</p>
             
-            <p class="card-text text-wrap fw-normal text-dark">Question hlui pdf-a siam dahkhawm a ni. Theory inbuatsaih nan a tha hle.</p>
+            <img src="img/video-tutorials.png" class="card-img-top mx-auto" alt="video-tutorials" style="height:150px; width:200px">
             
-            <img src="img/syllabus.png" class="card-img-top" alt="syllabus">
-          
-            <p class="text-center text-success">Download here <i class="fas fa-angle-right text-success"></i></p></a>
-          
+            <div class="mx-auto mb-2"><a href="std/loginStudent"><button class="btn text-center text-primary border"> Login to Explore <i class="fas fa-arrow-right"></i></button></a></div>
+            
             </div>
             
         </div>
 
-        <div class="mx-auto m-3 col-lg-3 col-md-6 col-xs-12">
+        <div class="mx-auto m-3 col-lg-4 col-md-6 col-xs-12">
               
-            <div class="card rounded p-3 fw-normal text-dark" >
+            <div class="card rounded fw-normal text-dark borderTop shadow-sm">
+              
+            <div class="card-header py-3">
+            <h4 class="my-0 fw-normal text-center bgColor">Download</h4>
+            </div>
                 
-                <a href="test_yourself/dca1TestYourself.html">
-                    
-                <h6 class="card-title text-center fw-bold mt-2 mb-2 text-muted">Test Yourself!</h6>
+            <p class="card-text text-wrap fw-normal text-dark px-3 pt-2"> Study Material heng; question hlui, notebook etc,. te a awm...</p>
                 
-                <p class="card-text text-wrap fw-normal text-dark">Question hlui mahnia lo in-test theihna a ni. Question hlui Mock test-na a ni e.</p>
+                <img src="img/questionBank.png" class="card-img-top mx-auto" alt="question bank" style="height:150px; width:200px">
                 
-                <img src="img/onlineTest.jpg" class="card-img-top" alt="online test">
-                 
-                <p class="text-center text-danger">Let me test <i class="fas fa-angle-right text-danger"></i></p></a>
+                <div class="mx-auto mb-2"><a href="std/loginStudent"><button class="btn text-center text-success border"> Login to Explore <i class="fas fa-arrow-right"></i></button></a></div>                
+               
               
             </div>
             
         </div>
         
-        <div class="mx-auto m-3 col-lg-3 col-md-6 col-xs-12">
-                
-            <div class="card rounded p-3 border fw-normal text-dark" >
-                
-                <a href="selectcoursevideo.html">
-                    
-                <h6 class="card-title fw-bold text-center mt-2 mb-2 text-muted">Tutorial Video</h6>
-                
-                <p class="card-text text-justify fw-normal text-dark">Hetah hian tutorial video dahkhawm a ni. Practical tanpuitu atan a tangkai hle.</p>
-                
-                <img src="img/video-tutorials.png" class="card-img-top" alt="video-tutorials">
-                
-                 <p class="text-center text-primary">Let's Watch <i class="fas fa-angle-right text-primary"></i></p></a>
-              
-            </div>
-        
-        </div>
-          
     </div>
 
-<!-- ---------2nd row-------------- -->
-        <div class="row">
-            
-            <div class="h4 text-center pt-4"> Explore Jojo Utility Services</div>
+    <h2 class="display-6 text-center mb-4 mt-4">Compare pricing</h2>
 
-        <div class="mx-auto m-3 col-lg-3 col-md-6 col-xs-12">
-              
-            <div class="card  bg-white rounded p-3 fw-normal text-dark borderTop">
-                    
-                <a href="selectcoursevideo.html">
-                    
-                <h6 class="card-title fw-bold  text-center mt-2 mb-2 text-muted">Pan Card Agency</h6>
-                
-                <p class="card-text text-justify fw-normal text-dark">Pan card siam hi pawisa lakluhna tha tak a ni. Agent dil ve rawh le.</p>
-                
-                <p class="text-center text-primary"> Learn More <i class="fas fa-angle-right text-primary"></i></p></a>
-              
-            </div>
-            
-        </div>
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%;"></th>
+            <th style="width: 22%;">Free</th>
+            <th style="width: 22%;">Paid</th>
+            <th style="width: 22%;">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Jojo Student</th>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td> - </td>
+            <td> - </td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Any Other Student</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td> Rs. 499/Session</td>
+          </tr>
+        </tbody>
 
-        <div class="mx-auto m-3 col-lg-3 col-md-6 col-xs-12">
-              
-            <div class="card bg-white rounded p-3 fw-normal text-dark borderTop" >
-                
-                <a href="jojoutility/open/opensyllabus.html">
-                    
-                <h6 class="card-title fw-bold  text-center mt-2 mb-2 text-muted">Zarkawt Open School</h6>
-                
-                <p class="card-text text-justify fw-normal text-dark">Class X leh XII kal mekte tana Syllabus, Online Lesson leh Video dahkhawm a ni.</p>
-    
-                <p class="text-center text-primary"> Learn More <i class="fas fa-angle-right text-primary"></i></p></a>
-              
-            </div>
-            
-        </div>
-
-        <div class="mx-auto m-3 col-lg-3 col-md-6 col-xs-12">
-              
-            <div class="card bg-white rounded p-3 fw-normal text-dark borderTop" >
-              
-                <a href="jojoutility/jojoutilityservices.html">
-                    
-                <h6 class="card-title fw-bold  text-center mt-2 mb-2 text-muted">Hnaruak dil theih</h6>
-                
-                <p class="card-text text-justify fw-normal text-dark">Online-in hnaruak form kan fillup sak thei a. Hnaruak kan post thin bawk.</p>
-    
-                <p class="text-center text-primary"> Learn More <i class="fas fa-angle-right text-primary"></i></p></a>
-              
-            </div>
-            
-        </div>
+      </table>
+    </div>
         
-        <div class="mx-auto m-3 col-lg-3 col-md-6 col-xs-12">
-              
-            <div class="card bg-white rounded p-3 fw-normal text-dark borderTop" >
-              
-                <a href="jojoutility/jojoutilityservices.html">
-                    
-                <h6 class="card-title fw-bold  text-center mt-2 mb-2 text-muted">Passport Apply</h6>
-                
-                <p class="card-text text-justify fw-normal text-dark"> Ram danga zinna passport kan apply sak thei. Urgent leh Normal</p>
-    
-                <p class="text-center text-primary"> Learn More <i class="fas fa-angle-right text-primary"></i></p></a>
-              
-            </div>
-            
-        </div>
-
-       </div>
+        
        
     </div>
 

@@ -109,6 +109,32 @@ router.get('/', (req, res) => {
         
 });
 
+//faq page
+router.get('/faq', (req, res) => {
+    
+            res.render('faq', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3
+            
+        });
+        
+        
+});
+
 
 
 
@@ -309,15 +335,59 @@ router.get('/std/loginStudent', (req, res) => {
 //student dashboard
 
 router.get('/all/stdDashboard', async (req, res) => {
-    
+  
+  const Students = await Student.find({})  
     
   const thisStudent = await Student.findOne({_id: req.session.userId});
   
   console.log('========= ' + thisStudent);
-    
+  
     if(req.session.studentIdentity) {
         
         return res.render('stdDashboard', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent,
+            
+            Students
+     
+        });
+        
+    }
+        
+        res.redirect('/');
+    
+});
+
+
+//student scoreboard
+
+router.get('/all/stdScoreboard', async (req, res) => {
+    
+  const thisStudent = await Student.findOne({_id: req.session.userId});
+  
+    if(req.session.studentIdentity) {
+        
+        return res.render('stdScoreboard', {
             
             username: req.session.username,
             
@@ -349,13 +419,61 @@ router.get('/all/stdDashboard', async (req, res) => {
     
 });
 
+//============================
+
+//student top performers
+
+router.get('/all/stdTopPerformers', async (req, res) => {
+    
+     const Students = await Student.find({});
+    
+  const thisStudent = await Student.findOne({_id: req.session.userId});
+  
+    if(req.session.studentIdentity) {
+        
+        return res.render('stdTopPerformers', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent,
+            
+            Students
+     
+        });
+        
+    }
+        
+        res.redirect('/');
+    
+});
+
+//============================
+
 
 
 //student check score
 
 router.get('/assignment/checkScore/:id', async (req, res) => {
     
-  const thisAssignment = await Student.findOne({_id: req.params.id});
+  const thisStudent = await Student.findOne({_id: req.params.id});
   
     if(req.session.studentIdentity) {
         
@@ -381,7 +499,7 @@ router.get('/assignment/checkScore/:id', async (req, res) => {
             
             studentId: req.session.userId,
             
-            thisAssignment
+            thisStudent
      
         });
         
@@ -4702,6 +4820,49 @@ await Student.updateOne({_id: req.params.id}, { $pull: { assignmentTheory106 : {
 
 
 //=================================================
+
+//download syllabus
+
+
+router.get('/all/dcaDownloadMaterialPage', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dcaDownloadMaterialPage', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            link4: req.session.myDashboard4,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId
+            
+        });
+        
+    }
+        
+        res.redirect('/');
+    
+}); 
+
+
+
+//================================
+
+
 
 //download syllabus
 

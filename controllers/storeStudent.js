@@ -47,9 +47,9 @@ function insertRecord(req, res) {
       
       staffid: req.session.userId,
       
-      myDashboard: ['My Dashboard', 'My Scoreboard', 'My Fee Details', 'Logout'],
+      myDashboard: ['My Dashboard', 'My Scoreboard', 'My Profile & Fee', 'Logout'],
       
-      hrefLink: ['/all/stdDashboard', '/all/testResult', '/feeDetails'],
+      hrefLink: ['/all/stdDashboard', '/all/stdScoreboard'],
       
       studentFee: [],
       
@@ -123,5 +123,3 @@ function updateRecord(req, res) {
     });
     
 }
-
-

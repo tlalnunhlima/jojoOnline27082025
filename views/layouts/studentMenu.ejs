@@ -1,81 +1,17 @@
-<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 border-bottom">
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-3 mb-4">
         
-        <h5 class="text-secondary"> Welcome, <%= username %> </h5>
+        <div class="fs-5 py-1 px-2 shadow-sm"> <i class="fas fa-user-circle greenColor fs-5"></i> <%= capitalizeFirstLetter(username) %> </div>
         
        
-        <div class="btn-toolbar mb-2 mb-md-0">
+        <div class="btn-toolbar mb-2 mb-md-0 profileButton">
           
-          <div class="btn-group me-2  my-1">
+                          <!-- Button trigger modal -->
+            <button type="button" class="btn btn-sm btn-outline-secondary me-1"> <a href="computer/<%= studentId %>" class="buttonText"> Pro & Fee </a></button>
             
-            <a href="computer/<%= studentId %>"><button type="button" class="btn btn-sm btn-outline-secondary me-2"> <i class="far fa-user-circle"></i> Personal </button></a>
-            
-   
-          </div>
+            <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Lessons
+            </button>
           
-          
-          <!--thoery assignment section start-->
-          
-              <div class="btn-group me-2  my-1">
-            
-            <a href="dcatheorywelcomepage"><button type="button" 
-            
-            class="btn btn-sm btn-outline-secondary me-2"> <i class="fas fa-chalkboard-teacher"></i> Learn Theory</button>
-            
-            
-            </a>
-            
-   
-          </div>
-              <!--theory assignment section end-->
-              
-              
-              
-            <!--practical assignment section start-->
-              
-              <div class="btn-group me-2  my-1">
-            
-            <a href="dcapracticalwelcomepage"><button type="button" 
-            
-            class="btn btn-sm btn-outline-secondary me-2"> <i class="fas fa-chalkboard-teacher"></i> Learn Practical</button>
-            
-            
-            </a>
-            
-   
-          </div>
-              
-              
-              <!--practical assignment section end-->
-              
-              
-          
-          <!--download section-->
-          
-          <div class="dropdown me-2 my-1">
-                
-                <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  
-                 <i class="fas fa-download"></i> Download
-                
-                </button>
-                
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
-                  
-                  <li><a class="dropdown-item" href="dca1stSemSyllabus"><i class="far fa-clipboard"></i> Syllabus</a></li>
-                  
-                  <li><a class="dropdown-item" href="dca1stSemGuidebook"> <i class="far fa-sticky-note"></i> GuideBook </a></li>
-                  
-                  <li><a class="dropdown-item" href="dca1stSemOldQuestion"><i class="far fa-sticky-note"></i> Old Question</a></li>
-                  
-                  <li><a class="dropdown-item" href="dca1stSemSuggestionNote"><i class="far fa-clipboard"></i> Prob Question</a></li>
-
-                </ul>
-              
-              </div>
-          
-          
-          
-    
         </div>
 
         

@@ -178,7 +178,6 @@ const UserSchema = new Schema({
    }],
    
    
-   
    totalCourseFee: {
        
        type: Number,
@@ -222,6 +221,10 @@ const UserSchema = new Schema({
         mcq4: String,
        
         mcq5: String,
+        
+        Scored: String,
+        
+        totalMark: String,
        
         dateSubmitted: {
         
@@ -250,6 +253,10 @@ const UserSchema = new Schema({
         mcq4: String,
        
         mcq5: String,
+        
+        Scored: String,
+        
+        totalMark: String,
        
         dateSubmitted: {
         
@@ -278,6 +285,10 @@ const UserSchema = new Schema({
         mcq4: String,
        
         mcq5: String,
+        
+        Scored: String,
+        
+        totalMark: String,
        
         dateSubmitted: {
         
@@ -306,6 +317,10 @@ const UserSchema = new Schema({
         mcq4: String,
        
         mcq5: String,
+        
+        Scored: String,
+        
+        totalMark: String,
        
         dateSubmitted: {
         
@@ -334,6 +349,10 @@ const UserSchema = new Schema({
         mcq4: String,
        
         mcq5: String,
+        
+        Scored: String,
+        
+        totalMark: String,
        
         dateSubmitted: {
         
@@ -362,6 +381,10 @@ const UserSchema = new Schema({
         mcq4: String,
        
         mcq5: String,
+        
+        Scored: String,
+        
+        totalMark: String,
        
         dateSubmitted: {
         

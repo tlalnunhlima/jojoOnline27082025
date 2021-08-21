@@ -143,14 +143,26 @@ showTotalExamFeeBalance = function(inputValue) {
 
 // For exam fee ends ===========================
 
-//============================
-
-
-function mySearchByDate() {
-    
-  document.getElementById("demo").innerHTML = "Hello World";
-  
+// JavaScript program to find
+// maximum in arr[] of size n
+   
+findMaxInArray = function largest(dateArray) {
+        
+        let i;
+       
+        // Initialize maximum element
+        let max = dateArray[0];
+   
+        // Traverse array elements 
+        // from second and compare
+        // every element with current max 
+        for (i = 1; i < dateArray.length; i++) {
+            if (dateArray[i] > max)
+                max = dateArray[i];
+        }
+         
+      return max;
 }
-
+ 
 
 %>

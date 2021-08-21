@@ -16,33 +16,19 @@
 
 <body class="text-center">
     
-<main class="form-signin">
+<main class="form-signin shadow rounded border mt-4">
   
- 
+   <form action="/authUser/loginStaff" method="POST" autocomplete="off">
     
-    
-    
-
-  <form action="/authUser/loginStaff" method="POST" autocomplete="off">
-    
-    
-
     <a href="/"><img class="mb-3" src="/img/icon.png" alt="" width="72" height="57"></a>
     
-    
-    
-    <h3 class="h3 mb-3 fw-normal"> Login for Jojo Staff</h3>
+    <h3 class="fs-4 mb-3 fw-normal"> Login for Jojo Staff</h3>
     
      <!--Login laia error awm rawn display tu-->
   
   <% if(errors != null && errors.length > 0 ) { %>
   
-
-  
       <ul class="list-group"></ul>
-      
-      
-    
       
         <li class="list-group-item list-group-item-danger">
           
