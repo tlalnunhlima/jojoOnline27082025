@@ -33,13 +33,9 @@ module.exports = (req, res) => {
                     
                     req.session.myDashboard3 = staff.myDashboard[2],
                     
-                    req.session.myDashboard4 = staff.myDashboard[3],
-                    
                     req.session.hrefLink1 = staff.hrefLink[0],
                     
                     req.session.hrefLink2 = staff.hrefLink[1],
-                    
-                    req.session.hrefLink3 = staff.hrefLink[2],
                     
                     res.redirect('/stdList')
                     

@@ -47,7 +47,7 @@ function insertRecord(req, res) {
       
       staffid: req.session.userId,
       
-      myDashboard: ['My Dashboard', 'My Scoreboard', 'My Profile & Fee', 'Logout'],
+      myDashboard: ['My Dashboard', 'My Scoreboard', 'Logout'],
       
       hrefLink: ['/all/stdDashboard', '/all/stdScoreboard'],
       

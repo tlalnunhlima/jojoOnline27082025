@@ -23,9 +23,9 @@ function insertRecord(req, res) {
       
       adminIdentity: 'adminJojo',
       
-      myDashboard: ['Computer Student', 'Open Student', 'My Scoreboard', 'Logout'],
+      myDashboard: ['Computer Student', 'Open Student', 'Logout'],
       
-      hrefLink: ['/stdList', '/openList', '/myScoreboard']
+      hrefLink: ['/stdList', '/openList']
       
    })
 

@@ -6,8 +6,6 @@
 
 <body class="bg-light">
   
-    <%- include('layouts/navbar') -%>
-    
 <main class="container">
   
 <div class="d-flex justify-content-between mt-3 mb-2">
@@ -16,7 +14,7 @@
   
   <% if(loggedIn) { %>
   
-  <a class="btn  btn-warning btn-sm" href="/auth/registerStaff"><i class="fa fa-plus"></i> Add New Student</a>
+  <a class="btn  btn-warning btn-sm" href="/auth/registerStaff"><i class="fa fa-plus"></i> Add New Staff</a>
   
   <% } %>
   
@@ -31,13 +29,17 @@
   </thead>
   
   <tbody>
-      <% for(var i=0; i < staffs.length; i++) { %>
+      <% 
+      
+      if(staffs.length > 0) {
+      
+      for(var i=0; i < staffs.length; i++) { %>
     <tr>
       <td><%= staffs[i].username %></td>
       <td>
         <a href="/staffList/delete/<%= staffs[i]._id %>" onclick="return confirm('Are you sure to delete ' + '<%= staffs[i].username %>' +' record ?');"><i class="fas fa-trash-alt border p-1 text-muted rounded" aria-hidden="true"></i></a></td>
     </tr>
-    <% } %>
+    <% } }%>
   </tbody>
   
 </table>
