@@ -290,13 +290,9 @@ router.get('/stdList', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
-            
-            
             
             students
         })
@@ -537,13 +533,9 @@ router.get('/all/stdScoreboard', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
-            
-            
             
             loginIdName: req.session.studentIdentity,
             
@@ -581,13 +573,9 @@ router.get('/all/stdTopPerformers', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
-            
-            
             
             loginIdName: req.session.studentIdentity,
             
@@ -615,7 +603,7 @@ router.get('/assignment/checkScore/:id', async (req, res) => {
     
   const thisStudent = await Student.findOne({_id: req.params.id});
   
-    if(req.session.studentIdentity) {
+    if(req.session.studentIdentity || req.session.adminIdentity) {
         
         return res.render('assignmentCheckScore', {
             
@@ -627,13 +615,9 @@ router.get('/assignment/checkScore/:id', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
-            
-            
             
             loginIdName: req.session.studentIdentity,
             

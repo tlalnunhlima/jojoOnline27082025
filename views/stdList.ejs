@@ -33,9 +33,9 @@
       
       <th scope="col" class="orangeColor fw-normal">Father's Name</th>
       
-      <th scope="col" class="orangeColor fw-normal">Address</th>
-      
       <th scope="col" class="orangeColor fw-normal">Phone No</th>
+      
+      <th scope="col" class="orangeColor fw-normal">Assignment</th>
       
       <th scope="col" class="orangeColor fw-normal">Action</th>
       
@@ -63,9 +63,10 @@
       
       <td><%= capitalizeFirstLetter(students[i].fname) %></td>
       
-      <td><%= capitalizeFirstLetter(students[i].address) %></td>
-      
       <td><%= students[i].phone %></td>
+      
+      <td class="ps-3">  <a href="/assignment/checkScore/<%= students[i]._id %>" class="text-muted">
+                           click here... </a></td>
       
       <td>
         
@@ -81,6 +82,7 @@
           
                 <% } %>
       </td>
+      
       
     </tr>
     
