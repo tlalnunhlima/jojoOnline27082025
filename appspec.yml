@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /index.js
-    destination: /var/www/html/
+    destination: /home/ec2-user/jojoOnline
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
