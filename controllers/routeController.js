@@ -2,8 +2,6 @@ const Student = require('../models/Student')
 
 const staff = require('../models/staff')
 
-const dcaQuestion = require('../QuestionJs/dca2019101Question')
-
 const express = require('express')
 
 const moment = require('moment')
