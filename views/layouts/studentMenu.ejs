@@ -1,15 +1,15 @@
-<div class="py-2 mb-2">
+<div class="mb-2">
         
-        <div class="fs-5 py-1 px-3 border-bottom"> <i class="fas fa-user-circle greenColor fs-5"></i> Hi, <%= capitalizeFirstLetter(username) %> </div>
+        <div class="fs-6 py-1 pe-3 border-bottom text=muted"> <i class="fas fa-user-circle greenColor fs-6"></i> <%= capitalizeFirstLetter(username) %> </div>
         
 </div>
 
-<div class="d-flex justify-content-between mb-2">
-          
+<div class="d-flex justify-content-end mb-2">
+    
         <!-- Button trigger modal -->
-            <a href="computer/<%= studentId %>" class="text-primary"> <button type="button" class="btn btn-sm btn-outline-primary me-1"> Your Profile & Fee </button></a>
+            <a href="computer/<%= studentId %>" class="text-primary"> <button type="button" class="btn btn-sm btn-outline-secondary me-1"> Your Profile & Fee </button></a>
             
-            <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
               Learn Lessons
             </button>
           

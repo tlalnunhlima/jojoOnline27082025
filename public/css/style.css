@@ -217,16 +217,26 @@ background-image: linear-gradient(315deg, #bf3a30 0%, #864ba2 74%);
 
 .navbar-brand {
   
-  padding-left: 5px;
+  padding-left: 1px;
   
 }
 
 .threeLine {
   
-  margin-right: 3px;
+  margin-right: 1px;
   
 }
 
+.smarterFont, h4 {
+  
+  font-size: 22px!important;
+  
+}
+.objective {
+  
+  font-size: 17px!important;
+  
+}
 
 }
 
