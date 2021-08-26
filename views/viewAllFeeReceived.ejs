@@ -61,7 +61,8 @@
                     </tr>
                     
               <%  
-              
+                            var serialNos = 0;
+                            
                             for (var i=0; i < students.length; i++) {
                                 
                                 if( students[i].studentFee != undefined ) {
@@ -69,13 +70,14 @@
                                 for (var k=0; k < students[i].studentFee.length; k++) {
                  
                                     if(students[i].studentFee[k] != undefined && students[i].studentFee[k].dateofpayment >=  moment().format('2021-01-01')) {
-              
+                                        
+                                        serialNos++;
               
               %>
               
                         <tr>
                           
-                          <td class="text-center border" ><%= i + 1 %></td>
+                          <td class="text-center border" ><%= serialNos %></td>
                           
                           <td class="text-center border" ><%= students[i].regn  %></td>
                           

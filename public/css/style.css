@@ -145,11 +145,9 @@ body {
 }
 
 .bgGradientPink {
-  
-  background-color: #7f53ac;
+background-color: #7f53ac;
 background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
-  border-radius: 50%;
-  
+border-radius: 50%;
 }
 
 .bgGradientBlue {
@@ -160,10 +158,8 @@ background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
   
 }
 .bgGradientRed {
-  
-  background-color: #bf3a30;
-background-image: linear-gradient(315deg, #bf3a30 0%, #864ba2 74%);
-  border-radius: 8px;
+background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+border-radius: 8px;
   
 }
 .bgGradientYellow {

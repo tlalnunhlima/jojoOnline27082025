@@ -307,7 +307,9 @@ router.get('/stdList', async (req, res) => {
 
 //new student register form ======================================
 
-router.get('/register', (req, res) => {
+router.get('/register', async (req, res) => {
+    
+ const allStudents = await Student.find({});   
     
    if(req.session.adminIdentity){
         
@@ -317,7 +319,9 @@ router.get('/register', (req, res) => {
             
             errors: req.flash('validationErrors') &&  req.flash('errors'),
             
-            students: req.body
+            students: req.body,
+            
+            allStudents
             
         });
     } 
@@ -327,15 +331,11 @@ router.get('/register', (req, res) => {
 
 //end of new student register form ======================================
 
-
-
-
-
-
-
 //edit student details
 
 router.get('/editStudent/:id', async (req, res) => {
+    
+const allStudents = await Student.find({});  
     
     if(req.session.adminIdentity) {
     
@@ -349,7 +349,9 @@ router.get('/editStudent/:id', async (req, res) => {
             
             errors: req.flash('validationErrors') &&  req.flash('errors'),
             
-            students: doc
+            students: doc,
+            
+            allStudents
                 
                 });
             }
@@ -442,6 +444,25 @@ router.get('/staffList/delete/:id', (req, res) => {
         }
         
         else { console.log('Error in staff delete :' + err); }
+        
+    });
+    
+});
+
+
+//student delete
+
+router.get('/stdList/delete/:id', (req, res) => {
+    
+    Student.findByIdAndRemove(req.params.id, (err, doc) => {
+        
+        if (!err) {
+            
+            res.redirect('/stdList');
+            
+        }
+        
+        else { console.log('Error in student delete :' + err); }
         
     });
     

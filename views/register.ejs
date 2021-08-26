@@ -26,14 +26,26 @@ body {
                 <div class="d-flex justify-content-between mb-2">
                   
                     
-                <p class="lead fw-normal text-secondary"> <%= viewTitle -%></p>
+                <p class="lead fw-normal text-secondary"> <%= viewTitle -%><br>
+                
+                <% 
+  
+    if(allStudents.length > 0) {
+      
+  %>
+  
+  <span class="text-start text-info fw-light fs-6">Last regn no. <%= allStudents[(allStudents.length) - 1].regn %></span>
+                
+   <%  } %> 
+                
+                </p>
                 
                 <a href="/"><img src="/img/icon.png" alt="" width="72" height="57"></a>
                 
                 <a class="small text-secondary" href="/stdList"><i class="fa fa-database text-secondary small"></i> View All Student</a>
                 
-              </div>
-              
+               </div>
+               
       
       <!--error a awm chuan form chungah a rawn tilang ang-->
             
@@ -50,7 +62,6 @@ body {
     </ul>
     
     <% } %>
-  
   
 
  <form action="/users/register" method="POST" autocomplete="off" class="border rounded bg-white shadow p-3">

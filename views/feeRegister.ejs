@@ -32,7 +32,9 @@ body {
 
  <input type="hidden" name="_id" value="<%= students._id %>" aria-hidden="true">
 
-<table class="table table-borderless w-50">
+<div class="table-responsive">
+
+<table class="table table-borderless" style="max-width:400px;">
   
   <div class="d-flex justify-content-around border-bottom mb-2">
   
@@ -46,17 +48,17 @@ body {
     
     <tr class="border-bottom">
       
-      <th scope="row" style="width: 200px; height: 50px" class="text-start ps-3"> Name of Student</th>
+      <th scope="row" class="text-start fw-light"> Name of Student</th>
       
-      <td class="text-start text-primary" style="width: 200px"> <a href="/computer/<%= students._id %>"><%= capitalizeFirstLetter(students.username) %></a></td>
+      <td class="text-start text-primary"> <a href="/computer/<%= students._id %>"><%= capitalizeFirstLetter(students.username) %></a></td>
       
     </tr>
     
     <tr class="border-bottom">
       
-      <th scope="row" style="width: 200px" class="text-start ps-3"> Narration</th>
+      <th scope="row" class="text-start fw-light"> Narration</th>
       
-      <td class="text-start text-primary" style="width: 200px"> 
+      <td class="text-start text-primary"> 
       
       <select id="narrationInput" name="narrationInput" class="form-select" aria-label="Default select"  required>
                             
@@ -76,11 +78,11 @@ body {
     
     <tr class="border-bottom">
       
-      <th scope="row" style="width: 200px" class="text-start ps-3"> Amount (in Rs.)</th>
+      <th scope="row" class="text-start fw-light"> Amount (in Rs.)</th>
       
-      <td class="text-start text-primary" style="width: 200px"> 
+      <td class="text-start text-primary"> 
       
-         <input type="number" class="form-control" id="feeAmount" size="4" placeholder="type amount..." name="feeAmount" maxlength="5" minlength="3" required>
+         <input type="number" class="form-control" id="feeAmount" placeholder="type amount..." name="feeAmount" maxlength="5" minlength="3" required>
 
       </td>
       
@@ -88,9 +90,9 @@ body {
     
     <tr class="border-bottom">
       
-      <th scope="row" style="width: 200px" class="text-start ps-3"> Date of Payment</th>
+      <th scope="row" class="text-start fw-light"> Date of Payment</th>
       
-      <td class="text-start text-primary" style="width: 200px"> 
+      <td class="text-start text-primary"> 
       
         <input type="date" class="form-control" id="dateofpayment" placeholder="dateofpayment" name="dateofpayment" required>
 
@@ -101,6 +103,8 @@ body {
   </tbody>
   
 </table>
+
+</div>
        
           <button class="btn btn-success mt-2" type="submit">Process</button>
           
