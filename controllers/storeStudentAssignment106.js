@@ -18,35 +18,35 @@ function insertAssignmentRecord(req, res) {
     if(req.body.chapterName == 'Chapter-1') {
     
                           //question 1
-                          if(thisStudent.assignmentTheory106[i].mcq1 == 'Ruler') {
+                          if(req.body.dcaMCQ1 == 'Ruler') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q1');
                           }
                           //question 2
-                          if(thisStudent.assignmentTheory106[i].mcq2 == '1985') {
+                          if(req.body.dcaMCQ2 == '1985') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q2');
                           }
                           //question 3
-                          if(thisStudent.assignmentTheory106[i].mcq3 == 'Revert') {
+                          if(req.body.dcaMCQ3 == 'Revert') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q3');
                           }
                            //question 4
-                          if(thisStudent.assignmentTheory106[i].mcq4 == 'Ctrl + Shift + \\') {
+                          if(req.body.dcaMCQ4 == 'Ctrl + Shift + \\') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q4');
                           }
                            //question 5
-                          if(thisStudent.assignmentTheory106[i].mcq5 == 'Bullet and Numbering') {
+                          if(req.body.dcaMCQ5 == 'Bullet and Numbering') {
                             correctCount++;
                           } else {
                             incorrect++;
@@ -58,35 +58,35 @@ function insertAssignmentRecord(req, res) {
     if(req.body.chapterName == 'Chapter-2') {
     
                            //question 1
-                          if(thisStudent.assignmentTheory106[i].mcq1 == 'Save as') {
+                          if(req.body.dcaMCQ1 == 'Save as') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q1');
                           }
                           //question 2
-                          if(thisStudent.assignmentTheory106[i].mcq2 == 'Aldus Manucius') {
+                          if(req.body.dcaMCQ2 == 'Aldus Manucius') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q2');
                           }
                           //question 3
-                          if(thisStudent.assignmentTheory106[i].mcq3 == 'Dimensions') {
+                          if(req.body.dcaMCQ3 == 'Dimensions') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q3');
                           }
                            //question 4
-                          if(thisStudent.assignmentTheory106[i].mcq4 == 'Document Setup') {
+                          if(req.body.dcaMCQ4 == 'Document Setup') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q4');
                           }
                            //question 5
-                          if(thisStudent.assignmentTheory106[i].mcq5 == 'Bleed') {
+                          if(req.body.dcaMCQ5 == 'Bleed') {
                             correctCount++;
                           } else {
                             incorrect++;
@@ -99,35 +99,35 @@ function insertAssignmentRecord(req, res) {
     if(req.body.chapterName == 'Chapter-3') {
     
                            //question 1
-                          if(thisStudent.assignmentTheory106[i].mcq1 == 'Pointer tool') {
+                          if(req.body.dcaMCQ1 == 'Pointer tool') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q1');
                           }
                           //question 2
-                          if(thisStudent.assignmentTheory106[i].mcq2 == 'Object') {
+                          if(req.body.dcaMCQ2 == 'Object') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q2');
                           }
                           //question 3
-                          if(thisStudent.assignmentTheory106[i].mcq3 == 'Rounded Corners') {
+                          if(req.body.dcaMCQ3 == 'Rounded Corners') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q3');
                           }
                            //question 4
-                          if(thisStudent.assignmentTheory106[i].mcq4 == 'Autoflow') {
+                          if(req.body.dcaMCQ4 == 'Autoflow') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q4');
                           }
                            //question 5
-                          if(thisStudent.assignmentTheory106[i].mcq5 == '100') {
+                          if(req.body.dcaMCQ5 == '100') {
                             correctCount++;
                           } else {
                             incorrect++;
@@ -138,35 +138,35 @@ function insertAssignmentRecord(req, res) {
     if(req.body.chapterName == 'Chapter-4') {
     
                           //question 1
-                          if(thisStudent.assignmentTheory106[i].mcq1 == 'Top') {
+                          if(req.body.dcaMCQ1 == 'Top') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q1');
                           }
                           //question 2
-                          if(thisStudent.assignmentTheory106[i].mcq2 == 'Text block') {
+                          if(req.body.dcaMCQ2 == 'Text block') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q2');
                           }
                           //question 3
-                          if(thisStudent.assignmentTheory106[i].mcq3 == 'Layout') {
+                          if(req.body.dcaMCQ3 == 'Layout') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q3');
                           }
                            //question 4
-                          if(thisStudent.assignmentTheory106[i].mcq4 == 'Application software') {
+                          if(req.body.dcaMCQ4 == 'Application software') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q4');
                           }
                            //question 5
-                          if(thisStudent.assignmentTheory106[i].mcq5 == 'Document') {
+                          if(req.body.dcaMCQ5 == 'Document') {
                             correctCount++;
                           } else {
                             incorrect++;
@@ -178,35 +178,35 @@ function insertAssignmentRecord(req, res) {
     if(req.body.chapterName == 'Chapter-5') {
     
                           //question 1
-                          if(thisStudent.assignmentTheory106[i].mcq1 == 'Place') {
+                          if(req.body.dcaMCQ1 == 'Place') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q1');
                           }
                           //question 2
-                          if(thisStudent.assignmentTheory106[i].mcq2 == 'Cropping') {
+                          if(req.body.dcaMCQ2 == 'Cropping') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q2');
                           }
                           //question 3
-                          if(thisStudent.assignmentTheory106[i].mcq3 == 'Morphing') {
+                          if(req.body.dcaMCQ3 == 'Morphing') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q3');
                           }
                            //question 4
-                          if(thisStudent.assignmentTheory106[i].mcq4 == 'Element') {
+                          if(req.body.dcaMCQ4 == 'Element') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q4');
                           }
                            //question 5
-                          if(thisStudent.assignmentTheory106[i].mcq5 == 'Text wrap') {
+                          if(req.body.dcaMCQ5 == 'Text wrap') {
                             correctCount++;
                           } else {
                             incorrect++;
@@ -218,35 +218,35 @@ function insertAssignmentRecord(req, res) {
     if(req.body.chapterName == 'Chapter-6') {
     
                             //question 1
-                          if(thisStudent.assignmentTheory106[i].mcq1 == 'Shift + tab') {
+                          if(req.body.dcaMCQ1 == 'Shift + tab') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q1');
                           }
                           //question 2
-                          if(thisStudent.assignmentTheory106[i].mcq2 == 'Control palette') {
+                          if(req.body.dcaMCQ2 == 'Control palette') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q2');
                           }
                           //question 3
-                          if(thisStudent.assignmentTheory106[i].mcq3 == 'Sorting pages') {
+                          if(req.body.dcaMCQ3 == 'Sorting pages') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q3');
                           }
                            //question 4
-                          if(thisStudent.assignmentTheory106[i].mcq4 == 'Grouping') {
+                          if(req.body.dcaMCQ4 == 'Grouping') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q4');
                           }
                            //question 5
-                          if(thisStudent.assignmentTheory106[i].mcq5 == 'Control palette') {
+                          if(req.body.dcaMCQ5 == 'Control palette') {
                             correctCount++;
                           } else {
                             incorrect++;
@@ -258,35 +258,35 @@ function insertAssignmentRecord(req, res) {
     if(req.body.chapterName == 'Chapter-7') {
     
                           //question 1
-                          if(thisStudent.assignmentTheory106[i].mcq1 == 'Not editable') {
+                          if(req.body.dcaMCQ1 == 'Not editable') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q1');
                           }
                           //question 2
-                          if(thisStudent.assignmentTheory106[i].mcq2 == 'Character specification') {
+                          if(req.body.dcaMCQ2 == 'Character specification') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q2');
                           }
                           //question 3
-                          if(thisStudent.assignmentTheory106[i].mcq3 == 'fully justified') {
+                          if(req.body.dcaMCQ3 == 'fully justified') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q3');
                           }
                            //question 4
-                          if(thisStudent.assignmentTheory106[i].mcq4 == 'Gutter') {
+                          if(req.body.dcaMCQ4 == 'Gutter') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q4');
                           }
                            //question 5
-                          if(thisStudent.assignmentTheory106[i].mcq5 == 'Keyline') {
+                          if(req.body.dcaMCQ5 == 'Keyline') {
                             correctCount++;
                           } else {
                             incorrect++;
@@ -298,35 +298,35 @@ function insertAssignmentRecord(req, res) {
     if(req.body.chapterName == 'Chapter-8') {
     
                           //question 1
-                          if(thisStudent.assignmentTheory106[i].mcq1 == 'Master Page') {
+                          if(req.body.dcaMCQ1 == 'Master Page') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q1');
                           }
                           //question 2
-                          if(thisStudent.assignmentTheory106[i].mcq2 == '1 to 999') {
+                          if(req.body.dcaMCQ2 == '1 to 999') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q2');
                           }
                           //question 3
-                          if(thisStudent.assignmentTheory106[i].mcq3 == 'Kerning') {
+                          if(req.body.dcaMCQ3 == 'Kerning') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q3');
                           }
                            //question 4
-                          if(thisStudent.assignmentTheory106[i].mcq4 == 'Ctrl+Shift+P') {
+                          if(req.body.dcaMCQ4 == 'Ctrl+Shift+P') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q4');
                           }
                            //question 5
-                          if(thisStudent.assignmentTheory106[i].mcq5 == 'Master page') {
+                          if(req.body.dcaMCQ5 == 'Master page') {
                             correctCount++;
                           } else {
                             incorrect++;
@@ -338,35 +338,35 @@ function insertAssignmentRecord(req, res) {
     if(req.body.chapterName == 'Chapter-9') {
     
                           //question 1
-                          if(thisStudent.assignmentTheory106[i].mcq1 == 'Apply button') {
+                          if(req.body.dcaMCQ1 == 'Apply button') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q1');
                           }
                           //question 2
-                          if(thisStudent.assignmentTheory106[i].mcq2 == 'Leading') {
+                          if(req.body.dcaMCQ2 == 'Leading') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q2');
                           }
                           //question 3
-                          if(thisStudent.assignmentTheory106[i].mcq3 == 'One point line') {
+                          if(req.body.dcaMCQ3 == 'One point line') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q3');
                           }
                            //question 4
-                          if(thisStudent.assignmentTheory106[i].mcq4 == 'Alt+G') {
+                          if(req.body.dcaMCQ4 == 'Alt+G') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q4');
                           }
                            //question 5
-                          if(thisStudent.assignmentTheory106[i].mcq5 == '5') {
+                          if(req.body.dcaMCQ5 == '5') {
                             correctCount++;
                           } else {
                             incorrect++;
@@ -378,35 +378,35 @@ function insertAssignmentRecord(req, res) {
     if(req.body.chapterName == 'Chapter-10') {
     
                           //question 1
-                          if(thisStudent.assignmentTheory106[i].mcq1 == 'Story Editor') {
+                          if(req.body.dcaMCQ1 == 'Story Editor') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q1');
                           }
                           //question 2
-                          if(thisStudent.assignmentTheory106[i].mcq2 == 'Story Editor') {
+                          if(req.body.dcaMCQ2 == 'Story Editor') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q2');
                           }
                           //question 3
-                          if(thisStudent.assignmentTheory106[i].mcq3 == 'Spelling') {
+                          if(req.body.dcaMCQ3 == 'Spelling') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q3');
                           }
                            //question 4
-                          if(thisStudent.assignmentTheory106[i].mcq4 == 'Utilities') {
+                          if(req.body.dcaMCQ4 == 'Utilities') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q4');
                           }
                            //question 5
-                          if(thisStudent.assignmentTheory106[i].mcq5 == 'Layout Editor') {
+                          if(req.body.dcaMCQ5 == 'Layout Editor') {
                             correctCount++;
                           } else {
                             incorrect++;
@@ -418,21 +418,21 @@ function insertAssignmentRecord(req, res) {
     if(req.body.chapterName == 'Chapter-11') {
     
                           //question 1
-                          if(thisStudent.assignmentTheory106[i].mcq1 == 'Desktop publishing') {
+                          if(req.body.dcaMCQ1 == 'Desktop publishing') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q1');
                           }
                           //question 2
-                          if(thisStudent.assignmentTheory106[i].mcq2 == 'Define style') {
+                          if(req.body.dcaMCQ2 == 'Define style') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q2');
                           }
                           //question 3
-                          if(thisStudent.assignmentTheory106[i].mcq3 == 'Automatically') {
+                          if(req.body.dcaMCQ3 == 'Automatically') {
                             correctCount++;
                           } else {
                             incorrect++;
@@ -444,21 +444,21 @@ function insertAssignmentRecord(req, res) {
     if(req.body.chapterName == 'Chapter-12') {
     
                           //question 1
-                          if(thisStudent.assignmentTheory106[i].mcq1 == 'Table of Content') {
+                          if(req.body.dcaMCQ1 == 'Table of Content') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q1');
                           }
                           //question 2
-                          if(thisStudent.assignmentTheory106[i].mcq2 == 'TINT') {
+                          if(req.body.dcaMCQ2 == 'TINT') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q2');
                           }
                           //question 3
-                          if(thisStudent.assignmentTheory106[i].mcq3 == 'Primary') {
+                          if(req.body.dcaMCQ3 == 'Primary') {
                             correctCount++;
                           } else {
                             incorrect++;
@@ -470,21 +470,21 @@ function insertAssignmentRecord(req, res) {
     if(req.body.chapterName == 'Chapter-13') {
     
                           //question 1
-                          if(thisStudent.assignmentTheory106[i].mcq1 == 'Ctrl+Alt+]') {
+                          if(req.body.dcaMCQ1 == 'Ctrl+Alt+]') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q1');
                           }
                           //question 2
-                          if(thisStudent.assignmentTheory106[i].mcq2 == 'Frame option') {
+                          if(req.body.dcaMCQ2 == 'Frame option') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q2');
                           }
                           //question 3
-                          if(thisStudent.assignmentTheory106[i].mcq3 == 'Inset') {
+                          if(req.body.dcaMCQ3 == 'Inset') {
                             correctCount++;
                           } else {
                             incorrect++;
@@ -497,21 +497,21 @@ function insertAssignmentRecord(req, res) {
     if(req.body.chapterName == 'Chapter-14') {
     
                           //question 1
-                          if(thisStudent.assignmentTheory106[i].mcq1 == 'Layers palette') {
+                          if(req.body.dcaMCQ1 == 'Layers palette') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q1');
                           }
                           //question 2
-                          if(thisStudent.assignmentTheory106[i].mcq2 == 'Layers') {
+                          if(req.body.dcaMCQ2 == 'Layers') {
                             correctCount++;
                           } else {
                             incorrect++;
                             questionNumber.push('Q2');
                           }
                           //question 3
-                          if(thisStudent.assignmentTheory106[i].mcq3 == 'Cutting') {
+                          if(req.body.dcaMCQ3 == 'Cutting') {
                             correctCount++;
                           } else {
                             incorrect++;

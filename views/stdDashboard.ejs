@@ -216,7 +216,7 @@
         
       <div class="table-responsive">
         
-        <table class="table table-sm mt-4 table-hover shadow-sm">
+        <table class="table table-sm mt-4 table-hover shadow-sm" style="max-width: 400px;">
           
           <thead>
               
@@ -224,20 +224,18 @@
               
               <td colspan="5" class="fw-normal fs-6 bgColor border bg-light mb-2">
                   
-                  <i class="fas fa-user-friends text-dark ps-2"></i> List of students who test today </td>
+                  <i class="fas fa-user-friends text-dark ps-2"></i> Students' who test today </td>
               
             </tr>
             
             <tr class="orangeColor">
               
                       
+              <td class="border ps-3 small fw-normal"> Sl.</td>
+              
               <td class="border ps-3 small fw-normal"> Student's Name</td>
                       
               <td class="border ps-3 small fw-normal"> Address </td>
-              
-              <td class="border ps-3 small fw-normal"> Subject </td>
-              
-              <td class="border ps-3 small fw-normal"> Chapter </td>
               
             </tr>
             
@@ -247,7 +245,13 @@
             
       <% 
             // Get today's date
-            var todaysDate = new Date();  
+            var todaysDate = new Date(); 
+            
+            var studentName = [];
+            
+            var studentAddress = [];
+            
+            if(Students.length > 0) {
               
              for (var i=0; i < Students.length; i++) {
               
@@ -257,31 +261,14 @@
                         
                         if( Students[i].assignmentTheory[k] != undefined && Students[i].assignmentTheory[k].dateSubmitted.setHours(0,0,0,0) ==  todaysDate.setHours(0,0,0,0)) {
               
-              
-              %>
-            
-             <tr>
-                          
-                          
-                          <td class="border text-muted ps-3" >
-          
-                                <%= capitalizeFirstLetter(Students[i].username) %>
+                            studentName.push(Students[i].username);
                             
-                          </td>
-                          
-                          <td class="border text-muted ps-3"> <%= Students[i].address %> </td>
-                          
-                          <td class="border text-muted ps-3"> <%= Students[i].assignmentTheory[k].subjectName %> </td>
-                          
-                          <td class="border text-muted ps-3"> <%= Students[i].assignmentTheory[k].chapterName %> </td>
-        
-                        </tr>
-        
-            <% } } } }%>
+                            studentAddress.push(Students[i].address);
+              
+              
+             } } } }%>
             
             <% 
-            // Get today's date
-            var todaysDate = new Date();  
               
              for (var i=0; i < Students.length; i++) {
               
@@ -291,32 +278,13 @@
                         
                         if( Students[i].assignmentTheory102[k] != undefined && Students[i].assignmentTheory102[k].dateSubmitted.setHours(0,0,0,0) ==  todaysDate.setHours(0,0,0,0)) {
               
-              
-              %>
-            
-             <tr>
-                          
-                          
-                          <td class="border text-muted ps-3" >
-          
-                                <%= capitalizeFirstLetter(Students[i].username) %>
+                            studentName.push(Students[i].username);
                             
-                          </td>
-                          
-                          <td class="border text-muted ps-3"> <%= Students[i].fname %> </td>
-                          
-                          <td class="border text-muted ps-3"> <%= Students[i].address %> </td>
-                          
-                          <td class="border text-muted ps-3"> <%= Students[i].assignmentTheory102[k].subjectName %> </td>
-                          
-                          <td class="border text-muted ps-3"> <%= Students[i].assignmentTheory102[k].chapterName %> </td>
+                            studentAddress.push(Students[i].address);
         
-                        </tr>
-        
-            <% } } } }%>
+             } } } }%>
+            
             <% 
-            // Get today's date
-            var todaysDate = new Date();  
               
              for (var i=0; i < Students.length; i++) {
               
@@ -327,31 +295,12 @@
                         if( Students[i].assignmentTheory103[k] != undefined && Students[i].assignmentTheory103[k].dateSubmitted.setHours(0,0,0,0) ==  todaysDate.setHours(0,0,0,0)) {
               
               
-              %>
-            
-             <tr>
-                          
-                          
-                          <td class="border text-muted ps-3" >
-          
-                                <%= capitalizeFirstLetter(Students[i].username) %>
+                            studentName.push(Students[i].username);
                             
-                          </td>
-                          
-                          <td class="border text-muted ps-3"> <%= Students[i].fname %> </td>
-                          
-                          <td class="border text-muted ps-3"> <%= Students[i].address %> </td>
-                          
-                          <td class="border text-muted ps-3"> <%= Students[i].assignmentTheory103[k].subjectName %> </td>
-                          
-                          <td class="border text-muted ps-3"> <%= Students[i].assignmentTheory103[k].chapterName %> </td>
+                            studentAddress.push(Students[i].address);
         
-                        </tr>
-        
-            <% } } } }%>
+            } } } }%>
             <% 
-            // Get today's date
-            var todaysDate = new Date();  
               
              for (var i=0; i < Students.length; i++) {
               
@@ -361,34 +310,14 @@
                         
                         if( Students[i].assignmentTheory104[k] != undefined && Students[i].assignmentTheory104[k].dateSubmitted.setHours(0,0,0,0) ==  todaysDate.setHours(0,0,0,0)) {
               
-              
-              %>
-            
-             <tr>
-                          
-                          
-                          <td class="border text-muted ps-3" >
-          
-                                <%= capitalizeFirstLetter(Students[i].username) %>
+                        studentName.push(Students[i].username);
                             
-                          </td>
-                          
-                          <td class="border text-muted ps-3"> <%= Students[i].fname %> </td>
-                          
-                          <td class="border text-muted ps-3"> <%= Students[i].address %> </td>
-                          
-                          <td class="border text-muted ps-3"> <%= Students[i].assignmentTheory104[k].subjectName %> </td>
-                          
-                          <td class="border text-muted ps-3"> <%= Students[i].assignmentTheory104[k].chapterName %> </td>
+                        studentAddress.push(Students[i].address);
+              
         
-                        </tr>
-        
-            <% } } } }%>
+             } } } }%>
             
             <% 
-            // Get today's date
-            var todaysDate = new Date();  
-              
              for (var i=0; i < Students.length; i++) {
               
                     if( Students[i].assignmentTheory105 != undefined ) {
@@ -397,33 +326,14 @@
                         
                         if( Students[i].assignmentTheory105[k] != undefined && Students[i].assignmentTheory105[k].dateSubmitted.setHours(0,0,0,0) ==  todaysDate.setHours(0,0,0,0)) {
               
-              
-              %>
-            
-             <tr>
-                          
-                          
-                          <td class="border text-muted ps-3" >
-          
-                                <%= capitalizeFirstLetter(Students[i].username) %>
+                            studentName.push(Students[i].username);
                             
-                          </td>
-                          
-                          <td class="border text-muted ps-3"> <%= Students[i].fname %> </td>
-                          
-                          <td class="border text-muted ps-3"> <%= Students[i].address %> </td>
-                          
-                          <td class="border text-muted ps-3"> <%= Students[i].assignmentTheory105[k].subjectName %> </td>
-                          
-                          <td class="border text-muted ps-3"> <%= Students[i].assignmentTheory105[k].chapterName %> </td>
+                            studentAddress.push(Students[i].address);
+              
         
-                        </tr>
-        
-            <% } } } }%>
+            } } } }%>
             
             <% 
-            // Get today's date
-            var todaysDate = new Date();  
               
              for (var i=0; i < Students.length; i++) {
               
@@ -433,30 +343,37 @@
                         
                         if( Students[i].assignmentTheory106[k] != undefined && Students[i].assignmentTheory106[k].dateSubmitted.setHours(0,0,0,0) ==  todaysDate.setHours(0,0,0,0)) {
               
+                            studentName.push(Students[i].username);
+                            
+                            studentAddress.push(Students[i].address);
               
-              %>
+              
+                        } } } } %>
+             
+            <% 
             
+            var uniqueName = studentName.filter(onlyUnique);
+            
+            var uniqueAddress = studentAddress.filter(onlyUnique);
+            
+            for(var i=0; i < uniqueName.length; i++) {
+            
+            %>
              <tr>
+                          <td class="border text-center"> <%= i + 1 %> </td>
                           
-                          
-                          <td class="border text-muted ps-3" >
+                          <td class="border" >
           
-                                <%= capitalizeFirstLetter(Students[i].username) %>
+                                <%= capitalizeFirstLetter(uniqueName[i]) %>
                             
                           </td>
                           
-                          <td class="border text-muted ps-3"> <%= Students[i].fname %> </td>
+                          <td class="border"> <%= capitalizeFirstLetter(uniqueAddress[i]) %> </td>
                           
-                          <td class="border text-muted ps-3"> <%= Students[i].address %> </td>
-                          
-                          <td class="border text-muted ps-3"> <%= Students[i].assignmentTheory106[k].subjectName %> </td>
-                          
-                          <td class="border text-muted ps-3"> <%= Students[i].assignmentTheory106[k].chapterName %> </td>
-        
                         </tr>
         
-            <% } } } }%>
             
+            <% } } %>
 
           </tbody>
           
@@ -498,10 +415,6 @@
     </div>
   </div>
 </div>
-    
-    
-    
-    
 
   </body>
   
