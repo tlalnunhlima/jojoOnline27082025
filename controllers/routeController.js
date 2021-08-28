@@ -3615,13 +3615,9 @@ router.get('/all/dca106onlineclasschapter1', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
-            
-            
             
             loginIdName: req.session.studentIdentity,
             
