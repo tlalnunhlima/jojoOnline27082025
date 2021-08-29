@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#give permission for everything in the express-app directory
+#give permission for everything in the jojoOnline directory
 sudo chmod -R 777 /home/ec2-user/jojoOnline
 
 #navigate into our working directory where we have all our github files

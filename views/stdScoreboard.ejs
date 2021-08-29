@@ -7,8 +7,6 @@
 
 <body class="bg-white">
     
-    <%- include('layouts/navbar') -%>
-    
     <%- include ('ejsFunction') %> <!--function javascript ejs-->
     
     <!--main container section-->
@@ -17,15 +15,13 @@
   
 <main>
 
- <div class="row">
+  <div class="row">
           
-           <div class="mx-auto px-2 mt-3">
+           <div class="mx-auto px-4 mt-3">
             
             <div class="d-flex justify-content-between">
             
-            <a href="stdDashboard" class="small text-secondary"> <i class="fas fa-home text-primary"></i> Dashboard</i> </a>
-            
-            <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
+            <a href="#" onclick="window.history.back();" class="small text-secondary"> <i class="fas fa-arrow-left pe-2"></i> Back </i> </a>
             
             </div>
             
@@ -40,7 +36,7 @@
     
       <div class="shadow-sm mx-auto fs-4 fw-bold mb-0 text-center border bg-white text-dark rounded p-2 mt-4 mb-2" style="max-width: 350px"> 
       
-      Your Record </div>
+      My Record </div>
       
  <div class="row bg-white p-2">
    

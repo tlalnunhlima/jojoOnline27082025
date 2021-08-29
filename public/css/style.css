@@ -208,6 +208,12 @@ thead, tbody {
   font-size: 90%;
   
 }
+
+.modal-title {
+  
+  font-size: 97%!important;
+  
+}
   
 .navbar-nav > li > a {
   
@@ -244,6 +250,13 @@ thead, tbody {
   
   font-size: 17px!important;
   
+}
+
+.card {
+  
+  max-width: 290px;
+  max-height: 350px;
+  margin: auto;
 }
 
 }
