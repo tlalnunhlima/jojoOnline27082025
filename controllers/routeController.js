@@ -614,6 +614,47 @@ router.get('/all/stdTopPerformers', async (req, res) => {
 
 //============================
 
+//student top performers
+
+router.get('/all/stdAssignmentFinished', async (req, res) => {
+    
+     const Students = await Student.find({});
+    
+  const thisStudent = await Student.findOne({_id: req.session.userId});
+  
+    if(req.session.studentIdentity) {
+        
+        return res.render('stdAssignmentFinished', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent,
+            
+            Students
+     
+        });
+        
+    }
+        
+        res.redirect('/');
+    
+});
+
+//============================
 
 
 //student check score
