@@ -115,7 +115,7 @@
                       
                       <td> : </td>
                       
-                      <td> <%= convertDate(students.dob)  %></td>
+                      <td> <%= students.dob  %></td>
                       
                       <td class="text-primary">Registration No.</td>
                       
@@ -248,7 +248,7 @@
                           
                           <td class="border">Rs.  <%= students.studentFee[i].feeAmount %> </td>
                       
-                          <td class="border"><%= convertDate(students.studentFee[i].dateofpayment) %></td>
+                          <td class="border"><%= students.studentFee[i].dateofpayment %></td>
                           
                           <td class="border">  <%= capitalizeFirstLetter(students.studentFee[i].verifierId.username) %> </td>
         
@@ -350,7 +350,7 @@
                           
                           <td class="border">Rs.  <%= students.studentExamFee[i].feeAmount %> </td>
                       
-                          <td class="border"><%= convertDate(students.studentExamFee[i].dateofpayment) %></td>
+                          <td class="border"><%= students.studentExamFee[i].dateofpayment %></td>
                           
                           <td class="border">  <%= capitalizeFirstLetter(students.studentExamFee[i].verifierId.username) %> </td>
         
@@ -447,7 +447,7 @@
                           
                           <td class="border">Rs.  <%= students.studentOtherFee[i].feeAmount %> </td>
                       
-                          <td class="border"><%= convertDate(students.studentOtherFee[i].dateofpayment) %></td>
+                          <td class="border"><%= students.studentOtherFee[i].dateofpayment %></td>
                           
                           <td class="border">  <%= capitalizeFirstLetter(students.studentOtherFee[i].verifierId.username) %> </td>
         

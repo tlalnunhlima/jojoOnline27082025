@@ -4,20 +4,55 @@
   
 <%- include('layouts/headers') -%>
 
-
 <body>
     
     <%- include('layouts/navbar') -%>
     
     <%- include ('ejsFunction') %> <!--function javascript ejs-->
     
-    
-    
 <main class="container">
   
   <%- include('layouts/staffMenu') -%>
 
+ <div class="table-responsive mb-2 mt-4 col-lg-6 col-md-6 col-xs-12 mx-auto">
+        
+        <table class="table table-sm bg-white shadow-sm mx-auto" style="max-width:500px">
+          
+          <thead>
+              
+             <tr>
+              
+              <td colspan="3" class="fw-normal fs-6 border bg-primary text-white text-center">
+                  
+                  <i class="fas fa-user-check text-white"></i> Verify assignment </td>
+              
+            </tr>
+            
+          </thead>
+          
+          <tbody class="border">
+            
+                <tr>
+                    
+                    <td colspan="3"><a href="all/stdTopPerformers" class="text-muted fs-6 fw-normal">
+                        <i class="fas fa-check-circle ps-2 text-success"></i> <span class="myLink"> Check who answer assignment...</span></a></td>
+                    
+                </tr>
+                <tr>
+                    
+                    <td colspan="3"><a href="all/stdAssignmentFinished" class="text-muted fs-6 fw-normal">
+                        <i class="fas fa-check-circle ps-2 text-success"></i> <span class="myLink"> Check who finished assignment...</span></a></td>
+                    
+                </tr>
+
+          </tbody>
+          
+        </table>
+        
+      </div>
+
 <div class="lead text-primary text-center fw-bold m-3"><i class="fas fa-check bgGradientBlue text-white border p-1 fs-6"></i> <%= viewTitle %></div>
+<!--std list-->
 
 <div class="table-responsive">
   

@@ -28,28 +28,13 @@
     <!--Login laia error awm rawn display tu-->
   
   <% if(errors != null && errors.length > 0 ) { %>
-  
-
-  
       <ul class="list-group"></ul>
-      
-      
-    
-      
         <li class="list-group-item list-group-item-danger">
-          
           <%= errors %>
-          
         </li>
-    
     </ul>
-    
     <% } %>
     
-    
-    
-    
-
     <div class="form-floating mb-2">
       
       <input type="text" class="form-control" id="floatingPhone" placeholder="phone" name="phone" required>
@@ -60,9 +45,9 @@
     
     <div class="form-floating mb-2">
       
-      <input type="date" class="form-control" id="floatingDob" placeholder="dob" name="dob" required>
+      <input type="text" class="form-control" id="floatingDob" placeholder="dob" name="dob" required>
       
-      <label for="floatingDob">Date of Birth</label>
+      <label for="floatingDob">Date of Birth (dd-mm-yyyy)</label>
       
     </div>
 

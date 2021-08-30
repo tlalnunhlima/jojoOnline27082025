@@ -580,7 +580,7 @@ router.get('/all/stdTopPerformers', async (req, res) => {
     
   const thisStudent = await Student.findOne({_id: req.session.userId});
   
-    if(req.session.studentIdentity) {
+    if(req.session.studentIdentity || req.session.adminIdentity) {
         
         return res.render('stdTopPerformers', {
             
@@ -622,7 +622,7 @@ router.get('/all/stdAssignmentFinished', async (req, res) => {
     
   const thisStudent = await Student.findOne({_id: req.session.userId});
   
-    if(req.session.studentIdentity) {
+    if(req.session.studentIdentity || req.session.adminIdentity) {
         
         return res.render('stdAssignmentFinished', {
             

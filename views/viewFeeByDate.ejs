@@ -18,14 +18,10 @@
             <a class="text-primary small" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Goto view fee" href="/viewFee"><i class="fas fa-arrow-left text-dark fw-bold"></i> Go back</i> </a>
             
             </div>   
-  
 
     <div class="text-center mt-2">
-      
         
-         <p class="text-secondary fw-normal"><%= viewTitle %> : <span class="text-danger"><%= convertDate(searchDate) %> </span></p>
-
-
+         <p class="text-secondary fw-normal"><%= viewTitle %> : <span class="text-danger"><%= searchDate %> </span></p>
     
     </div>
     
@@ -62,17 +58,13 @@
                     </tr>
               <% 
               
-              
-              
              for (var i=0; i < students.length; i++) {
               
                     if( students[i].studentFee != undefined ) {
-                        
           
                     for (var k=0; k < students[i].studentFee.length; k++) {
                         
                         if( students[i].studentFee[k] != undefined && students[i].studentFee[k].dateofpayment ==  searchDate ) {
-              
               
               %>
               

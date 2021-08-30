@@ -39,7 +39,7 @@
                   
                 <i class="fas fa-calendar-check fw-bold text-primary me-1"></i> 
                 
-                <input type="date" id="dateSelect" style="width: 200px" class="form-control ms-2" required />
+                <input type="text" id="floatingDob" style="width: 150px" placeholder="dd-mm-yyyy" class="form-control ms-2 dateSelect" required />
                 
                 <a href="/viewFee/viewFeeByDate" id="searchFeeByDate" class="btn btn-primary ms-2"> View By Date</a>
               
@@ -61,19 +61,15 @@
         $(function() {
             
             
-          
-            
-            
                     $('#searchFeeByDate').click( function(e) {
                         
                         e.preventDefault();
                         
-                        
                         //checkValidity() Returns true if an input element contains valid data.
                         
-                    if ($("#dateSelect")[0].checkValidity()) {
+                    if ($(".dateSelect")[0].checkValidity()) {
                         
-                        window.location = $(this).attr('href') + '/' + $('#dateSelect').val();
+                        window.location = $(this).attr('href') + '/' + $('.dateSelect').val();
                         
                         return false;
                         
@@ -81,7 +77,7 @@
                         
                         //Validate Form : the best function for highlighting required fields
                         
-                        $("#dateSelect")[0].reportValidity()
+                        $(".dateSelect")[0].reportValidity()
                         
                     }
                         
