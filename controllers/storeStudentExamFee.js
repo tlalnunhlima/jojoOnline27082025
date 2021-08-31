@@ -1,5 +1,5 @@
-const Student = require('../models/Student')
-
+const Student = require('../models/Student');
+const moment = require('moment');
 module.exports = async (req, res) => {
 
         insertFeeRecord(req, res);
@@ -9,8 +9,9 @@ module.exports = async (req, res) => {
 
 
 function insertFeeRecord(req, res) {
-    
-    var examFeePaymentArray = {narrationInput: req.body.narrationInput, feeAmount:req.body.feeAmount, dateofpayment:req.body.dateofpayment, verifierId: req.session.userId};
+    var formatDateString = req.body.dateofpayment;
+    let parsed = moment(formatDateString, "DD/MM/YYYY");
+    var examFeePaymentArray = {narrationInput: req.body.narrationInput, feeAmount:req.body.feeAmount, dateofpayment:parsed.format(), verifierId: req.session.userId};
     
         Student.findOneAndUpdate({ _id: req.body._id }, 
                

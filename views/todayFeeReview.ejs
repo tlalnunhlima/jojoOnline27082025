@@ -22,7 +22,7 @@
     <div class="text-center mt-4">
 
          <p class="text-secondary fw-normal"><%= viewTitle %> : <span class="text-danger"><%= moment().format('DD/MM/YYYY'); %> <%= moment().format("[(]dddd[)]"); %></span></p>
-
+         
     </div>
     
         <!--Today fee review table started-->
@@ -65,7 +65,7 @@
           
                     for (var k=0; k < students[i].studentFee.length; k++) {
                         
-                        if( students[i].studentFee[k] != undefined && students[i].studentFee[k].dateofpayment ==  moment().format('YYYY-MM-DD') ) {
+                        if( students[i].studentFee[k] != undefined &&  moment(students[i].studentFee[k].dateofpayment).format('YYYY-MM-DD') ==  moment().format('YYYY-MM-DD')) {
               
               
               %>
@@ -151,7 +151,7 @@
           
                     for (var k=0; k < students[i].studentExamFee.length; k++) {
                         
-                        if( students[i].studentExamFee[k] != undefined && students[i].studentExamFee[k].dateofpayment ==  moment().format('YYYY-MM-DD') ) {
+                        if( students[i].studentExamFee[k] != undefined &&  moment(students[i].studentExamFee[k].dateofpayment).format('YYYY-MM-DD') ==  moment().format('YYYY-MM-DD')) {
                             
                             
               
@@ -184,11 +184,7 @@
         
                         </tr>
                         
-
-                        
                         <% } } } } %>
-                            
-                       
                         
                       </tbody>
                       
@@ -241,7 +237,7 @@
           
                     for (var k=0; k < students[i].studentOtherFee.length; k++) {
                         
-                        if( students[i].studentOtherFee[k] != undefined && students[i].studentOtherFee[k].dateofpayment ==  moment().format('YYYY-MM-DD') ) {
+                        if( students[i].studentOtherFee[k] != undefined &&  moment(students[i].studentOtherFee[k].dateofpayment).format('YYYY-MM-DD') ==  moment().format('YYYY-MM-DD')) {
                             
               %>
               
@@ -275,8 +271,6 @@
                         
                         <% } } } } %>
                             
-                       
-                        
                       </tbody>
                       
                     </table>

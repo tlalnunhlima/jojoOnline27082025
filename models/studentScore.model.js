@@ -44,7 +44,7 @@ const testScoreSchema = new Schema({
     },
     datePosted: {
         type: Date,
-        default: new Date()
+        default: Date.now
     }
 });
 

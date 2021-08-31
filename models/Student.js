@@ -116,7 +116,15 @@ const UserSchema = new Schema({
        
        feeAmount: Number,
        
-       dateofpayment: String,
+       dateofpayment: Date,
+       
+       dateSubmitted: {
+        
+        type: Date,
+        
+        default: Date.now
+        
+    },
        
        verifierId: {
         
@@ -138,7 +146,15 @@ const UserSchema = new Schema({
        
        feeAmount: Number,
        
-       dateofpayment: String,
+       dateofpayment: Date,
+       
+       dateSubmitted: {
+        
+        type: Date,
+        
+        default: Date.now
+        
+    },
        
        verifierId: {
         
@@ -161,9 +177,17 @@ const UserSchema = new Schema({
        
        feeAmount: Number,
        
-       dateofpayment: String,
+       dateofpayment: Date,
        
        remarks: String,
+       
+       dateSubmitted: {
+        
+        type: Date,
+        
+        default: Date.now
+        
+    },
        
        verifierId: {
         
@@ -230,7 +254,7 @@ const UserSchema = new Schema({
         
         type: Date,
         
-        default: new Date()
+        default: Date.now
         
     }
        
@@ -262,7 +286,7 @@ const UserSchema = new Schema({
         
         type: Date,
         
-        default: new Date()
+        default: Date.now
         
     }
        
@@ -294,7 +318,7 @@ const UserSchema = new Schema({
         
         type: Date,
         
-        default: new Date()
+        default: Date.now
         
     }
        
@@ -326,7 +350,7 @@ const UserSchema = new Schema({
         
         type: Date,
         
-        default: new Date()
+        default: Date.now
         
     }
        
@@ -358,7 +382,7 @@ const UserSchema = new Schema({
         
         type: Date,
         
-        default: new Date()
+        default: Date.now
         
     }
        
@@ -390,7 +414,7 @@ const UserSchema = new Schema({
         
         type: Date,
         
-        default: new Date()
+        default: Date.now
         
     }
        
@@ -401,7 +425,7 @@ const UserSchema = new Schema({
         
         type: Date,
         
-        default: new Date()
+        default: Date.now
         
     }
     

@@ -110,13 +110,13 @@
           
         </a>
     
-                <% if( username == 'tmapuia') { %>
+        <% if( username == 'tmapuia') { %>
         
-        <a href="/stdList/delete/<%= students[i]._id %>" onclick="return confirm('Are you sure to delete ' + '<%= students[i].username %>' +' record ?');"><i class="fas fa-trash-alt border p-1 text-danger rounded" aria-hidden="true"></i></a></td>
+        <a href="/stdList/delete/<%= students[i]._id %>" onclick="return confirm('Are you sure to delete ' + '<%= students[i].username %>' +' record ?');"><i class="fas fa-trash-alt border p-1 text-danger rounded" aria-hidden="true"></i></a>
+        
+        </td>
           
-                <% } %>
-      </td>
-      
+         <% } %>
       
     </tr>
     

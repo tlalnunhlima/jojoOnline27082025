@@ -46,7 +46,7 @@ const staffSchema = new Schema({
         
         type: Date,
         
-        default: new Date()
+        default: Date.now
         
     }
     

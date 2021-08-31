@@ -194,6 +194,10 @@ border-radius: 8px;
   
 }
 
+.tableHeaderColor {
+  background-color: #56BDEA;
+}
+
 /*-------------media query for video fullscreen-----------*/
 @media only screen and (max-width: 768px) {
   

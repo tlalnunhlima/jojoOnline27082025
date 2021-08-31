@@ -21,7 +21,7 @@
 
     <div class="text-center table-responsive">
     
-         <p class="text-secondary fw-normal"><%= viewTitle %> Wef: 01/01/2021  </p>
+         <p class="text-secondary fw-normal"><%= viewTitle %> Wef: 01/01/2020  </p>
 
     </div>
     
@@ -68,7 +68,7 @@
                                 
                                 for (var k=0; k < students[i].studentExamFee.length; k++) {
                  
-                                    if(students[i].studentExamFee[k] != undefined && students[i].studentExamFee[k].dateofpayment >=  moment().format('2021-01-01')) {
+                                    if(students[i].studentExamFee[k] != undefined && moment(students[i].studentExamFee[k].dateofpayment).format('YYYY-MM-DD') >=  moment().format('2020-01-01')) {
                                             
                                             serialNos++;
               

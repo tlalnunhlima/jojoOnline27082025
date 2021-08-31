@@ -103,8 +103,6 @@ router.get('/', (req, res) => {
             
         });
         
-        console.log(req.session);
-        
 });
 
 //faq page
@@ -365,7 +363,6 @@ const allStudents = await Student.find({});
     }
     
 })
-    
 
 
 
@@ -412,8 +409,6 @@ router.get('/view/staffList', async (req, res) => {
     if(req.session.adminIdentity && req.session.username == 'tmapuia') {
     
     const staffs = await staff.find({});
-    
-    console.log(req.session);
     
         res.render('staffList', {
             
@@ -469,6 +464,83 @@ router.get('/stdList/delete/:id', (req, res) => {
 });
 
 
+//studentfee field delete
+
+router.get('/studentFee/delete/:id/:feeId', async (req, res) => {
+    
+await Student.updateOne({_id: req.params.id}, { $pull: { studentFee : { _id : req.params.feeId } } }, { multi: true }, (err, doc) => {
+        
+        if (!err) {
+            
+            console.log('Student fee data deleted successfully');
+            
+            res.redirect(req.get('referer'));
+            
+        }
+        
+        else { 
+            
+            console.log('Error in student fee delete :' + err);
+        
+            res.redirect(req.get('referer'));
+        }
+        
+    });
+    
+});
+
+
+//studentExamfee field delete
+
+router.get('/studentExamFee/delete/:id/:feeId', async (req, res) => {
+    
+await Student.updateOne({_id: req.params.id}, { $pull: { studentExamFee : { _id : req.params.feeId } } }, { multi: true }, (err, doc) => {
+        
+        if (!err) {
+            
+            console.log('Student exam fee data deleted successfully');
+            
+            res.redirect(req.get('referer'));
+            
+        }
+        
+        else { 
+            
+            console.log('Error in student exam fee delete :' + err);
+        
+            res.redirect(req.get('referer'));
+        }
+        
+    });
+    
+});
+
+//studentOtherFee field delete
+
+router.get('/studentOtherFee/delete/:id/:feeId', async (req, res) => {
+    
+await Student.updateOne({_id: req.params.id}, { $pull: { studentOtherFee : { _id : req.params.feeId } } }, { multi: true }, (err, doc) => {
+        
+        if (!err) {
+            
+            console.log('Student other fee data deleted successfully');
+            
+            res.redirect(req.get('referer'));
+            
+        }
+        
+        else { 
+            
+            console.log('Error in student other fee delete :' + err);
+        
+            res.redirect(req.get('referer'));
+        }
+        
+    });
+    
+});
+
+
 
 //student login panel
     
@@ -499,8 +571,6 @@ router.get('/all/stdDashboard', async (req, res) => {
     
   const thisStudent = await Student.findOne({_id: req.session.userId});
   
-  console.log('========= ' + thisStudent);
-  
     if(req.session.studentIdentity) {
         
         return res.render('stdDashboard', {
@@ -523,7 +593,9 @@ router.get('/all/stdDashboard', async (req, res) => {
             
             thisStudent,
             
-            Students
+            Students,
+            
+            moment
      
         });
         
@@ -4298,8 +4370,6 @@ if(req.session.adminIdentity) {
   
   (err, doc) => {
       
-      console.log(doc.length);
-      
       if(!err) {
           
             res.render('todayFeeReview', {
@@ -4314,18 +4384,13 @@ if(req.session.adminIdentity) {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-           
             students: doc,
             
             moment: moment
-            
                 
                 });
                 
@@ -4364,12 +4429,10 @@ if(req.session.adminIdentity) {
 //i want to see all fee received from the student irrespective of timestamp
 
 router.get('/viewFee/viewAllFeeReceived', async (req, res) => {
-    
 
-     const startingDateWithoutTime = moment().format('2021-01-01'); //kumtir hriatna
+     const startingDateWithoutTime = moment().format('2020-01-01'); //kumtir hriatna
             
      const currentDateWithoutTime = moment().format('YYYY-MM-DD'); //vawiin hriatna
-            
 
 if(req.session.adminIdentity) {
     
@@ -4389,13 +4452,9 @@ if(req.session.adminIdentity) {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
-            
-            
            
             students: doc,
             
@@ -4437,11 +4496,9 @@ if(req.session.adminIdentity) {
 
 router.get('/viewFee/viewExamFeeReceived', async (req, res) => {
     
-    
-    const startingDateWithoutTime = moment().format('2021-01-01'); //kumtir hriatna
+    const startingDateWithoutTime = moment().format('2020-01-01'); //kumtir hriatna
             
     const currentDateWithoutTime = moment().format('YYYY-MM-DD'); //vawiin hriatna
-            
 
 if(req.session.adminIdentity) {
     
@@ -4461,13 +4518,9 @@ if(req.session.adminIdentity) {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
-            
-            
            
             students: doc,
             
@@ -4513,15 +4566,15 @@ if(req.session.adminIdentity) {
 router.get('/viewFee/viewOtherFeeReceived', async (req, res) => {
     
     
-   const startingDateWithoutTime = moment().format('2021-01-01'); //kumtir hriatna
+const startingDateWithoutTime = moment().format('2020-01-01'); //kumtir hriatna
             
-   const currentDateWithoutTime = moment().format('YYYY-MM-DD'); //vawiin hriatna
+const currentDateWithoutTime = moment().format('YYYY-MM-DD'); //vawiin hriatna
             
 
 if(req.session.adminIdentity) {
     
   await Student.find({studentOtherFee : { $elemMatch: {  dateofpayment : { $gte: startingDateWithoutTime, $lte: currentDateWithoutTime } } } }, (err, doc) => {
-      
+
       if(!err) {
           
             res.render('viewOtherFeeReceived', {
@@ -4536,13 +4589,9 @@ if(req.session.adminIdentity) {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
-            
-            
            
             students: doc,
             
@@ -4578,24 +4627,20 @@ if(req.session.adminIdentity) {
     
 });
 
-
-
-
-
 //view fee by selecting date for admin only view
 
 router.get('/viewFee/viewFeeByDate/:dateofpayment', async (req, res) => {
     
-
+const currentDateWithoutTime = moment().format('YYYY-MM-DD'); //vawiin hriatna
 //req.params.dateofpayment hian a chunga url date hi a search chhuak thei dawn a ni.
             
 if(req.session.adminIdentity) {
     
-  await Student.find({$or: [{studentFee : { $elemMatch: {  dateofpayment : { $eq: req.params.dateofpayment }  } } }, 
+  await Student.find({$or: [{studentFee : { $elemMatch: {  dateofpayment : { $gte: req.params.dateofpayment, $lte: currentDateWithoutTime }  } } }, 
   
-  {studentExamFee : { $elemMatch: {  dateofpayment : { $eq: req.params.dateofpayment }  } } },
+  {studentExamFee : { $elemMatch: {  dateofpayment : { $gte: req.params.dateofpayment, $lte: currentDateWithoutTime }  } } },
   
-  {studentOtherFee : { $elemMatch: {  dateofpayment : { $eq: req.params.dateofpayment }  } } }
+  {studentOtherFee : { $elemMatch: {  dateofpayment : { $gte: req.params.dateofpayment, $lte: currentDateWithoutTime }  } } }
   
   ] },
   
@@ -4606,7 +4651,7 @@ if(req.session.adminIdentity) {
           
             res.render('viewFeeByDate', {
                 
-            viewTitle: 'Your search date: ',
+            viewTitle: 'Search From: ',
        
             username: req.session.username,
             
@@ -4616,20 +4661,15 @@ if(req.session.adminIdentity) {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-           
             students: doc,
             
             moment: moment,
             
-            searchDate: req.params.dateofpayment
-            
+            searchFromDate: req.params.dateofpayment
                 
                 });
                 
@@ -4687,13 +4727,9 @@ router.get('/computer/:id', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
-            
-            
             
             loginIdName: req.session.adminIdentity,
            
@@ -4754,11 +4790,6 @@ router.get('/computer/:id/feeRegister', async (req, res) => {
 });
 
 // =========================================
-
-
-
-
-
 
 //exam fee payment form =========
 
