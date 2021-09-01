@@ -131,7 +131,39 @@ Input Devices (Keyboard Devices, Point-and-Draw Devices, Data Scanning Devices, 
                 
                 </div>  <!--Syllabus video end-->
                 
-                
+                 <% 
+                        
+                        var paidStudent = [];
+                        
+                        if(studentFee.length != undefined) {
+                        
+                        for(var i = 0; i < studentFee.length; i++) {
+                        
+                        if(studentFee[i].feeAmount >= 1000) {
+                            paidStudent.push('paid');
+                          }
+                        }
+                        }
+                        if(studentExamFee.length != undefined) {
+                        
+                        for(var i = 0; i < studentExamFee.length; i++) {
+                        
+                        if(studentExamFee[i].feeAmount == 1510) {
+                            paidStudent.push('paid');
+                          }
+                        }
+                        }
+                        if(studentOtherFee.length != undefined) {
+                        
+                        for(var i = 0; i < studentOtherFee.length; i++) {
+                        
+                        if(studentOtherFee[i].feeAmount >= 499) {
+                            paidStudent.push('paid');
+                          }
+                        }
+                        }
+                        if(paidStudent.includes('paid')) {
+                        %>
                 
                 
                 <div class="accordion-item"> <!--video section started-->
@@ -927,10 +959,7 @@ Note: <em>A page printer is a computer printer which processes and prints a, who
   </div>
 </div>
     
-    
-    
-    
-
+<% } %>
   </body>
   
   

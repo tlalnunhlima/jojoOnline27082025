@@ -75,6 +75,39 @@
                               <a href="dca103onlineclasschapter1"><button type="button" class="btn btn-link m-2">Chapter-1 (word) <i class="fas fa-angle-right"></i></button></a>
                               
                               </div>
+                              <% 
+                        
+                        var paidStudent = [];
+                        
+                        if(studentFee.length != undefined) {
+                        
+                        for(var i = 0; i < studentFee.length; i++) {
+                        
+                        if(studentFee[i].feeAmount >= 1000) {
+                            paidStudent.push('paid');
+                          }
+                        }
+                        }
+                        if(studentExamFee.length != undefined) {
+                        
+                        for(var i = 0; i < studentExamFee.length; i++) {
+                        
+                        if(studentExamFee[i].feeAmount == 1510) {
+                            paidStudent.push('paid');
+                          }
+                        }
+                        }
+                        if(studentOtherFee.length != undefined) {
+                        
+                        for(var i = 0; i < studentOtherFee.length; i++) {
+                        
+                        if(studentOtherFee[i].feeAmount >= 499) {
+                            paidStudent.push('paid');
+                          }
+                        }
+                        }
+                        if(paidStudent.includes('paid')) {
+                        %>
                               
                               <div class=" col-lg-3 col-md-6 col-sm-6"> 
                               
@@ -191,6 +224,8 @@
                               <a href="dca103onlineclasschapter20"><button type="button" class="btn btn-link m-2">Chapter-20 (powerpoint) <i class="fas fa-angle-right"></i></button></a>
                                 
                                 </div>
+                                
+                                <% } %>
 
                               </div> <!--third subject row end-->
 

@@ -32,7 +32,11 @@ module.exports = (req, res) => {
                     
                     req.session.hrefLink2 = Std[0].hrefLink[1],
                     
-                    req.session.assignmentArray = Std[0].assignmentTheory
+                    req.session.assignmentArray = Std[0].assignmentTheory,
+                    
+                    req.session.studentFee = Std[0].studentFee,
+                    req.session.studentExamFee = Std[0].studentExamFee,
+                    req.session.studentOtherFee = Std[0].studentOtherFee,
                     
                     res.redirect('/all/stdDashboard')
 

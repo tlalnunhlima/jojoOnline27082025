@@ -93,8 +93,6 @@ router.get('/', (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
@@ -117,8 +115,6 @@ router.get('/faq', (req, res) => {
             link2: req.session.myDashboard2,
             
             link3: req.session.myDashboard3,
-            
-            
             
             href1: req.session.hrefLink1,
             
@@ -144,8 +140,6 @@ router.get('/message', (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
@@ -169,8 +163,6 @@ router.get('/contactus', (req, res) => {
             link2: req.session.myDashboard2,
             
             link3: req.session.myDashboard3,
-            
-            
             
             href1: req.session.hrefLink1,
             
@@ -196,8 +188,6 @@ router.get('/privacy', (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
@@ -205,7 +195,6 @@ router.get('/privacy', (req, res) => {
             href3: req.session.hrefLink3
             
         });
-        
         
 });
 
@@ -223,8 +212,6 @@ router.get('/terms', (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
@@ -232,7 +219,6 @@ router.get('/terms', (req, res) => {
             href3: req.session.hrefLink3
             
         });
-        
         
 });
 
@@ -249,7 +235,29 @@ router.get('/photoGallery', (req, res) => {
             
             link3: req.session.myDashboard3,
             
+            href1: req.session.hrefLink1,
             
+            href2: req.session.hrefLink2,
+            
+            href3: req.session.hrefLink3
+            
+        });
+        
+});
+
+
+//paid and unpaid account page
+router.get('/paid_unpaid_account', (req, res) => {
+    
+            res.render('paid_unpaid_account', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
             
             href1: req.session.hrefLink1,
             
@@ -259,10 +267,7 @@ router.get('/photoGallery', (req, res) => {
             
         });
         
-        
 });
-
-
 
 
 
@@ -591,6 +596,10 @@ router.get('/all/stdDashboard', async (req, res) => {
             
             studentId: req.session.userId,
             
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
+            
             thisStudent,
             
             Students,
@@ -765,9 +774,6 @@ router.get('/assignment/checkScore/:id', async (req, res) => {
     
 });
 
-
-
-
 //student view profile and fee ====
 
 router.get('/all/computer/:id', async (req, res) => {
@@ -788,13 +794,9 @@ router.get('/all/computer/:id', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
-            
-            
             
             loginIdName: req.session.studentIdentity,
             
@@ -826,9 +828,11 @@ router.get('/all/computer/:id', async (req, res) => {
 
 //theory intro page
 
-router.get('/all/dcatheorywelcomepage', (req, res) => {
+router.get('/all/dcatheorywelcomepage', async (req, res) => {
     
-    if(req.session.studentIdentity) {
+   const Students = await Student.find({});
+   
+   if(req.session.studentIdentity) {
         
        return res.render('dcatheorywelcomepage', {
             
@@ -840,17 +844,19 @@ router.get('/all/dcatheorywelcomepage', (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
+            
+            Students
             
         });
         
@@ -880,13 +886,9 @@ router.get('/all/dcapracticalwelcomepage', (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
-            
-            
             
             loginIdName: req.session.studentIdentity,
             
@@ -921,17 +923,16 @@ router.get('/all/dca101welcomepage', (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee
             
         });
         
@@ -959,17 +960,17 @@ router.get('/all/dca102welcomepage', (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee
             
         });
         
@@ -997,17 +998,17 @@ router.get('/all/dca103welcomepage', (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee
             
         });
         
@@ -1034,17 +1035,17 @@ router.get('/all/dca104welcomepage', (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee
             
         });
         
@@ -1071,17 +1072,17 @@ router.get('/all/dca105welcomepage', (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee
             
         });
         
@@ -1110,17 +1111,17 @@ router.get('/all/dca106welcomepage', (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee
             
         });
         
@@ -1129,10 +1130,6 @@ router.get('/all/dca106welcomepage', (req, res) => {
         res.redirect('/');
     
 }); 
-
-
-
-
 
 //dca101 chapter  1
 
@@ -1154,13 +1151,9 @@ const thisStudent = await Student.findOne({_id: req.session.userId});
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
-            
-            
             
             loginIdName: req.session.studentIdentity,
             
@@ -1197,17 +1190,17 @@ router.get('/all/dca1semOnlineLessonChapter2', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
             
@@ -1240,17 +1233,17 @@ router.get('/all/dca1semOnlineLessonChapter3', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
             
@@ -1284,17 +1277,17 @@ router.get('/all/dca1semOnlineLessonChapter4', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
             
@@ -1326,18 +1319,18 @@ router.get('/all/dca1semOnlineLessonChapter5', async (req, res) => {
             link2: req.session.myDashboard2,
             
             link3: req.session.myDashboard3,
-            
-            
-            
+        
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
             
@@ -1370,17 +1363,17 @@ router.get('/all/dca1semOnlineLessonChapter6', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
             
@@ -1414,17 +1407,17 @@ router.get('/all/dca1semOnlineLessonChapter7', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
             
@@ -1456,17 +1449,17 @@ router.get('/all/dca1semOnlineLessonChapter8', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
             
@@ -1499,17 +1492,17 @@ router.get('/all/dca1semOnlineLessonChapter9', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
             
@@ -1542,17 +1535,17 @@ router.get('/all/dca1semOnlineLessonChapter10', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
             
@@ -1588,13 +1581,9 @@ router.get('/all/dca102onlineclasschapter1', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
-            
-            
             
             loginIdName: req.session.studentIdentity,
             
@@ -1631,17 +1620,17 @@ router.get('/all/dca102onlineclasschapter2', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -1675,17 +1664,17 @@ router.get('/all/dca102onlineclasschapter3', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -1719,17 +1708,17 @@ router.get('/all/dca102onlineclasschapter4', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -1763,17 +1752,17 @@ router.get('/all/dca102onlineclasschapter5', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -1806,17 +1795,17 @@ router.get('/all/dca102onlineclasschapter6', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -1850,17 +1839,17 @@ router.get('/all/dca102onlineclasschapter7', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -1893,17 +1882,17 @@ router.get('/all/dca102onlineclasschapter8', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -1938,17 +1927,17 @@ router.get('/all/dca102onlineclasschapter9', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -1982,17 +1971,17 @@ router.get('/all/dca102onlineclasschapter10', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -2030,13 +2019,9 @@ router.get('/all/dca103onlineclasschapter1', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
-            
-            
             
             loginIdName: req.session.studentIdentity,
             
@@ -2073,17 +2058,17 @@ router.get('/all/dca103onlineclasschapter2', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -2116,17 +2101,17 @@ router.get('/all/dca103onlineclasschapter3', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -2160,17 +2145,17 @@ router.get('/all/dca103onlineclasschapter4', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -2203,17 +2188,17 @@ router.get('/all/dca103onlineclasschapter5', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -2247,17 +2232,17 @@ router.get('/all/dca103onlineclasschapter6', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -2291,17 +2276,17 @@ router.get('/all/dca103onlineclasschapter7', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -2335,17 +2320,17 @@ router.get('/all/dca103onlineclasschapter8', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -2378,17 +2363,17 @@ router.get('/all/dca103onlineclasschapter9', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -2421,17 +2406,17 @@ router.get('/all/dca103onlineclasschapter10', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -2464,17 +2449,17 @@ router.get('/all/dca103onlineclasschapter11', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -2507,17 +2492,17 @@ router.get('/all/dca103onlineclasschapter12', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -2550,17 +2535,17 @@ router.get('/all/dca103onlineclasschapter13', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -2592,17 +2577,17 @@ router.get('/all/dca103onlineclasschapter14', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -2635,17 +2620,17 @@ router.get('/all/dca103onlineclasschapter15', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -2678,17 +2663,17 @@ router.get('/all/dca103onlineclasschapter16', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -2721,17 +2706,17 @@ router.get('/all/dca103onlineclasschapter17', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -2764,17 +2749,17 @@ router.get('/all/dca103onlineclasschapter18', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -2807,17 +2792,17 @@ router.get('/all/dca103onlineclasschapter19', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -2849,17 +2834,17 @@ router.get('/all/dca103onlineclasschapter20', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -2899,13 +2884,9 @@ router.get('/all/dca104onlineclasschapter1', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
-            
-            
             
             loginIdName: req.session.studentIdentity,
             
@@ -2942,17 +2923,17 @@ router.get('/all/dca104onlineclasschapter2', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -2985,17 +2966,16 @@ router.get('/all/dca104onlineclasschapter3', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -3029,17 +3009,16 @@ router.get('/all/dca104onlineclasschapter4', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -3073,17 +3052,16 @@ router.get('/all/dca104onlineclasschapter5', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -3116,17 +3094,16 @@ router.get('/all/dca104onlineclasschapter6', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -3166,13 +3143,9 @@ router.get('/all/dca105onlineclasschapter1', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
-            
-            
             
             loginIdName: req.session.studentIdentity,
             
@@ -3210,17 +3183,17 @@ router.get('/all/dca105onlineclasschapter2', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -3253,17 +3226,16 @@ router.get('/all/dca105onlineclasschapter3', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -3296,17 +3268,16 @@ router.get('/all/dca105onlineclasschapter4', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -3339,17 +3310,16 @@ router.get('/all/dca105onlineclasschapter5', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -3382,17 +3352,16 @@ router.get('/all/dca105onlineclasschapter6', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -3425,17 +3394,17 @@ router.get('/all/dca105onlineclasschapter7', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -3467,17 +3436,16 @@ router.get('/all/dca105onlineclasschapter8', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -3510,17 +3478,16 @@ router.get('/all/dca105onlineclasschapter9', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -3552,17 +3519,16 @@ router.get('/all/dca105onlineclasschapter10', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -3594,17 +3560,16 @@ router.get('/all/dca105onlineclasschapter11', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -3636,17 +3601,16 @@ router.get('/all/dca105onlineclasschapter12', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -3679,17 +3643,16 @@ router.get('/all/dca105onlineclasschapter13', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -3768,17 +3731,16 @@ router.get('/all/dca106onlineclasschapter2', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -3812,17 +3774,16 @@ router.get('/all/dca106onlineclasschapter3', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -3862,6 +3823,9 @@ router.get('/all/dca106onlineclasschapter4', async (req, res) => {
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -3895,17 +3859,16 @@ router.get('/all/dca106onlineclasschapter5', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -3938,17 +3901,16 @@ router.get('/all/dca106onlineclasschapter6', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -3981,17 +3943,16 @@ router.get('/all/dca106onlineclasschapter7', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -4026,17 +3987,16 @@ router.get('/all/dca106onlineclasschapter8', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -4069,17 +4029,16 @@ router.get('/all/dca106onlineclasschapter9', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -4119,6 +4078,9 @@ router.get('/all/dca106onlineclasschapter10', async (req, res) => {
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -4151,17 +4113,16 @@ router.get('/all/dca106onlineclasschapter11', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -4194,17 +4155,16 @@ router.get('/all/dca106onlineclasschapter12', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -4237,17 +4197,16 @@ router.get('/all/dca106onlineclasschapter13', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -4281,17 +4240,16 @@ router.get('/all/dca106onlineclasschapter14', async (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             thisStudent
 
@@ -4327,13 +4285,9 @@ if(req.session.adminIdentity) {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
-            
-            
             
             moment: moment
                 
@@ -4700,13 +4654,6 @@ if(req.session.adminIdentity) {
     
 });
 
-
-
-
-
-
-
-
 //student page admin only view====
 
 router.get('/computer/:id', async (req, res) => {
@@ -4735,7 +4682,7 @@ router.get('/computer/:id', async (req, res) => {
            
             students: doc
                 
-                })
+                });
                 
                 return;
             }
@@ -5041,15 +4988,14 @@ router.get('/all/dcaDownloadMaterialPage', (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
             
-            
-            
             loginIdName: req.session.studentIdentity,
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
             
             studentId: req.session.userId
             

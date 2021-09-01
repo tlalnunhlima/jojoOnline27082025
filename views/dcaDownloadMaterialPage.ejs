@@ -26,7 +26,7 @@
             
             <div class="d-flex justify-content-between">
             
-            <a href="stdDashboard" class="small text-secondary"> <i class="fas fa-home text-primary"></i> Dashboard</i> </a>
+            <a href="#" onclick="window.history.back();" class="small text-secondary"> <i class="fas fa-arrow-left pe-2"></i> Back </i> </a>
             
             <span class="float-end"> <%- include('layouts/subjectMenuTheory') -%> </span>
             
@@ -63,6 +63,40 @@
                       <div class="accordion-body">
                         
                         <div class="row">
+                          
+                          <% 
+                        var paidStudent = [];
+                        
+                        if(studentFee.length != undefined) {
+                        
+                        for(var i = 0; i < studentFee.length; i++) {
+                        
+                        if(studentFee[i].feeAmount >= 1000) {
+                            paidStudent.push('paid');
+                          }
+                        }
+                        }
+                        if(studentExamFee.length != undefined) {
+                        
+                        for(var i = 0; i < studentExamFee.length; i++) {
+                        
+                        if(studentExamFee[i].feeAmount == 1510) {
+                            paidStudent.push('paid');
+                          }
+                        }
+                        }
+                        if(studentOtherFee.length != undefined) {
+                        
+                        for(var i = 0; i < studentOtherFee.length; i++) {
+                        
+                        if(studentOtherFee[i].feeAmount >= 499) {
+                            paidStudent.push('paid');
+                          }
+                        }
+                        }
+                        if(paidStudent.includes('paid')) {
+                            
+                            %> 
                                 
                                 <div class="col-lg-3 col-md-6 col-sm-6"> 
                               
@@ -99,14 +133,10 @@
                   </div>
                   
                    <hr>
-            
-
-                  
+                   
+                   <% } %>
                 
                 </div>
-            
-            
-      
 
     </main>
     
