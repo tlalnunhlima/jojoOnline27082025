@@ -15,6 +15,9 @@ const app = express();
 
 app.set('view engine', 'ejs');
 
+app.set('port', (process.env.PORT || 3000));
+
+
 // public express static
 
 app.use(express.static(__dirname + '/public'));
@@ -41,3 +44,10 @@ app.use('/', routeController);
 
 
 
+//listen on specific post
+
+ app.listen(app.get('port'), () => {
+  
+    console.log('App is listening on port:' + app.get('port'));
+    
+ });
