@@ -615,6 +615,53 @@ router.get('/all/stdDashboard', async (req, res) => {
 });
 
 
+//student who test today
+
+router.get('/all/whotesttoday', async (req, res) => {
+  
+  const Students = await Student.find({})  
+    
+  const thisStudent = await Student.findOne({_id: req.session.userId});
+  
+    if(req.session.adminIdentity) {
+        
+        return res.render('whotesttoday', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
+            
+            thisStudent,
+            
+            Students,
+            
+            moment
+     
+        });
+        
+    }
+        
+        res.redirect('/');
+    
+});
+
+
 //student scoreboard
 
 router.get('/all/stdScoreboard', async (req, res) => {
@@ -801,7 +848,7 @@ router.get('/all/computer/:id', async (req, res) => {
             loginIdName: req.session.studentIdentity,
             
             studentId: req.session.userId,
-           
+
             students: doc
                 
                 });

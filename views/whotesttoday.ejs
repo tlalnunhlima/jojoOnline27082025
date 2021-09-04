@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  
+<%- include('layouts/headers') -%>
+
+
+<body>
+    
+    <%- include ('ejsFunction') %> <!--function javascript ejs-->
+    
+
+
+    <!-- --------------main container section------------------ -->
+
+<div class="container">
+  
+  <main>
+
+  <div class="row">
+          
+           <div class="mx-auto px-4 mt-3">
+            
+            <div class="d-flex justify-content-between">
+            
+            <a href="#" onclick="window.history.back();" class="small text-secondary"> <i class="fas fa-arrow-left pe-2"></i> Back </i> </a>
+            
+            </div>
+            
+            </div>
+  </div>
+      
+
+      
+      <!--second lane-->
+     
+      <!-- --------------Who test today------------------ -->
+        
+      <div class="table-responsive">
+        
+        <table class="table table-sm mt-4 table-hover shadow-sm" style="max-width: 400px;">
+          
+          <thead>
+              
+              <tr>
+              
+              <td colspan="5" class="fw-normal fs-6 border bg-primary text-white text-center mb-2">
+                  
+                  <i class="fas fa-user-friends text-white ps-2"></i> Students' who test today </td>
+              
+            </tr>
+            
+            <tr class="orangeColor">
+              
+                      
+              <td class="border ps-3 small fw-normal"> Sl.</td>
+              
+              <td class="border ps-3 small fw-normal"> Student's Name</td>
+                      
+              <td class="border ps-3 small fw-normal"> Address </td>
+              
+            </tr>
+            
+          </thead>
+          
+          <tbody>
+            
+      <% 
+            // Get today's date
+            var todaysDate = new Date(); 
+            
+            var studentName = [];
+            
+            var studentAddress = [];
+            
+            if(Students.length > 0) {
+              
+             for (var i=0; i < Students.length; i++) {
+              
+                    if( Students[i].assignmentTheory != undefined ) {
+          
+                    for (var k=0; k < Students[i].assignmentTheory.length; k++) {
+                        
+                        if( Students[i].assignmentTheory[k] != undefined && Students[i].assignmentTheory[k].dateSubmitted.setHours(0,0,0,0) ==  todaysDate.setHours(0,0,0,0)) {
+              
+                            studentName.push(Students[i].username);
+                            
+                            studentAddress.push(Students[i].address);
+              
+              
+             } } } }%>
+            
+            <% 
+              
+             for (var i=0; i < Students.length; i++) {
+              
+                    if( Students[i].assignmentTheory102 != undefined ) {
+          
+                    for (var k=0; k < Students[i].assignmentTheory102.length; k++) {
+                        
+                        if( Students[i].assignmentTheory102[k] != undefined && Students[i].assignmentTheory102[k].dateSubmitted.setHours(0,0,0,0) ==  todaysDate.setHours(0,0,0,0)) {
+              
+                            studentName.push(Students[i].username);
+                            
+                            studentAddress.push(Students[i].address);
+        
+             } } } }%>
+            
+            <% 
+              
+             for (var i=0; i < Students.length; i++) {
+              
+                    if( Students[i].assignmentTheory103 != undefined ) {
+          
+                    for (var k=0; k < Students[i].assignmentTheory103.length; k++) {
+                        
+                        if( Students[i].assignmentTheory103[k] != undefined && Students[i].assignmentTheory103[k].dateSubmitted.setHours(0,0,0,0) ==  todaysDate.setHours(0,0,0,0)) {
+              
+              
+                            studentName.push(Students[i].username);
+                            
+                            studentAddress.push(Students[i].address);
+        
+            } } } }%>
+            <% 
+              
+             for (var i=0; i < Students.length; i++) {
+              
+                    if( Students[i].assignmentTheory104 != undefined ) {
+          
+                    for (var k=0; k < Students[i].assignmentTheory104.length; k++) {
+                        
+                        if( Students[i].assignmentTheory104[k] != undefined && Students[i].assignmentTheory104[k].dateSubmitted.setHours(0,0,0,0) ==  todaysDate.setHours(0,0,0,0)) {
+              
+                        studentName.push(Students[i].username);
+                            
+                        studentAddress.push(Students[i].address);
+              
+        
+             } } } }%>
+            
+            <% 
+             for (var i=0; i < Students.length; i++) {
+              
+                    if( Students[i].assignmentTheory105 != undefined ) {
+          
+                    for (var k=0; k < Students[i].assignmentTheory105.length; k++) {
+                        
+                        if( Students[i].assignmentTheory105[k] != undefined && Students[i].assignmentTheory105[k].dateSubmitted.setHours(0,0,0,0) ==  todaysDate.setHours(0,0,0,0)) {
+              
+                            studentName.push(Students[i].username);
+                            
+                            studentAddress.push(Students[i].address);
+              
+        
+            } } } }%>
+            
+            <% 
+              
+             for (var i=0; i < Students.length; i++) {
+              
+                    if( Students[i].assignmentTheory106 != undefined ) {
+          
+                    for (var k=0; k < Students[i].assignmentTheory106.length; k++) {
+                        
+                        if( Students[i].assignmentTheory106[k] != undefined && Students[i].assignmentTheory106[k].dateSubmitted.setHours(0,0,0,0) ==  todaysDate.setHours(0,0,0,0)) {
+              
+                            studentName.push(Students[i].username);
+                            
+                            studentAddress.push(Students[i].address);
+              
+              
+                        } } } } %>
+             
+            <% 
+            
+            var uniqueName = studentName.filter(onlyUnique);
+            
+            var uniqueAddress = studentAddress.filter(onlyUnique);
+            
+            for(var i=0; i < uniqueAddress.length; i++) {
+            
+            %>
+             <tr>
+                          <td class="border text-center"> <%= i + 1 %> </td>
+                          
+                          <td class="border" >
+          
+                                <%= capitalizeFirstLetter(uniqueName[i]) %>
+                            
+                          </td>
+                          
+                          <td class="border"> <%= capitalizeFirstLetter(uniqueAddress[i]) %> </td>
+                          
+                        </tr>
+        
+            
+            <% } } %>
+            
+          </tbody>
+          
+        </table>
+        
+      </div>
+      
+      
+    </main>
+    
+</div>
+
+    <%- include('layouts/scripts') -%>
+    
+    <%- include('layouts/footer') -%>
+    
+  </body>
+  
+</html>

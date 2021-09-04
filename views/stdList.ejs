@@ -14,7 +14,7 @@
   
   <%- include('layouts/staffMenu') -%>
 
- <div class="table-responsive mb-2 mt-4 col-lg-6 col-md-6 col-xs-12 mx-auto">
+ <div class="table-responsive mb-4 mt-4 col-lg-6 col-md-6 col-xs-12">
         
         <table class="table table-sm bg-white shadow-sm mx-auto" style="max-width:500px">
           
@@ -22,9 +22,9 @@
               
              <tr>
               
-              <td colspan="3" class="fw-normal fs-6 border bg-primary text-white text-center">
+              <td colspan="3" class="fw-normal fs-6 border bg-light text-primary text-center">
                   
-                  <i class="fas fa-user-check text-white"></i> Verify assignment </td>
+                  <i class="fas fa-user-check text-primary"></i> Verify assignment </td>
               
             </tr>
             
@@ -42,6 +42,12 @@
                     
                     <td colspan="3"><a href="all/stdAssignmentFinished" class="text-muted fs-6 fw-normal">
                         <i class="fas fa-check-circle ps-2 text-success"></i> <span class="myLink"> Check who finished assignment...</span></a></td>
+                    
+                </tr>
+                <tr>
+                    
+                    <td colspan="3"><a href="all/whotesttoday" class="text-muted fs-6 fw-normal">
+                        <i class="fas fa-check-circle ps-2 text-success"></i> <span class="myLink"> Check who test today...</span></a></td>
                     
                 </tr>
 
