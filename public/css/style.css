@@ -309,3 +309,10 @@ thead, tbody {
   
   
 }
+
+@media only screen and (max-width: 350px) {
+  
+  .branchNamejojo {
+    font-size: 90%;
+}
+}
