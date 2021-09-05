@@ -56,25 +56,58 @@
                         if(paidStudent.includes('paid')) {
                             
                             %> 
-                            <div class="alert alert-primary alert-dismissible fade show" role="alert">
-  <strong>Hello Dear!</strong> Practical video hi kan la zo lo va, buaipui mek a ni. Tunah hian theory lesson kan zir hmasa dawn a ni.  Kan theory lesson siamte hi i zir hunah hriatthiam harsa i ti maithei a, i hre thiam vek lo a nih pawhin beidawng lo la,
-  hmanhmawh lovin zir la, i la hrefiah chho zel dawn a ni tih hria ang che. 
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-<div class="alert alert-success alert-dismissible fade show" role="alert">
-  <strong>Inhlawh duh tan!</strong> Computer zir tur pakhat i rawn hmuh chuan Rs. 500/- i hlawh thei. Mi 10 i hmuh chuan Rs. 5000/- i hlawh daih thei!. 
-  Pi Mary emaw Miss Hlui emaw be hmasa ang che.
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-
-<div class="alert alert-success alert-dismissible fade show" role="alert">
-  <strong>Internal Mark hmuh teuh dan!</strong> Kan theory lesson zawng zawng hi dik taka i chhan vek chuan internal-ah full mark i hmu thei.
-  Internal hian subject tinah mark 20 a pu a. Mark 20 i lo neih lawk chuan exam-ah pass a harsa vak lo vang. Lo chhang taima la, mark lo khawl rawh. Fighting!
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators mt-0 pt-0">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active d-none d-sm-block" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" class="d-none d-sm-block" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" class="d-none d-sm-block" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" class="d-none d-sm-block" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="20000">
+      <img src="/img/slide1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-md-block">
+          <h5>Assignment</h5>
+        <p>Assignment i chhan hmain chhiar chiang hmasa la, hmanhmawh suh ang che.</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="20000">
+      <img src="/img/slide2.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-md-block">
+        <h5>Internal</h5>
+        <p>Assignment chhang dik vek tan internal mark 20-ah 20 hmuh theih a ni.</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="20000">
+      <img src="/img/slide3.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-md-block text-white">
+        <h5>Theory</h5>
+        <p>Assignment hi board exam hmain chhan zawh vek tur a ni.</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="20000">
+      <img src="/img/slide4.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-md-block text-white">
+        <h5>Inhlawhna</h5>
+        <p>Zirlai pakhat hmuhin Rs. 500/- zel hlawh theih a ni.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
                             
+            
+ 
                        <% } else {%>
-                            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
   <strong>Hello Dear!</strong> Tuna i account hi unpaid account a ni a, i thil tih theih a limit dawn a; lesson tam tak i zir thei dawn lo a, study material i download thei lo bawk ang.
   Account chungchang hi i hriatthiam theih nan <a href="/paid_unpaid_account" class="text-primary"> ...learn more</a> hi click ang che. 
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>

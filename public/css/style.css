@@ -198,6 +198,16 @@ border-radius: 8px;
   background-color: #56BDEA;
 }
 
+.carousel-caption {
+  color: black;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  max-width: 300px;
+  transform: translateY(-50%);
+  font-size: 90%;
+}
+
 /*-------------media query for video fullscreen-----------*/
 @media only screen and (max-width: 768px) {
   
@@ -263,6 +273,17 @@ thead, tbody {
   margin: auto;
 }
 
+.carousel-caption {
+  color: black;
+  text-align: center;
+  top: 45%;
+  left: 45%;
+  max-width: 400px;
+  transform: translateY(-50%);
+  font-size: 68%;
+}
+
+
 }
 
 /*media quiery of 990 end ===============================*/
@@ -307,12 +328,63 @@ thead, tbody {
     
   }
   
+.carousel-caption {
+  color: black;
+  text-align: center;
+  top: 40%;
+  left: 50%;
+  max-width: 350px;
+  transform: translateY(-50%);
+  font-size: 80%;
+}
+  
   
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 450px) {
   
   .branchNamejojo {
     font-size: 90%;
 }
+
+.carousel-caption {
+  color: black;
+  text-align: center;
+  top: 35%;
+  left: 50%;
+  max-width: 400px;
+  transform: translateY(-50%);
+  font-size: 68%;
+}
+
+.carousel {
+  
+  width: 100vw;
+    
+    padding: 0;
+    
+    margin: 0;
+  
+}
+
+
+}
+
+@media only screen and (max-width: 365px) {
+  
+  .branchNamejojo {
+    font-size: 90%;
+}
+
+.carousel-caption {
+  color: black;
+  text-align: center;
+  top: 25%;
+  left: 50%;
+  max-width: 400px;
+  transform: translateY(-50%);
+  font-size: 65%;
+}
+
+
 }
