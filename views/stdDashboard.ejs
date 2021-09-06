@@ -332,8 +332,6 @@
               
               <td class="border ps-3 small fw-normal"> Student's Name</td>
                       
-              <td class="border ps-3 small fw-normal"> Address </td>
-              
             </tr>
             
           </thead>
@@ -451,9 +449,7 @@
             
             var uniqueName = studentName.filter(onlyUnique);
             
-            var uniqueAddress = studentAddress.filter(onlyUnique);
-            
-            for(var i=0; i < uniqueAddress.length; i++) {
+            for(var i=0; i < uniqueName.length; i++) {
             
             %>
              <tr>
@@ -465,7 +461,6 @@
                             
                           </td>
                           
-                          <td class="border"> <%= capitalizeFirstLetter(uniqueAddress[i]) %> </td>
                           
                         </tr>
         
