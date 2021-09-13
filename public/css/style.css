@@ -358,10 +358,14 @@ thead, tbody {
 }
 
 .carousel {
-  
   width: 100vw;
   padding: 0;
   margin: 0;
+}
+
+.carousel-item img {
+  
+  height: 150px;
   
 }
 
@@ -374,15 +378,15 @@ thead, tbody {
     font-size: 90%;
 }
 
-.carousel-caption {
-  color: black;
-  text-align: center;
-  top: 25%;
-  left: 50%;
-  max-width: 400px;
-  transform: translateY(-50%);
-  font-size: 65%;
-}
+/*.carousel-caption {*/
+/*  color: black;*/
+/*  text-align: center;*/
+/*  top: 25%;*/
+/*  left: 50%;*/
+/*  max-width: 400px;*/
+/*  transform: translateY(-50%);*/
+/*  font-size: 65%;*/
+/*}*/
 
 
 }
