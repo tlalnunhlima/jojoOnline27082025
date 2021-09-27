@@ -919,7 +919,9 @@ router.get('/all/dcatheorywelcomepage', async (req, res) => {
 
 //practical intro page
 
-router.get('/all/dcapracticalwelcomepage', (req, res) => {
+router.get('/all/dcapracticalwelcomepage', async (req, res) => {
+    
+    const Students = await Student.find({});
     
     if(req.session.studentIdentity) {
         
@@ -939,7 +941,13 @@ router.get('/all/dcapracticalwelcomepage', (req, res) => {
             
             loginIdName: req.session.studentIdentity,
             
-            studentId: req.session.userId
+            studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee,
+            
+            Students
             
         });
         
@@ -1036,6 +1044,43 @@ router.get('/all/dca103welcomepage', (req, res) => {
     if(req.session.studentIdentity) {
         
        return res.render('dca103welcomepage', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee
+            
+        });
+        
+    }
+        
+        res.redirect('/');
+    
+}); 
+
+
+//dca-103 practical intro page
+
+router.get('/all/dca103practicalwelcomepage', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103practicalwelcomepage', {
             
             username: req.session.username,
             
@@ -4309,9 +4354,774 @@ router.get('/all/dca106onlineclasschapter14', async (req, res) => {
 });
 
 
-
-
 // ==================106 theory end=========================
+
+
+//dca103 practical chapter  1
+
+router.get('/all/dca103practicalclasschapter1', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103practicalclasschapter1', {
+           
+           chapterTitle: 'Office Automation Software',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca103 practical chapter  2
+
+router.get('/all/dca103practicalclasschapter2', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103practicalclasschapter2', {
+           
+           chapterTitle: 'Office Automation Software',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca103 practical chapter  3
+
+router.get('/all/dca103practicalclasschapter3', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103practicalclasschapter3', {
+           
+           chapterTitle: 'Office Automation Software',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca103 practical chapter  4
+
+router.get('/all/dca103practicalclasschapter4', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103practicalclasschapter4', {
+           
+           chapterTitle: 'Office Automation Software',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca103 practical chapter  5
+
+router.get('/all/dca103practicalclasschapter5', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103practicalclasschapter5', {
+           
+           chapterTitle: 'Office Automation Software',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca103 practical chapter  6
+
+router.get('/all/dca103practicalclasschapter6', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103practicalclasschapter6', {
+           
+           chapterTitle: 'Office Automation Software',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca103 practical chapter  7
+
+router.get('/all/dca103practicalclasschapter7', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103practicalclasschapter7', {
+           
+           chapterTitle: 'Office Automation Software',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca103 practical chapter  8
+
+router.get('/all/dca103practicalclasschapter8', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103practicalclasschapter8', {
+           
+           chapterTitle: 'Office Automation Software',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+
+//dca103 practical chapter  9
+
+router.get('/all/dca103practicalclasschapter9', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103practicalclasschapter9', {
+           
+           chapterTitle: 'Office Automation Software',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca103 practical chapter  10
+
+router.get('/all/dca103practicalclasschapter10', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103practicalclasschapter10', {
+           
+           chapterTitle: 'Office Automation Software',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca103 practical chapter  11
+
+router.get('/all/dca103practicalclasschapter11', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103practicalclasschapter11', {
+           
+           chapterTitle: 'Office Automation Software',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca103 practical chapter  12
+
+router.get('/all/dca103practicalclasschapter12', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103practicalclasschapter12', {
+           
+           chapterTitle: 'Office Automation Software',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca103 practical chapter  13
+
+router.get('/all/dca103practicalclasschapter13', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103practicalclasschapter13', {
+           
+           chapterTitle: 'Office Automation Software',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca103 practical chapter  14
+
+router.get('/all/dca103practicalclasschapter14', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103practicalclasschapter14', {
+           
+           chapterTitle: 'Office Automation Software',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca103 practical chapter  15
+
+router.get('/all/dca103practicalclasschapter15', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103practicalclasschapter15', {
+           
+           chapterTitle: 'Office Automation Software',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca103 practical chapter  16
+
+router.get('/all/dca103practicalclasschapter16', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103practicalclasschapter16', {
+           
+           chapterTitle: 'Office Automation Software',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca103 practical chapter  17
+
+router.get('/all/dca103practicalclasschapter17', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103practicalclasschapter17', {
+           
+           chapterTitle: 'Office Automation Software',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca103 practical chapter  18
+
+router.get('/all/dca103practicalclasschapter18', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103practicalclasschapter18', {
+           
+           chapterTitle: 'Office Automation Software',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca103 practical chapter  19
+
+router.get('/all/dca103practicalclasschapter19', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103practicalclasschapter19', {
+           
+           chapterTitle: 'Office Automation Software',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca103 practical chapter  20
+
+router.get('/all/dca103practicalclasschapter20', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca103practicalclasschapter20', {
+           
+           chapterTitle: 'Office Automation Software',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+// end 103 of practical video route
+
+
 
 
 
