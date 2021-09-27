@@ -399,7 +399,6 @@ router.get('/december2021Batch', async (req, res) => {
     res.redirect('/');
 });
 
-
 //new student register form ======================================
 
 router.get('/register', async (req, res) => {
@@ -461,8 +460,6 @@ const allStudents = await Student.find({});
     
 })
 
-
-
 // staff section ================================
 
 router.get('/auth/loginStaff', (req, res) => {
@@ -476,11 +473,7 @@ router.get('/auth/loginStaff', (req, res) => {
     
 });
 
-
-
-
 //register staff
-
 router.get('/auth/registerStaff', (req, res) => {
     
      if(req.session.adminIdentity && req.session.username == 'tmapuia') {
@@ -495,11 +488,6 @@ router.get('/auth/registerStaff', (req, res) => {
      
      res.redirect('/');
 });
-
-
-
-
-
 
 router.get('/view/staffList', async (req, res) => {
     
@@ -518,10 +506,6 @@ router.get('/view/staffList', async (req, res) => {
     
     res.redirect('/');
 });
-
-
-
-
 
 //staff delete
 
@@ -637,8 +621,6 @@ await Student.updateOne({_id: req.params.id}, { $pull: { studentOtherFee : { _id
     
 });
 
-
-
 //student login panel
     
 router.get('/std/loginStudent', (req, res) => {
@@ -653,18 +635,11 @@ router.get('/std/loginStudent', (req, res) => {
      
 });
 
-
-
-
-
-
-
-
 //student dashboard
 
 router.get('/all/stdDashboard', async (req, res) => {
   
-  const Students = await Student.find({})  
+  const Students = await Student.find({});  
     
   const thisStudent = await Student.findOne({_id: req.session.userId});
   
