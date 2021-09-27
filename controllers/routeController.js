@@ -303,9 +303,101 @@ router.get('/stdList', async (req, res) => {
     res.redirect('/');
 });
 
+//all student list for admin only view
 
+router.get('/allStdList', async (req, res) => {
+    
+    const students = await Student.find({}).sort({regn : -1}).populate('staffid');
+    
+   if(req.session.adminIdentity) {
+    
+          return res.render('allStdList', {
+            
+            viewTitle: 'All Student List',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            students
+        })
+        
+        }
+    
+    res.redirect('/');
+});
 
+//june 2021 student list for admin only view
 
+router.get('/june2021Batch', async (req, res) => {
+    
+    const students = await Student.find({}).sort({regn : -1}).populate('staffid');
+    
+   if(req.session.adminIdentity) {
+    
+          return res.render('june2021Batch', {
+            
+            viewTitle: 'June 2021 Batch - Student List',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            students
+        })
+        
+        }
+    
+    res.redirect('/');
+});
+
+//december 2021 student list for admin only view
+
+router.get('/december2021Batch', async (req, res) => {
+    
+    const students = await Student.find({}).sort({regn : -1}).populate('staffid');
+    
+   if(req.session.adminIdentity) {
+    
+          return res.render('december2021Batch', {
+            
+            viewTitle: 'December 2021 Batch - Student List',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            students
+        })
+        
+        }
+    
+    res.redirect('/');
+});
 
 
 //new student register form ======================================
