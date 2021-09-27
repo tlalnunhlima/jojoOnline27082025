@@ -89,41 +89,7 @@
                               
                     <!--          </div>-->
                         
-                        <% 
-                        
-                        var paidStudent = [];
-                        
-                        if(studentFee.length != undefined) {
-                        
-                        for(var i = 0; i < studentFee.length; i++) {
-                        
-                        if(studentFee[i].feeAmount >= 1000) {
-                            paidStudent.push('paid');
-                          }
-                        }
-                        }
-                        if(studentExamFee.length != undefined) {
-                        
-                        for(var i = 0; i < studentExamFee.length; i++) {
-                        
-                        if(studentExamFee[i].feeAmount == 1510) {
-                            paidStudent.push('paid');
-                          }
-                        }
-                        }
-                        if(studentOtherFee.length != undefined) {
-                        
-                        for(var i = 0; i < studentOtherFee.length; i++) {
-                        
-                        if(studentOtherFee[i].feeAmount >= 499) {
-                            paidStudent.push('paid');
-                          }
-                        }
-                        }
-                        if(paidStudent.includes('paid')) {
-                        %>
-                          
-                         <!--<div class=" col-lg-3 col-md-6 col-sm-6"> -->
+                      <!--<div class=" col-lg-3 col-md-6 col-sm-6"> -->
                               
                          <!--     <a href="dca1semOnlineLessonChapter2"><button type="button" class="btn btn-link m-2">Chapter-2 <i class="fas fa-angle-right"></i></button></a>-->
                               
@@ -176,9 +142,6 @@
                          <!--     <a href="dca1semOnlineLessonChapter10"><button type="button" class="btn btn-link m-2">Chapter-10 <i class="fas fa-angle-right"></i></button></a>-->
                                 
                          <!--       </div>-->
-                                
-                                <% }  %>
-                                
                               <!--</div>-->  <!--row end for first chapter-->
                         
                       <!--</div>-->
@@ -218,11 +181,6 @@
                     <!--          <a href="dca102onlineclasschapter1"><button type="button" class="btn btn-link m-2">Chapter-1 <i class="fas fa-angle-right"></i></button></a>-->
                               
                     <!--          </div>-->
-                              
-                        <% 
-                        
-                        if(paidStudent.includes('paid')) {
-                        %>
                               
                             <!--  <div class=" col-lg-3 col-md-6 col-sm-6"> -->
                               
@@ -279,8 +237,6 @@
                                 
                             <!--    </div>-->
                                 
-                                <% } %>
-
                               <!--</div><!--end of subject 2 chapter-->
 
                       <!--</div>-->
@@ -288,9 +244,6 @@
                     </div>
                     
                   </div>
-                  
-                  
-                  
                   
                   
                   <!-- DCA I Semester subject te... -->
@@ -327,11 +280,6 @@
                               <a href="dca103practicalclasschapter1"><button type="button" class="btn btn-link m-2">Chapter-1 (docx) <i class="fas fa-angle-right"></i></button></a>
                               
                               </div>
-                              
-                               <% 
-                        
-                        if(paidStudent.includes('paid')) {
-                        %>
                               
                               <div class=" col-lg-3 col-md-6 col-sm-6"> 
                               
@@ -448,9 +396,6 @@
                             <!--  <a href="dca103practicalclasschapter20"><button type="button" class="btn btn-link m-2">Chapter-20 (pptx) <i class="fas fa-angle-right"></i></button></a>-->
                                 
                             <!--    </div>-->
-                                
-                                <% } %>
-
                               </div> <!--third subject row end-->
 
                       </div>
@@ -493,10 +438,6 @@
                               
                     <!--          </div>-->
                               
-                               <% 
-                        
-                        if(paidStudent.includes('paid')) {
-                        %>
                               
                             <!--  <div class=" col-lg-3 col-md-6 col-sm-6"> -->
                               
@@ -529,7 +470,6 @@
                             
                             <!--</div>-->
 
-                            <% } %>
                           <!--</div> <!--fourth subject row end-->
 
                       <!--</div>-->
@@ -571,9 +511,6 @@
                               
                     <!--          </div>-->
                               
-                               <% 
-                        if(paidStudent.includes('paid')) {
-                        %>
                               
                             <!--  <div class=" col-lg-3 col-md-6 col-sm-6"> -->
                               
@@ -647,7 +584,6 @@
                             <!--  <a href="dca105onlineclasschapter13"><button type="button" class="btn btn-link m-2">Chapter-13 <i class="fas fa-angle-right"></i></button></a>-->
                                 
                             <!--    </div>-->
-                            <% } %>
  
                           <!--</div> <!--fifth subject row end-->
 
@@ -691,10 +627,7 @@
                               
                     <!--          </div>-->
                               
-                        <% 
-                        if(paidStudent.includes('paid')) {
-                        %>
-                              
+                             
                             <!--  <div class=" col-lg-3 col-md-6 col-sm-6"> -->
                               
                             <!--  <a href="dca106onlineclasschapter2"><button type="button" class="btn btn-link m-2">Chapter-2 <i class="fas fa-angle-right"></i></button></a>-->
@@ -773,8 +706,6 @@
                                 
                             <!--    </div>-->
                                 
-                                <% } %>
-
                           <!--</div> <!--sixth subject row end-->
 
                       <!--</div>-->
