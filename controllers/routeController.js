@@ -3869,7 +3869,6 @@ router.get('/all/dca106onlineclasschapter1', async (req, res) => {
 });
 
 
-
 //dca106 chapter  2
 
 router.get('/all/dca106onlineclasschapter2', async (req, res) => {
@@ -5931,11 +5930,7 @@ router.get('/all/dcaDownloadMaterialPage', (req, res) => {
     
 }); 
 
-
-
 //================================
-
-
 
 //download syllabus
 
@@ -5954,13 +5949,9 @@ router.get('/all/dca1stSemSyllabus', (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
-            
-            
             
             loginIdName: req.session.studentIdentity,
             
@@ -5992,13 +5983,9 @@ router.get('/all/dca1stSemGuidebook', (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
-            
-            
             
             loginIdName: req.session.studentIdentity,
             
@@ -6029,13 +6016,9 @@ router.get('/all/dca1stSemOldQuestion', (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
-            
-            
             
             loginIdName: req.session.studentIdentity,
             
@@ -6069,13 +6052,9 @@ router.get('/all/dca1stSemSuggestionNote', (req, res) => {
             
             link3: req.session.myDashboard3,
             
-            
-            
             href1: req.session.hrefLink1,
             
             href2: req.session.hrefLink2,
-            
-            
             
             loginIdName: req.session.studentIdentity,
             
@@ -6090,7 +6069,6 @@ router.get('/all/dca1stSemSuggestionNote', (req, res) => {
 }); 
 
 //suggestion note download end
-
 
 router.use((req, res) => res.render('notFoundPage'));
 
