@@ -275,13 +275,9 @@ router.get('/paid_unpaid_account', (req, res) => {
 
 router.get('/stdList', async (req, res) => {
     
-    const students = await Student.find({}).sort({regn : -1}).populate('staffid');
-    
    if(req.session.adminIdentity) {
     
           return res.render('stdList', {
-            
-            viewTitle: 'Student List',
             
             username: req.session.username,
             
@@ -293,9 +289,8 @@ router.get('/stdList', async (req, res) => {
             
             href1: req.session.hrefLink1,
             
-            href2: req.session.hrefLink2,
+            href2: req.session.hrefLink2
             
-            students
         })
         
         }
@@ -307,7 +302,7 @@ router.get('/stdList', async (req, res) => {
 
 router.get('/allStdList', async (req, res) => {
     
-    const students = await Student.find({}).sort({regn : -1}).populate('staffid');
+const students = await Student.find({}).sort({regn : -1}).populate('staffid');
     
    if(req.session.adminIdentity) {
     
@@ -332,20 +327,22 @@ router.get('/allStdList', async (req, res) => {
         
         }
     
-    res.redirect('/');
+    res.redirect('/stdList');
 });
+
+
 
 //june 2021 student list for admin only view
 
 router.get('/june2021Batch', async (req, res) => {
     
-    const students = await Student.find({}).sort({regn : -1}).populate('staffid');
+    const students = await Student.find({ batchSession : 'june'}).sort({regn : -1}).populate('staffid');
     
    if(req.session.adminIdentity) {
     
           return res.render('june2021Batch', {
             
-            viewTitle: 'June 2021 Batch - Student List',
+            viewTitle: 'June 2021 Batch',
             
             username: req.session.username,
             
@@ -377,7 +374,7 @@ router.get('/december2021Batch', async (req, res) => {
     
           return res.render('december2021Batch', {
             
-            viewTitle: 'December 2021 Batch - Student List',
+            viewTitle: 'December 2021 Batch',
             
             username: req.session.username,
             
@@ -639,7 +636,7 @@ router.get('/std/loginStudent', (req, res) => {
 
 router.get('/all/stdDashboard', async (req, res) => {
   
-  const Students = await Student.find({});  
+  //const Students = await Student.find({});  
     
   const thisStudent = await Student.findOne({_id: req.session.userId});
   
@@ -669,7 +666,7 @@ router.get('/all/stdDashboard', async (req, res) => {
             
             thisStudent,
             
-            Students,
+           // Students,
             
             moment
      
@@ -690,7 +687,7 @@ router.get('/all/whotesttoday', async (req, res) => {
     
   const thisStudent = await Student.findOne({_id: req.session.userId});
   
-    if(req.session.adminIdentity) {
+    if(req.session.adminIdentity || req.session.studentIdentity) {
         
         return res.render('whotesttoday', {
             
@@ -771,7 +768,7 @@ router.get('/all/stdScoreboard', async (req, res) => {
 
 router.get('/all/stdTopPerformers', async (req, res) => {
     
-     const Students = await Student.find({});
+ const Students = await Student.find({});
     
   const thisStudent = await Student.findOne({_id: req.session.userId});
   
@@ -797,7 +794,7 @@ router.get('/all/stdTopPerformers', async (req, res) => {
             
             thisStudent,
             
-            Students
+          Students
      
         });
         
@@ -807,13 +804,14 @@ router.get('/all/stdTopPerformers', async (req, res) => {
     
 });
 
+
 //============================
 
 //student top performers
 
 router.get('/all/stdAssignmentFinished', async (req, res) => {
     
-     const Students = await Student.find({});
+const Students = await Student.find({});
     
   const thisStudent = await Student.findOne({_id: req.session.userId});
   
@@ -944,7 +942,7 @@ router.get('/all/computer/:id', async (req, res) => {
 
 router.get('/all/dcatheorywelcomepage', async (req, res) => {
     
-   const Students = await Student.find({});
+   //const Students = await Student.find({});
    
    if(req.session.studentIdentity) {
         
@@ -968,9 +966,9 @@ router.get('/all/dcatheorywelcomepage', async (req, res) => {
             
             studentFee: req.session.studentFee,
             studentExamFee: req.session.studentExamFee,
-            studentOtherFee: req.session.studentOtherFee,
+            studentOtherFee: req.session.studentOtherFee
             
-            Students
+           // Students
             
         });
         
@@ -987,8 +985,6 @@ router.get('/all/dcatheorywelcomepage', async (req, res) => {
 //practical intro page
 
 router.get('/all/dcapracticalwelcomepage', async (req, res) => {
-    
-    const Students = await Student.find({});
     
     if(req.session.studentIdentity) {
         
@@ -1012,9 +1008,7 @@ router.get('/all/dcapracticalwelcomepage', async (req, res) => {
             
             studentFee: req.session.studentFee,
             studentExamFee: req.session.studentExamFee,
-            studentOtherFee: req.session.studentOtherFee,
-            
-            Students
+            studentOtherFee: req.session.studentOtherFee
             
         });
         
@@ -5299,15 +5293,11 @@ if(req.session.adminIdentity) {
 });
 
 
-
-
-
-
 //i want to see all fee received from the student irrespective of timestamp
 
 router.get('/viewFee/viewAllFeeReceived', async (req, res) => {
 
-     const startingDateWithoutTime = moment().format('2020-01-01'); //kumtir hriatna
+     const startingDateWithoutTime = moment().format('2021-01-01'); //kumtir hriatna
             
      const currentDateWithoutTime = moment().format('YYYY-MM-DD'); //vawiin hriatna
 

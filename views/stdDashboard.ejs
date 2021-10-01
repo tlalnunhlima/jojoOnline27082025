@@ -271,9 +271,9 @@
               
              <tr>
               
-              <td colspan="3" class="fw-normal fs-6 border bg-primary text-white text-center">
+              <td colspan="3" class="fw-normal fs-6 border bg-success text-white text-center">
                   
-                  <i class="fas fa-user-check text-white"></i> Verify assignment </td>
+                  <i class="fas fa-user-check text-white"></i> My assignment </td>
               
             </tr>
             
@@ -288,16 +288,50 @@
                     
                 </tr>
                 
+          </tbody>
+          
+        </table>
+        
+      </div>
+      
+      </div> <!--row end-->
+      
+       <div class="table-responsive mb-2 mt-4 col-lg-6 col-md-6 col-xs-12">
+        
+        <table class="table table-sm bg-white shadow-sm mx-auto" style="max-width:500px">
+          
+          <thead>
+              
+             <tr>
+              
+              <td colspan="3" class="fw-normal fs-6 border bg-primary text-white text-center">
+                  
+                  <i class="fas fa-user-check text-white"></i> Other Assignment </td>
+              
+            </tr>
+            
+          </thead>
+          
+          <tbody class="border">
+            
                 <tr>
                     
                     <td colspan="3"><a href="stdTopPerformers" class="text-muted fs-6 fw-normal">
-                        <i class="fas fa-check-circle ps-2 text-success"></i> <span class="myLink"> Check who answer assignment...</span></a></td>
+                        <i class="fas fa-check-circle ps-2 text-success"></i> <span class="myLink"> Assignment chhangtu list...</span></a></td>
                     
                 </tr>
                 <tr>
                     
                     <td colspan="3"><a href="stdAssignmentFinished" class="text-muted fs-6 fw-normal">
-                        <i class="fas fa-check-circle ps-2 text-success"></i> <span class="myLink"> Students' who finished assignment...</span></a></td>
+                        <i class="fas fa-check-circle ps-2 text-success"></i> <span class="myLink"> Assignment chhang zo tawhte...</span></a>
+                        </td>
+                    
+                </tr>
+                <tr>
+                    
+                    <td colspan="3"><a href="whotesttoday" class="text-muted fs-6 fw-normal">
+                        <i class="fas fa-check-circle ps-2 text-success"></i> <span class="myLink"> Vawiina assignment chhangtute...</span></a>
+                        </td>
                     
                 </tr>
 
@@ -308,155 +342,6 @@
       </div>
       
       </div> <!--row end-->
-      
-        <!-- --------------Who test today------------------ -->
-        
-      <div class="table-responsive">
-        
-        <table class="table table-sm mt-4 table-hover shadow-sm" style="max-width: 400px;">
-          
-          <thead>
-              
-              <tr>
-              
-              <td colspan="5" class="fw-normal fs-6 border bg-primary text-white text-center mb-2">
-                  
-                  <i class="fas fa-user-friends text-white ps-2"></i> Students' who test today </td>
-              
-            </tr>
-            
-            <tr class="orangeColor">
-              
-                      
-              <td class="border ps-3 small fw-normal"> Sl.</td>
-              
-              <td class="border ps-3 small fw-normal"> Student's Name</td>
-                      
-            </tr>
-            
-          </thead>
-          
-          <tbody>
-            
-      <% 
-            // Get today's date
-            var todaysDate = new Date(); 
-            
-            var studentName = [];
-            
-            var studentAddress = [];
-            
-            if(Students.length > 0) {
-              
-             for (var i=0; i < Students.length; i++) {
-              
-                    if( Students[i].assignmentTheory != undefined ) {
-          
-                    for (var k=0; k < Students[i].assignmentTheory.length; k++) {
-                        
-                        if( Students[i].assignmentTheory[k] != undefined && Students[i].assignmentTheory[k].dateSubmitted.setHours(0,0,0,0) ==  todaysDate.setHours(0,0,0,0)) {
-              
-                            studentName.push(Students[i].username);
-                            
-             } } } }%>
-            
-            <% 
-              
-             for (var i=0; i < Students.length; i++) {
-              
-                    if( Students[i].assignmentTheory102 != undefined ) {
-          
-                    for (var k=0; k < Students[i].assignmentTheory102.length; k++) {
-                        
-                        if( Students[i].assignmentTheory102[k] != undefined && Students[i].assignmentTheory102[k].dateSubmitted.setHours(0,0,0,0) ==  todaysDate.setHours(0,0,0,0)) {
-              
-                            studentName.push(Students[i].username);
-                            
-             } } } }%>
-            
-            <% 
-              
-             for (var i=0; i < Students.length; i++) {
-              
-                    if( Students[i].assignmentTheory103 != undefined ) {
-          
-                    for (var k=0; k < Students[i].assignmentTheory103.length; k++) {
-                        
-                        if( Students[i].assignmentTheory103[k] != undefined && Students[i].assignmentTheory103[k].dateSubmitted.setHours(0,0,0,0) ==  todaysDate.setHours(0,0,0,0)) {
-              
-              
-                            studentName.push(Students[i].username);
-                            
-            } } } }%>
-            <% 
-              
-             for (var i=0; i < Students.length; i++) {
-              
-                    if( Students[i].assignmentTheory104 != undefined ) {
-          
-                    for (var k=0; k < Students[i].assignmentTheory104.length; k++) {
-                        
-                        if( Students[i].assignmentTheory104[k] != undefined && Students[i].assignmentTheory104[k].dateSubmitted.setHours(0,0,0,0) ==  todaysDate.setHours(0,0,0,0)) {
-              
-                        studentName.push(Students[i].username);
-                            
-        
-             } } } }%>
-            
-            <% 
-             for (var i=0; i < Students.length; i++) {
-              
-                    if( Students[i].assignmentTheory105 != undefined ) {
-          
-                    for (var k=0; k < Students[i].assignmentTheory105.length; k++) {
-                        
-                        if( Students[i].assignmentTheory105[k] != undefined && Students[i].assignmentTheory105[k].dateSubmitted.setHours(0,0,0,0) ==  todaysDate.setHours(0,0,0,0)) {
-              
-                            studentName.push(Students[i].username);
-                            
-            } } } }%>
-            
-            <% 
-              
-             for (var i=0; i < Students.length; i++) {
-              
-                    if( Students[i].assignmentTheory106 != undefined ) {
-          
-                    for (var k=0; k < Students[i].assignmentTheory106.length; k++) {
-                        
-                        if( Students[i].assignmentTheory106[k] != undefined && Students[i].assignmentTheory106[k].dateSubmitted.setHours(0,0,0,0) ==  todaysDate.setHours(0,0,0,0)) {
-              
-                            studentName.push(Students[i].username);
-                            
-                        } } } } %>
-             
-            <% 
-            
-            var uniqueName = studentName.filter(onlyUnique);
-            
-            for(var i=0; i < uniqueName.length; i++) {
-            
-            %>
-             <tr>
-                          <td class="border text-center"> <%= i + 1 %> </td>
-                          
-                          <td class="border" >
-          
-                                <%= capitalizeFirstLetter(uniqueName[i]) %>
-                            
-                          </td>
-                          
-                          
-                        </tr>
-        
-            
-            <% } } %>
-            
-          </tbody>
-          
-        </table>
-        
-      </div>
       
 
     </main>
