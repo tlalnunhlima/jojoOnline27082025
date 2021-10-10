@@ -302,7 +302,7 @@ router.get('/stdList', async (req, res) => {
 
 router.get('/allStdList', async (req, res) => {
     
-const students = await Student.find({}).sort({regn : -1}).populate('staffid');
+const students = await Student.find({},{_id:1, regn:1, username:1,  fname: 1, batchSession: 1, phone:1} ).sort({regn : -1}).populate('staffid');
     
    if(req.session.adminIdentity) {
     
@@ -336,7 +336,7 @@ const students = await Student.find({}).sort({regn : -1}).populate('staffid');
 
 router.get('/june2021Batch', async (req, res) => {
     
-    const students = await Student.find({ batchSession : 'june'}).sort({regn : -1}).populate('staffid');
+    const students = await Student.find({},{_id:1, regn:1, username:1,  fname: 1, batchSession: 1, phone:1} ).sort({regn : -1}).populate('staffid');
     
    if(req.session.adminIdentity) {
     
@@ -368,7 +368,7 @@ router.get('/june2021Batch', async (req, res) => {
 
 router.get('/december2021Batch', async (req, res) => {
     
-    const students = await Student.find({}).sort({regn : -1}).populate('staffid');
+    const students = await Student.find({},{_id:1, regn:1, username:1,  fname: 1, batchSession: 1, phone:1} ).sort({regn : -1}).populate('staffid');
     
    if(req.session.adminIdentity) {
     
@@ -400,7 +400,7 @@ router.get('/december2021Batch', async (req, res) => {
 
 router.get('/register', async (req, res) => {
     
- const allStudents = await Student.find({});   
+ const allStudents = await Student.find({}, {_id:1, regn:1});   
     
    if(req.session.adminIdentity){
         
@@ -683,7 +683,9 @@ router.get('/all/stdDashboard', async (req, res) => {
 
 router.get('/all/whotesttoday', async (req, res) => {
   
-  const Students = await Student.find({})  
+  const Students = await Student.find({}, {username:1, assignmentTheory:1, 
+    assignmentTheory102:1, assignmentTheory103:1, assignmentTheory104:1, assignmentTheory105:1, assignmentTheory106:1
+});
     
   const thisStudent = await Student.findOne({_id: req.session.userId});
   
@@ -768,7 +770,9 @@ router.get('/all/stdScoreboard', async (req, res) => {
 
 router.get('/all/stdTopPerformers', async (req, res) => {
     
- const Students = await Student.find({});
+ const Students = await Student.find({}, {username:1, address:1, assignmentTheory:1, 
+    assignmentTheory102:1, assignmentTheory103:1, assignmentTheory104:1, assignmentTheory105:1, assignmentTheory106:1
+});
     
   const thisStudent = await Student.findOne({_id: req.session.userId});
   
@@ -811,7 +815,9 @@ router.get('/all/stdTopPerformers', async (req, res) => {
 
 router.get('/all/stdAssignmentFinished', async (req, res) => {
     
-const Students = await Student.find({});
+const Students = await Student.find({}, {_id:1, username:1, address:1, assignmentTheory:1, 
+    assignmentTheory102:1, assignmentTheory103:1, assignmentTheory104:1, assignmentTheory105:1, assignmentTheory106:1
+});
     
   const thisStudent = await Student.findOne({_id: req.session.userId});
   
