@@ -683,42 +683,25 @@ router.get('/all/stdDashboard', async (req, res) => {
 
 router.get('/all/whotesttoday', async (req, res) => {
   
-  const Students = await Student.find({}, {username:1, assignmentTheory:1, 
+  const Students = await Student.find({}, {_id:1, username:1, assignmentTheory:1, 
     assignmentTheory102:1, assignmentTheory103:1, assignmentTheory104:1, assignmentTheory105:1, assignmentTheory106:1
 });
-    
-  const thisStudent = await Student.findOne({_id: req.session.userId});
-  
     if(req.session.adminIdentity || req.session.studentIdentity) {
         
         return res.render('whotesttoday', {
-            
             username: req.session.username,
-            
             link1: req.session.myDashboard1,
-            
             link2: req.session.myDashboard2,
-            
             link3: req.session.myDashboard3,
-            
             href1: req.session.hrefLink1,
-            
             href2: req.session.hrefLink2,
-            
             loginIdName: req.session.studentIdentity,
-            
             studentId: req.session.userId,
-            
             studentFee: req.session.studentFee,
             studentExamFee: req.session.studentExamFee,
             studentOtherFee: req.session.studentOtherFee,
-            
-            thisStudent,
-            
             Students,
-            
             moment
-     
         });
         
     }

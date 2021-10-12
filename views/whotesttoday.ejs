@@ -66,8 +66,6 @@
             
             var studentName = [];
             
-            var studentAddress = [];
-            
             if(Students.length > 0) {
               
              for (var i=0; i < Students.length; i++) {
@@ -80,9 +78,6 @@
               
                             studentName.push(Students[i].username);
                             
-                            studentAddress.push(Students[i].address);
-              
-              
              } } } }%>
             
             <% 
@@ -96,8 +91,6 @@
                         if( Students[i].assignmentTheory102[k] != undefined && Students[i].assignmentTheory102[k].dateSubmitted.setHours(0,0,0,0) ==  todaysDate.setHours(0,0,0,0)) {
               
                             studentName.push(Students[i].username);
-                            
-                            studentAddress.push(Students[i].address);
         
              } } } }%>
             
@@ -110,11 +103,7 @@
                     for (var k=0; k < Students[i].assignmentTheory103.length; k++) {
                         
                         if( Students[i].assignmentTheory103[k] != undefined && Students[i].assignmentTheory103[k].dateSubmitted.setHours(0,0,0,0) ==  todaysDate.setHours(0,0,0,0)) {
-              
-              
                             studentName.push(Students[i].username);
-                            
-                            studentAddress.push(Students[i].address);
         
             } } } }%>
             <% 
@@ -126,11 +115,7 @@
                     for (var k=0; k < Students[i].assignmentTheory104.length; k++) {
                         
                         if( Students[i].assignmentTheory104[k] != undefined && Students[i].assignmentTheory104[k].dateSubmitted.setHours(0,0,0,0) ==  todaysDate.setHours(0,0,0,0)) {
-              
                         studentName.push(Students[i].username);
-                            
-                        studentAddress.push(Students[i].address);
-              
         
              } } } }%>
             
@@ -144,9 +129,6 @@
                         if( Students[i].assignmentTheory105[k] != undefined && Students[i].assignmentTheory105[k].dateSubmitted.setHours(0,0,0,0) ==  todaysDate.setHours(0,0,0,0)) {
               
                             studentName.push(Students[i].username);
-                            
-                            studentAddress.push(Students[i].address);
-              
         
             } } } }%>
             
@@ -161,17 +143,12 @@
                         if( Students[i].assignmentTheory106[k] != undefined && Students[i].assignmentTheory106[k].dateSubmitted.setHours(0,0,0,0) ==  todaysDate.setHours(0,0,0,0)) {
               
                             studentName.push(Students[i].username);
-                            
-                            studentAddress.push(Students[i].address);
-              
               
                         } } } } %>
              
             <% 
             
             var uniqueName = studentName.filter(onlyUnique);
-            
-            var uniqueAddress = studentAddress.filter(onlyUnique);
             
             for(var i=0; i < uniqueName.length; i++) {
             
