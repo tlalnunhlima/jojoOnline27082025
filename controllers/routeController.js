@@ -1234,6 +1234,43 @@ router.get('/all/dca105welcomepage', (req, res) => {
     
 }); 
 
+//dca-105 practical intro page
+
+router.get('/all/dca105practicalwelcomepage', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105practicalwelcomepage', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            
+            studentExamFee: req.session.studentExamFee,
+            
+            studentOtherFee: req.session.studentOtherFee
+            
+        });
+        
+    }
+        
+        res.redirect('/');
+    
+}); 
 
 
 
@@ -1263,6 +1300,44 @@ router.get('/all/dca106welcomepage', (req, res) => {
             
             studentFee: req.session.studentFee,
             studentExamFee: req.session.studentExamFee,
+            studentOtherFee: req.session.studentOtherFee
+            
+        });
+        
+    }
+        
+        res.redirect('/');
+    
+}); 
+
+//dca-106 practical intro page
+
+router.get('/all/dca106practicalwelcomepage', (req, res) => {
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106practicalwelcomepage', {
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            studentFee: req.session.studentFee,
+            
+            studentExamFee: req.session.studentExamFee,
+            
             studentOtherFee: req.session.studentOtherFee
             
         });
@@ -5170,12 +5245,1013 @@ router.get('/all/dca103practicalclasschapter20', async (req, res) => {
 
 // end 103 of practical video route
 
+//dca105 practical chapter  1
 
+router.get('/all/dca105practicalclasschapter1', async (req, res) => {
 
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105practicalclasschapter1', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
 
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca105 practical chapter  2
+
+router.get('/all/dca105practicalclasschapter2', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105practicalclasschapter2', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca105 practical chapter  3
+
+router.get('/all/dca105practicalclasschapter3', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105practicalclasschapter3', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca105 practical chapter  4
+
+router.get('/all/dca105practicalclasschapter4', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105practicalclasschapter4', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca105 practical chapter  5
+
+router.get('/all/dca105practicalclasschapter5', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105practicalclasschapter5', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+//dca105 practical chapter  6
+
+router.get('/all/dca105practicalclasschapter6', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105practicalclasschapter6', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+//dca105 practical chapter  7
+
+router.get('/all/dca105practicalclasschapter7', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105practicalclasschapter7', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+//dca105 practical chapter  8
+
+router.get('/all/dca105practicalclasschapter8', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105practicalclasschapter8', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+//dca105 practical chapter  9
+
+router.get('/all/dca105practicalclasschapter9', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105practicalclasschapter9', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+//dca105 practical chapter  10
+
+router.get('/all/dca105practicalclasschapter10', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105practicalclasschapter10', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+//dca105 practical chapter  11
+
+router.get('/all/dca105practicalclasschapter11', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105practicalclasschapter11', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+//dca105 practical chapter  12
+
+router.get('/all/dca105practicalclasschapter12', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105practicalclasschapter12', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+//dca105 practical chapter  13
+
+router.get('/all/dca105practicalclasschapter13', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca105practicalclasschapter13', {
+           
+           chapterTitle: 'Computer Graphics',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca106 practical chapter  1
+
+router.get('/all/dca106practicalclasschapter1', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106practicalclasschapter1', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+//dca106 practical chapter  2
+
+router.get('/all/dca106practicalclasschapter2', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106practicalclasschapter2', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+//dca106 practical chapter  3
+
+router.get('/all/dca106practicalclasschapter3', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106practicalclasschapter3', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+//dca106 practical chapter  4
+
+router.get('/all/dca106practicalclasschapter4', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106practicalclasschapter4', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+//dca106 practical chapter  5
+
+router.get('/all/dca106practicalclasschapter5', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106practicalclasschapter5', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+//dca106 practical chapter  6
+
+router.get('/all/dca106practicalclasschapter6', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106practicalclasschapter6', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+//dca106 practical chapter  7
+
+router.get('/all/dca106practicalclasschapter7', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106practicalclasschapter7', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+//dca106 practical chapter  8
+
+router.get('/all/dca106practicalclasschapter8', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106practicalclasschapter8', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+//dca106 practical chapter  9
+
+router.get('/all/dca106practicalclasschapter9', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106practicalclasschapter9', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+//dca106 practical chapter  10
+
+router.get('/all/dca106practicalclasschapter10', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106practicalclasschapter10', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+//dca106 practical chapter  11
+
+router.get('/all/dca106practicalclasschapter11', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106practicalclasschapter11', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+//dca106 practical chapter  12
+
+router.get('/all/dca106practicalclasschapter12', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106practicalclasschapter12', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+//dca106 practical chapter  13
+
+router.get('/all/dca106practicalclasschapter13', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106practicalclasschapter13', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
+
+//dca106 practical chapter  14
+
+router.get('/all/dca106practicalclasschapter14', async (req, res) => {
+
+    const thisStudent = await Student.findOne({_id: req.session.userId});
+    
+    if(req.session.studentIdentity) {
+        
+       return res.render('dca106practicalclasschapter14', {
+           
+           chapterTitle: 'Desktop Publishing',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            loginIdName: req.session.studentIdentity,
+            
+            studentId: req.session.userId,
+            
+            thisStudent
+
+        });
+        
+    }
+        
+        res.redirect('/all/stdDashboard');
+    
+});
 
 router.get('/viewFee',(req, res) => {
-    
 
 if(req.session.adminIdentity) {
     
