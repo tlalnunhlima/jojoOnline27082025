@@ -22,6 +22,8 @@ module.exports = async (req, res) => {
 function insertRecord(req, res) {
    
    const newStudent = new Student({
+       
+      admissionYear: req.body.admissionYear,
       
       regn: req.body.regn,
       

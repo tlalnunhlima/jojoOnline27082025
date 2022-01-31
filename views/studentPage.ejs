@@ -140,7 +140,11 @@
                       
                       <td> : </td>
                       
-                      <td> <%= students.batchSession === undefined ? 'N/A' : capitalizeFirstLetter(students.batchSession) %></td>
+                      <td> <%= students.batchSession === undefined ? 'N/A' : capitalizeFirstLetter(students.batchSession) %>
+                      
+                      <%= students.admissionYear === undefined ? ' ' : students.admissionYear %>
+                      
+                      </td>
                       
                       <td class="text-primary"> Online </td>
                       

@@ -6,6 +6,14 @@ var uniqueValidator = require('mongoose-unique-validator')
 
 const UserSchema = new Schema({
     
+        admissionYear: {
+        
+        type: String,
+        
+        required: [true, 'Please provide year']
+        
+    },
+    
     regn: {
         
         type: Number,

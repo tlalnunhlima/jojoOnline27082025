@@ -70,14 +70,14 @@ body {
     
    <div class="row g-2">
      
-    <div class="form-floating mb-2 col-lg-6">
+     <div class="form-floating mb-2 col-lg-6">
       
-      <input type="number" class="form-control pl-3" id="floatingRegn" size="4" placeholder="regn" name="regn" maxlength="4" minlength="1" value="<%= students.regn %>" required>
+      <input type="text" class="form-control" id="floatingYear" placeholder="admissionYear" name="admissionYear" maxlength="30" value="<%= students.admissionYear %>" required>
       
-      <label for="floatingRegn" class="fw-light">Regn No.<span class="text-danger fw-bold">*</span></label>
+      <label for="floatingUserame" class="fw-light"> Year <span class="text-danger fw-bold"> *</span></label>
       
     </div>
-    
+     
     <div class="form-floating border rounded d-flex justify-content-around align-items-center mb-2 col-lg-6">
       
       <div class="form-check">
@@ -106,7 +106,13 @@ body {
       
     </div>
     
-  
+      <div class="form-floating mb-2 col-lg-6">
+      
+      <input type="number" class="form-control pl-3" id="floatingRegn" size="4" placeholder="regn" name="regn" maxlength="4" minlength="1" value="<%= students.regn %>" required>
+      
+      <label for="floatingRegn" class="fw-light">Regn No.<span class="text-danger fw-bold">*</span></label>
+      
+    </div>
     
     <div class="form-floating mb-2 col-lg-6">
       

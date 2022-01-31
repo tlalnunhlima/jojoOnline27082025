@@ -396,6 +396,36 @@ router.get('/december2021Batch', async (req, res) => {
     res.redirect('/');
 });
 
+router.get('/june2022Batch', async (req, res) => {
+    
+    const students = await Student.find({},{_id:1, admissionYear:1, regn:1, username:1,  fname: 1, batchSession: 1, phone:1} ).sort({regn : -1}).populate('staffid');
+    
+   if(req.session.adminIdentity) {
+    
+          return res.render('june2022Batch', {
+            
+            viewTitle: 'June 2022 Batch',
+            
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            students
+        })
+        
+        }
+    
+    res.redirect('/');
+});
+
 //new student register form ======================================
 
 router.get('/register', async (req, res) => {
