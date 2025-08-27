@@ -54,20 +54,21 @@
       for(var i=0; i < students.length; i++) { 
       
       if( students[i].batchSession == 'december' && students[i].regn > 278 && students[i].regn < 504 ) {
-      
-      noOfBatchStd++;
-      
+        
+        noOfBatchStd++;
+
           }
         }
       }
       
-       if(students.length > 0) {
+       if(noOfBatchStd > 0) {
       
       for(var i=0; i < students.length; i++) { 
       
       if(students[i].batchSession == 'december' && students[i].regn > 278 && students[i].regn < 504 ) {
       
       %>
+      
       
     <tr>
       

@@ -15,7 +15,7 @@
   
   <div class="d-flex justify-content-between m-3">
             
-            <a class="text-primary small" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Goto view fee" href="/viewFee"><i class="fas fa-arrow-left text-dark fw-bold"></i> Go Back</i> </a>
+            <a class="text-primary small" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Goto view fee" href="/stdList"><i class="fas fa-arrow-left text-dark fw-bold"></i> Go Back</i> </a>
             
             </div>
     
@@ -37,23 +37,21 @@
                      
                     <tr class="text-center">
                         
-                      <th class="fw-bold bgColor" colspan="6"> Monthly Fee</th>
+                      <th class="fw-bold bgColor" colspan="6"> Today fee received</th>
                       
                     </tr>
                     
                     <tr class="bg-light">
                       
-                       <td class="fw-normal border align-middle small"> Sl </td>
+                      <td class="fw-normal border align-middle small"> Regn.</td>
                       
                       <td class="fw-normal border align-middle small"> Student's Name</td>
                       
+                      <td class="fw-normal border align-middle small"> Father's Name </td>
+                      
                       <td class="fw-normal border align-middle small"> Narration </td>
-                      
+      
                       <td class="fw-normal border align-middle small"> Amount </td>
-                      
-                      <td class="fw-normal border align-middle small"> Date of Payment </td>
-                      
-                      <td class="fw-normal border align-middle small"> Date of Entered </td>
                       
                       <td class="fw-normal border align-middle small"> Entered By </td>
       
@@ -70,7 +68,7 @@
               %>
                         <tr>
                           
-                          <td class="border"> <%= i + 1 %> </td>
+                          <td class="text-center border" ><%= students[i].regn %></td>
                           
                           <td class="border" >
                             
@@ -82,13 +80,11 @@
                             
                           </td>
                           
+                          <td class="border"> <%= students[i].fname %> </td>
+                          
                           <td class="border fst-italic"> <%= students[i].studentFee[k].narrationInput %> </td>
                           
                           <td class="border">Rs.  <%= students[i].studentFee[k].feeAmount %> </td>
-                          
-                          <td class="border"> <%= moment(students[i].studentFee[k].dateofpayment).format('DD/MM/YYYY') %> </td>
-                          
-                          <td class="border"> <%= moment(students[i].studentFee[k].dateSubmitted).format('DD/MM/YYYY') %> </td>
                       
                           <td class="border">  <%= capitalizeFirstLetter(students[i].studentFee[k].verifierId.username) %> </td>
         
@@ -117,23 +113,21 @@
                      
                     <tr class="text-center">
                         
-                      <th class="fw-bold bgColor" colspan="6"> Exam Fee</th>
+                      <th class="fw-bold bgColor" colspan="6"> December 2021 Batch</th>
                       
                     </tr>
                     
                     <tr class="bg-light">
                       
-                      <td class="fw-normal border align-middle small"> Sl </td>
+                      <td class="fw-normal border align-middle small"> Regn.</td>
                       
                       <td class="fw-normal border align-middle small"> Student's Name</td>
                       
+                      <td class="fw-normal border align-middle small"> Father's Name </td>
+                      
                       <td class="fw-normal border align-middle small"> Narration </td>
-                      
+      
                       <td class="fw-normal border align-middle small"> Amount </td>
-                      
-                      <td class="fw-normal border align-middle small"> Date of Payment </td>
-                      
-                      <td class="fw-normal border align-middle small"> Date of Entered </td>
                       
                       <td class="fw-normal border align-middle small"> Entered By </td>
       
@@ -152,9 +146,9 @@
               
                         <tr>
                           
-                          <td class="border"> <%= i + 1 %> </td>
+                          <td class="text-center border" ><%= students[i].regn %></td>
                           
-                           <td class="border" >
+                          <td class="border" >
                             
                             <a href="/computer/<%= students[i]._id %>">
           
@@ -164,13 +158,11 @@
                             
                           </td>
                           
+                          <td class="border"> <%= students[i].fname %> </td>
+                          
                           <td class="border fst-italic"> <%= students[i].studentExamFee[k].narrationInput %> </td>
                           
                           <td class="border">Rs.  <%= students[i].studentExamFee[k].feeAmount %> </td>
-                          
-                          <td class="border"> <%= moment(students[i].studentExamFee[k].dateofpayment).format('DD/MM/YYYY') %> </td>
-                          
-                          <td class="border"> <%= moment(students[i].studentExamFee[k].dateSubmitted).format('DD/MM/YYYY') %> </td>
                       
                           <td class="border">  <%= capitalizeFirstLetter(students[i].studentExamFee[k].verifierId.username) %> </td>
         
@@ -200,23 +192,21 @@
                      
                     <tr class="text-center">
                         
-                      <th class="fw-bold bgColor" colspan="6"> Other Fee</th>
+                      <th class="fw-bold bgColor" colspan="6"> June 2022 Batch</th>
                       
                     </tr>
                     
                     <tr class="bg-light">
                       
-                      <td class="fw-normal border align-middle small"> Sl </td>
+                      <td class="fw-normal border align-middle small"> Regn.</td>
                       
                       <td class="fw-normal border align-middle small"> Student's Name</td>
                       
+                      <td class="fw-normal border align-middle small"> Father's Name </td>
+                      
                       <td class="fw-normal border align-middle small"> Narration </td>
-                      
+      
                       <td class="fw-normal border align-middle small"> Amount </td>
-                      
-                      <td class="fw-normal border align-middle small"> Date of Payment </td>
-                      
-                      <td class="fw-normal border align-middle small"> Date of Entered </td>
                       
                       <td class="fw-normal border align-middle small"> Entered By </td>
       
@@ -235,7 +225,9 @@
               
                         <tr>
                           
-                          <td class="border"> <%= i + 1 %> </td>
+                          <td class="text-center border" ><%= students[i].regn %></td>
+                          
+                          
                           
                           <td class="border" >
                             
@@ -247,19 +239,15 @@
                             
                           </td>
                           
+                          <td class="border"> <%= students[i].fname %> </td>
+                          
                           <td class="border fst-italic"> <%= students[i].studentOtherFee[k].narrationInput %> </td>
                           
                           <td class="border">Rs.  <%= students[i].studentOtherFee[k].feeAmount %> </td>
-                          
-                          <td class="border"> <%= moment(students[i].studentOtherFee[k].dateofpayment).format('DD/MM/YYYY') %> </td>
-                          
-                          <td class="border"> <%= moment(students[i].studentOtherFee[k].dateSubmitted).format('DD/MM/YYYY') %> </td>
                       
                           <td class="border">  <%= capitalizeFirstLetter(students[i].studentOtherFee[k].verifierId.username) %> </td>
         
                         </tr>
-                        
-
                         
                         <% } } } } %>
                             

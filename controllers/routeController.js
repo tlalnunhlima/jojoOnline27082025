@@ -302,7 +302,7 @@ router.get('/stdList', async (req, res) => {
 
 router.get('/allStdList', async (req, res) => {
     
-const students = await Student.find({},{_id:1, regn:1, username:1,  fname: 1, batchSession: 1, phone:1} ).sort({regn : -1}).populate('staffid');
+const students = await Student.find({},{_id:1, regn:1, username:1,  fname: 1, address: 1, batchSession: 1, phone:1} ).sort({regn : -1}).populate('staffid');
     
    if(req.session.adminIdentity) {
     
@@ -6326,11 +6326,11 @@ router.get('/viewFee/todayFeeReview', async (req, res) => {
             
 if(req.session.adminIdentity) {
     
-  await Student.find( { $or: [ {studentFee : { $elemMatch: {  dateofpayment : moment().format('YYYY-MM-DD')  } } }, 
+  await Student.find( { $or: [ {studentFee : { $elemMatch: {  dateSubmitted : { $gte : moment().format('YYYY-MM-DD') }  } } }, 
   
-  { studentExamFee : { $elemMatch: {  dateofpayment : moment().format('YYYY-MM-DD')  } } },
+  { studentExamFee : { $elemMatch: {  dateSubmitted : { $gte : moment().format('YYYY-MM-DD') } } } },
   
-  { studentOtherFee : { $elemMatch: {  dateofpayment : moment().format('YYYY-MM-DD')  } } }
+  { studentOtherFee : { $elemMatch: {  dateSubmitted : { $gte : moment().format('YYYY-MM-DD') } } } }
   
   ] },
   
@@ -6591,24 +6591,24 @@ if(req.session.adminIdentity) {
 
 //view fee by selecting date for admin only view
 
-router.get('/viewFee/viewFeeByDate/:dateofpayment', async (req, res) => {
+router.get('/viewFee/viewFeeByDate/:dateSubmitted', async (req, res) => {
     
 const currentDateWithoutTime = moment().format('YYYY-MM-DD'); //vawiin hriatna
-//req.params.dateofpayment hian a chunga url date hi a search chhuak thei dawn a ni.
+//req.params.dateSubmitted hian a chunga url date hi a search chhuak thei dawn a ni.
             
 if(req.session.adminIdentity) {
     
-  await Student.find({$or: [{studentFee : { $elemMatch: {  dateofpayment : { $gte: req.params.dateofpayment, $lte: currentDateWithoutTime }  } } }, 
+  await Student.find({$or: [{studentFee : { $elemMatch: {  dateSubmitted : { $gte: req.params.dateSubmitted, $lte: currentDateWithoutTime }  } } }, 
   
-  {studentExamFee : { $elemMatch: {  dateofpayment : { $gte: req.params.dateofpayment, $lte: currentDateWithoutTime }  } } },
+  {studentExamFee : { $elemMatch: {  dateSubmitted : { $gte: req.params.dateSubmitted, $lte: currentDateWithoutTime }  } } },
   
-  {studentOtherFee : { $elemMatch: {  dateofpayment : { $gte: req.params.dateofpayment, $lte: currentDateWithoutTime }  } } }
+  {studentOtherFee : { $elemMatch: {  dateSubmitted : { $gte: req.params.dateSubmitted, $lte: currentDateWithoutTime }  } } }
   
   ] },
   
   (err, doc) => {
       
-
+console.log(req.params.dateSubmitted + 1);
       if(!err) {
           
             res.render('viewFeeByDate', {
@@ -6661,6 +6661,80 @@ if(req.session.adminIdentity) {
         res.redirect('/stdList');
     
 });
+
+
+//fee due
+
+router.get('/view/feeDue', async (req, res) => {
+    
+    //hei hi vawiin date entirnan 2022-02-11;  moment().format('YYYY-MM-DD')
+            
+if(req.session.adminIdentity) {
+    
+  await Student.find( { $or: [ {studentFee : { $elemMatch: {  dateSubmitted : { $gte : moment().format('YYYY-MM-DD') } } } }, 
+  
+  { studentExamFee : { $elemMatch: {  dateSubmitted : { $gte : moment().format('YYYY-MM-DD') } } } },
+  
+  { studentOtherFee : { $elemMatch: {  dateSubmitted : { $gte : moment().format('YYYY-MM-DD') } } } }
+  
+  ] },
+  
+  (err, doc) => {
+      
+     if(!err) {
+          
+            res.render('feeDue', {
+                
+            viewTitle: 'Today Received',
+       
+            username: req.session.username,
+            
+            link1: req.session.myDashboard1,
+            
+            link2: req.session.myDashboard2,
+            
+            link3: req.session.myDashboard3,
+            
+            href1: req.session.hrefLink1,
+            
+            href2: req.session.hrefLink2,
+            
+            students: doc,
+            
+            moment: moment
+                
+                });
+                
+                return;
+                
+                
+
+            } else {
+                
+                res.redirect('/stdList');
+                
+            }
+            
+        })
+        .populate('studentFee.verifierId')
+        
+        .populate('studentExamFee.verifierId')
+        
+        .populate('studentOtherFee.verifierId');
+        
+        return;
+        
+            
+    }
+        
+        
+        res.redirect('/stdList');
+    
+});
+
+
+
+
 
 //student page admin only view====
 
