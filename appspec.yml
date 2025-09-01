@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ec2-user/jojoOnline27082025
+    destination: /home/ec2-user/jojoOnline
 hooks:
   ApplicationStop:
     - location: scripts/application_stop.sh
