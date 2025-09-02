@@ -1,5 +1,5 @@
         {
-          "name": "jojoOnline27082025",
+          "name": "jojoOnline",
           "version": "1.0.0",
           "main": "index.js",
           "scripts": {
